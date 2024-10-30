@@ -34,6 +34,31 @@ fun GrapesInformationCard(
     contentVerticalArrangement: Arrangement.Vertical = GrapesInformationCardDefaults.contentVerticalArrangement,
     content: @Composable ColumnScope.() -> Unit = {},
 ) {
+    InformationCard(
+        header = {
+            Text(
+                text = title,
+                style = GrapesTheme.typography.titleM,
+                modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing3),
+            )
+        },
+        modifier = modifier,
+        colors = colors,
+        border = border,
+        contentVerticalArrangement = contentVerticalArrangement,
+        content = content,
+    )
+}
+
+@Composable
+private fun InformationCard(
+    header: @Composable () -> Unit,
+    content: @Composable ColumnScope.() -> Unit,
+    modifier: Modifier = Modifier,
+    colors: CardColors = GrapesInformationCardDefaults.colors,
+    border: BorderStroke = GrapesInformationCardDefaults.border,
+    contentVerticalArrangement: Arrangement.Vertical = GrapesInformationCardDefaults.contentVerticalArrangement,
+) {
     Card(
         modifier = modifier,
         colors = colors,
@@ -43,11 +68,7 @@ fun GrapesInformationCard(
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
             modifier = Modifier.padding(vertical = GrapesTheme.dimensions.spacing3),
         ) {
-            Text(
-                text = title,
-                style = GrapesTheme.typography.titleM,
-                modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing3),
-            )
+            header()
             GrapesDivider()
             Column(
                 verticalArrangement = contentVerticalArrangement,
