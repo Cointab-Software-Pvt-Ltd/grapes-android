@@ -23,6 +23,7 @@ fun GrapesInlineInformationIconItem(
     @DrawableRes icon: Int,
     description: String,
     modifier: Modifier = Modifier,
+    colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
 ) {
     Row(
         modifier = modifier,
@@ -35,6 +36,7 @@ fun GrapesInlineInformationIconItem(
         )
         Text(
             text = description,
+            color = colors.description,
             style = GrapesTheme.typography.bodyL,
             modifier = Modifier.weight(1f),
         )
