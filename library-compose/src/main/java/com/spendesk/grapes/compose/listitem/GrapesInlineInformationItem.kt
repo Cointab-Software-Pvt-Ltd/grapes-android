@@ -22,6 +22,7 @@ fun GrapesInlineInformationItem(
     title: String,
     value: String,
     modifier: Modifier = Modifier,
+    colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
 ) {
     Row(
         modifier = modifier,
@@ -30,7 +31,7 @@ fun GrapesInlineInformationItem(
     ) {
         Text(
             text = title,
-            color = GrapesTheme.colors.neutralDark,
+            color = colors.title,
             style = GrapesTheme.typography.bodyL,
             modifier = Modifier.weight(1f),
         )
@@ -40,6 +41,7 @@ fun GrapesInlineInformationItem(
         ) {
             Text(
                 text = value,
+                color = colors.description,
                 style = GrapesTheme.typography.bodyL,
                 textAlign = TextAlign.End
             )
@@ -61,6 +63,7 @@ private fun Preview(
 }
 
 private class ItemParameterProvider : PreviewParameterProvider<Pair<String, String>> {
+
     override val values = sequenceOf(
         "This is an example of a very long key" to "Short value",
         "Short key" to "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
