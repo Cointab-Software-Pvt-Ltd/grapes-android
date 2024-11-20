@@ -4,7 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -119,7 +119,7 @@ fun GrapesSearchInputSecondary(
         value = value,
         placeholderValue = placeholder,
         onValueChange = onValueChange,
-        modifier = modifier.height(GrapesTheme.dimensions.sizing6),
+        modifier = modifier.heightIn(min = GrapesTheme.dimensions.sizing6),
         helperText = helperText,
         enabled = enabled,
         readOnly = readOnly,
