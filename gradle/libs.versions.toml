@@ -1,6 +1,6 @@
 [versions]
 grapes-version = '1.22.0'
-androidGradlePlugin = "8.5.1"
+androidGradlePlugin = "8.7.2"
 
 # [ANDROID]
 androidCompileSdk = "34"
@@ -10,28 +10,28 @@ androidTargetSdk = "34"
 # [PLUGINS]
 
 ## Firebase
-firebaseAppdistributionPlugin = "4.0.1"
+firebaseAppdistributionPlugin = "5.0.0"
 
 # [LIBRARIES]
-detekt = "1.23.6"
-detektFormatting = "1.23.6"
+detekt = "1.23.7"
+detektFormatting = "1.23.7"
 glide = "4.16.0"
 
 ## AndroidX
-androidxAppcompat = "1.6.1"
+androidxAppcompat = "1.7.0"
 androidxComposeBom = "2024.09.02"
 androidxComposeCompiler = "1.5.14"
-androidxConstraintlayout = "2.1.4"
-androidxCore = "1.12.0"
-androidxEspresso = "3.5.1"
-androidxFragment = "1.6.2"
-androidxLifecycle = "2.7.0"
-androidxTestJunit = "1.1.5"
+androidxConstraintlayout = "2.2.0"
+androidxCore = "1.13.1"
+androidxEspresso = "3.6.1"
+androidxFragment = "1.8.5"
+androidxLifecycle = "2.8.7"
+androidxTestJunit = "1.2.1"
 
 ## Google
 hilt = "2.50"
 ksp = "1.9.24-1.0.20"
-material = '1.11.0'
+material = "1.12.0"
 
 ## Jetbrains
 kotlin = "1.9.24"
