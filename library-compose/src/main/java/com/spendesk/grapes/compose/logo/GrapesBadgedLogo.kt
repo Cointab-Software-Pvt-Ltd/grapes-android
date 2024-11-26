@@ -3,6 +3,7 @@ package com.spendesk.grapes.compose.logo
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -59,6 +60,36 @@ fun GrapesBadgedLogo(
     }
 }
 
+@Composable
+fun GrapesCardBadgedLogo(
+    modifier: Modifier = Modifier,
+    badge: @Composable BoxScope.() -> Unit = {},
+    badgeAlignment: Alignment = Alignment.TopEnd,
+    logo: @Composable BoxScope.() -> Unit,
+) {
+    Box(modifier) {
+        GrapesCardLogoContainer {
+            logo()
+        }
+        if (badgeAlignment in supportedAlignments) {
+            val highlightIconOffset = GrapesTheme.dimensions.spacing1
+            val yOffset = when (badgeAlignment) {
+                Alignment.TopEnd -> -highlightIconOffset
+                Alignment.BottomEnd -> highlightIconOffset
+                else -> 0.dp
+            }
+            Box(
+                modifier = Modifier
+                    .align(badgeAlignment)
+                    .size(GrapesTheme.dimensions.sizing4)
+                    .offset(y = yOffset, x = highlightIconOffset)
+            ) {
+                badge()
+            }
+        }
+    }
+}
+
 @Preview
 @Composable
 private fun GrapesBadgedLogoPreview(
@@ -88,6 +119,35 @@ private fun GrapesBadgedLogoPreview(
     }
 }
 
+@Preview
+@Composable
+private fun GrapesBadgedCardLogoPreview(
+    @PreviewParameter(AlignmentParameterProvider::class) alignment: Alignment,
+) {
+    GrapesTheme {
+        GrapesCardBadgedLogo(
+            badge = {
+                GrapesHighlightIconSuccess(
+                    size = GrapesHighlightIconSize.SMALL,
+                    modifier = Modifier
+                        .size(40.dp)
+                        .clip(GrapesTheme.shapes.shape4)
+                        .background(GrapesTheme.colors.warningNormal)
+                )
+            },
+            badgeAlignment = alignment,
+            modifier = Modifier.padding(16.dp),
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(GrapesTheme.colors.neutralLight)
+            )
+        }
+    }
+}
+
 private class AlignmentParameterProvider : PreviewParameterProvider<Alignment> {
+
     override val values = sequenceOf(Alignment.TopEnd, Alignment.BottomEnd)
 }

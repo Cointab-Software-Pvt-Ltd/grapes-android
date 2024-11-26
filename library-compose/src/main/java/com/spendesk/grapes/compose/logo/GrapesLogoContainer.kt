@@ -5,7 +5,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -56,6 +58,23 @@ fun GrapesLargeLogoContainer(
     )
 }
 
+/**
+ * Container for a card logo with a maximum height of [GrapesTheme.dimensions.sizing6] and width of [GrapesTheme.dimensions.sizing7].
+ */
+@Composable
+fun GrapesCardLogoContainer(
+    modifier: Modifier = Modifier,
+    content: @Composable BoxScope.() -> Unit = {},
+) {
+    Box(
+        contentAlignment = Alignment.Center,
+        content = content,
+        modifier = modifier
+            .width(51.dp)
+            .height(32.dp),
+    )
+}
+
 @Preview
 @Composable
 private fun GrapesMediumLogoContainerPreview() {
@@ -71,6 +90,13 @@ private fun GrapesMediumLogoContainerPreview() {
                 )
             }
             GrapesLargeLogoContainer {
+                Box(
+                    modifier = Modifier
+                        .size(200.dp)
+                        .background(Color.Red)
+                )
+            }
+            GrapesCardLogoContainer {
                 Box(
                     modifier = Modifier
                         .size(200.dp)
