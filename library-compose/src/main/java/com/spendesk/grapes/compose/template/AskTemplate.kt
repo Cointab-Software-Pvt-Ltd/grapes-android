@@ -4,8 +4,10 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.systemBars
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,6 +31,8 @@ private fun AskTemplate(
     title: @Composable () -> Unit,
     description: @Composable () -> Unit,
     callToAction: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    contentWindowInsets: WindowInsets = WindowInsets.systemBars,
 ) {
     InformativeComponent(
         middlePart = {
@@ -42,7 +46,9 @@ private fun AskTemplate(
                 description()
             }
         },
-        bottomPart = callToAction
+        bottomPart = callToAction,
+        contentWindowInsets = contentWindowInsets,
+        modifier = modifier
     )
 }
 
@@ -52,6 +58,8 @@ fun AskTemplate(
     title: String,
     description: String?,
     callToAction: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    contentWindowInsets: WindowInsets = WindowInsets.systemBars,
 ) {
     val header = @Composable {
         if (headerImageRes != null) {
@@ -83,7 +91,9 @@ fun AskTemplate(
         header = header,
         title = titleText,
         description = descriptionText,
-        callToAction = callToAction
+        callToAction = callToAction,
+        contentWindowInsets = contentWindowInsets,
+        modifier = modifier,
     )
 }
 
