@@ -12,18 +12,16 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -86,10 +84,8 @@ fun ActionMenuItem(
             )
             if (enabled) {
                 Spacer(Modifier.width(GrapesTheme.dimensions.spacing3))
-                Icon(
-                    painter = painterResource(R.drawable.ic_chevron_right),
-                    contentDescription = null,
-                    tint = GrapesTheme.colors.primaryLighter,
+                GrapesIconSet.ChevronRight(
+                    tint = GrapesTheme.colors.primaryLighter
                 )
             }
         }
@@ -124,11 +120,7 @@ private fun ActionMenuItemIcon(
 private fun ActionMenuItemPreview() {
     GrapesTheme {
         val icon = @Composable {
-            Icon(
-                painter = painterResource(R.drawable.ic_neutral),
-                contentDescription = null,
-                modifier = Modifier.size(48.dp)
-            )
+            GrapesIconSet.ReceiptQuestion(modifier = Modifier.size(48.dp))
         }
         val text = "Action"
         val longText = "Action with a very long title which will not fit in one line. Event two lines will not be enough"

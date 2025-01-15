@@ -14,11 +14,11 @@ object GrapesIcons {
      */
     fun iconFor(configurationState: GrapesConfigurationStatus): Int =
         when (configurationState) {
-            GrapesConfigurationStatus.SUCCESS -> R.drawable.ic_success
-            GrapesConfigurationStatus.INFORMATION -> R.drawable.ic_information
-            GrapesConfigurationStatus.NEUTRAL -> R.drawable.ic_neutral
-            GrapesConfigurationStatus.ALERT -> R.drawable.ic_error
-            GrapesConfigurationStatus.WARNING -> R.drawable.ic_warning
-            GrapesConfigurationStatus.BLOCKED -> R.drawable.ic_block
+            GrapesConfigurationStatus.SUCCESS -> R.drawable.ic_grapes_icon_circle_check
+            GrapesConfigurationStatus.INFORMATION -> R.drawable.ic_grapes_icon_circle_information
+            GrapesConfigurationStatus.NEUTRAL -> R.drawable.ic_grapes_icon_receipt_question
+            GrapesConfigurationStatus.ALERT -> R.drawable.ic_grapes_icon_hexagone_cross
+            GrapesConfigurationStatus.WARNING -> R.drawable.ic_grapes_icon_triangle_warning
+            GrapesConfigurationStatus.BLOCKED -> R.drawable.ic_grapes_icon_lock_close
         }
 }

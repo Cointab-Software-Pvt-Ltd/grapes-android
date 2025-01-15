@@ -170,11 +170,11 @@ fun PreviewGrapesTextField() {
     var canToggleError by remember { mutableStateOf(isEnabled) }
 
     val leadingIcon = @Composable {
-        GrapesIcon(icon = R.drawable.ic_neutral, Modifier.size(18.dp))
+        GrapesIcon(icon = R.drawable.ic_grapes_icon_receipt_question, Modifier.size(18.dp))
     }
 
     val trailingIcon = @Composable {
-        GrapesIcon(icon = R.drawable.ic_success, Modifier.size(18.dp))
+        GrapesIcon(icon = R.drawable.ic_grapes_icon_circle_check, Modifier.size(18.dp))
     }
 
     val scaffoldState = rememberScaffoldState()

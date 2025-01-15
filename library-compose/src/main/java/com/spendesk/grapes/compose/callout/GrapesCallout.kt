@@ -36,7 +36,7 @@ fun GrapesErrorCallout(
         GrapesCoreCallout(
             leadingIcon = {
                 GrapesIcon(
-                    icon = R.drawable.ic_error,
+                    icon = R.drawable.ic_grapes_icon_hexagone_cross,
                     contentDescription = "Error callout icon",
                     tint = calloutColors.titleColor().value,
                 )
@@ -64,7 +64,7 @@ fun GrapesWarningCallout(
         GrapesCoreCallout(
             leadingIcon = {
                 GrapesIcon(
-                    icon = R.drawable.ic_warning,
+                    icon = R.drawable.ic_grapes_icon_triangle_warning,
                     contentDescription = "Warning callout icon",
                     tint = calloutColors.titleColor().value,
                 )
@@ -92,7 +92,7 @@ fun GrapesInfoCallout(
         GrapesCoreCallout(
             leadingIcon = {
                 GrapesIcon(
-                    icon = R.drawable.ic_information,
+                    icon = R.drawable.ic_grapes_icon_circle_information,
                     contentDescription = "Warning callout icon",
                     tint = calloutColors.titleColor().value,
                 )
@@ -119,7 +119,7 @@ fun GrapesSuccessCallout(
 
         val leadingIcon = @Composable {
             GrapesIcon(
-                icon = R.drawable.ic_success,
+                icon = R.drawable.ic_grapes_icon_circle_check,
                 contentDescription = "Success callout icon",
                 tint = calloutColors.titleColor().value,
             )

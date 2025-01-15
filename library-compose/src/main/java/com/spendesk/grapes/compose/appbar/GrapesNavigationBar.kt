@@ -98,15 +98,15 @@ private fun Preview() {
         val tabs = listOf(
             object : GrapesNavigationItem {
                 override val title: Int = R.string.grapes_top_app_bar_back_icon_description
-                override val icon: Int = R.drawable.ic_add
+                override val icon: Int = R.drawable.ic_grapes_icon_circle_plus
             },
             object : GrapesNavigationItem {
                 override val title: Int = R.string.grapes_top_app_bar_close_icon_description
-                override val icon: Int = R.drawable.ic_arrow_back
+                override val icon: Int = R.drawable.ic_grapes_icon_arrow_left
             },
             object : GrapesNavigationItem {
                 override val title: Int = R.string.grapes_top_app_bar_more_icon_description
-                override val icon: Int = R.drawable.ic_more_vertical
+                override val icon: Int = R.drawable.ic_grapes_icon_ellipsis_vertical
             }
         )
         GrapesNavigationBar(

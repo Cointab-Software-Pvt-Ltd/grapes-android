@@ -29,7 +29,7 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 @Composable
 fun GrapesHighlightIconPrimary(
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_block),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_lock_close),
     contentDescription: String? = null,
     size: GrapesHighlightIconSize,
 ) {
@@ -48,7 +48,7 @@ fun GrapesHighlightIconPrimary(
 fun GrapesHighlightIconAlert(
     size: GrapesHighlightIconSize,
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_cross_filled),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_circle_cross),
     contentDescription: String? = null,
 ) {
     GrapesHighlightIcon(
@@ -66,7 +66,7 @@ fun GrapesHighlightIconAlert(
 fun GrapesHighlightIconWarning(
     size: GrapesHighlightIconSize,
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_warning),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_triangle_warning),
     contentDescription: String? = null,
 ) {
     GrapesHighlightIcon(
@@ -84,7 +84,7 @@ fun GrapesHighlightIconWarning(
 fun GrapesHighlightIconSuccess(
     size: GrapesHighlightIconSize,
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_success),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_circle_check),
     contentDescription: String? = null,
 ) {
     GrapesHighlightIcon(
@@ -102,7 +102,7 @@ fun GrapesHighlightIconSuccess(
 fun GrapesHighlightIconNeutral(
     size: GrapesHighlightIconSize,
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_block),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_lock_close),
     contentDescription: String? = null,
 ) {
     GrapesHighlightIcon(
@@ -120,7 +120,7 @@ fun GrapesHighlightIconNeutral(
 fun GrapesHighlightIconInfo(
     size: GrapesHighlightIconSize,
     modifier: Modifier = Modifier,
-    painter: Painter = painterResource(R.drawable.ic_information),
+    painter: Painter = painterResource(R.drawable.ic_grapes_icon_circle_information),
     contentDescription: String? = null,
 ) {
     GrapesHighlightIcon(

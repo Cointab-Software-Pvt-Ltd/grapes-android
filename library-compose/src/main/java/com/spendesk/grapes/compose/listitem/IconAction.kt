@@ -63,20 +63,20 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
 private fun IconActionPreview() {
     val alertConfiguration = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.ALERT,
         description = "Description"
     )
 
     val infoConfigurationWithoutDescription = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.INFORMATION
     )
 
     val infoConfigurationWithDescription = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.INFORMATION,
         description = "Test description"
     )

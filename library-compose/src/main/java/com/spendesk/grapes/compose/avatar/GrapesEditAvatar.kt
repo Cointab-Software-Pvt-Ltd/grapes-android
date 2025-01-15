@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Alignment
@@ -22,14 +21,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layoutId
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import kotlin.math.cos
 import kotlin.math.sin
@@ -47,9 +45,7 @@ fun GrapesEditAvatar(
 ) {
     EditAvatarLayout(
         badge = {
-            Icon(
-                painter = painterResource(R.drawable.ic_add),
-                contentDescription = null,
+            GrapesIconSet.CirclePlus(
                 tint = badgeTint,
                 modifier = Modifier
                     .size(badgeSize)
@@ -124,7 +120,7 @@ private fun EditAvatarLayout(
 object EditAvatarDefaults {
 
     val badgeOffset = DpOffset(8.dp, 2.dp)
-    val badgeSize = DpSize(24.dp, 24.dp)
+    val badgeSize = DpSize(36.dp, 36.dp)
 }
 
 @Preview(showBackground = true)
@@ -142,7 +138,7 @@ private fun Preview() {
                             .background(Color.Blue)
                     )
                 },
-                badgeSize = DpSize(32.dp, 32.dp),
+                badgeSize = DpSize(48.dp, 48.dp),
                 contentDescription = "",
                 modifier = Modifier.size(128.dp),
             )

@@ -103,7 +103,7 @@ private fun GrapesQuickActionButtonPreview() {
         ) {
             GrapesQuickActionButton(
                 label = "Label $clickCount",
-                icon = R.drawable.ic_add,
+                icon = R.drawable.ic_grapes_icon_circle_plus,
                 onClick = { clickCount++ }, // Let's make sure onClick is not triggered twice by the interaction source sharing.
             )
         }

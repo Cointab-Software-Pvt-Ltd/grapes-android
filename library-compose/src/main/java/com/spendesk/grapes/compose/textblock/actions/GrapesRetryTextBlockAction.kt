@@ -5,15 +5,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.tooling.preview.Preview
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -28,7 +26,7 @@ fun GrapesRetryTextBlockAction(retryLabel: String, onRetryClicked: () -> Unit, m
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
     ) {
         Text(text = retryLabel, style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.warningNormal)
-        Icon(painter = painterResource(R.drawable.ic_warning), contentDescription = null, tint = GrapesTheme.colors.warningNormal)
+        GrapesIconSet.TriangleWarning(tint = GrapesTheme.colors.warningNormal)
     }
 }
 

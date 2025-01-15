@@ -1,6 +1,5 @@
 package com.spendesk.grapes.compose.textfield
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,17 +8,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -80,9 +77,9 @@ fun GrapesSearchInputPrimary(
         trailingIcon = {
             if (value.isNotEmpty()) {
                 IconButton(onClick = onClear) {
-                    Image(
-                        painter = painterResource(R.drawable.ic_clear_round),
+                    GrapesIconSet.CircleCross(
                         contentDescription = clearContentDescription,
+                        tint = GrapesTheme.colors.contentDecorativeIcon,
                     )
                 }
             }
@@ -147,9 +144,9 @@ fun GrapesSearchInputSecondary(
         trailingIcon = {
             if (value.isNotEmpty()) {
                 IconButton(onClick = onClear) {
-                    Image(
-                        painter = painterResource(R.drawable.ic_clear_round),
+                    GrapesIconSet.CircleCross(
                         contentDescription = clearContentDescription,
+                        tint = GrapesTheme.colors.contentDecorativeIcon,
                     )
                 }
             }
@@ -179,7 +176,7 @@ private fun Preview() {
                 clearContentDescription = "",
                 onValueChange = {},
                 onClear = {},
-                leadingIcon = { Icon(painterResource(R.drawable.ic_close), null) },
+                leadingIcon = { GrapesIconSet.CrossSmall() },
             )
             GrapesSearchInputPrimary(
                 value = "Value",
@@ -187,7 +184,7 @@ private fun Preview() {
                 clearContentDescription = "",
                 onValueChange = {},
                 onClear = {},
-                leadingIcon = { Icon(painterResource(R.drawable.ic_close), null) },
+                leadingIcon = { GrapesIconSet.CrossSmall() },
             )
             GrapesSearchInputSecondary(
                 value = "",
@@ -195,7 +192,7 @@ private fun Preview() {
                 clearContentDescription = "",
                 onValueChange = {},
                 onClear = {},
-                leadingIcon = { Icon(painterResource(R.drawable.ic_close), null) },
+                leadingIcon = { GrapesIconSet.CrossSmall() },
             )
             GrapesSearchInputSecondary(
                 value = "Value",
@@ -203,7 +200,7 @@ private fun Preview() {
                 clearContentDescription = "",
                 onValueChange = {},
                 onClear = {},
-                leadingIcon = { Icon(painterResource(R.drawable.ic_close), null) },
+                leadingIcon = { GrapesIconSet.CrossSmall() },
             )
         }
     }
