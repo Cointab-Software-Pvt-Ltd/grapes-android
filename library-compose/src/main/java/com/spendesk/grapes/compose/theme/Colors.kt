@@ -55,14 +55,13 @@ data class GrapesColors(
     val isLight: Boolean,
 
     // UI-Revamp new design tokens:
-    val backgroundPrimary: Color,
-    val backgroundSecondary: Color,
-    val backgroundTertiary: Color,
-    val backgroundHover: Color,
-    val backgroundPressed: Color,
-    val backgroundSelected: Color,
-    val backgroundDisabled: Color,
-    val backgroundReadOnly: Color,
+    val backgroundOverlay: Color,
+    val backgroundPrimaryDefault: Color,
+    val backgroundPrimaryHover: Color,
+    val backgroundPrimaryPressed: Color,
+    val backgroundPrimarySelected: Color,
+    val backgroundPrimaryDisabled: Color,
+    val backgroundPrimaryReadOnly: Color,
 
     val backgroundPrimaryBrandDefault: Color,
     val backgroundPrimaryBrandHover: Color,
@@ -84,6 +83,8 @@ data class GrapesColors(
     val backgroundPrimaryAlertHover: Color,
     val backgroundPrimaryAlertPressed: Color,
 
+    val backgroundSecondaryDefault: Color,
+
     val backgroundSecondaryBrandDefault: Color,
     val backgroundSecondaryBrandHover: Color,
     val backgroundSecondaryBrandPressed: Color,
@@ -104,16 +105,20 @@ data class GrapesColors(
     val backgroundSecondaryAlertHover: Color,
     val backgroundSecondaryAlertPressed: Color,
 
+    val backgroundComplementaryDefault: Color,
+    val backgroundComplementaryHover: Color,
+    val backgroundComplementaryPressed: Color,
+    val backgroundComplementaryDisabled: Color,
+
     val contentPrimary: Color,
-    val contentSecondary: Color,
-    val contentTertiary: Color,
+    val contentDecorativeIcon: Color,
     val contentComplementary: Color,
     val contentSelected: Color,
     val contentDisable: Color,
+    val contentSecondaryBGPrimary: Color,
+    val contentSecondaryBGSecondary: Color,
 
     val contentBrandDefault: Color,
-    val contentBrandHover: Color,
-    val contentBrandPressed: Color,
 
     val contentInfoDefault: Color,
     val contentSuccessDefault: Color,
@@ -121,12 +126,18 @@ data class GrapesColors(
     val contentAlertDefault: Color,
 
     val borderDefault: Color,
+    val borderComplementary: Color,
     val borderHover: Color,
     val borderSelected: Color,
-    val borderInfo: Color,
-    val borderSuccess: Color,
-    val borderWarning: Color,
-    val borderAlert: Color,
+
+    val borderInfoDefault: Color,
+    val borderInfoDecorative: Color,
+    val borderSuccessDefault: Color,
+    val borderSuccessDecorative: Color,
+    val borderWarningDefault: Color,
+    val borderWarningDecorative: Color,
+    val borderAlertDefault: Color,
+    val borderAlertDecorative: Color,
 )
 
 val google = Color(0xFF4285F4)
