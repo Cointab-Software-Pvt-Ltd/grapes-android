@@ -528,6 +528,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun Car(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_car),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Card(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2002,6 +2016,7 @@ private fun IconsPreview() {
                 GrapesIconSet.CalendarClock()
                 GrapesIconSet.Camera()
                 GrapesIconSet.CameraStrikeout()
+                GrapesIconSet.Car()
                 GrapesIconSet.Card()
                 GrapesIconSet.CardArrowDown()
                 GrapesIconSet.CardArrowUp()
