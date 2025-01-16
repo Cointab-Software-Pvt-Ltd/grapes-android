@@ -27,22 +27,22 @@
     <color name="mainBackground">@color/carbon_3</color>
 
     <color name="mainInfoNormal">@color/blue_70</color>
-    <color name="mainInfoLighter">@color/blue_30</color>
-    <color name="mainInfoLightest">@color/blue_20</color>
+    <color name="mainInfoLighter">@color/blue_10</color>
+    <color name="mainInfoLightest">@color/blue_10</color>
 
     <color name="mainSuccessNormal">@color/emerald_70</color>
-    <color name="mainSuccessLighter">@color/emerald_30</color>
-    <color name="mainSuccessLightest">@color/emerald_20</color>
+    <color name="mainSuccessLighter">@color/emerald_10</color>
+    <color name="mainSuccessLightest">@color/emerald_10</color>
 
     <color name="mainWarningDark">@color/apricot_90</color>
     <color name="mainWarningNormal">@color/apricot_70</color>
-    <color name="mainWarningLighter">@color/apricot_30</color>
-    <color name="mainWarningLightest">@color/apricot_20</color>
+    <color name="mainWarningLighter">@color/apricot_10</color>
+    <color name="mainWarningLightest">@color/apricot_10</color>
 
     <color name="mainAlertDark">@color/raspberry_90</color>
     <color name="mainAlertNormal">@color/raspberry_70</color>
-    <color name="mainAlertLighter">@color/raspberry_30</color>
-    <color name="mainAlertLightest">@color/raspberry_20</color>
+    <color name="mainAlertLighter">@color/raspberry_10</color>
+    <color name="mainAlertLightest">@color/raspberry_10</color>
 
     <!-- Alpha colors -->
     <color name="mainAlertNormalAlpha20">#33D12D00</color>

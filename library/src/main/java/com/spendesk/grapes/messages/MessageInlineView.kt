@@ -86,11 +86,11 @@ class MessageInlineView : MaterialTextView {
      */
     fun setStyle(style: Style) {
         when (style) {
-            Style.NEUTRAL -> ColorConfiguration(R.color.mainNeutralDarkest, R.color.mainNeutralLighter, R.color.mainNeutralNormal)
-            Style.SUCCESS -> ColorConfiguration(R.color.mainSuccessNormal, R.color.mainSuccessLightest, R.color.mainSuccessLighter)
-            Style.ALERT -> ColorConfiguration(R.color.mainAlertNormal, R.color.mainAlertLightest, R.color.mainAlertLighter)
-            Style.WARNING -> ColorConfiguration(R.color.mainWarningNormal, R.color.mainWarningLightest, R.color.mainWarningLighter)
-            Style.INFO -> ColorConfiguration(R.color.mainInfoNormal, R.color.mainInfoLightest, R.color.mainInfoLighter)
+            Style.NEUTRAL -> ColorConfiguration(R.color.mainNeutralDarkest, R.color.mainNeutralLighter, R.color.mainNeutralLighter)
+            Style.SUCCESS -> ColorConfiguration(R.color.mainSuccessNormal, R.color.mainSuccessLightest, R.color.mainSuccessLightest)
+            Style.ALERT -> ColorConfiguration(R.color.mainAlertNormal, R.color.mainAlertLightest, R.color.mainAlertLightest)
+            Style.WARNING -> ColorConfiguration(R.color.mainWarningNormal, R.color.mainWarningLightest, R.color.mainWarningLightest)
+            Style.INFO -> ColorConfiguration(R.color.mainInfoNormal, R.color.mainInfoLightest, R.color.mainInfoLightest)
         }.let { configuration ->
             setTextColor(ContextCompat.getColor(context, configuration.textColor))
             setDrawable(colorId = configuration.backgroundColor, radiusId = R.dimen.messageInlineRadius, strokeSizeId = R.dimen.messageInlineStrokeSize, strokeColorId = configuration.strokeColor)

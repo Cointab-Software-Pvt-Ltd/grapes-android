@@ -15,7 +15,11 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.core.graphics.drawable.toDrawable
 import com.spendesk.grapes.R
 import com.spendesk.grapes.databinding.MessageBlockViewBinding
-import com.spendesk.grapes.extensions.*
+import com.spendesk.grapes.extensions.gone
+import com.spendesk.grapes.extensions.setDrawable
+import com.spendesk.grapes.extensions.setDrawableLeft
+import com.spendesk.grapes.extensions.visible
+import com.spendesk.grapes.extensions.visibleWithTextOrGone
 import com.spendesk.grapes.internal.libs.glide.loadFromUrl
 
 
@@ -98,7 +102,7 @@ class MessageBlockView : ConstraintLayout {
      */
     fun setStyle(style: Style) {
         when (style) {
-            Style.NEUTRAL -> ColorConfiguration(R.color.mainNeutralDarker, R.color.mainNeutralLight, R.color.mainNeutralNormal)
+            Style.NEUTRAL -> ColorConfiguration(R.color.mainNeutralDarker, R.color.mainNeutralLight, R.color.mainNeutralLight)
             Style.SUCCESS -> ColorConfiguration(R.color.mainSuccessNormal, R.color.mainSuccessLightest, R.color.mainSuccessLighter)
             Style.ALERT -> ColorConfiguration(R.color.mainAlertNormal, R.color.mainAlertLightest, R.color.mainAlertLighter)
             Style.WARNING -> ColorConfiguration(R.color.mainWarningNormal, R.color.mainWarningLightest, R.color.mainWarningLighter)

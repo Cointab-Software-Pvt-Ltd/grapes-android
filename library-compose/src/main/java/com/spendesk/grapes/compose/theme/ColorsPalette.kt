@@ -27,24 +27,24 @@ fun lightColorsPalette(
     neutralLighter: Color = carbon10,
 
     infoNormal: Color = blue70,
-    infoLighter: Color = blue30,
-    infoLightest: Color = blue20,
+    infoLighter: Color = blue10,
+    infoLightest: Color = blue10,
 
     successNormal: Color = emerald70,
-    successLighter: Color = emerald30,
-    successLightest: Color = emerald20,
+    successLighter: Color = emerald10,
+    successLightest: Color = emerald10,
 
     warningDark: Color = apricot90,
     warningNormal: Color = apricot70,
     warningLight: Color = apricot30,
-    warningLighter: Color = apricot30,
-    warningLightest: Color = apricot20,
+    warningLighter: Color = apricot10,
+    warningLightest: Color = apricot10,
 
     alertDark: Color = raspberry90,
     alertNormal: Color = raspberry70,
     alertLight: Color = raspberry30,
-    alertLighter: Color = raspberry30,
-    alertLightest: Color = raspberry20,
+    alertLighter: Color = raspberry10,
+    alertLightest: Color = raspberry10,
 
     backgroundOverlay: Color = blue100.copy(alpha = 0.6f),
 
