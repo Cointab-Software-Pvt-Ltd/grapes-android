@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.hilt)
     alias(libs.plugins.firebase.appdistribution)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -104,4 +105,8 @@ dependencies {
 
     // REFLECTION
     implementation(libs.kotlinx.reflect)
+
+    // Navigation
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization)
 }
