@@ -91,6 +91,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.activity.compose)
 
     implementation(libs.google.material)
 

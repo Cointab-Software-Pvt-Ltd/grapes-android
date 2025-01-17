@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import com.spendesk.grapes.compose.button.GrapesButton
 import com.spendesk.grapes.compose.theme.GrapesTheme
+import com.spendesk.grapes.samples.compose.ComposeActivity
 
 /**
  * @author : danyboucanova
@@ -43,7 +44,12 @@ class ComposeFragment : Fragment() {
                             .padding(horizontal = GrapesTheme.dimensions.spacing3, vertical = GrapesTheme.dimensions.spacing3),
                         verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
                     ) {
-                        GrapesButton(text = "First Compose component test")
+                        GrapesButton(
+                            text = "First Compose component test",
+                            onClick = {
+                                this@ComposeFragment.context?.let { it.startActivity(ComposeActivity.createIntent(it)) }
+                            }
+                        )
                         Spacer(Modifier.height(GrapesTheme.dimensions.spacing3))
                         Text(text = "Shapes", style = GrapesTheme.typography.titleM)
                         Box(
