@@ -50,6 +50,9 @@ sealed class Destinations {
     object Shape : Destinations()
 
     @Serializable
+    object Size : Destinations()
+
+    @Serializable
     object Spacing : Destinations()
 
     @Serializable

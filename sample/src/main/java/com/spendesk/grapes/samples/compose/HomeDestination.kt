@@ -66,6 +66,14 @@ fun HomeDestination(
         }
         item {
             GridItem(
+                text = "Size",
+                onClick = {
+                    onDestinationClicked(Destinations.Size)
+                }
+            )
+        }
+        item {
+            GridItem(
                 text = "Typography",
                 onClick = {
                     onDestinationClicked(Destinations.Typography)

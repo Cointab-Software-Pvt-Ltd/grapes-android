@@ -76,6 +76,7 @@ class ComposeActivity : ComponentActivity() {
                         composable<Destinations.Modal> { ModalDestination() }
                         composable<Destinations.Navigation> { NavigationDestination() }
                         composable<Destinations.Shape> { ShapeDestination() }
+                        composable<Destinations.Size> { SizeDestination() }
                         composable<Destinations.Spacing> { SpacingDestination() }
                         composable<Destinations.Typography> { TypographyDestination() }
                     }
