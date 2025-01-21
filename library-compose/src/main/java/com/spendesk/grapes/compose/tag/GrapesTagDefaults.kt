@@ -24,6 +24,17 @@ object GrapesTagDefaults {
 }
 
 @Composable
+internal fun NeutralGrapesTagColors(
+    containerColor: Color = GrapesTheme.colors.neutralLightest,
+    contentColor: Color = LocalContentColor.current,
+    borderStoreColor: Color = GrapesTheme.colors.neutralLighter,
+): GrapesTagColors = DefaultGrapesTagColors(
+    containerColor = containerColor,
+    contentColor = contentColor,
+    borderStoreColor = borderStoreColor,
+)
+
+@Composable
 internal fun ErrorGrapesTagColors(
     containerColor: Color = GrapesTheme.colors.alertLightest,
     contentColor: Color = LocalContentColor.current,

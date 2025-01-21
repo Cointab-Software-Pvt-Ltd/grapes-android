@@ -124,6 +124,29 @@ fun GrapesErrorTag(
 }
 
 @Composable
+fun GrapesNeutralTag(
+    label: String,
+    showIcon: Boolean = true,
+) {
+    CompositionLocalProvider(
+        LocalContentColor provides GrapesTheme.colors.contentSecondaryBGSecondary,
+    ) {
+        val icon: @Composable () -> Unit = @Composable {
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_question_filled, contentDescription = "Neutral tag icon")
+        }
+
+        val tagColors = NeutralGrapesTagColors()
+
+        GrapesTag(
+            label = label,
+            icon = icon.takeIf { showIcon },
+            backgroundColor = tagColors.containerColor().value,
+            borderColor = tagColors.borderStrokeColor().value
+        )
+    }
+}
+
+@Composable
 fun GrapesTag(
     label: String,
     backgroundColor: Color,
@@ -173,6 +196,7 @@ private fun Preview(
             is Tags.Info -> GrapesInfoTag(label = tag.tag, showIcon = tag.showIcon)
             is Tags.Success -> GrapesSuccessTag(label = tag.tag, showIcon = tag.showIcon)
             is Tags.Warning -> GrapesWarningTag(label = tag.tag, showIcon = tag.showIcon)
+            is Tags.Neutral -> GrapesNeutralTag(label = tag.tag, showIcon = tag.showIcon)
         }
     }
 }
@@ -191,6 +215,9 @@ internal class TagProvider : PreviewParameterProvider<Tags> {
 
         Tags.Success("Label", true),
         Tags.Success("Label", false),
+
+        Tags.Neutral("Label", true),
+        Tags.Neutral("Label", false),
     )
 }
 
@@ -203,4 +230,5 @@ internal sealed class Tags {
     data class Info(override val tag: String, override val showIcon: Boolean) : Tags()
     data class Warning(override val tag: String, override val showIcon: Boolean) : Tags()
     data class Success(override val tag: String, override val showIcon: Boolean) : Tags()
+    data class Neutral(override val tag: String, override val showIcon: Boolean) : Tags()
 }
