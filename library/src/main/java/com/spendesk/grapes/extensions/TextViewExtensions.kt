@@ -1,11 +1,9 @@
 package com.spendesk.grapes.extensions
 
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.DrawableCompat
 
 /**
  * Extension functions for [TextView] class.
@@ -40,12 +38,7 @@ internal fun TextView.setDrawableRight(drawableResId: Int) = this.setCompoundDra
 internal fun TextView.setDrawableBottom(drawableResId: Int) = this.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, drawableResId)
 
 internal fun TextView.setDrawableTintList(colorStateListId: Int) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        compoundDrawableTintList = ContextCompat.getColorStateList(context, colorStateListId)
-    } else {
-        DrawableCompat.setTintList(DrawableCompat.wrap(compoundDrawables[0]), ContextCompat.getColorStateList(context, colorStateListId))
-    }
-
+    compoundDrawableTintList = ContextCompat.getColorStateList(context, colorStateListId)
 }
 
 internal fun TextView.removeDrawables() = this.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, 0, 0)
