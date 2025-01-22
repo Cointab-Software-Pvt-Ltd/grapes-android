@@ -79,7 +79,7 @@ fun ActionMenuItem(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
-                style = GrapesTheme.typography.titleM,
+                style = GrapesTheme.typography.titleS,
                 modifier = Modifier.weight(1f),
             )
             if (enabled) {
