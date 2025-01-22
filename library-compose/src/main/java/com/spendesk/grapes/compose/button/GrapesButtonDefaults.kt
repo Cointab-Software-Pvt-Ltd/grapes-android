@@ -86,12 +86,20 @@ object GrapesButtonDefaults {
     @Immutable
     object BorderStroke {
 
-        val secondary: androidx.compose.foundation.BorderStroke?
+        val secondary: androidx.compose.foundation.BorderStroke
             @Composable
             @ReadOnlyComposable
             get() = BorderStroke(
                 BorderThickness,
-                GrapesTheme.colors.neutralLight
+                GrapesTheme.colors.borderDefault
+            )
+
+        val primaryDisabled: androidx.compose.foundation.BorderStroke
+            @Composable
+            @ReadOnlyComposable
+            get() = BorderStroke(
+                BorderThickness,
+                GrapesTheme.colors.borderDefault
             )
 
         val alert: androidx.compose.foundation.BorderStroke
