@@ -198,7 +198,7 @@ private fun GridHeader(text: String, modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .background(GrapesTheme.colors.backgroundSecondaryInfoDefault)
-            .padding(GrapesTheme.dimensions.spacing3)
+            .padding(GrapesTheme.dimensions.unit16)
     )
 }
 
@@ -208,7 +208,7 @@ private fun GridItem(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    GrapesCard(onClick = onClick, modifier = modifier.padding(GrapesTheme.dimensions.spacing2)) {
+    GrapesCard(onClick = onClick, modifier = modifier.padding(GrapesTheme.dimensions.unit8)) {
         Box(modifier = Modifier.fillMaxSize().height(GrapesTheme.dimensions.sizing7), contentAlignment = Alignment.Center) {
             Text(
                 text = text,

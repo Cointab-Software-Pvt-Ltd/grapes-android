@@ -23,8 +23,8 @@ fun TypographyDestination() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scroll)
-            .padding(GrapesTheme.dimensions.spacing3),
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+            .padding(GrapesTheme.dimensions.unit16),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         Text("Heading", style = GrapesTheme.typography.heading, color = GrapesTheme.colors.contentPrimary)
         Text("Title/Xxl", style = GrapesTheme.typography.titleXxl, color = GrapesTheme.colors.contentPrimary)

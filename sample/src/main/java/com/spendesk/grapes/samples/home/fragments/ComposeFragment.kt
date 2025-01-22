@@ -41,14 +41,14 @@ class ComposeFragment : Fragment() {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(horizontal = GrapesTheme.dimensions.spacing3, vertical = GrapesTheme.dimensions.spacing3),
-                        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+                            .padding(horizontal = GrapesTheme.dimensions.unit16, vertical = GrapesTheme.dimensions.unit16),
+                        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
                     ) {
                         GrapesButton(
                             text = "First Compose component test",
                             onClick = {}
                         )
-                        Spacer(Modifier.height(GrapesTheme.dimensions.spacing3))
+                        Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
                         Text(text = "Shapes", style = GrapesTheme.typography.titleM)
                         Box(
                             modifier = Modifier

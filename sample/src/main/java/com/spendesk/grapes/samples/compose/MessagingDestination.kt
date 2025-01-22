@@ -49,44 +49,44 @@ fun MessagingDestination() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scroll)
-            .padding(GrapesTheme.dimensions.spacing3),
+            .padding(GrapesTheme.dimensions.unit16),
     ) {
         Text("Badge", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Badges()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Empty state", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Tag", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Tags()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Message", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Toaster", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Snackbar { Text("Message", style = GrapesTheme.typography.bodyM) }
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Callout", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing1))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Callouts()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
     }
 }
 
 @Composable
 private fun Badges() {
-    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)) {
-        Row(horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)) {
+    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)) {
 
             GrapesTooltipBox("GrapesNeutralBadge") {
                 GrapesNeutralBadge(1)
@@ -95,7 +95,7 @@ private fun Badges() {
                 GrapesAlertBadge(200, maxCount = 99)
             }
         }
-        Row(horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)) {
             GrapesTooltipBox("GrapesNeutralBadge") {
                 GrapesNeutralBadge(1)
             }
@@ -113,8 +113,8 @@ private fun Badges() {
 @Composable
 private fun Tags() {
     FlowRow(
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
         GrapesTooltipBox("GrapesErrorTag") {
             GrapesErrorTag("Label", showIcon = true)
@@ -139,10 +139,10 @@ private fun Tags() {
 private fun Callouts() {
     val title = "Message title"
     val description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus sed sem porttitor viverra. Vestibulum magna leo."
-    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)) {
+    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)) {
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
         ) {
             GrapesTooltipBox("GrapesErrorCallout") {
                 GrapesErrorCallout(title, { CalloutWithCTAContent(description = description) })
@@ -155,8 +155,8 @@ private fun Callouts() {
             }
         }
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
         ) {
             GrapesTooltipBox("GrapesWarningCallout") {
                 GrapesWarningCallout(title, { CalloutWithCTAContent(description = description) })
@@ -169,8 +169,8 @@ private fun Callouts() {
             }
         }
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
         ) {
             GrapesTooltipBox("GrapesInfoCallout") {
                 GrapesInfoCallout(title, { CalloutWithCTAContent(description = description) })
@@ -183,8 +183,8 @@ private fun Callouts() {
             }
         }
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
         ) {
             GrapesTooltipBox("GrapesSuccessCallout") {
                 GrapesSuccessCallout(title, { CalloutWithCTAContent(description = description) })
@@ -197,8 +197,8 @@ private fun Callouts() {
             }
         }
         FlowRow(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
         ) {
             GrapesTooltipBox("GrapesNeutralCallout") {
                 GrapesNeutralCallout(title, { CalloutWithCTAContent(description = description) })

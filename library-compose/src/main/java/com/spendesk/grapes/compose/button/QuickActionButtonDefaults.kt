@@ -42,5 +42,5 @@ object QuickActionButtonDefaults {
     val buttonPadding: PaddingValues
         @Composable
         @ReadOnlyComposable
-        get() = PaddingValues(GrapesTheme.dimensions.spacing3)
+        get() = PaddingValues(GrapesTheme.dimensions.unit16)
 }

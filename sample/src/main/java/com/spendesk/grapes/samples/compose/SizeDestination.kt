@@ -37,9 +37,9 @@ fun SizeDestination() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scroll)
-            .padding(vertical = GrapesTheme.dimensions.spacing3),
+            .padding(vertical = GrapesTheme.dimensions.unit16),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing5),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit32),
     ) {
         SizePlaceholder(GrapesTheme.dimensions.sizing1, "sizing1")
         SizePlaceholder(GrapesTheme.dimensions.sizing2, "sizing2")
@@ -59,7 +59,7 @@ fun SizeDestination() {
 
 @Composable
 private fun SizePlaceholder(size: Dp, text: String) {
-    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8), horizontalAlignment = Alignment.CenterHorizontally) {
         GrapesIconSet.Spendesk(
             modifier = Modifier
                 .size(size)

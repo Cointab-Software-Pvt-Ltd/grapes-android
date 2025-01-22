@@ -191,7 +191,7 @@ private fun createStripeGauge(
 @Preview(showBackground = true)
 private fun GaugePreview() {
     GrapesTheme {
-        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)) {
+        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
             GrapesGauge(
                 modifier = Modifier.padding(16.dp),
                 backgroundColor = GrapesTheme.colors.neutralLightest,

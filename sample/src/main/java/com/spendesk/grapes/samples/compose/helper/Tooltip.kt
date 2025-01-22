@@ -38,9 +38,9 @@ fun TooltipContent(text: String, modifier: Modifier = Modifier) {
         modifier = modifier
             .clip(GrapesTheme.shapes.radius4)
             .background(color = GrapesTheme.colors.backgroundSecondaryInfoDefault)
-            .padding(GrapesTheme.dimensions.spacing2),
+            .padding(GrapesTheme.dimensions.unit8),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
     ) {
         GrapesIconSet.CircleInformation(tint = GrapesTheme.colors.contentInfoDefault)
         Text(

@@ -38,44 +38,44 @@ fun ButtonsDestination() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scroll)
-            .padding(GrapesTheme.dimensions.spacing3),
+            .padding(GrapesTheme.dimensions.unit16),
     ) {
         Text("Button primary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonPrimary()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Button secondary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonSecondary()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Button tertiary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonTertiary()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Button alert", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonAlert()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Button warning", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonWarning()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Button SSO", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         MarketingButtons()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
     }
 }
 
 @Composable
 private fun ButtonPrimary() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.primary, state = GrapesButtonState.Enabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.primary, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
@@ -95,9 +95,9 @@ private fun ButtonPrimary() {
             contentColor = GrapesTheme.colors.contentComplementary,
             onClick = {}
         ) {
-            Row(modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing3)) {
+            Row(modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16)) {
                 GrapesIconSet.CirclePlus()
-                Spacer(modifier = Modifier.width(GrapesTheme.dimensions.spacing2))
+                Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit8))
                 Text("Label", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentComplementary)
             }
         }
@@ -107,7 +107,7 @@ private fun ButtonPrimary() {
 @Composable
 private fun ButtonSecondary() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.secondary, state = GrapesButtonState.Enabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.secondary, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
@@ -120,7 +120,7 @@ private fun ButtonSecondary() {
 @Composable
 private fun ButtonTertiary() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.tertiary, state = GrapesButtonState.Enabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.tertiary, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
@@ -131,7 +131,7 @@ private fun ButtonTertiary() {
 @Composable
 private fun ButtonAlert() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.alert, state = GrapesButtonState.Enabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.alert, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
@@ -142,7 +142,7 @@ private fun ButtonAlert() {
 @Composable
 private fun ButtonWarning() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.warning, state = GrapesButtonState.Enabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.warning, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
@@ -153,7 +153,7 @@ private fun ButtonWarning() {
 @Composable
 private fun MarketingButtons() {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
         GrapesGoogleButton("Sign in with Google", onClick = {})
         GrapesMicrosoftButton("Sign in with Microsoft", onClick = {})

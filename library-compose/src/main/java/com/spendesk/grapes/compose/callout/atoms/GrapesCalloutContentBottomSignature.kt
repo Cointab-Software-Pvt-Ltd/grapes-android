@@ -31,7 +31,7 @@ fun GrapesCalloutContentBottomSignature(
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(

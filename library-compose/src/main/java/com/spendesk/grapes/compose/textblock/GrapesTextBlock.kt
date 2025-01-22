@@ -55,8 +55,8 @@ private fun TextBlockPreview() {
                         GrapesRetryTextBlockAction(retryLabel = "Retry", onRetryClicked = { /*TODO*/ })
                     },
                     modifier = Modifier
-                        .padding(horizontal = GrapesTheme.dimensions.spacing3)
-                        .padding(top = GrapesTheme.dimensions.spacing3)
+                        .padding(horizontal = GrapesTheme.dimensions.unit16)
+                        .padding(top = GrapesTheme.dimensions.unit16)
                 )
             },
             content = {
@@ -64,7 +64,7 @@ private fun TextBlockPreview() {
                     text = "Content",
                     style = GrapesTheme.typography.bodyS,
                     color = GrapesTheme.colors.neutralDark,
-                    modifier = Modifier.padding(GrapesTheme.dimensions.spacing3)
+                    modifier = Modifier.padding(GrapesTheme.dimensions.unit16)
                 )
             },
         )

@@ -68,10 +68,10 @@ fun WindowEditText(
         text = text,
         onTextChange = onTextChange,
         modifier = modifier
-            .padding(GrapesTheme.dimensions.spacing3)
+            .padding(GrapesTheme.dimensions.unit16)
             .fillMaxWidth()
             .background(GrapesTheme.colors.primaryDark, RoundedCornerShape(12.dp))
-            .padding(vertical = GrapesTheme.dimensions.spacing3),
+            .padding(vertical = GrapesTheme.dimensions.unit16),
         windowLength = windowLength,
         maxLength = maxLength,
         cursorColor = cursorColor,

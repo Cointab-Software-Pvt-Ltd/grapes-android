@@ -33,7 +33,7 @@ internal fun InformativeComponent(
                     listOf(GrapesTheme.colors.primaryNormal, GrapesTheme.colors.primaryDark)
                 )
             )
-            .padding(GrapesTheme.dimensions.spacing3)
+            .padding(GrapesTheme.dimensions.unit16)
             .windowInsetsPadding(contentWindowInsets),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

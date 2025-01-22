@@ -185,7 +185,7 @@ private fun LazyGridScope.colorGroup(group: ColorShowcase.ColorGroup, depth: Int
             modifier = Modifier
                 .fillMaxWidth()
                 .background(titleBackground)
-                .padding(GrapesTheme.dimensions.spacing2)
+                .padding(GrapesTheme.dimensions.unit8)
         ) {
             Text(
                 text = groupName,
@@ -207,10 +207,10 @@ private fun LazyGridScope.colorItem(colorItem: ColorShowcase.ColorItem, modifier
     item {
         Box(
             modifier = Modifier
-                .padding(GrapesTheme.dimensions.spacing2)
+                .padding(GrapesTheme.dimensions.unit8)
                 .size(64.dp)
                 .background(colorItem.color, shape = GrapesTheme.shapes.shape3)
-                .padding(GrapesTheme.dimensions.spacing2),
+                .padding(GrapesTheme.dimensions.unit8),
             contentAlignment = Alignment.Center
         ) {
             Text(

@@ -28,7 +28,7 @@ fun GrapesTextBlockInformativeLabel(
 ) {
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Spacer(
@@ -50,8 +50,8 @@ fun GrapesTextBlockInformativeLabel(
 private fun TextBlockOptionalTitlePreview() {
     GrapesTheme {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesTextBlockInformativeLabel("Missing", color = GrapesTheme.colors.warningNormal)
             GrapesTextBlockInformativeLabel("Optional", color = GrapesTheme.colors.neutralNormal)

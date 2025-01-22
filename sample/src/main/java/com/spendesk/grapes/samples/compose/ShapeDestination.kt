@@ -32,10 +32,10 @@ fun ShapeDestination() {
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scroll),
-        verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
         ShapePlaceholder(
             text = "radius0",
             shape = GrapesTheme.shapes.radius0,

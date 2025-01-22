@@ -58,7 +58,7 @@ fun SpacingDestination() {
 
 @Composable
 private fun SpacingPlaceholder(spacing: Dp, text: String) {
-    Column(verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(GrapesTheme.dimensions.spacing1), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(GrapesTheme.dimensions.unit4), horizontalAlignment = Alignment.CenterHorizontally) {
         Row(modifier = Modifier.height(50.dp)) {
             LeftItem()
             SpacingItem(spacing)

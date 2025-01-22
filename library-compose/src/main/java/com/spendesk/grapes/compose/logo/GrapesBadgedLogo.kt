@@ -42,7 +42,7 @@ fun GrapesBadgedLogo(
             logo()
         }
         if (badgeAlignment in supportedAlignments) {
-            val highlightIconOffset = GrapesTheme.dimensions.spacing2
+            val highlightIconOffset = GrapesTheme.dimensions.unit8
             val yOffset = when (badgeAlignment) {
                 Alignment.TopEnd -> -highlightIconOffset
                 Alignment.BottomEnd -> highlightIconOffset
@@ -72,7 +72,7 @@ fun GrapesCardBadgedLogo(
             logo()
         }
         if (badgeAlignment in supportedAlignments) {
-            val highlightIconOffset = GrapesTheme.dimensions.spacing1
+            val highlightIconOffset = GrapesTheme.dimensions.unit4
             val yOffset = when (badgeAlignment) {
                 Alignment.TopEnd -> -highlightIconOffset
                 Alignment.BottomEnd -> highlightIconOffset

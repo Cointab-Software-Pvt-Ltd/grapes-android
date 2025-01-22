@@ -22,10 +22,10 @@ fun GrapesLoadingTextBlockAction(loadingLabel: String, modifier: Modifier = Modi
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
         Text(text = loadingLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.neutralNormal)
-        LinearProgressIndicator(modifier = Modifier.size(GrapesTheme.dimensions.spacing3))
+        LinearProgressIndicator(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
     }
 }
 
@@ -34,8 +34,8 @@ fun GrapesLoadingTextBlockAction(loadingLabel: String, modifier: Modifier = Modi
 fun LoadingTextBlockActionPreview() {
     GrapesTheme {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesLoadingTextBlockAction("Saving")
         }

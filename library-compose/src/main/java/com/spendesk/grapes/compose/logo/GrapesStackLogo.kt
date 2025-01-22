@@ -85,11 +85,11 @@ fun GrapesStackSurface(
 @Composable
 private fun GrapesStackLogoPreview() {
     GrapesTheme {
-        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)) {
+        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
             GrapesStackSurface(text = "2")
             GrapesStackSurface(text = "24")
             GrapesStackSurface(text = "24343")
-            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.spacing3))
+            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
             GrapesStackLogo(numberOfStack = 5)
             GrapesStackLogo(numberOfStack = 1)
         }

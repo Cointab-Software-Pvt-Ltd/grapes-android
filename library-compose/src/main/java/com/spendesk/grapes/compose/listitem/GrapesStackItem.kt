@@ -105,7 +105,7 @@ fun GrapesStackItem(
 @Preview(showBackground = true)
 private fun GrapesStackItemPreview() {
     GrapesTheme {
-        Column(modifier = Modifier.background(Color.White), verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)) {
+        Column(modifier = Modifier.background(Color.White), verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizing2))
             GrapesStackItem(
                 title = "Awaiting Reimbursement",

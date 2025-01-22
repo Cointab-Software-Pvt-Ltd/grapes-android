@@ -38,11 +38,11 @@ fun GrapesCoreCallout(
         border = BorderStroke(GrapesCalloutDefaults.borderThickness, colors.borderStrokeColor().value),
     ) {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         ) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+                horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
             ) {
                 ProvideTextStyle(
                     GrapesTheme.typography.titleS.copy(color = colors.titleColor().value),

@@ -72,7 +72,7 @@ private fun ColoredTextBlockAction(
         color = color,
         modifier = modifier
             .clickable(enabled = isEnabled, onClick = onActionClicked, role = Role.Button)
-            .padding(GrapesTheme.dimensions.spacing1)
+            .padding(GrapesTheme.dimensions.unit4)
     )
 }
 
@@ -81,8 +81,8 @@ private fun ColoredTextBlockAction(
 fun PrimaryTextBlockActionPreview() {
     GrapesTheme {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesPrimaryTextBlockAction("Test", onActionClicked = {})
             GrapesPrimaryTextBlockAction("Test disabled", isEnabled = false, onActionClicked = {})

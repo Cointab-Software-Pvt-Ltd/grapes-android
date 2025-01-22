@@ -44,14 +44,14 @@ fun GrapesSwitchField(
         modifier = modifier
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16)
         ) {
             Text(
                 text = title,
                 style = GrapesTheme.typography.bodyM,
-                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.spacing3)
+                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit16)
             )
             Spacer(Modifier.weight(1f))
             GrapesSwitch(

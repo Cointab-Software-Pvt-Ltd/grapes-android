@@ -52,7 +52,7 @@ object GrapesSwitchDefaults {
 private fun PreviewGrapesSwitch() {
     GrapesTheme {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         ) {
             GrapesSwitch(checked = true, onCheckedChange = {})
             GrapesSwitch(checked = false, onCheckedChange = {})

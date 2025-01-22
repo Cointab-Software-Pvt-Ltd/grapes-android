@@ -157,8 +157,8 @@ private fun GrapesBadgesPreview(@PreviewParameter(GrapesBadgeProvider::class) ty
         var count2 by remember { mutableIntStateOf(95) }
 
         Row(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing2),
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit8),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             when (type) {

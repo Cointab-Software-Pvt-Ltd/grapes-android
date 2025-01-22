@@ -163,7 +163,7 @@ fun GrapesTag(
         Row(
             modifier = Modifier
                 .padding(PaddingValues(horizontal = 8.dp, vertical = 4.dp)),
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
         ) {
             if (icon != null) {
                 Box(

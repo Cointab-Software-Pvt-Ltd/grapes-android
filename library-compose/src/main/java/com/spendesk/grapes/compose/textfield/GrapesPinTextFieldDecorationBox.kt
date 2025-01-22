@@ -45,7 +45,7 @@ fun GrapesPinTextFieldDecorationBox(
             }
 
             PinText(
-                modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing1),
+                modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit4),
                 char = char,
                 isError = isError,
                 isEnabled = isEnabled,
