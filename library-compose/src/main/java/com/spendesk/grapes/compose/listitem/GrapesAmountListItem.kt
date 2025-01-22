@@ -119,7 +119,7 @@ fun GrapesAmountListItem(
             Row {
                 Text(
                     text = subtitle,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                     color = colors.subtitleColor,
                     modifier = Modifier.weight(1f),
                     overflow = TextOverflow.Ellipsis,
@@ -127,7 +127,7 @@ fun GrapesAmountListItem(
                 )
                 Text(
                     text = description,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                     color = colors.descriptionColor,
                     maxLines = 1,
                 )

@@ -70,7 +70,7 @@ fun GrapesMessage(
                 Spacer(modifier = Modifier.size(GrapesTheme.dimensions.spacing1))
                 Text(
                     text = description,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                     color = GrapesTheme.colors.structureComplementary,
                     textAlign = descriptionTextAlign,
                     modifier = Modifier.fillMaxWidth(),
