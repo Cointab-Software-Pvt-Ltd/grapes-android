@@ -29,13 +29,53 @@ data class GrapesDimensions(
 
     val elevationNormal: Dp = 8.dp,
 
+    @Deprecated("Pre UI refresh design token, without equivalent")
     val sizing1: Dp = 12.dp,
+
+    @Deprecated(
+        "Pre UI refresh design token",
+        replaceWith = ReplaceWith(
+            expression = "sizeIconM",
+            imports = ["com.spendesk.grapes.compose.theme.GrapesDimensions"]
+        )
+    )
     val sizing2: Dp = 16.dp,
+
+    @Deprecated(
+        "Pre UI refresh design token",
+        replaceWith = ReplaceWith(
+            expression = "sizeIconL",
+            imports = ["com.spendesk.grapes.compose.theme.GrapesDimensions"]
+        )
+    )
     val sizing3: Dp = 20.dp,
+
+    @Deprecated(
+        "Pre UI refresh design token",
+        replaceWith = ReplaceWith(
+            expression = "sizeIconXl",
+            imports = ["com.spendesk.grapes.compose.theme.GrapesDimensions"]
+        )
+    )
     val sizing4: Dp = 24.dp,
+
+    @Deprecated("Pre UI refresh design token, without equivalent")
     val sizing5: Dp = 32.dp,
+
+    @Deprecated("Pre UI refresh design token, without equivalent")
     val sizing6: Dp = 40.dp,
+
+    @Deprecated("Pre UI refresh design token, without equivalent")
     val sizing7: Dp = 56.dp,
+    // endregion pre-UI refresh
+
+    // region UI refresh
+    val sizeIconS: Dp = 14.dp,
+    val sizeIconM: Dp = 16.dp,
+    val sizeIconL: Dp = 20.dp,
+    val sizeIconXl: Dp = 24.dp
+
+    // endregion UI refresh
 )
 
 internal val LocalGrapesDimensions = staticCompositionLocalOf { GrapesDimensions() }
