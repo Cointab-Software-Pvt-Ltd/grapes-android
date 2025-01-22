@@ -45,7 +45,7 @@ class ComposeFragment : Fragment() {
                     ) {
                         GrapesButton(text = "First Compose component test")
                         Spacer(Modifier.height(GrapesTheme.dimensions.spacing3))
-                        Text(text = "Shapes", style = GrapesTheme.typography.titleL)
+                        Text(text = "Shapes", style = GrapesTheme.typography.titleM)
                         Box(
                             modifier = Modifier
                                 .height(100.dp)

@@ -103,7 +103,7 @@ fun GrapesAmountListItem(
             Row {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleL,
+                    style = GrapesTheme.typography.titleM,
                     color = colors.titleColor,
                     modifier = Modifier.weight(1f),
                     overflow = TextOverflow.Ellipsis,
@@ -111,7 +111,7 @@ fun GrapesAmountListItem(
                 )
                 Text(
                     text = amount,
-                    style = GrapesTheme.typography.titleL,
+                    style = GrapesTheme.typography.titleM,
                     color = colors.amountColor,
                     maxLines = 1,
                 )
@@ -213,7 +213,7 @@ private fun PreviewGrapesAmountListItemAnnotatedAmount() {
                 ) {
                     append("100€ • ")
                 }
-                withStyle(GrapesTheme.typography.titleL.toSpanStyle()) {
+                withStyle(GrapesTheme.typography.titleM.toSpanStyle()) {
                     append("100€")
                 }
             },

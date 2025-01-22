@@ -45,7 +45,7 @@ fun GrapesTextOptionGroupItem(
     ) {
         Text(
             text = text,
-            style = GrapesTheme.typography.titleL,
+            style = GrapesTheme.typography.titleM,
             maxLines = 1,
             modifier = Modifier.padding(
                 vertical = GrapesTheme.dimensions.spacing3,
