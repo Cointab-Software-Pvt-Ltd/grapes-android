@@ -4,7 +4,7 @@ androidGradlePlugin = "8.7.2"
 
 # [ANDROID]
 androidCompileSdk = "34"
-androidMinSdk = "23"
+androidMinSdk = "26"
 androidTargetSdk = "34"
 
 # [PLUGINS]
