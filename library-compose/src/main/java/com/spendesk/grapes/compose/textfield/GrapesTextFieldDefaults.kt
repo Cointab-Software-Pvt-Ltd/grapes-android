@@ -45,7 +45,7 @@ object GrapesTextFieldDefaults {
     val TextFieldShape: Shape
         @Composable
         @ReadOnlyComposable
-        get() = GrapesTheme.shapes.shape2
+        get() = GrapesTheme.shapes.radius8
 
 
     fun textFieldPadding(

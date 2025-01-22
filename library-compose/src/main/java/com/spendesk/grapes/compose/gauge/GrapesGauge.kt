@@ -67,7 +67,7 @@ fun GrapesGauge(
     backgroundColor: Color,
     gauges: List<Gauge>,
     modifier: Modifier = Modifier,
-    clipShape: Shape = GrapesTheme.shapes.shape1,
+    clipShape: Shape = GrapesTheme.shapes.radius4,
 ) {
     GrapesGaugeContainer(
         modifier = modifier,

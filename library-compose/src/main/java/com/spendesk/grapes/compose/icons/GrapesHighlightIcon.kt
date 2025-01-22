@@ -148,9 +148,9 @@ private fun GrapesHighlightIcon(
         contentAlignment = Alignment.Center,
         modifier = modifier
             .size(size.getContainerSize())
-            .clip(GrapesTheme.shapes.shape4)
+            .clip(GrapesTheme.shapes.radius1000)
             .background(containerColor)
-            .border(1.dp, borderColor, GrapesTheme.shapes.shape4)
+            .border(1.dp, borderColor, GrapesTheme.shapes.radius1000)
     ) {
         Icon(
             painter = painter,

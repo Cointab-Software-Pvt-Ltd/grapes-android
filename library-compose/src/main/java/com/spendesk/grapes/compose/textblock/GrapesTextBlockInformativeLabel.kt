@@ -34,7 +34,7 @@ fun GrapesTextBlockInformativeLabel(
         Spacer(
             modifier = Modifier
                 .size(4.dp)
-                .background(color, shape = GrapesTheme.shapes.shape4)
+                .background(color, shape = GrapesTheme.shapes.radius1000)
         )
         Text(
             text = label,

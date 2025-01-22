@@ -209,7 +209,7 @@ private fun LazyGridScope.colorItem(colorItem: ColorShowcase.ColorItem, modifier
             modifier = Modifier
                 .padding(GrapesTheme.dimensions.unit8)
                 .size(64.dp)
-                .background(colorItem.color, shape = GrapesTheme.shapes.shape3)
+                .background(colorItem.color, shape = GrapesTheme.shapes.radius12)
                 .padding(GrapesTheme.dimensions.unit8),
             contentAlignment = Alignment.Center
         ) {

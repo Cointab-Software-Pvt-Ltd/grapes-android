@@ -36,7 +36,7 @@ fun GrapesTextOptionGroup(
     onItemSelected: (GrapesTextOptionGroupUiModel) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val shape = GrapesTheme.shapes.shape2
+    val shape = GrapesTheme.shapes.radius8
     Box(
         modifier = modifier
             .width(IntrinsicSize.Max)

@@ -65,7 +65,7 @@ private fun SizePlaceholder(size: Dp, text: String) {
                 .size(size)
                 .dashedBorder(
                     brush = SolidColor(GrapesTheme.colors.backgroundPrimaryInfoDefault),
-                    shape = GrapesTheme.shapes.shape0,
+                    shape = GrapesTheme.shapes.radius0,
                     strokeWidth = 2.dp,
                     dashLength = 4.dp,
                     gapLength = 4.dp

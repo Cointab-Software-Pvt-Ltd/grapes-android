@@ -32,9 +32,9 @@ fun GrapesBucketContainer(
 ) {
     Box(
         modifier = modifier
-            .background(GrapesTheme.colors.mainWhite, GrapesTheme.shapes.shape2)
-            .border(GrapesBucketBorderWidth, GrapesTheme.colors.neutralLight, GrapesTheme.shapes.shape2)
-            .clip(GrapesTheme.shapes.shape2)
+            .background(GrapesTheme.colors.mainWhite, GrapesTheme.shapes.radius8)
+            .border(GrapesBucketBorderWidth, GrapesTheme.colors.neutralLight, GrapesTheme.shapes.radius8)
+            .clip(GrapesTheme.shapes.radius8)
     ) {
         content()
     }

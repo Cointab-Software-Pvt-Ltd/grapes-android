@@ -26,7 +26,7 @@ fun GrapesSection(
 ) {
     Card(
         modifier = modifier,
-        shape = GrapesTheme.shapes.shape3,
+        shape = GrapesTheme.shapes.radius12,
         colors = CardDefaults.cardColors(
             containerColor = GrapesTheme.colors.structureSurface,
             contentColor = GrapesTheme.colors.neutralDarker,

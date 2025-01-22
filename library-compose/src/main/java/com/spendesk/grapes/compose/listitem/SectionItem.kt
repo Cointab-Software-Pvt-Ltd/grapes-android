@@ -63,7 +63,7 @@ private fun Preview() {
             icon = { modifier ->
                 Box(
                     modifier
-                        .clip(GrapesTheme.shapes.shape2)
+                        .clip(GrapesTheme.shapes.radius8)
                         .background(Color.Blue)
                 )
             },

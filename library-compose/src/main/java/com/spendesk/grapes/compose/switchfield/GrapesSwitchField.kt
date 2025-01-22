@@ -29,7 +29,7 @@ fun GrapesSwitchField(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    shape: Shape = GrapesTheme.shapes.shape2,
+    shape: Shape = GrapesTheme.shapes.radius8,
     color: Color = GrapesTheme.colors.structureSurface,
     contentColor: Color = GrapesTheme.colors.neutralDarker,
     border: BorderStroke = BorderStroke(1.dp, GrapesTheme.colors.neutralLighter),

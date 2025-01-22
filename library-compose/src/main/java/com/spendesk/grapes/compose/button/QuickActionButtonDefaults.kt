@@ -37,7 +37,7 @@ object QuickActionButtonDefaults {
     val buttonShape: Shape
         @Composable
         @ReadOnlyComposable
-        get() = GrapesTheme.shapes.shape2
+        get() = GrapesTheme.shapes.radius8
 
     val buttonPadding: PaddingValues
         @Composable

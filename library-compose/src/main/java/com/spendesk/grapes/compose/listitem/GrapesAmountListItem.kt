@@ -83,7 +83,7 @@ fun GrapesAmountListItem(
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .clip(GrapesTheme.shapes.shape2)
+            .clip(GrapesTheme.shapes.radius8)
             .then(clickableModifier)
             .padding(
                 vertical = GrapesTheme.dimensions.unit16,

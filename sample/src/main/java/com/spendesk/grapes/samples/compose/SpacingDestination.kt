@@ -78,7 +78,7 @@ private fun LeftItem() {
             .fillMaxHeight()
             .width(100.dp)
             .background(Brush.horizontalGradient(listOf(GrapesTheme.colors.backgroundSecondaryInfoDefault.copy(alpha = 0f), GrapesTheme.colors.backgroundSecondaryInfoDefault)))
-            .border(1.dp, Brush.horizontalGradient(listOf(GrapesTheme.colors.borderInfoDefault.copy(alpha = 0f), GrapesTheme.colors.borderInfoDefault)), GrapesTheme.shapes.shape0)
+            .border(1.dp, Brush.horizontalGradient(listOf(GrapesTheme.colors.borderInfoDefault.copy(alpha = 0f), GrapesTheme.colors.borderInfoDefault)), GrapesTheme.shapes.radius0)
     )
 }
 
@@ -89,7 +89,7 @@ private fun RightItem() {
             .fillMaxHeight()
             .width(100.dp)
             .background(Brush.horizontalGradient(listOf(GrapesTheme.colors.backgroundSecondaryInfoDefault, GrapesTheme.colors.backgroundSecondaryInfoDefault.copy(alpha = 0f))))
-            .border(1.dp, Brush.horizontalGradient(listOf(GrapesTheme.colors.borderInfoDefault, GrapesTheme.colors.borderInfoDefault.copy(alpha = 0f))), GrapesTheme.shapes.shape0)
+            .border(1.dp, Brush.horizontalGradient(listOf(GrapesTheme.colors.borderInfoDefault, GrapesTheme.colors.borderInfoDefault.copy(alpha = 0f))), GrapesTheme.shapes.radius0)
     )
 }
 

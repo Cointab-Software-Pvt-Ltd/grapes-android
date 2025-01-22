@@ -32,7 +32,7 @@ fun GrapesCoreCallout(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = GrapesTheme.shapes.shape2,
+        shape = GrapesTheme.shapes.radius8,
         color = colors.containerColor().value,
         contentColor = colors.contentColor().value,
         border = BorderStroke(GrapesCalloutDefaults.borderThickness, colors.borderStrokeColor().value),

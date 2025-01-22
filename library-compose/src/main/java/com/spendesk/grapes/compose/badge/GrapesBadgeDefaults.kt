@@ -41,7 +41,7 @@ object GrapesBadgeDefaults {
     val HorizontalPadding = 4.dp
 
     @Composable
-    fun backgroundShape() = GrapesTheme.shapes.shape4
+    fun backgroundShape() = GrapesTheme.shapes.radius1000
 
     @Composable
     fun textTypography(textColor: Color) = GrapesTheme.typography.titleS.copy(color = textColor)
