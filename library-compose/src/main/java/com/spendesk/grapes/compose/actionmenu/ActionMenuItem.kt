@@ -28,8 +28,6 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
  * @author : RomainGF
  * @since : 09/10/2023
  **/
-private val iconMaxSize = 16.dp
-private val verticalInnerPadding = 20.dp
 private const val ACTION_TEXT_MAX_LINES = 2
 
 /**
@@ -53,18 +51,18 @@ fun ActionMenuItem(
         onClick = onClick,
         enabled = enabled,
         colors = ButtonDefaults.buttonColors(
-            containerColor = GrapesTheme.colors.neutralLightest,
-            contentColor = GrapesTheme.colors.primaryNormal,
-            disabledContainerColor = GrapesTheme.colors.neutralLightest,
-            disabledContentColor = GrapesTheme.colors.neutralNormal,
+            containerColor = GrapesTheme.colors.backgroundSecondaryDefault,
+            contentColor = GrapesTheme.colors.contentSelected,
+            disabledContainerColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary,
         ),
         contentPadding = PaddingValues(
-            start = GrapesTheme.dimensions.spacing4,
-            end = GrapesTheme.dimensions.spacing3,
-            top = verticalInnerPadding,
-            bottom = verticalInnerPadding,
+            start = GrapesTheme.dimensions.unit24,
+            end = GrapesTheme.dimensions.unit16,
+            top = GrapesTheme.dimensions.unit16,
+            bottom = GrapesTheme.dimensions.unit16,
         ),
-        shape = GrapesTheme.shapes.shape2,
+        shape = GrapesTheme.shapes.radius12,
         modifier = modifier,
     ) {
         Row(
@@ -74,7 +72,7 @@ fun ActionMenuItem(
                 enabled = enabled,
                 icon = icon,
             )
-            Spacer(Modifier.width(GrapesTheme.dimensions.spacing4))
+            Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
             Text(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
@@ -83,9 +81,9 @@ fun ActionMenuItem(
                 modifier = Modifier.weight(1f),
             )
             if (enabled) {
-                Spacer(Modifier.width(GrapesTheme.dimensions.spacing3))
+                Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
                 GrapesIconSet.ChevronRight(
-                    tint = GrapesTheme.colors.primaryLighter
+                    tint = GrapesTheme.colors.contentPrimary
                 )
             }
         }
@@ -99,14 +97,14 @@ private fun ActionMenuItemIcon(
 ) {
     Box(
         modifier = Modifier.sizeIn(
-            maxWidth = iconMaxSize,
-            maxHeight = iconMaxSize,
+            maxWidth = GrapesTheme.dimensions.sizeIconM,
+            maxHeight = GrapesTheme.dimensions.sizeIconM,
         ),
     ) {
         val iconContentColor = if (enabled) {
-            GrapesTheme.colors.primaryNormal
+            GrapesTheme.colors.contentSelected
         } else {
-            GrapesTheme.colors.neutralNormal
+            GrapesTheme.colors.contentSecondaryBGSecondary
         }
         CompositionLocalProvider(LocalContentColor provides iconContentColor) {
             icon()
