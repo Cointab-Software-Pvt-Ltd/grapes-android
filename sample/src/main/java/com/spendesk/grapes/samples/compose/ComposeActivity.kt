@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -18,6 +19,7 @@ import com.spendesk.grapes.compose.appbar.GrapesTopAppBarBackIcon
 import com.spendesk.grapes.compose.appbar.GrapesTopAppBarIconButton
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import com.spendesk.grapes.samples.compose.navigation.Destinations
+import com.spendesk.grapes.samples.home.HomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -38,16 +40,19 @@ class ComposeActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             GrapesTheme {
+                val localContext = LocalContext.current
                 val navController = rememberNavController()
-                val currentScreen = navController.currentBackStackEntryAsState().value?.destination?.route ?: Destinations.Home.toString()
+                val currentScreen = navController.currentBackStackEntryAsState().value?.destination?.route ?: Destinations.Home::class.qualifiedName ?: ""
+                val homeScreen = Destinations.Home::class.qualifiedName?.split(".")?.last()
                 val sanitizedCurrentScreen = currentScreen.split(".").last()
+
                 Scaffold(
                     topBar = {
                         GrapesTopAppBar(
                             title = sanitizedCurrentScreen,
                             navigationIcon = {
                                 GrapesTopAppBarIconButton(
-                                    icon = { GrapesTopAppBarBackIcon() },
+                                    icon = { if (sanitizedCurrentScreen != homeScreen) GrapesTopAppBarBackIcon() },
                                     onClick = { navController.popBackStack() }
                                 )
                             }
@@ -60,6 +65,9 @@ class ComposeActivity : ComponentActivity() {
                             HomeDestination(
                                 onDestinationClicked = { destination ->
                                     navController.navigate(route = destination)
+                                },
+                                onOpenLegacyClicked = {
+                                    localContext.startActivity(Intent(localContext, HomeActivity::class.java))
                                 }
                             )
                         }

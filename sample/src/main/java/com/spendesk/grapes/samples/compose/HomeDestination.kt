@@ -26,7 +26,8 @@ import com.spendesk.grapes.samples.compose.navigation.Destinations
 
 @Composable
 fun HomeDestination(
-    onDestinationClicked: (Destinations) -> Unit
+    onDestinationClicked: (Destinations) -> Unit,
+    onOpenLegacyClicked: () -> Unit,
 ) {
     LazyVerticalGrid(modifier = Modifier.fillMaxSize(), columns = GridCells.Fixed(2)) {
         item(key = "Design tokens", span = { GridItemSpan(maxLineSpan) }) {
@@ -174,6 +175,17 @@ fun HomeDestination(
                 }
             )
         }
+
+        item(key = "Grapes Legacy", span = { GridItemSpan(maxLineSpan) }) {
+            GridHeader(text = "Grapes Legacy")
+        }
+
+        item(key = "Legacy Sample") {
+            GridItem(
+                text = "Legacy Sample",
+                onClick = onOpenLegacyClicked
+            )
+        }
     }
 }
 
@@ -212,6 +224,6 @@ private fun GridItem(
 @Composable
 fun HomeDestinationPreview() {
     GrapesTheme {
-        HomeDestination({})
+        HomeDestination({}, {})
     }
 }

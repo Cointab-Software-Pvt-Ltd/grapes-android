@@ -10,7 +10,7 @@
         android:theme="@style/Theme.GrapesSamples">
 
         <activity
-            android:name=".home.HomeActivity"
+            android:name=".compose.ComposeActivity"
             android:exported="true"
             android:theme="@style/Theme.GrapesSamples">
 
@@ -21,6 +21,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".compose.ComposeActivity" />
+        <activity android:name=".home.HomeActivity" />
     </application>
 </manifest>

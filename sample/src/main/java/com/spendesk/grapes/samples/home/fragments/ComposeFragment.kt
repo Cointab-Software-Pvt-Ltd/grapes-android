@@ -46,9 +46,7 @@ class ComposeFragment : Fragment() {
                     ) {
                         GrapesButton(
                             text = "First Compose component test",
-                            onClick = {
-                                this@ComposeFragment.context?.let { it.startActivity(ComposeActivity.createIntent(it)) }
-                            }
+                            onClick = {}
                         )
                         Spacer(Modifier.height(GrapesTheme.dimensions.spacing3))
                         Text(text = "Shapes", style = GrapesTheme.typography.titleM)
