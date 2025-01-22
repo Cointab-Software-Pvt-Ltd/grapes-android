@@ -208,7 +208,7 @@ private fun PreviewGrapesAmountListItemAnnotatedAmount() {
             subtitle = "Subtitle",
             amount = buildAnnotatedString {
                 withStyle(
-                    GrapesTheme.typography.bodyL.toSpanStyle()
+                    GrapesTheme.typography.bodyM.toSpanStyle()
                         .copy(color = GrapesTheme.colors.neutralDark)
                 ) {
                     append("100€ • ")
