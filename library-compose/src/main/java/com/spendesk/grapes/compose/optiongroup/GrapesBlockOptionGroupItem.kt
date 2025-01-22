@@ -41,11 +41,11 @@ fun GrapesBlockOptionGroupItem(
         modifier = modifier
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(
-                horizontal = GrapesTheme.dimensions.spacing3,
-                vertical = GrapesTheme.dimensions.spacing4,
+                horizontal = GrapesTheme.dimensions.unit16,
+                vertical = GrapesTheme.dimensions.unit24,
             )
         ) {
             Icon(
@@ -54,7 +54,7 @@ fun GrapesBlockOptionGroupItem(
                 contentDescription = null,
             )
             Column(
-                verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1),
+                verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
             ) {
                 Text(
                     text = model.title,
