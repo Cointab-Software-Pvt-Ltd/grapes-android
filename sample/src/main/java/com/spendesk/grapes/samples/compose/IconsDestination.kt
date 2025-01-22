@@ -23,697 +23,697 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 @Composable
 fun IconsDestination() {
     LazyVerticalGrid(modifier = Modifier.fillMaxSize(), columns = GridCells.Fixed(4)) {
-        item {
+        item(key = "AdjustmentsHorizontal") {
             IconDisplay("AdjustmentsHorizontal") {
                 GrapesIconSet.AdjustmentsHorizontal()
             }
         }
-        item {
+        item(key = "Archive") {
             IconDisplay("Archive") {
                 GrapesIconSet.Archive()
             }
         }
-        item {
+        item(key = "ArrowDown") {
             IconDisplay("ArrowDown") {
                 GrapesIconSet.ArrowDown()
             }
         }
-        item {
+        item(key = "ArrowDownTray") {
             IconDisplay("ArrowDownTray") {
                 GrapesIconSet.ArrowDownTray()
             }
         }
-        item {
+        item(key = "ArrowLeft") {
             IconDisplay("ArrowLeft") {
                 GrapesIconSet.ArrowLeft()
             }
         }
-        item {
+        item(key = "ArrowLeftRight") {
             IconDisplay("ArrowLeftRight") {
                 GrapesIconSet.ArrowLeftRight()
             }
         }
-        item {
+        item(key = "ArrowPath") {
             IconDisplay("ArrowPath") {
                 GrapesIconSet.ArrowPath()
             }
         }
-        item {
+        item(key = "ArrowRight") {
             IconDisplay("ArrowRight") {
                 GrapesIconSet.ArrowRight()
             }
         }
-        item {
+        item(key = "ArrowRightRectangle") {
             IconDisplay("ArrowRightRectangle") {
                 GrapesIconSet.ArrowRightRectangle()
             }
         }
-        item {
+        item(key = "ArrowSplit") {
             IconDisplay("ArrowSplit") {
                 GrapesIconSet.ArrowSplit()
             }
         }
-        item {
+        item(key = "ArrowTopRightSquare") {
             IconDisplay("ArrowTopRightSquare") {
                 GrapesIconSet.ArrowTopRightSquare()
             }
         }
-        item {
+        item(key = "ArrowTurnLeft") {
             IconDisplay("ArrowTurnLeft") {
                 GrapesIconSet.ArrowTurnLeft()
             }
         }
-        item {
+        item(key = "ArrowTurnRight") {
             IconDisplay("ArrowTurnRight") {
                 GrapesIconSet.ArrowTurnRight()
             }
         }
-        item {
+        item(key = "ArrowUp") {
             IconDisplay("ArrowUp") {
                 GrapesIconSet.ArrowUp()
             }
         }
-        item {
+        item(key = "ArrowUturnLeftDown") {
             IconDisplay("ArrowUturnLeftDown") {
                 GrapesIconSet.ArrowUturnLeftDown()
             }
         }
-        item {
+        item(key = "ArrowUturnRightTop") {
             IconDisplay("ArrowUturnRightTop") {
                 GrapesIconSet.ArrowUturnRightTop()
             }
         }
-        item {
+        item(key = "Backspace") {
             IconDisplay("Backspace") {
                 GrapesIconSet.Backspace()
             }
         }
-        item {
+        item(key = "Banknote") {
             IconDisplay("Banknote") {
                 GrapesIconSet.Banknote()
             }
         }
-        item {
+        item(key = "BanknoteStrikeout") {
             IconDisplay("BanknoteStrikeout") {
                 GrapesIconSet.BanknoteStrikeout()
             }
         }
-        item {
+        item(key = "Bars3") {
             IconDisplay("Bars3") {
                 GrapesIconSet.Bars3()
             }
         }
-        item {
+        item(key = "BarsArrowDown") {
             IconDisplay("BarsArrowDown") {
                 GrapesIconSet.BarsArrowDown()
             }
         }
-        item {
+        item(key = "Bed") {
             IconDisplay("Bed") {
                 GrapesIconSet.Bed()
             }
         }
-        item {
+        item(key = "Bell") {
             IconDisplay("Bell") {
                 GrapesIconSet.Bell()
             }
         }
-        item {
+        item(key = "BellDesk") {
             IconDisplay("BellDesk") {
                 GrapesIconSet.BellDesk()
             }
         }
-        item {
+        item(key = "Bike") {
             IconDisplay("Bike") {
                 GrapesIconSet.Bike()
             }
         }
-        item {
+        item(key = "BuildingBank") {
             IconDisplay("BuildingBank") {
                 GrapesIconSet.BuildingBank()
             }
         }
-        item {
+        item(key = "BuildingStorefront") {
             IconDisplay("BuildingStorefront") {
                 GrapesIconSet.BuildingStorefront()
             }
         }
-        item {
+        item(key = "BuildingsOffice") {
             IconDisplay("BuildingsOffice") {
                 GrapesIconSet.BuildingsOffice()
             }
         }
-        item {
+        item(key = "Bus") {
             IconDisplay("Bus") {
                 GrapesIconSet.Bus()
             }
         }
-        item {
+        item(key = "Calculator") {
             IconDisplay("Calculator") {
                 GrapesIconSet.Calculator()
             }
         }
-        item {
+        item(key = "Calendar") {
             IconDisplay("Calendar") {
                 GrapesIconSet.Calendar()
             }
         }
-        item {
+        item(key = "CalendarArrowRight") {
             IconDisplay("CalendarArrowRight") {
                 GrapesIconSet.CalendarArrowRight()
             }
         }
-        item {
+        item(key = "CalendarCheckmark") {
             IconDisplay("CalendarCheckmark") {
                 GrapesIconSet.CalendarCheckmark()
             }
         }
-        item {
+        item(key = "CalendarClock") {
             IconDisplay("CalendarClock") {
                 GrapesIconSet.CalendarClock()
             }
         }
-        item {
+        item(key = "Camera") {
             IconDisplay("Camera") {
                 GrapesIconSet.Camera()
             }
         }
-        item {
+        item(key = "CameraStrikeout") {
             IconDisplay("CameraStrikeout") {
                 GrapesIconSet.CameraStrikeout()
             }
         }
-        item {
+        item(key = "Car") {
             IconDisplay("Car") {
                 GrapesIconSet.Car()
             }
         }
-        item {
+        item(key = "Card") {
             IconDisplay("Card") {
                 GrapesIconSet.Card()
             }
         }
-        item {
+        item(key = "CardArrowDown") {
             IconDisplay("CardArrowDown") {
                 GrapesIconSet.CardArrowDown()
             }
         }
-        item {
+        item(key = "CardArrowUp") {
             IconDisplay("CardArrowUp") {
                 GrapesIconSet.CardArrowUp()
             }
         }
-        item {
+        item(key = "CardLightning") {
             IconDisplay("CardLightning") {
                 GrapesIconSet.CardLightning()
             }
         }
-        item {
+        item(key = "CardLockClose") {
             IconDisplay("CardLockClose") {
                 GrapesIconSet.CardLockClose()
             }
         }
-        item {
+        item(key = "CardLockOpen") {
             IconDisplay("CardLockOpen") {
                 GrapesIconSet.CardLockOpen()
             }
         }
-        item {
+        item(key = "CardRoundedArrows") {
             IconDisplay("CardRoundedArrows") {
                 GrapesIconSet.CardRoundedArrows()
             }
         }
-        item {
+        item(key = "CardStack") {
             IconDisplay("CardStack") {
                 GrapesIconSet.CardStack()
             }
         }
-        item {
+        item(key = "CardStrikeout") {
             IconDisplay("CardStrikeout") {
                 GrapesIconSet.CardStrikeout()
             }
         }
-        item {
+        item(key = "CfoConnect") {
             IconDisplay("CfoConnect") {
                 GrapesIconSet.CfoConnect()
             }
         }
-        item {
+        item(key = "ChartPie") {
             IconDisplay("ChartPie") {
                 GrapesIconSet.ChartPie()
             }
         }
-        item {
+        item(key = "Check") {
             IconDisplay("Check") {
                 GrapesIconSet.Check()
             }
         }
-        item {
+        item(key = "ChevronDouble") {
             IconDisplay("ChevronDouble") {
                 GrapesIconSet.ChevronDouble()
             }
         }
-        item {
+        item(key = "ChevronDoubleRight") {
             IconDisplay("ChevronDoubleRight") {
                 GrapesIconSet.ChevronDoubleRight()
             }
         }
-        item {
+        item(key = "ChevronDown") {
             IconDisplay("ChevronDown") {
                 GrapesIconSet.ChevronDown()
             }
         }
-        item {
+        item(key = "ChevronLeft") {
             IconDisplay("ChevronLeft") {
                 GrapesIconSet.ChevronLeft()
             }
         }
-        item {
+        item(key = "ChevronRight") {
             IconDisplay("ChevronRight") {
                 GrapesIconSet.ChevronRight()
             }
         }
-        item {
+        item(key = "ChevronUp") {
             IconDisplay("ChevronUp") {
                 GrapesIconSet.ChevronUp()
             }
         }
-        item {
+        item(key = "CircleActive") {
             IconDisplay("CircleActive") {
                 GrapesIconSet.CircleActive()
             }
         }
-        item {
+        item(key = "CircleCheck") {
             IconDisplay("CircleCheck") {
                 GrapesIconSet.CircleCheck()
             }
         }
-        item {
+        item(key = "CircleCross") {
             IconDisplay("CircleCross") {
                 GrapesIconSet.CircleCross()
             }
         }
-        item {
+        item(key = "CircleInformation") {
             IconDisplay("CircleInformation") {
                 GrapesIconSet.CircleInformation()
             }
         }
-        item {
+        item(key = "CircleMinus") {
             IconDisplay("CircleMinus") {
                 GrapesIconSet.CircleMinus()
             }
         }
-        item {
+        item(key = "CirclePause") {
             IconDisplay("CirclePause") {
                 GrapesIconSet.CirclePause()
             }
         }
-        item {
+        item(key = "CirclePlay") {
             IconDisplay("CirclePlay") {
                 GrapesIconSet.CirclePlay()
             }
         }
-        item {
+        item(key = "CirclePlus") {
             IconDisplay("CirclePlus") {
                 GrapesIconSet.CirclePlus()
             }
         }
-        item {
+        item(key = "CircleQuestionFilled") {
             IconDisplay("CircleQuestionFilled") {
                 GrapesIconSet.CircleQuestionFilled()
             }
         }
-        item {
+        item(key = "CircleQuestionOutline") {
             IconDisplay("CircleQuestionOutline") {
                 GrapesIconSet.CircleQuestionOutline()
             }
         }
-        item {
+        item(key = "Clipboard") {
             IconDisplay("Clipboard") {
                 GrapesIconSet.Clipboard()
             }
         }
-        item {
+        item(key = "ClipboardPin") {
             IconDisplay("ClipboardPin") {
                 GrapesIconSet.ClipboardPin()
             }
         }
-        item {
+        item(key = "ClockFilled") {
             IconDisplay("ClockFilled") {
                 GrapesIconSet.ClockFilled()
             }
         }
-        item {
+        item(key = "ClockOutline") {
             IconDisplay("ClockOutline") {
                 GrapesIconSet.ClockOutline()
             }
         }
-        item {
+        item(key = "CodeBracket") {
             IconDisplay("CodeBracket") {
                 GrapesIconSet.CodeBracket()
             }
         }
-        item {
+        item(key = "Crop") {
             IconDisplay("Crop") {
                 GrapesIconSet.Crop()
             }
         }
-        item {
+        item(key = "CrossSmall") {
             IconDisplay("CrossSmall") {
                 GrapesIconSet.CrossSmall()
             }
         }
-        item {
+        item(key = "Cube") {
             IconDisplay("Cube") {
                 GrapesIconSet.Cube()
             }
         }
-        item {
+        item(key = "DollarCircleArrow") {
             IconDisplay("DollarCircleArrow") {
                 GrapesIconSet.DollarCircleArrow()
             }
         }
-        item {
+        item(key = "EllipsisHorizontal") {
             IconDisplay("EllipsisHorizontal") {
                 GrapesIconSet.EllipsisHorizontal()
             }
         }
-        item {
+        item(key = "EllipsisVertical") {
             IconDisplay("EllipsisVertical") {
                 GrapesIconSet.EllipsisVertical()
             }
         }
-        item {
+        item(key = "Envelope") {
             IconDisplay("Envelope") {
                 GrapesIconSet.Envelope()
             }
         }
-        item {
+        item(key = "EnvelopeOpen") {
             IconDisplay("EnvelopeOpen") {
                 GrapesIconSet.EnvelopeOpen()
             }
         }
-        item {
+        item(key = "Eye") {
             IconDisplay("Eye") {
                 GrapesIconSet.Eye()
             }
         }
-        item {
+        item(key = "EyeStrikeout") {
             IconDisplay("EyeStrikeout") {
                 GrapesIconSet.EyeStrikeout()
             }
         }
-        item {
+        item(key = "Facebook") {
             IconDisplay("Facebook") {
                 GrapesIconSet.Facebook()
             }
         }
-        item {
+        item(key = "Flag") {
             IconDisplay("Flag") {
                 GrapesIconSet.Flag()
             }
         }
-        item {
+        item(key = "FlagCheckered") {
             IconDisplay("FlagCheckered") {
                 GrapesIconSet.FlagCheckered()
             }
         }
-        item {
+        item(key = "Gas") {
             IconDisplay("Gas") {
                 GrapesIconSet.Gas()
             }
         }
-        item {
+        item(key = "Gear") {
             IconDisplay("Gear") {
                 GrapesIconSet.Gear()
             }
         }
-        item {
+        item(key = "HexagoneCross") {
             IconDisplay("HexagoneCross") {
                 GrapesIconSet.HexagoneCross()
             }
         }
-        item {
+        item(key = "House") {
             IconDisplay("House") {
                 GrapesIconSet.House()
             }
         }
-        item {
+        item(key = "Inbox") {
             IconDisplay("Inbox") {
                 GrapesIconSet.Inbox()
             }
         }
-        item {
+        item(key = "InboxStack") {
             IconDisplay("InboxStack") {
                 GrapesIconSet.InboxStack()
             }
         }
-        item {
+        item(key = "Instagram") {
             IconDisplay("Instagram") {
                 GrapesIconSet.Instagram()
             }
         }
-        item {
+        item(key = "Invoice") {
             IconDisplay("Invoice") {
                 GrapesIconSet.Invoice()
             }
         }
-        item {
+        item(key = "Key") {
             IconDisplay("Key") {
                 GrapesIconSet.Key()
             }
         }
-        item {
+        item(key = "LeftMenu") {
             IconDisplay("LeftMenu") {
                 GrapesIconSet.LeftMenu()
             }
         }
-        item {
+        item(key = "Lightning") {
             IconDisplay("Lightning") {
                 GrapesIconSet.Lightning()
             }
         }
-        item {
+        item(key = "Link") {
             IconDisplay("Link") {
                 GrapesIconSet.Link()
             }
         }
-        item {
+        item(key = "Linkedin") {
             IconDisplay("Linkedin") {
                 GrapesIconSet.Linkedin()
             }
         }
-        item {
+        item(key = "LockClose") {
             IconDisplay("LockClose") {
                 GrapesIconSet.LockClose()
             }
         }
-        item {
+        item(key = "LockOpen") {
             IconDisplay("LockOpen") {
                 GrapesIconSet.LockOpen()
             }
         }
-        item {
+        item(key = "MagicWand") {
             IconDisplay("MagicWand") {
                 GrapesIconSet.MagicWand()
             }
         }
-        item {
+        item(key = "MagnifyingGlass") {
             IconDisplay("MagnifyingGlass") {
                 GrapesIconSet.MagnifyingGlass()
             }
         }
-        item {
+        item(key = "MapPin") {
             IconDisplay("MapPin") {
                 GrapesIconSet.MapPin()
             }
         }
-        item {
+        item(key = "Megaphone") {
             IconDisplay("Megaphone") {
                 GrapesIconSet.Megaphone()
             }
         }
-        item {
+        item(key = "Minus") {
             IconDisplay("Minus") {
                 GrapesIconSet.Minus()
             }
         }
-        item {
+        item(key = "MinusSmall") {
             IconDisplay("MinusSmall") {
                 GrapesIconSet.MinusSmall()
             }
         }
-        item {
+        item(key = "Motorcycle") {
             IconDisplay("Motorcycle") {
                 GrapesIconSet.Motorcycle()
             }
         }
-        item {
+        item(key = "MouseSquareStack") {
             IconDisplay("MouseSquareStack") {
                 GrapesIconSet.MouseSquareStack()
             }
         }
-        item {
+        item(key = "Pdf") {
             IconDisplay("Pdf") {
                 GrapesIconSet.Pdf()
             }
         }
-        item {
+        item(key = "Pen") {
             IconDisplay("Pen") {
                 GrapesIconSet.Pen()
             }
         }
-        item {
+        item(key = "Person") {
             IconDisplay("Person") {
                 GrapesIconSet.Person()
             }
         }
-        item {
+        item(key = "PersonGroup") {
             IconDisplay("PersonGroup") {
                 GrapesIconSet.PersonGroup()
             }
         }
-        item {
+        item(key = "Phone") {
             IconDisplay("Phone") {
                 GrapesIconSet.Phone()
             }
         }
-        item {
+        item(key = "Photo") {
             IconDisplay("Photo") {
                 GrapesIconSet.Photo()
             }
         }
-        item {
+        item(key = "PiggyBank") {
             IconDisplay("PiggyBank") {
                 GrapesIconSet.PiggyBank()
             }
         }
-        item {
+        item(key = "Pizza") {
             IconDisplay("Pizza") {
                 GrapesIconSet.Pizza()
             }
         }
-        item {
+        item(key = "Plane") {
             IconDisplay("Plane") {
                 GrapesIconSet.Plane()
             }
         }
-        item {
+        item(key = "Plug") {
             IconDisplay("Plug") {
                 GrapesIconSet.Plug()
             }
         }
-        item {
+        item(key = "Plus") {
             IconDisplay("Plus") {
                 GrapesIconSet.Plus()
             }
         }
-        item {
+        item(key = "Puzzle") {
             IconDisplay("Puzzle") {
                 GrapesIconSet.Puzzle()
             }
         }
-        item {
+        item(key = "Receipt") {
             IconDisplay("Receipt") {
                 GrapesIconSet.Receipt()
             }
         }
-        item {
+        item(key = "ReceiptChecked") {
             IconDisplay("ReceiptChecked") {
                 GrapesIconSet.ReceiptChecked()
             }
         }
-        item {
+        item(key = "ReceiptCross") {
             IconDisplay("ReceiptCross") {
                 GrapesIconSet.ReceiptCross()
             }
         }
-        item {
+        item(key = "ReceiptQuestion") {
             IconDisplay("ReceiptQuestion") {
                 GrapesIconSet.ReceiptQuestion()
             }
         }
-        item {
+        item(key = "Robot") {
             IconDisplay("Robot") {
                 GrapesIconSet.Robot()
             }
         }
-        item {
+        item(key = "ShieldStar") {
             IconDisplay("ShieldStar") {
                 GrapesIconSet.ShieldStar()
             }
         }
-        item {
+        item(key = "ShoppingCart") {
             IconDisplay("ShoppingCart") {
                 GrapesIconSet.ShoppingCart()
             }
         }
-        item {
+        item(key = "Slack") {
             IconDisplay("Slack") {
                 GrapesIconSet.Slack()
             }
         }
-        item {
+        item(key = "Sparkle") {
             IconDisplay("Sparkle") {
                 GrapesIconSet.Sparkle()
             }
         }
-        item {
+        item(key = "Spendesk") {
             IconDisplay("Spendesk") {
                 GrapesIconSet.Spendesk()
             }
         }
-        item {
+        item(key = "Square4") {
             IconDisplay("Square4") {
                 GrapesIconSet.Square4()
             }
         }
-        item {
+        item(key = "SquareStack") {
             IconDisplay("SquareStack") {
                 GrapesIconSet.SquareStack()
             }
         }
-        item {
+        item(key = "StarFilled") {
             IconDisplay("StarFilled") {
                 GrapesIconSet.StarFilled()
             }
         }
-        item {
+        item(key = "StarOutline") {
             IconDisplay("StarOutline") {
                 GrapesIconSet.StarOutline()
             }
         }
-        item {
+        item(key = "SteeringWheel") {
             IconDisplay("SteeringWheel") {
                 GrapesIconSet.SteeringWheel()
             }
         }
-        item {
+        item(key = "Taxi") {
             IconDisplay("Taxi") {
                 GrapesIconSet.Taxi()
             }
         }
-        item {
+        item(key = "Trash") {
             IconDisplay("Trash") {
                 GrapesIconSet.Trash()
             }
         }
-        item {
+        item(key = "TriangleWarning") {
             IconDisplay("TriangleWarning") {
                 GrapesIconSet.TriangleWarning()
             }
         }
-        item {
+        item(key = "Wallet") {
             IconDisplay("Wallet") {
                 GrapesIconSet.Wallet()
             }
         }
-        item {
+        item(key = "X") {
             IconDisplay("X") {
                 GrapesIconSet.X()
             }
         }
-        item {
+        item(key = "Youtube") {
             IconDisplay("Youtube") {
                 GrapesIconSet.Youtube()
             }

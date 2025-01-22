@@ -29,10 +29,10 @@ fun HomeDestination(
     onDestinationClicked: (Destinations) -> Unit
 ) {
     LazyVerticalGrid(modifier = Modifier.fillMaxSize(), columns = GridCells.Fixed(2)) {
-        item(span = { GridItemSpan(maxLineSpan) }) {
+        item(key = "Design tokens", span = { GridItemSpan(maxLineSpan) }) {
             GridHeader(text = "Design tokens")
         }
-        item {
+        item(key = "Colors") {
             GridItem(
                 text = "Colors",
                 onClick = {
@@ -40,7 +40,7 @@ fun HomeDestination(
                 }
             )
         }
-        item {
+        item(key = "Icons") {
             GridItem(
                 text = "Icons",
                 onClick = {
@@ -48,7 +48,7 @@ fun HomeDestination(
                 }
             )
         }
-        item {
+        item(key = "Shape") {
             GridItem(
                 text = "Shape",
                 onClick = {
@@ -56,7 +56,7 @@ fun HomeDestination(
                 }
             )
         }
-        item {
+        item(key = "Spacing") {
             GridItem(
                 text = "Spacing",
                 onClick = {
@@ -64,7 +64,7 @@ fun HomeDestination(
                 }
             )
         }
-        item {
+        item(key = "Size") {
             GridItem(
                 text = "Size",
                 onClick = {
@@ -72,7 +72,7 @@ fun HomeDestination(
                 }
             )
         }
-        item {
+        item(key = "Typography") {
             GridItem(
                 text = "Typography",
                 onClick = {
@@ -81,11 +81,11 @@ fun HomeDestination(
             )
         }
 
-        item(span = { GridItemSpan(maxLineSpan) }) {
+        item(key = "Components", span = { GridItemSpan(maxLineSpan) }) {
             GridHeader(text = "Components")
         }
 
-        item {
+        item(key = "Buttons") {
             GridItem(
                 text = "Buttons",
                 onClick = {
@@ -94,7 +94,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Cards") {
             GridItem(
                 text = "Cards",
                 onClick = {
@@ -103,7 +103,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Controls") {
             GridItem(
                 text = "Controls",
                 onClick = {
@@ -112,7 +112,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Gauge") {
             GridItem(
                 text = "Gauge",
                 onClick = {
@@ -121,7 +121,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Header") {
             GridItem(
                 text = "Header",
                 onClick = {
@@ -130,7 +130,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Inputs") {
             GridItem(
                 text = "Inputs",
                 onClick = {
@@ -139,7 +139,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Lists") {
             GridItem(
                 text = "Lists",
                 onClick = {
@@ -148,7 +148,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Messaging") {
             GridItem(
                 text = "Messaging",
                 onClick = {
@@ -157,7 +157,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Modal") {
             GridItem(
                 text = "Modal",
                 onClick = {
@@ -166,7 +166,7 @@ fun HomeDestination(
             )
         }
 
-        item {
+        item(key = "Navigation") {
             GridItem(
                 text = "Navigation",
                 onClick = {
