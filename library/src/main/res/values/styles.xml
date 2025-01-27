@@ -222,7 +222,7 @@
     </style>
 
     <style name="ToasterText">
-        <item name="android:textColor">@color/backgroundComplementary</item>
+        <item name="android:textColor">@color/contentComplementary</item>
         <item name="android:textSize">@dimen/toasterText</item>
         <item name="android:fontFamily">@font/gt_america_bold</item>
     </style>
