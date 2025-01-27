@@ -13,7 +13,12 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.widget.TextViewCompat
 import com.google.android.material.card.MaterialCardView
 import com.spendesk.grapes.databinding.ButtonBinding
-import com.spendesk.grapes.extensions.*
+import com.spendesk.grapes.extensions.colorCompat
+import com.spendesk.grapes.extensions.colorStateListCompat
+import com.spendesk.grapes.extensions.gone
+import com.spendesk.grapes.extensions.setDrawableLeft
+import com.spendesk.grapes.extensions.setRippleDrawable
+import com.spendesk.grapes.extensions.visible
 
 /**
  * Implementation of the Grapes Button which handles three different styles: Primary Button, Secondary Button and Alert Button.
@@ -167,7 +172,9 @@ class Button : MaterialCardView {
                     colorBackgroundPressed = R.color.buttonPrimaryBackgroundPressed,
                     colorBackgroundDisabled = R.color.buttonPrimaryBackgroundDisabled,
                     contentTextColorStateList = R.color.btn_primary_text,
-                    radius = R.dimen.buttonRadius
+                    radius = R.dimen.buttonRadius,
+                    stroke = R.dimen.buttonPrimaryBackgroundStroke,
+                    strokeColor = R.color.buttonPrimaryBorder
                 )
 
             Style.SECONDARY ->

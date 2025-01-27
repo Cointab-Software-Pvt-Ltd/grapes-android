@@ -44,6 +44,7 @@
     <dimen name="buttonDrawablePadding">16dp</dimen>
     <dimen name="buttonDrawableStartSize">16dp</dimen>
     <dimen name="buttonRadius">8dp</dimen>
+    <dimen name="buttonPrimaryBackgroundStroke">1dp</dimen>
     <dimen name="buttonSecondaryBackgroundStroke">1dp</dimen>
     <dimen name="buttonAlertBackgroundStroke">1dp</dimen>
     <dimen name="buttonCircularProgressBarMarginHorz">@dimen/smallMargin</dimen>
