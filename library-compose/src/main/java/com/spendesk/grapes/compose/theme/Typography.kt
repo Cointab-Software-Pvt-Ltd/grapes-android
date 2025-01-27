@@ -87,7 +87,7 @@ data class GrapesTypography(
             fontSize = 40.sp
         ),
         titleS: TextStyle = TextStyle(
-            fontWeight = FontWeight.Medium,
+            fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
         ),
         titleM: TextStyle = TextStyle(
