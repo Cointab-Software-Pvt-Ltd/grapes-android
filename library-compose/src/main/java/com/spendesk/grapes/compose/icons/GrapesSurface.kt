@@ -26,7 +26,7 @@ fun GrapesSurface(
     val (backgroundColor: Color, borderColor: Color) = when (configuration) {
         GrapesConfigurationStatus.SUCCESS -> Pair(GrapesTheme.colors.successLightest, GrapesTheme.colors.successLighter)
         GrapesConfigurationStatus.INFORMATION -> Pair(GrapesTheme.colors.infoLightest, GrapesTheme.colors.infoLighter)
-        GrapesConfigurationStatus.NEUTRAL -> Pair(GrapesTheme.colors.neutralLightest, GrapesTheme.colors.neutralLight)
+        GrapesConfigurationStatus.NEUTRAL -> Pair(GrapesTheme.colors.neutralLightest, GrapesTheme.colors.neutralLighter)
         GrapesConfigurationStatus.ALERT -> Pair(GrapesTheme.colors.alertLightest, GrapesTheme.colors.alertLighter)
         GrapesConfigurationStatus.WARNING -> Pair(GrapesTheme.colors.warningLightest, GrapesTheme.colors.warningLighter)
         GrapesConfigurationStatus.BLOCKED -> Pair(GrapesTheme.colors.primaryLightest, GrapesTheme.colors.primaryLighter)
@@ -50,6 +50,7 @@ fun grapesSurfacePreview() {
         Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)) {
             GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.SUCCESS, content = {})
             GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.INFORMATION, content = {})
+            GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.NEUTRAL, content = {})
             GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.ALERT, content = {})
             GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.WARNING, content = {})
             GrapesSurface(modifier = Modifier.size(50.dp), configuration = GrapesConfigurationStatus.BLOCKED, content = {})
