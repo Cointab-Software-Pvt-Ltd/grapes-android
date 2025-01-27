@@ -14,5 +14,5 @@ object WindowEditTextDefaults {
     internal val ForbiddenCharRegex = "\\D".toRegex()
 
     @Composable
-    fun defaultTextStyle(): TextStyle = GrapesTheme.typography.bodyM.copy(letterSpacing = 3.sp, color = Color.White, fontSize = 18.sp, fontFeatureSettings = "tnum")
+    fun defaultTextStyle(): TextStyle = GrapesTheme.typography.bodyS.copy(letterSpacing = 3.sp, color = Color.White, fontSize = 18.sp, fontFeatureSettings = "tnum")
 }

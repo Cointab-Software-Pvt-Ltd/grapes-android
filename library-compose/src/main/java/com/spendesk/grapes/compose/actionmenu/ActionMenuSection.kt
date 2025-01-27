@@ -12,16 +12,14 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -93,14 +91,14 @@ private fun ActionMenuSectionHeader(
         ) {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleL,
+                style = GrapesTheme.typography.titleM,
                 color = GrapesTheme.colors.structureComplementary,
                 maxLines = TITLE_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
             )
             Text(
                 text = description,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyS,
                 color = GrapesTheme.colors.neutralDark,
                 maxLines = DESCRIPTION_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
@@ -118,18 +116,18 @@ private fun ActionMenuSectionPreview() {
             title = "Make a purchase request",
             description = "Order a virtual card to directly use company money online",
             illustration = {
-                Icon(painterResource(R.drawable.ic_neutral), null, Modifier.fillMaxSize())
+                GrapesIconSet.ReceiptQuestion(modifier = Modifier.fillMaxSize())
             },
             modifier = Modifier.fillMaxWidth(),
         ) {
             ActionMenuItem(
                 text = "Ask for a virtual card",
-                icon = { Icon(painterResource(R.drawable.ic_neutral), null) },
+                icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
             )
             ActionMenuItem(
                 text = "Ask for a virtual card",
-                icon = { Icon(painterResource(R.drawable.ic_neutral), null) },
+                icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
             )
         }

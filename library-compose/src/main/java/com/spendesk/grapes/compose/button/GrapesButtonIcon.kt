@@ -105,27 +105,27 @@ private fun ButtonIconPrimaryPreview() {
         ) {
             GrapesButtonIcon(
                 text = "Button with Icon",
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
             GrapesButtonIcon(
                 text = "Button with Icon And a very long text to check if it's ok",
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
             GrapesButtonIcon(
                 text = "Text with Icon Disabled",
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
             GrapesButtonIcon(
                 text = "Should not be visible",
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -149,7 +149,7 @@ private fun ButtonIconPrimarySmallPreview() {
             GrapesButtonIcon(
                 text = "Button with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.primarySmall,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -157,7 +157,7 @@ private fun ButtonIconPrimarySmallPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.primarySmall,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -165,7 +165,7 @@ private fun ButtonIconPrimarySmallPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.primarySmall,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -191,7 +191,7 @@ private fun ButtonIconSecondaryPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.secondary,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -199,7 +199,7 @@ private fun ButtonIconSecondaryPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.secondary,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -207,7 +207,7 @@ private fun ButtonIconSecondaryPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.secondary,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -232,7 +232,7 @@ private fun ButtonIconSecondarySmallPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.secondarySmall,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -240,7 +240,7 @@ private fun ButtonIconSecondarySmallPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.secondarySmall,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -248,7 +248,7 @@ private fun ButtonIconSecondarySmallPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.secondarySmall,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -275,7 +275,7 @@ private fun ButtonIconTextPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.text,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -283,7 +283,7 @@ private fun ButtonIconTextPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.text,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -291,7 +291,7 @@ private fun ButtonIconTextPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.text,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -316,7 +316,7 @@ private fun ButtonIconTextSmallPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.textSmall,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -324,7 +324,7 @@ private fun ButtonIconTextSmallPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.textSmall,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -332,7 +332,7 @@ private fun ButtonIconTextSmallPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.textSmall,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -358,7 +358,7 @@ private fun ButtonIconWarningPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.warning,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -366,7 +366,7 @@ private fun ButtonIconWarningPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.warning,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -374,7 +374,7 @@ private fun ButtonIconWarningPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.warning,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -400,7 +400,7 @@ private fun ButtonIconAlertPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.alert,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -408,7 +408,7 @@ private fun ButtonIconAlertPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.alert,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -416,7 +416,7 @@ private fun ButtonIconAlertPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.alert,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -440,7 +440,7 @@ private fun ButtonIconLinkPrimaryPreview() {
             GrapesButtonIcon(
                 text = "Text with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.linkPrimary,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -448,7 +448,7 @@ private fun ButtonIconLinkPrimaryPreview() {
                 text = "Text with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.linkPrimary,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -456,7 +456,7 @@ private fun ButtonIconLinkPrimaryPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.linkPrimary,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }
@@ -480,7 +480,7 @@ private fun ButtonIconLinkSecondaryPreview() {
             GrapesButtonIcon(
                 text = "Button with Icon",
                 buttonStyle = GrapesButtonStyleDefaults.linkSecondary,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description"
             )
 
@@ -488,7 +488,7 @@ private fun ButtonIconLinkSecondaryPreview() {
                 text = "Button with Icon Disabled",
                 buttonStyle = GrapesButtonStyleDefaults.linkSecondary,
                 state = GrapesButtonState.Disabled,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
 
@@ -496,7 +496,7 @@ private fun ButtonIconLinkSecondaryPreview() {
                 text = "Should not be visible",
                 buttonStyle = GrapesButtonStyleDefaults.linkSecondary,
                 state = GrapesButtonState.ShowCircularIndicator,
-                leadingIcon = R.drawable.ic_success,
+                leadingIcon = R.drawable.ic_grapes_icon_circle_check,
                 iconDescription = "Description",
             )
         }

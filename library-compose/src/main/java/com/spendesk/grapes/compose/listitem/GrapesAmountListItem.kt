@@ -103,7 +103,7 @@ fun GrapesAmountListItem(
             Row {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleL,
+                    style = GrapesTheme.typography.titleM,
                     color = colors.titleColor,
                     modifier = Modifier.weight(1f),
                     overflow = TextOverflow.Ellipsis,
@@ -111,7 +111,7 @@ fun GrapesAmountListItem(
                 )
                 Text(
                     text = amount,
-                    style = GrapesTheme.typography.titleL,
+                    style = GrapesTheme.typography.titleM,
                     color = colors.amountColor,
                     maxLines = 1,
                 )
@@ -119,7 +119,7 @@ fun GrapesAmountListItem(
             Row {
                 Text(
                     text = subtitle,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                     color = colors.subtitleColor,
                     modifier = Modifier.weight(1f),
                     overflow = TextOverflow.Ellipsis,
@@ -127,7 +127,7 @@ fun GrapesAmountListItem(
                 )
                 Text(
                     text = description,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                     color = colors.descriptionColor,
                     maxLines = 1,
                 )
@@ -208,12 +208,12 @@ private fun PreviewGrapesAmountListItemAnnotatedAmount() {
             subtitle = "Subtitle",
             amount = buildAnnotatedString {
                 withStyle(
-                    GrapesTheme.typography.bodyL.toSpanStyle()
+                    GrapesTheme.typography.bodyM.toSpanStyle()
                         .copy(color = GrapesTheme.colors.neutralDark)
                 ) {
                     append("100€ • ")
                 }
-                withStyle(GrapesTheme.typography.titleL.toSpanStyle()) {
+                withStyle(GrapesTheme.typography.titleM.toSpanStyle()) {
                     append("100€")
                 }
             },

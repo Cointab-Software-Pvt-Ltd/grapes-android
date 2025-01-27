@@ -68,7 +68,7 @@ private fun ColoredTextBlockAction(
 ) {
     Text(
         text = label,
-        style = GrapesTheme.typography.titleM,
+        style = GrapesTheme.typography.titleS,
         color = color,
         modifier = modifier
             .clickable(enabled = isEnabled, onClick = onActionClicked, role = Role.Button)

@@ -12,26 +12,22 @@ import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
  * @author : RomainGF
  * @since : 09/10/2023
  **/
-private val iconMaxSize = 16.dp
-private val verticalInnerPadding = 20.dp
 private const val ACTION_TEXT_MAX_LINES = 2
 
 /**
@@ -55,18 +51,18 @@ fun ActionMenuItem(
         onClick = onClick,
         enabled = enabled,
         colors = ButtonDefaults.buttonColors(
-            containerColor = GrapesTheme.colors.neutralLightest,
-            contentColor = GrapesTheme.colors.primaryNormal,
-            disabledContainerColor = GrapesTheme.colors.neutralLightest,
-            disabledContentColor = GrapesTheme.colors.neutralNormal,
+            containerColor = GrapesTheme.colors.backgroundSecondaryDefault,
+            contentColor = GrapesTheme.colors.contentSelected,
+            disabledContainerColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary,
         ),
         contentPadding = PaddingValues(
-            start = GrapesTheme.dimensions.spacing4,
-            end = GrapesTheme.dimensions.spacing3,
-            top = verticalInnerPadding,
-            bottom = verticalInnerPadding,
+            start = GrapesTheme.dimensions.unit24,
+            end = GrapesTheme.dimensions.unit16,
+            top = GrapesTheme.dimensions.unit16,
+            bottom = GrapesTheme.dimensions.unit16,
         ),
-        shape = GrapesTheme.shapes.shape2,
+        shape = GrapesTheme.shapes.radius12,
         modifier = modifier,
     ) {
         Row(
@@ -76,20 +72,18 @@ fun ActionMenuItem(
                 enabled = enabled,
                 icon = icon,
             )
-            Spacer(Modifier.width(GrapesTheme.dimensions.spacing4))
+            Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
             Text(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
-                style = GrapesTheme.typography.titleM,
+                style = GrapesTheme.typography.titleS,
                 modifier = Modifier.weight(1f),
             )
             if (enabled) {
-                Spacer(Modifier.width(GrapesTheme.dimensions.spacing3))
-                Icon(
-                    painter = painterResource(R.drawable.ic_chevron_right),
-                    contentDescription = null,
-                    tint = GrapesTheme.colors.primaryLighter,
+                Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
+                GrapesIconSet.ChevronRight(
+                    tint = GrapesTheme.colors.contentPrimary
                 )
             }
         }
@@ -103,14 +97,14 @@ private fun ActionMenuItemIcon(
 ) {
     Box(
         modifier = Modifier.sizeIn(
-            maxWidth = iconMaxSize,
-            maxHeight = iconMaxSize,
+            maxWidth = GrapesTheme.dimensions.sizeIconM,
+            maxHeight = GrapesTheme.dimensions.sizeIconM,
         ),
     ) {
         val iconContentColor = if (enabled) {
-            GrapesTheme.colors.primaryNormal
+            GrapesTheme.colors.contentSelected
         } else {
-            GrapesTheme.colors.neutralNormal
+            GrapesTheme.colors.contentSecondaryBGSecondary
         }
         CompositionLocalProvider(LocalContentColor provides iconContentColor) {
             icon()
@@ -124,11 +118,7 @@ private fun ActionMenuItemIcon(
 private fun ActionMenuItemPreview() {
     GrapesTheme {
         val icon = @Composable {
-            Icon(
-                painter = painterResource(R.drawable.ic_neutral),
-                contentDescription = null,
-                modifier = Modifier.size(48.dp)
-            )
+            GrapesIconSet.ReceiptQuestion(modifier = Modifier.size(48.dp))
         }
         val text = "Action"
         val longText = "Action with a very long title which will not fit in one line. Event two lines will not be enough"

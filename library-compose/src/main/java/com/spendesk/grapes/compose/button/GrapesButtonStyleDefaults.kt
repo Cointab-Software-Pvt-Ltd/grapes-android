@@ -26,17 +26,18 @@ object GrapesButtonStyleDefaults {
         @ReadOnlyComposable
         get() =
             GrapesButtonStyle(
-                textStyle = GrapesTheme.typography.titleL,
+                textStyle = GrapesTheme.typography.titleM,
                 minSize = Size(
                     width = GrapesButtonDefaults.MinWidth.value,
                     height = GrapesButtonDefaults.MinHeight.value
                 ),
                 iconSize = GrapesButtonDefaults.iconSize,
-                shape = GrapesTheme.shapes.shape2,
-                rippleColor = GrapesTheme.colors.primaryDark,
+                shape = GrapesTheme.shapes.radius8,
+                rippleColor = GrapesTheme.colors.backgroundPrimaryBrandPressed,
                 colors = ButtonColorDefaults.primary,
                 contentPadding = GrapesButtonDefaults.PaddingValues,
                 borderStroke = null,
+                disabledBorderStroke = GrapesButtonDefaults.BorderStroke.primaryDisabled,
                 isFillMaxWidthWithContent = true,
             )
 
@@ -44,17 +45,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleM,
+            textStyle = GrapesTheme.typography.titleS,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
             ),
             iconSize = GrapesButtonDefaults.iconSizeSmall,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.primaryDark,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryBrandPressed,
             colors = ButtonColorDefaults.primary,
             contentPadding = GrapesButtonDefaults.PaddingValuesSmall,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = false,
         )
 
@@ -62,17 +64,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
             ),
             iconSize = GrapesButtonDefaults.iconSize,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.neutralLight,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryPressed,
             colors = ButtonColorDefaults.secondary,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = GrapesButtonDefaults.BorderStroke.secondary,
+            disabledBorderStroke = GrapesButtonDefaults.BorderStroke.secondary,
             isFillMaxWidthWithContent = true,
         )
 
@@ -80,17 +83,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleM,
+            textStyle = GrapesTheme.typography.titleS,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
             ),
             iconSize = GrapesButtonDefaults.iconSizeSmall,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.neutralLight,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryPressed,
             colors = ButtonColorDefaults.secondary,
             contentPadding = GrapesButtonDefaults.PaddingValuesSmall,
             borderStroke = GrapesButtonDefaults.BorderStroke.secondary,
+            disabledBorderStroke = GrapesButtonDefaults.BorderStroke.secondary,
             isFillMaxWidthWithContent = false,
         )
 
@@ -98,17 +102,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
             ),
             iconSize = GrapesButtonDefaults.iconSize,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.primaryLighter,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundSecondaryBrandPressed,
             colors = ButtonColorDefaults.tertiary,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -116,7 +121,7 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
@@ -127,6 +132,7 @@ object GrapesButtonStyleDefaults {
             colors = ButtonColorDefaults.text,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = false,
         )
 
@@ -134,7 +140,7 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleM,
+            textStyle = GrapesTheme.typography.titleS,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
@@ -145,6 +151,7 @@ object GrapesButtonStyleDefaults {
             colors = ButtonColorDefaults.text,
             contentPadding = GrapesButtonDefaults.PaddingValuesSmall,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = false,
         )
 
@@ -152,17 +159,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
             ),
             iconSize = GrapesButtonDefaults.iconSize,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.alertDark,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryAlertPressed,
             colors = ButtonColorDefaults.alert,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -170,7 +178,7 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
@@ -181,6 +189,7 @@ object GrapesButtonStyleDefaults {
             colors = ButtonColorDefaults.alertOutlined,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = GrapesButtonDefaults.BorderStroke.alert,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -188,17 +197,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidth.value,
                 height = GrapesButtonDefaults.MinHeight.value
             ),
             iconSize = GrapesButtonDefaults.iconSize,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.warningDark,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryWarningPressed,
             colors = ButtonColorDefaults.warning,
             contentPadding = GrapesButtonDefaults.PaddingValues,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -206,7 +216,7 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
@@ -217,6 +227,7 @@ object GrapesButtonStyleDefaults {
             colors = ButtonColorDefaults.linkPrimary,
             contentPadding = GrapesButtonDefaults.PaddingValuesSmall,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = false,
         )
 
@@ -224,7 +235,7 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
@@ -235,6 +246,7 @@ object GrapesButtonStyleDefaults {
             colors = ButtonColorDefaults.linkSecondary,
             contentPadding = GrapesButtonDefaults.PaddingValuesSmall,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = false,
         )
 
@@ -242,17 +254,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
             ),
             iconSize = 40.dp,
-            shape = GrapesTheme.shapes.shape2,
+            shape = GrapesTheme.shapes.radius8,
             rippleColor = GrapesTheme.colors.neutralLightest,
             colors = ButtonColorDefaults.google,
             contentPadding = GrapesButtonDefaults.PaddingValuesBrand,
             borderStroke = null,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -260,17 +273,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
             ),
             iconSize = 40.dp,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.neutralLightest,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryPressed,
             colors = ButtonColorDefaults.secondary,
             contentPadding = GrapesButtonDefaults.PaddingValuesBrand,
             borderStroke = GrapesButtonDefaults.BorderStroke.secondary,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 
@@ -278,17 +292,18 @@ object GrapesButtonStyleDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonStyle(
-            textStyle = GrapesTheme.typography.titleL,
+            textStyle = GrapesTheme.typography.titleM,
             minSize = Size(
                 width = GrapesButtonDefaults.MinWidthSmall.value,
                 height = GrapesButtonDefaults.MinHeightSmall.value
             ),
             iconSize = 40.dp,
-            shape = GrapesTheme.shapes.shape2,
-            rippleColor = GrapesTheme.colors.neutralLightest,
+            shape = GrapesTheme.shapes.radius8,
+            rippleColor = GrapesTheme.colors.backgroundPrimaryPressed,
             colors = ButtonColorDefaults.secondary,
             contentPadding = GrapesButtonDefaults.PaddingValuesBrand,
             borderStroke = GrapesButtonDefaults.BorderStroke.secondary,
+            disabledBorderStroke = null,
             isFillMaxWidthWithContent = true,
         )
 }
@@ -303,5 +318,6 @@ data class GrapesButtonStyle(
     val colors: ButtonColors,
     val contentPadding: PaddingValues,
     val borderStroke: BorderStroke?,
+    val disabledBorderStroke: BorderStroke?,
     internal val isFillMaxWidthWithContent: Boolean,
 )

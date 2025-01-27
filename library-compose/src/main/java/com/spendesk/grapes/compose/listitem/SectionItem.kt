@@ -43,13 +43,13 @@ fun SectionItem(
         Text(
             text = title,
             overflow = TextOverflow.Ellipsis,
-            style = GrapesTheme.typography.bodyL,
+            style = GrapesTheme.typography.bodyM,
             maxLines = 1,
             modifier = Modifier.weight(1f),
         )
         Text(
             text = description,
-            style = GrapesTheme.typography.bodyL,
+            style = GrapesTheme.typography.bodyM,
         )
     }
 }

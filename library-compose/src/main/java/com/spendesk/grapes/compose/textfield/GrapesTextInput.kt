@@ -59,7 +59,7 @@ fun GrapesTextInput(
     helperText: String? = null,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    textStyle: TextStyle = GrapesTheme.typography.bodyL,
+    textStyle: TextStyle = GrapesTheme.typography.bodyM,
     colors: GrapesTextFieldColors = GrapesTextFieldDefaults.textFieldColors(),
     isError: Boolean = false,
     onClick: (() -> Unit)? = null,
@@ -106,7 +106,7 @@ fun GrapesTextInput(
     helperText: String? = null,
     enabled: Boolean = true,
     readOnly: Boolean = false,
-    textStyle: TextStyle = GrapesTheme.typography.bodyL,
+    textStyle: TextStyle = GrapesTheme.typography.bodyM,
     colors: GrapesTextFieldColors = GrapesTextFieldDefaults.textFieldColors(),
     isError: Boolean = false,
     onClick: (() -> Unit)? = null,
@@ -170,11 +170,11 @@ fun PreviewGrapesTextField() {
     var canToggleError by remember { mutableStateOf(isEnabled) }
 
     val leadingIcon = @Composable {
-        GrapesIcon(icon = R.drawable.ic_neutral, Modifier.size(18.dp))
+        GrapesIcon(icon = R.drawable.ic_grapes_icon_receipt_question, Modifier.size(18.dp))
     }
 
     val trailingIcon = @Composable {
-        GrapesIcon(icon = R.drawable.ic_success, Modifier.size(18.dp))
+        GrapesIcon(icon = R.drawable.ic_grapes_icon_circle_check, Modifier.size(18.dp))
     }
 
     val scaffoldState = rememberScaffoldState()
@@ -352,7 +352,7 @@ private fun PreviewRowOptionSwitch(
         Text(
             modifier = Modifier,
             text = label,
-            style = GrapesTheme.typography.bodyL,
+            style = GrapesTheme.typography.bodyM,
         )
         Switch(
             modifier = Modifier,

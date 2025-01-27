@@ -7,42 +7,42 @@
 
     <!-- region Default -->
 
-    <color name="mainPrimaryDark">#421896</color>
-    <color name="mainPrimaryNormal">#5D21D2</color>
+    <color name="mainPrimaryDark">@color/purple_90</color>
+    <color name="mainPrimaryNormal">@color/purple_80</color>
     <color name="mainPrimaryNormalAlpha26">#385D21D2</color>
 
-    <color name="mainPrimaryLight">#7542D9</color>
-    <color name="mainPrimaryLighter">#DBD1F4</color>
-    <color name="mainPrimaryLightest">#F4EFFC</color>
+    <color name="mainPrimaryLight">@color/purple_70</color>
+    <color name="mainPrimaryLighter">@color/purple_30</color>
+    <color name="mainPrimaryLightest">@color/purple_10</color>
 
-    <color name="mainWhite">#FFF</color>
-    <color name="mainBlack">#FF000000</color>
-    <color name="mainComplementary">#17114E</color>
-    <color name="mainNeutralDarkest">#48465E</color>
-    <color name="mainNeutralDarker">#706F81</color>
-    <color name="mainNeutralDark">#B4B3BD</color>
-    <color name="mainNeutralNormal">#CFCFD5</color>
-    <color name="mainNeutralLight">#E6E6E9</color>
-    <color name="mainNeutralLighter">#F5F5F6</color>
-    <color name="mainBackground">#F7F7F8</color>
+    <color name="mainWhite">@color/white</color>
+    <color name="mainBlack">@color/carbon_100</color>
+    <color name="mainComplementary">@color/carbon_100</color>
+    <color name="mainNeutralDarkest">@color/carbon_80</color>
+    <color name="mainNeutralDarker">@color/carbon_80</color>
+    <color name="mainNeutralDark">@color/carbon_70</color>
+    <color name="mainNeutralNormal">@color/carbon_40</color>
+    <color name="mainNeutralLight">@color/carbon_20</color>
+    <color name="mainNeutralLighter">@color/carbon_10</color>
+    <color name="mainBackground">@color/carbon_3</color>
 
-    <color name="mainInfoNormal">#01799D</color>
-    <color name="mainInfoLighter">#B3D7E2</color>
-    <color name="mainInfoLightest">#E8F8FD</color>
+    <color name="mainInfoNormal">@color/blue_70</color>
+    <color name="mainInfoLighter">@color/blue_10</color>
+    <color name="mainInfoLightest">@color/blue_10</color>
 
-    <color name="mainSuccessNormal">#0B831B</color>
-    <color name="mainSuccessLighter">#B6DABB</color>
-    <color name="mainSuccessLightest">#DEFCEE</color>
+    <color name="mainSuccessNormal">@color/emerald_70</color>
+    <color name="mainSuccessLighter">@color/emerald_10</color>
+    <color name="mainSuccessLightest">@color/emerald_10</color>
 
-    <color name="mainWarningDark">#7F4608</color>
-    <color name="mainWarningNormal">#A85D00</color>
-    <color name="mainWarningLighter">#E5CEB3</color>
-    <color name="mainWarningLightest">#FFF3E5</color>
+    <color name="mainWarningDark">@color/apricot_90</color>
+    <color name="mainWarningNormal">@color/apricot_70</color>
+    <color name="mainWarningLighter">@color/apricot_10</color>
+    <color name="mainWarningLightest">@color/apricot_10</color>
 
-    <color name="mainAlertDark">#9E2208</color>
-    <color name="mainAlertNormal">#D12D00</color>
-    <color name="mainAlertLighter">#F1C0B3</color>
-    <color name="mainAlertLightest">#FDEDE8</color>
+    <color name="mainAlertDark">@color/raspberry_90</color>
+    <color name="mainAlertNormal">@color/raspberry_70</color>
+    <color name="mainAlertLighter">@color/raspberry_10</color>
+    <color name="mainAlertLightest">@color/raspberry_10</color>
 
     <!-- Alpha colors -->
     <color name="mainAlertNormalAlpha20">#33D12D00</color>
@@ -63,44 +63,44 @@
     <color name="maskView">@color/mainNeutralDarkest</color>
     <color name="toolbarBackground">@color/mainWhite</color>
     <color name="toolbarBackgroundDark">@color/mainComplementary</color>
-    <color name="placeholdersColor">@color/mainNeutralNormal</color>
+    <color name="placeholdersColor">@color/contentSecondaryBGPrimary</color>
 
     <!-- endregion Default -->
 
     <!-- region BadgeView -->
-    <color name="badgeViewTextColor">@color/mainWhite</color>
+    <color name="badgeViewTextColor">@color/mainWhite</color> white
 
     <!-- region Button -->
-    <color name="buttonPrimaryBackground">@color/mainPrimaryNormal</color>
-    <color name="buttonPrimaryBackgroundPressed">@color/mainPrimaryDark</color>
-    <color name="buttonPrimaryBackgroundDisabled">@color/mainNeutralNormal</color>
-    <color name="buttonPrimaryContent">@color/mainWhite</color>
-    <color name="buttonPrimaryContentPressed">@color/mainWhite</color>
-    <color name="buttonPrimaryContentDisabled">@color/mainWhite</color>
+    <color name="buttonPrimaryBackground">@color/backgroundPrimaryBrandDefault</color>
+    <color name="buttonPrimaryBackgroundPressed">@color/backgroundPrimaryBrandPressed</color>
+    <color name="buttonPrimaryBackgroundDisabled">@color/backgroundDisabled</color>
+    <color name="buttonPrimaryContent">@color/contentComplementary</color>
+    <color name="buttonPrimaryContentPressed">@color/contentComplementary</color>
+    <color name="buttonPrimaryContentDisabled">@color/contentSecondaryBGSecondary</color>
+    <color name="buttonPrimaryBorder">@color/borderDefault</color>
 
-    <color name="buttonSecondaryBackground">@color/mainWhite</color>
-    <color name="buttonSecondaryBackgroundPressed">@color/mainNeutralLighter</color>
-    <color name="buttonSecondaryBackgroundDisabled">@color/mainNeutralNormal</color>
-    <color name="buttonSecondaryBackgroundStroke">@color/mainNeutralLight</color>
-    <color name="buttonSecondaryContent">@color/mainNeutralDarkest</color>
-    <color name="buttonSecondaryContentPressed">@color/mainNeutralDarkest</color>
-    <color name="buttonSecondaryContentDisabled">@color/mainWhite</color>
+    <color name="buttonSecondaryBackground">@color/backgroundPrimary</color>
+    <color name="buttonSecondaryBackgroundPressed">@color/backgroundPressed</color>
+    <color name="buttonSecondaryBackgroundDisabled">@color/backgroundDisabled</color>
+    <color name="buttonSecondaryBackgroundStroke">@color/borderDefault</color>
+    <color name="buttonSecondaryContent">@color/contentBrandDefault</color>
+    <color name="buttonSecondaryContentDisabled">@color/contentSecondaryBGSecondary</color>
 
-    <color name="buttonAlertBackground">@color/mainAlertNormal</color>
-    <color name="buttonAlertBackgroundPressed">@color/mainAlertDark</color>
-    <color name="buttonAlertBackgroundDisabled">@color/mainNeutralNormal</color>
-    <color name="buttonAlertBackgroundStroke">@color/mainNeutralLight</color>
-    <color name="buttonAlertContent">@color/mainWhite</color>
-    <color name="buttonAlertContentPressed">@color/mainWhite</color>
-    <color name="buttonAlertContentDisabled">@color/mainWhite</color>
+    <color name="buttonAlertBackground">@color/backgroundPrimaryAlertDefault</color>
+    <color name="buttonAlertBackgroundPressed">@color/backgroundPrimaryAlertPressed</color>
+    <color name="buttonAlertBackgroundDisabled">@color/backgroundDisabled</color>
+    <color name="buttonAlertBackgroundStroke">@android:color/transparent</color>
+    <color name="buttonAlertContent">@color/contentComplementary</color>
+    <color name="buttonAlertContentPressed">@color/contentComplementary</color>
+    <color name="buttonAlertContentDisabled">@color/contentSecondaryBGSecondary</color>
 
-    <color name="buttonWarningBackground">@color/mainWarningNormal</color>
-    <color name="buttonWarningBackgroundPressed">@color/mainWarningDark</color>
-    <color name="buttonWarningBackgroundDisabled">@color/mainNeutralDark</color>
-    <color name="buttonWarningBackgroundStroke">@color/mainNeutralLight</color>
-    <color name="buttonWarningContent">@color/mainWhite</color>
-    <color name="buttonWarningContentPressed">@color/mainWhite</color>
-    <color name="buttonWarningContentDisabled">@color/mainWhite</color>
+    <color name="buttonWarningBackground">@color/backgroundPrimaryWarningDefault</color>
+    <color name="buttonWarningBackgroundPressed">@color/backgroundPrimaryWarningPressed</color>
+    <color name="buttonWarningBackgroundDisabled">@color/backgroundDisabled</color>
+    <color name="buttonWarningBackgroundStroke">@android:color/transparent</color>
+    <color name="buttonWarningContent">@color/contentComplementary</color>
+    <color name="buttonWarningContentPressed">@color/contentComplementary</color>
+    <color name="buttonWarningContentDisabled">@color/contentSecondaryBGSecondary</color>
     <!-- endregion Button -->
 
     <!-- region Bucket -->
@@ -130,22 +130,22 @@
     <!-- endregion Blocks -->
 
     <!-- region Toaster -->
-    <color name="toasterBackground">@color/mainNeutralDarkest</color>
-    <color name="toasterText">@color/mainWhite</color>
+    <color name="backgroundComplementary">@color/mainNeutralDarkest</color>
+    <color name="contentComplementary">@color/mainWhite</color>
     <!-- endregion Toaster -->
 
     <!-- region NumberKeyboardText -->
 
-    <color name="numberKeyboardTextColorLight">@color/mainWhite</color>
-    <color name="numberKeyboardTextColorDark">@color/mainComplementary</color>
-    <color name="numberKeyboardSeparatorColor">@color/mainNeutralLight</color>
+    <color name="numberKeyboardTextColorLight">@color/mainWhite</color> contentComplementary
+    <color name="numberKeyboardTextColorDark">@color/mainComplementary</color> contentPrimary
+    <color name="numberKeyboardSeparatorColor">@color/mainNeutralLight</color> ???
 
     <!-- endregion NumberKeyboardText -->
 
     <!-- region Action Message Bottom Sheet -->
 
-    <color name="actionMessageBottomSheetTitleTextColor">@color/mainComplementary</color>
-    <color name="actionMessageBottomSheetDescriptionTextColor">@color/mainNeutralDarker</color>
+    <color name="actionMessageBottomSheetTitleTextColor">@color/mainComplementary</color> contentPrimary
+    <color name="actionMessageBottomSheetDescriptionTextColor">@color/mainNeutralDarker</color> contentSecondaryBGPrimary
     <!-- endregion Action Message Bottom Sheet -->
 
     <!-- region UI-Revamp primitive tokens -->
@@ -262,11 +262,12 @@
     <color name="backgroundPrimary">@color/white</color>
     <color name="backgroundSecondary">@color/carbon_3</color>
     <color name="backgroundTertiary">@color/carbon_10</color>
-    <color name="backgroundHover">@color/carbon_3</color>
-    <color name="backgroundPressed">@color/carbon_10</color>
+    <color name="backgroundHover">#CCF8F8F8</color> // carbon_3 with alpha 80%
+    <color name="backgroundPressed">#CCE8E8E8</color> // carbon_10 with alpha 80%
     <color name="backgroundSelected">@color/purple_10</color>
     <color name="backgroundDisabled">@color/carbon_5</color>
     <color name="backgroundReadOnly">@color/carbon_3</color>
+    <color name="backgroundOverlay">#99222263</color> // color/blue_100 with alpha 60%
 
     <color name="backgroundPrimaryBrandDefault">@color/purple_70</color>
     <color name="backgroundPrimaryBrandHover">@color/purple_80</color>
@@ -289,47 +290,54 @@
     <color name="backgroundPrimaryAlertPressed">@color/raspberry_90</color>
 
     <color name="backgroundSecondaryBrandDefault">@color/purple_10</color>
-    <color name="backgroundSecondaryBrandHover">@color/purple_10</color>
-    <color name="backgroundSecondaryBrandPressed">@color/purple_20</color>
+    <color name="backgroundSecondaryBrandHover">#CCF3F0FF</color> // purple_10 with alpha 80%
+    <color name="backgroundSecondaryBrandPressed">#CCE4DDFF</color> // purple_20 with alpha 80%
 
     <color name="backgroundSecondaryInfoDefault">@color/blue_10</color>
-    <color name="backgroundSecondaryInfoHover">@color/blue_10</color>
-    <color name="backgroundSecondaryInfoPressed">@color/blue_20</color>
+    <color name="backgroundSecondaryInfoHover">#CCEFF1FE</color> // blue_10 with alpha 80%
+    <color name="backgroundSecondaryInfoPressed">#CCDAE6FF</color> // blue_20 with alpha 80%
 
     <color name="backgroundSecondarySuccessDefault">@color/emerald_10</color>
-    <color name="backgroundSecondarySuccessHover">@color/emerald_10</color>
-    <color name="backgroundSecondarySuccessPressed">@color/emerald_20</color>
+    <color name="backgroundSecondarySuccessHover">#CCE9F6EC</color> // emerald_10 with alpha 80%
+    <color name="backgroundSecondarySuccessPressed">#CCC7EACE</color> // emerald_20 with alpha 80%
 
     <color name="backgroundSecondaryWarningDefault">@color/apricot_10</color>
-    <color name="backgroundSecondaryWarningHover">@color/apricot_10</color>
-    <color name="backgroundSecondaryWarningPressed">@color/apricot_20</color>
+    <color name="backgroundSecondaryWarningHover">#CCF8EEE9</color> // apricot_10 with alpha 80%
+    <color name="backgroundSecondaryWarningPressed">#CCFACFB8</color> // apricot_20 with alpha 80%
 
     <color name="backgroundSecondaryAlertDefault">@color/raspberry_10</color>
-    <color name="backgroundSecondaryAlertHover">@color/raspberry_10</color>
-    <color name="backgroundSecondaryAlertPressed">@color/raspberry_20</color>
+    <color name="backgroundSecondaryAlertHover">#CCFAF0F3</color> // raspberry_10 with alpha 80%
+    <color name="backgroundSecondaryAlertPressed">#CCF9D7DF</color> // raspberry_20 with alpha 80%
 
     <color name="contentPrimary">@color/carbon_100</color>
-    <color name="contentSecondary">@color/carbon_70</color>
-    <color name="contentTertiary">@color/carbon_60</color>
-    <color name="contentComplementary">@color/white</color>
+    <color name="contentSecondaryBGPrimary">@color/carbon_60</color>
+    <color name="contentSecondaryBGSecondary">@color/carbon_70</color>
     <color name="contentSelected">@color/purple_70</color>
     <color name="contentDisable">@color/carbon_20</color>
 
     <color name="contentBrandDefault">@color/purple_70</color>
-    <color name="contentBrandHover">@color/purple_90</color>
-    <color name="contentBrandPressed">@color/purple_90</color>
 
     <color name="contentInfoDefault">@color/blue_70</color>
     <color name="contentSuccessDefault">@color/emerald_70</color>
     <color name="contentWarningDefault">@color/apricot_70</color>
     <color name="contentAlertDefault">@color/raspberry_70</color>
 
-    <color name="borderDefault">@color/carbon_10</color>
+    <color name="borderDefault">@color/carbon_15</color>
+    <color name="borderComplementary">@color/carbon_80</color>
     <color name="borderHover">@color/purple_90</color>
     <color name="borderSelected">@color/purple_70</color>
-    <color name="borderInfo">@color/blue_70</color>
-    <color name="borderSuccess">@color/emerald_70</color>
-    <color name="borderWarning">@color/apricot_70</color>
-    <color name="borderAlert">@color/raspberry_70</color>
+
+    <color name="borderInfoDefault">@color/blue_70</color>
+    <color name="borderInfoDecorative">@color/blue_50</color>
+
+    <color name="borderSuccessDefault">@color/emerald_70</color>
+    <color name="borderSuccessDecorative">@color/emerald_50</color>
+
+    <color name="borderWarningDefault">@color/apricot_70</color>
+    <color name="borderWarningDecorative">@color/apricot_50</color>
+
+    <color name="borderAlertDefault">@color/raspberry_70</color>
+    <color name="borderAlertDecorative">@color/raspberry_50</color>
+
     <!-- endregion UI-Revamp design tokens -->
 </resources>

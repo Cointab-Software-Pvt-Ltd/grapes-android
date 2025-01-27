@@ -50,7 +50,7 @@ internal fun GrapesOptionGroupItem(
 ) {
     Card(
         elevation = elevation,
-        shape = GrapesTheme.shapes.shape2,
+        shape = GrapesTheme.shapes.radius12,
         onClick = onClick,
         border = if (isSelected) {
             border?.selectedBorder
@@ -92,10 +92,10 @@ internal object GrapesOptionGroupItemDefaults {
 
     @Composable
     fun colors(
-        selectedContainerColor: Color = GrapesTheme.colors.primaryLightest,
-        selectedContentColor: Color = GrapesTheme.colors.primaryNormal,
-        unselectedContainerColor: Color = GrapesTheme.colors.structureSurface,
-        unselectedContentColor: Color = GrapesTheme.colors.structureComplementary,
+        selectedContainerColor: Color = GrapesTheme.colors.backgroundPrimarySelected,
+        selectedContentColor: Color = GrapesTheme.colors.contentSelected,
+        unselectedContainerColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        unselectedContentColor: Color = GrapesTheme.colors.contentPrimary,
     ): GrapesOptionGroupItemColors = GrapesOptionGroupItemColors(
         selectedColors = CardDefaults.cardColors(
             containerColor = selectedContainerColor,
@@ -109,8 +109,8 @@ internal object GrapesOptionGroupItemDefaults {
 
     @Composable
     fun border(
-        selectedBorder: BorderStroke? = BorderStroke(2.dp, GrapesTheme.colors.primaryNormal),
-        unselectedBorder: BorderStroke? = BorderStroke(1.dp, GrapesTheme.colors.neutralLighter),
+        selectedBorder: BorderStroke? = BorderStroke(2.dp, GrapesTheme.colors.borderSelected),
+        unselectedBorder: BorderStroke? = BorderStroke(1.dp, GrapesTheme.colors.borderDefault),
     ): GrapesOptionGroupItemBorder = GrapesOptionGroupItemBorder(
         selectedBorder = selectedBorder,
         unselectedBorder = unselectedBorder,

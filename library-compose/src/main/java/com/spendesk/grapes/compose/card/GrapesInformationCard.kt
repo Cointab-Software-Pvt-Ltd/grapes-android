@@ -46,7 +46,7 @@ fun GrapesInformationCard(
         header = {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleM,
+                style = GrapesTheme.typography.titleS,
                 modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
             )
         },
@@ -78,7 +78,7 @@ fun GrapesInformationCard(
             ) {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleM,
+                    style = GrapesTheme.typography.titleS,
                     modifier = Modifier
                         .weight(1f)
                         .padding(GrapesTheme.dimensions.spacing3),

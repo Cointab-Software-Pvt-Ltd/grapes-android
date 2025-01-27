@@ -20,30 +20,30 @@ object ButtonColorDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.primaryNormal,
-            contentColor = GrapesTheme.colors.mainWhite,
-            disabledBackgroundColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.mainWhite
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryBrandDefault,
+            contentColor = GrapesTheme.colors.contentComplementary,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary
         )
 
     val secondary: ButtonColors
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.mainWhite,
-            contentColor = GrapesTheme.colors.neutralDarker,
-            disabledBackgroundColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.mainWhite
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            contentColor = GrapesTheme.colors.contentPrimary,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary
         )
 
     val tertiary: ButtonColors
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.structureSurface,
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
             contentColor = GrapesTheme.colors.primaryNormal,
-            disabledBackgroundColor = GrapesTheme.colors.structureSurface,
-            disabledContentColor = GrapesTheme.colors.neutralNormal,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGPrimary,
         )
 
     val text: ButtonColors
@@ -60,10 +60,10 @@ object ButtonColorDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.alertNormal,
-            contentColor = GrapesTheme.colors.mainWhite,
-            disabledBackgroundColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.mainWhite
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryAlertDefault,
+            contentColor = GrapesTheme.colors.contentComplementary,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary
         )
 
     val alertOutlined: ButtonColors
@@ -80,10 +80,10 @@ object ButtonColorDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.warningNormal,
-            contentColor = GrapesTheme.colors.mainWhite,
-            disabledBackgroundColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.mainWhite
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryWarningDefault,
+            contentColor = GrapesTheme.colors.contentComplementary,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary
         )
 
     val linkPrimary: ButtonColors

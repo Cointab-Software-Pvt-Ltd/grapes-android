@@ -40,7 +40,7 @@ fun GrapesSuccessTag(
         LocalContentColor provides GrapesTheme.colors.successNormal,
     ) {
         val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_success, contentDescription = "Success tag icon")
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_check, contentDescription = "Success tag icon")
         }
 
         val tagColors = SuccessGrapesTagColors()
@@ -63,7 +63,7 @@ fun GrapesInfoTag(
         LocalContentColor provides GrapesTheme.colors.infoNormal,
     ) {
         val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_information, contentDescription = "Info tag icon")
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_information, contentDescription = "Info tag icon")
         }
 
         val tagColors = InfoGrapesTagColors()
@@ -86,7 +86,7 @@ fun GrapesWarningTag(
         LocalContentColor provides GrapesTheme.colors.warningNormal,
     ) {
         val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_warning, contentDescription = "Warning tag icon")
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_triangle_warning, contentDescription = "Warning tag icon")
         }
 
         val tagColors = WarningGrapesTagColors()
@@ -109,7 +109,7 @@ fun GrapesErrorTag(
         LocalContentColor provides GrapesTheme.colors.alertNormal,
     ) {
         val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_error, contentDescription = "Error tag icon")
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_hexagone_cross, contentDescription = "Error tag icon")
         }
 
         val tagColors = ErrorGrapesTagColors()
@@ -154,7 +154,7 @@ fun GrapesTag(
             }
 
             ProvideTextStyle(
-                GrapesTheme.typography.titleM.copy(color = LocalContentColor.current),
+                GrapesTheme.typography.titleS.copy(color = LocalContentColor.current),
             ) {
                 Text(text = label)
             }

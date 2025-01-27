@@ -50,9 +50,9 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)
         ) {
-            Text(text = iconActionConfiguration.title, style = GrapesTheme.typography.titleL, color = titleColor)
+            Text(text = iconActionConfiguration.title, style = GrapesTheme.typography.titleM, color = titleColor)
             iconActionConfiguration.description?.let {
-                Text(text = it, style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.neutralDark)
+                Text(text = it, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.neutralDark)
             }
         }
     }
@@ -63,20 +63,20 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
 private fun IconActionPreview() {
     val alertConfiguration = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.ALERT,
         description = "Description"
     )
 
     val infoConfigurationWithoutDescription = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.INFORMATION
     )
 
     val infoConfigurationWithDescription = ListItemConfiguration.IconAction(
         title = "Title",
-        icon = R.drawable.ic_success,
+        icon = R.drawable.ic_grapes_icon_circle_check,
         status = GrapesConfigurationStatus.INFORMATION,
         description = "Test description"
     )

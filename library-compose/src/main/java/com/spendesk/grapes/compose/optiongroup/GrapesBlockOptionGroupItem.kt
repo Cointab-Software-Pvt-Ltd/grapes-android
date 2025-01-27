@@ -41,11 +41,11 @@ fun GrapesBlockOptionGroupItem(
         modifier = modifier
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(
-                horizontal = GrapesTheme.dimensions.spacing3,
-                vertical = GrapesTheme.dimensions.spacing4,
+                horizontal = GrapesTheme.dimensions.unit16,
+                vertical = GrapesTheme.dimensions.unit24,
             )
         ) {
             Icon(
@@ -54,19 +54,19 @@ fun GrapesBlockOptionGroupItem(
                 contentDescription = null,
             )
             Column(
-                verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1),
+                verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
             ) {
                 Text(
                     text = model.title,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    style = GrapesTheme.typography.titleL,
+                    style = GrapesTheme.typography.titleM,
                 )
                 Text(
                     text = model.description,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyS,
                 )
             }
         }
@@ -84,7 +84,7 @@ private fun PreviewGrapesIconOptionGroupItem() {
             GrapesBlockOptionGroupItem(
                 model = GrapesBlockOptionGroupUiModel(
                     id = "",
-                    imageRes = R.drawable.ic_block,
+                    imageRes = R.drawable.ic_grapes_icon_lock_close,
                     title = "A short title",
                     description = "Some description here to fill the space",
                     isSelected = false,
@@ -95,7 +95,7 @@ private fun PreviewGrapesIconOptionGroupItem() {
             GrapesBlockOptionGroupItem(
                 model = GrapesBlockOptionGroupUiModel(
                     id = "",
-                    imageRes = R.drawable.ic_block,
+                    imageRes = R.drawable.ic_grapes_icon_lock_close,
                     title = "A short title",
                     description = "Some description here to fill the space",
                     isSelected = true,

@@ -56,13 +56,13 @@ private fun PreviewGrapesIconOptionGroupItem() {
         ) {
             GrapesIconOptionGroupItem(
                 isSelected = false,
-                imagePainter = painterResource(R.drawable.ic_block),
+                imagePainter = painterResource(R.drawable.ic_grapes_icon_lock_close),
                 onClick = {},
                 contentDescription = null,
             )
             GrapesIconOptionGroupItem(
                 isSelected = true,
-                imagePainter = painterResource(R.drawable.ic_block),
+                imagePainter = painterResource(R.drawable.ic_grapes_icon_lock_close),
                 onClick = {},
                 contentDescription = null,
             )
