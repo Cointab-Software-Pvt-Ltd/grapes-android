@@ -64,15 +64,15 @@ fun GrapesStackItem(
     }
 
     Row(
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .clip(GrapesTheme.shapes.shape2)
+            .clip(GrapesTheme.shapes.radius8)
             .then(clickableModifier)
             .background(colors.backgroundColor)
             .padding(
-                vertical = GrapesTheme.dimensions.spacing2,
-                horizontal = GrapesTheme.dimensions.spacing2,
+                vertical = GrapesTheme.dimensions.unit8,
+                horizontal = GrapesTheme.dimensions.unit8,
             ),
     ) {
         GrapesStackLogo(numberOfStack = itemsNumber)

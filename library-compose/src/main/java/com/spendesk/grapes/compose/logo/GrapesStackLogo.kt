@@ -37,7 +37,7 @@ fun GrapesStackLogo(
         GrapesStackSurface(modifier = modifier.align(if (numberOfStack > 1) Alignment.TopStart else Alignment.Center), text = numberOfStack.toString())
 
         if (numberOfStack > 1) {
-            val highlightIconOffset = GrapesTheme.dimensions.spacing1
+            val highlightIconOffset = GrapesTheme.dimensions.unit4
 
             Box(
                 modifier = Modifier
@@ -59,9 +59,13 @@ fun GrapesStackSurface(
     GrapesLargeLogoContainer(
         modifier = modifier
             .size(grapesStackSurface)
-            .border(1.dp, color = GrapesTheme.colors.neutralLighter, shape = GrapesTheme.shapes.shape2)
-            .clip(GrapesTheme.shapes.shape2)
-            .background(GrapesTheme.colors.neutralLightest)
+            .border(
+                width = 1.dp,
+                color = GrapesTheme.colors.borderDefault,
+                shape = GrapesTheme.shapes.radius8
+            )
+            .clip(GrapesTheme.shapes.radius8)
+            .background(GrapesTheme.colors.backgroundSecondaryDefault)
     ) {
         text?.let {
             Text(
