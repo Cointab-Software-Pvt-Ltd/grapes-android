@@ -164,20 +164,23 @@ private fun GrapesHighlightIcon(
 enum class GrapesHighlightIconSize {
     SMALL,
     MEDIUM,
-    LARGE;
+    LARGE,
+    EXTRA_LARGE;
 
     @Composable
     fun getContainerSize(): Dp = when (this) {
-        SMALL -> GrapesTheme.dimensions.sizing4
-        MEDIUM -> GrapesTheme.dimensions.sizing5
-        LARGE -> GrapesTheme.dimensions.sizing7
+        SMALL -> GrapesTheme.dimensions.unit24
+        MEDIUM -> GrapesTheme.dimensions.unit32
+        LARGE -> GrapesTheme.dimensions.unit40
+        EXTRA_LARGE -> GrapesTheme.dimensions.unit56
     }
 
     @Composable
     fun getIconSize(): Dp = when (this) {
-        SMALL -> GrapesTheme.dimensions.sizing1
-        MEDIUM -> GrapesTheme.dimensions.sizing2
-        LARGE -> GrapesTheme.dimensions.sizing4
+        SMALL -> GrapesTheme.dimensions.sizeIconS
+        MEDIUM -> GrapesTheme.dimensions.sizeIconM
+        LARGE -> GrapesTheme.dimensions.sizeIconL
+        EXTRA_LARGE -> GrapesTheme.dimensions.sizeIconXl
     }
 }
 
