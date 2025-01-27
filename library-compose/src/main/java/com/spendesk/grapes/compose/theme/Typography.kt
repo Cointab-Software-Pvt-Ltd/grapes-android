@@ -65,51 +65,60 @@ data class GrapesTypography(
         bodyXs: TextStyle = TextStyle(
             fontWeight = FontWeight.Medium,
             fontSize = 12.sp,
+            lineHeight = 16.sp,
         ),
         bodyS: TextStyle = TextStyle(
             fontWeight = FontWeight.Medium,
             fontSize = 14.sp,
+            lineHeight = 20.sp,
         ),
         bodyM: TextStyle = TextStyle(
             fontWeight = FontWeight.Medium,
             fontSize = 16.sp,
+            lineHeight = 24.sp,
         ),
         bodyL: TextStyle = TextStyle(
             fontWeight = FontWeight.Normal,
-            fontSize = 16.sp
+            fontSize = 16.sp,
         ),
         bodyXl: TextStyle = TextStyle(
             fontWeight = FontWeight.Normal,
-            fontSize = 20.sp
+            fontSize = 20.sp,
         ),
         bodyXxl: TextStyle = TextStyle(
             fontWeight = FontWeight.Normal,
-            fontSize = 40.sp
+            fontSize = 40.sp,
         ),
         titleS: TextStyle = TextStyle(
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp,
+            lineHeight = 20.sp,
         ),
         titleM: TextStyle = TextStyle(
             fontWeight = FontWeight.SemiBold,
             fontSize = 16.sp,
+            lineHeight = 24.sp,
         ),
         titleL: TextStyle = TextStyle(
             fontWeight = FontWeight.SemiBold,
             fontSize = 18.sp,
+            lineHeight = 26.sp,
         ),
         titleXl: TextStyle = TextStyle(
             fontWeight = FontWeight.SemiBold,
             fontSize = 20.sp,
+            lineHeight = 28.sp,
         ),
         titleXxl: TextStyle = TextStyle(
             fontWeight = FontWeight.SemiBold,
             fontSize = 24.sp,
+            lineHeight = 32.sp,
         ),
         heading: TextStyle = TextStyle(
             fontFamily = Roobert,
             fontWeight = FontWeight.Medium,
             fontSize = 32.sp,
+            lineHeight = 40.sp,
         ),
     ) : this(
         bodyXs = bodyXs.withDefaultFontFamily(defaultFontFamily),
