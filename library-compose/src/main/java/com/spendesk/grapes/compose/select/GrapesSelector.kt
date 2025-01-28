@@ -46,10 +46,10 @@ fun GrapesSelector(
         },
         onClick = onClick,
         colors = colors,
-        shape = GrapesTheme.shapes.shape4,
+        shape = GrapesTheme.shapes.radius1000,
         contentPadding = PaddingValues(
-            horizontal = GrapesTheme.dimensions.spacing3,
-            vertical = GrapesTheme.dimensions.spacing2,
+            horizontal = GrapesTheme.dimensions.unit16,
+            vertical = GrapesTheme.dimensions.unit8,
         ),
         modifier = modifier,
     )
@@ -60,10 +60,10 @@ internal fun GrapesSelector(
     label: String,
     modifier: Modifier = Modifier,
     badge: @Composable (() -> Unit)? = null,
-    shape: Shape = GrapesTheme.shapes.shape4,
+    shape: Shape = GrapesTheme.shapes.radius1000,
     contentPadding: PaddingValues = PaddingValues(
-        horizontal = GrapesTheme.dimensions.spacing3,
-        vertical = GrapesTheme.dimensions.spacing2,
+        horizontal = GrapesTheme.dimensions.unit16,
+        vertical = GrapesTheme.dimensions.unit8,
     ),
     colors: GrapesSelectorColors = GrapesSelectorDefaults.defaultColors(),
     icon: @Composable () -> Unit = {
@@ -83,7 +83,7 @@ internal fun GrapesSelector(
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
             modifier = Modifier
                 .border(1.dp, colors.borderColor, shape = shape)
                 .padding(contentPadding)

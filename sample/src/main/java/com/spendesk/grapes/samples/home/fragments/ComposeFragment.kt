@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import com.spendesk.grapes.compose.button.GrapesButton
 import com.spendesk.grapes.compose.theme.GrapesTheme
+import com.spendesk.grapes.samples.compose.ComposeActivity
 
 /**
  * @author : danyboucanova
@@ -40,17 +41,20 @@ class ComposeFragment : Fragment() {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(horizontal = GrapesTheme.dimensions.spacing3, vertical = GrapesTheme.dimensions.spacing3),
-                        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+                            .padding(horizontal = GrapesTheme.dimensions.unit16, vertical = GrapesTheme.dimensions.unit16),
+                        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
                     ) {
-                        GrapesButton(text = "First Compose component test")
-                        Spacer(Modifier.height(GrapesTheme.dimensions.spacing3))
+                        GrapesButton(
+                            text = "First Compose component test",
+                            onClick = {}
+                        )
+                        Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
                         Text(text = "Shapes", style = GrapesTheme.typography.titleM)
                         Box(
                             modifier = Modifier
                                 .height(100.dp)
                                 .width(200.dp)
-                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.shape0),
+                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.radius0),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -62,7 +66,7 @@ class ComposeFragment : Fragment() {
                             modifier = Modifier
                                 .height(100.dp)
                                 .width(200.dp)
-                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.shape1),
+                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.radius4),
                             contentAlignment = Alignment.Center
                         ) {
 
@@ -75,7 +79,7 @@ class ComposeFragment : Fragment() {
                             modifier = Modifier
                                 .height(100.dp)
                                 .width(200.dp)
-                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.shape2),
+                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.radius8),
                             contentAlignment = Alignment.Center
                         ) {
 
@@ -88,7 +92,7 @@ class ComposeFragment : Fragment() {
                             modifier = Modifier
                                 .height(100.dp)
                                 .width(200.dp)
-                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.shape3),
+                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.radius12),
                             contentAlignment = Alignment.Center
                         ) {
 
@@ -101,7 +105,7 @@ class ComposeFragment : Fragment() {
                             modifier = Modifier
                                 .height(100.dp)
                                 .width(200.dp)
-                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.shape4),
+                                .background(GrapesTheme.colors.primaryDark, shape = GrapesTheme.shapes.radius1000),
                             contentAlignment = Alignment.Center
                         ) {
 

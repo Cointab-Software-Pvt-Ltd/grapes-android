@@ -23,7 +23,7 @@ fun GrapesRetryTextBlockAction(retryLabel: String, onRetryClicked: () -> Unit, m
     Row(
         modifier = modifier.clickable(onClickLabel = retryLabel, onClick = onRetryClicked, enabled = true, role = Role.Button),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2)
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
         Text(text = retryLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.warningNormal)
         GrapesIconSet.TriangleWarning(tint = GrapesTheme.colors.warningNormal)
@@ -35,8 +35,8 @@ fun GrapesRetryTextBlockAction(retryLabel: String, onRetryClicked: () -> Unit, m
 fun TextBlockActionPreview() {
     GrapesTheme {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesRetryTextBlockAction("Tap to retry", onRetryClicked = {})
         }

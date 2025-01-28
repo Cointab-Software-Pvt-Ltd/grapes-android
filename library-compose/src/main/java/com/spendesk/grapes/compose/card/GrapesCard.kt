@@ -52,14 +52,14 @@ private fun GrapesCardPreview() {
         Column(
             modifier = Modifier
                 .background(GrapesTheme.colors.structureBackground)
-                .padding(GrapesTheme.dimensions.spacing3)
+                .padding(GrapesTheme.dimensions.unit16)
         ) {
             GrapesCard {
-                Text("Non clickable card", modifier = Modifier.padding(GrapesTheme.dimensions.spacing3))
+                Text("Non clickable card", modifier = Modifier.padding(GrapesTheme.dimensions.unit16))
             }
-            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing3))
+            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
             GrapesCard(onClick = { number++ }) {
-                Text("clickable card $number", modifier = Modifier.padding(GrapesTheme.dimensions.spacing3))
+                Text("clickable card $number", modifier = Modifier.padding(GrapesTheme.dimensions.unit16))
             }
         }
     }

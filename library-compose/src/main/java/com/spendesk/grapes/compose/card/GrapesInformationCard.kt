@@ -47,7 +47,7 @@ fun GrapesInformationCard(
             Text(
                 text = title,
                 style = GrapesTheme.typography.titleS,
-                modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
+                modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
             )
         },
         modifier = modifier,
@@ -81,7 +81,7 @@ fun GrapesInformationCard(
                     style = GrapesTheme.typography.titleS,
                     modifier = Modifier
                         .weight(1f)
-                        .padding(GrapesTheme.dimensions.spacing3),
+                        .padding(GrapesTheme.dimensions.unit16),
                 )
                 IconButton(onHeaderIconClicked) {
                     Icon(
@@ -121,7 +121,7 @@ private fun InformationCard(
             Column(
                 verticalArrangement = contentVerticalArrangement,
                 content = content,
-                modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
+                modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
             )
         }
     }
@@ -146,7 +146,7 @@ object GrapesInformationCardDefaults {
         )
 
     val contentVerticalArrangement: Arrangement.HorizontalOrVertical
-        @Composable get() = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+        @Composable get() = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
 }
 
 @Preview

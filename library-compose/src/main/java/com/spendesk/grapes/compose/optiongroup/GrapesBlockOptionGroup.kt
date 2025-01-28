@@ -25,7 +25,7 @@ fun GrapesBlockOptionGroup(
     modifier: Modifier = Modifier,
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         modifier = modifier.width(IntrinsicSize.Max),
     ) {
         items.forEach { item ->

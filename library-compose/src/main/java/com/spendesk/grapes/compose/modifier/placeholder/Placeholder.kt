@@ -85,7 +85,7 @@ fun Modifier.placeholder(
     Modifier.placeholder(
         visible = visible,
         color = if (color.isSpecified) color else GrapesTheme.colors.structureComplementary.copy(alpha = 0.08f),
-        shape = shape ?: GrapesTheme.shapes.shape2,
+        shape = shape ?: GrapesTheme.shapes.radius8,
         highlight = highlight,
         placeholderFadeTransitionSpec = placeholderFadeTransitionSpec,
         contentFadeTransitionSpec = contentFadeTransitionSpec,

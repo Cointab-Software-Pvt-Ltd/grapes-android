@@ -112,7 +112,7 @@ private fun Select(
         onClick = {},
         modifier = modifier,
         contentPadding = PaddingValues(
-            horizontal = GrapesTheme.dimensions.spacing3,
+            horizontal = GrapesTheme.dimensions.unit16,
             vertical = GrapesTheme.dimensions.sizing1,
         ),
         icon = {

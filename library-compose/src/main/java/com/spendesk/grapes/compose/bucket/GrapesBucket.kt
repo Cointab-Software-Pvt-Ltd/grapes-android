@@ -60,7 +60,7 @@ internal fun GrapesBucketCore(
             headline()
 
             if (content != null) {
-                Spacer(Modifier.padding(bottom = GrapesTheme.dimensions.spacing3))
+                Spacer(Modifier.padding(bottom = GrapesTheme.dimensions.unit16))
                 content()
             }
         }

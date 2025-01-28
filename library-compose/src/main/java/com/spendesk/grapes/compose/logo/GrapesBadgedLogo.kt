@@ -42,7 +42,7 @@ fun GrapesBadgedLogo(
             logo()
         }
         if (badgeAlignment in supportedAlignments) {
-            val highlightIconOffset = GrapesTheme.dimensions.spacing2
+            val highlightIconOffset = GrapesTheme.dimensions.unit8
             val yOffset = when (badgeAlignment) {
                 Alignment.TopEnd -> -highlightIconOffset
                 Alignment.BottomEnd -> highlightIconOffset
@@ -72,7 +72,7 @@ fun GrapesCardBadgedLogo(
             logo()
         }
         if (badgeAlignment in supportedAlignments) {
-            val highlightIconOffset = GrapesTheme.dimensions.spacing1
+            val highlightIconOffset = GrapesTheme.dimensions.unit4
             val yOffset = when (badgeAlignment) {
                 Alignment.TopEnd -> -highlightIconOffset
                 Alignment.BottomEnd -> highlightIconOffset
@@ -102,7 +102,7 @@ private fun GrapesBadgedLogoPreview(
                     size = GrapesHighlightIconSize.SMALL,
                     modifier = Modifier
                         .size(40.dp)
-                        .clip(GrapesTheme.shapes.shape4)
+                        .clip(GrapesTheme.shapes.radius1000)
                         .background(GrapesTheme.colors.warningNormal)
                 )
             },
@@ -112,7 +112,7 @@ private fun GrapesBadgedLogoPreview(
             Box(
                 modifier = Modifier
                     .size(40.dp)
-                    .clip(GrapesTheme.shapes.shape2)
+                    .clip(GrapesTheme.shapes.radius8)
                     .background(GrapesTheme.colors.neutralLight)
             )
         }
@@ -131,7 +131,7 @@ private fun GrapesBadgedCardLogoPreview(
                     size = GrapesHighlightIconSize.SMALL,
                     modifier = Modifier
                         .size(40.dp)
-                        .clip(GrapesTheme.shapes.shape4)
+                        .clip(GrapesTheme.shapes.radius1000)
                         .background(GrapesTheme.colors.warningNormal)
                 )
             },

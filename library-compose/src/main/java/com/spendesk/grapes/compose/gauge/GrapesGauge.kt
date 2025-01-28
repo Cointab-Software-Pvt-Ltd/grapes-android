@@ -67,7 +67,7 @@ fun GrapesGauge(
     backgroundColor: Color,
     gauges: List<Gauge>,
     modifier: Modifier = Modifier,
-    clipShape: Shape = GrapesTheme.shapes.shape1,
+    clipShape: Shape = GrapesTheme.shapes.radius4,
 ) {
     GrapesGaugeContainer(
         modifier = modifier,
@@ -191,7 +191,7 @@ private fun createStripeGauge(
 @Preview(showBackground = true)
 private fun GaugePreview() {
     GrapesTheme {
-        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing1)) {
+        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
             GrapesGauge(
                 modifier = Modifier.padding(16.dp),
                 backgroundColor = GrapesTheme.colors.neutralLightest,

@@ -27,7 +27,7 @@ fun GrapesInlineInformationIconItem(
 ) {
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
@@ -48,7 +48,7 @@ fun GrapesInlineInformationIconItem(
 private fun PreviewGrapesInlineInformationIconItem() {
     GrapesTheme {
         GrapesInlineInformationIconItem(
-            modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
             icon = R.drawable.ic_google_logo,
             description = "This is some kind of potential description",
         )

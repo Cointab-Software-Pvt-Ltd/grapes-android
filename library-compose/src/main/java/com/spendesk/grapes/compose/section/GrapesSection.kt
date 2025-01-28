@@ -26,22 +26,22 @@ fun GrapesSection(
 ) {
     Card(
         modifier = modifier,
-        shape = GrapesTheme.shapes.shape3,
+        shape = GrapesTheme.shapes.radius12,
         colors = CardDefaults.cardColors(
             containerColor = GrapesTheme.colors.structureSurface,
             contentColor = GrapesTheme.colors.neutralDarker,
         ),
     ) {
         Column(
-            modifier = Modifier.padding(vertical = GrapesTheme.dimensions.spacing2),
+            modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit8),
         ) {
             Text(
                 text = title,
                 style = GrapesTheme.typography.titleS,
                 color = GrapesTheme.colors.neutralDark,
                 modifier = Modifier.padding(
-                    horizontal = GrapesTheme.dimensions.spacing3,
-                    vertical = GrapesTheme.dimensions.spacing2,
+                    horizontal = GrapesTheme.dimensions.unit16,
+                    vertical = GrapesTheme.dimensions.unit8,
                 ),
             )
             content()

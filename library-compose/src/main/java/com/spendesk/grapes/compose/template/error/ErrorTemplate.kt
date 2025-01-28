@@ -87,7 +87,7 @@ fun ErrorTemplate(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(GrapesTheme.dimensions.spacing3),
+            .padding(GrapesTheme.dimensions.unit16),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Column(
@@ -101,7 +101,7 @@ fun ErrorTemplate(
                 icon()
             }
 
-            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing4))
+            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit24))
 
             AnimatedVisibility(visible = isVisible, enter = configuration.titleEnterAnimation) {
                 title()
@@ -132,8 +132,8 @@ fun ErrorTemplatePreview() {
         Column(
             modifier = Modifier
                 .background(GrapesTheme.colors.mainWhite)
-                .padding(GrapesTheme.dimensions.spacing3),
-            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3)
+                .padding(GrapesTheme.dimensions.unit16),
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             AnimatedContent(targetState = isError, label = "Preview animation") { animatedIsError ->
                 if (animatedIsError) {

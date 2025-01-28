@@ -29,7 +29,7 @@ fun GrapesSwitchField(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    shape: Shape = GrapesTheme.shapes.shape2,
+    shape: Shape = GrapesTheme.shapes.radius8,
     color: Color = GrapesTheme.colors.structureSurface,
     contentColor: Color = GrapesTheme.colors.neutralDarker,
     border: BorderStroke = BorderStroke(1.dp, GrapesTheme.colors.neutralLighter),
@@ -44,14 +44,14 @@ fun GrapesSwitchField(
         modifier = modifier
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.spacing3)
+            modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16)
         ) {
             Text(
                 text = title,
                 style = GrapesTheme.typography.bodyM,
-                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.spacing3)
+                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit16)
             )
             Spacer(Modifier.weight(1f))
             GrapesSwitch(

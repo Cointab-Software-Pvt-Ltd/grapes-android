@@ -85,7 +85,7 @@ private fun QuickActionButton(
         ) {
             buttonContent()
         }
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.spacing2))
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         labelContent()
     }
 }
@@ -99,7 +99,7 @@ private fun GrapesQuickActionButtonPreview() {
         Column(
             modifier = Modifier
                 .background(GrapesTheme.colors.structureBackground)
-                .padding(GrapesTheme.dimensions.spacing3)
+                .padding(GrapesTheme.dimensions.unit16)
         ) {
             GrapesQuickActionButton(
                 label = "Label $clickCount",

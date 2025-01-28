@@ -130,7 +130,7 @@ private fun GrapesDatePickerPreview(
             title = data.title?.let {
                 @Composable {
                     Text(
-                        modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
+                        modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
                         text = it,
                         style = GrapesTheme.typography.titleXl
                     )
@@ -139,7 +139,7 @@ private fun GrapesDatePickerPreview(
             headline = data.headline?.let {
                 @Composable {
                     Text(
-                        modifier = Modifier.padding(GrapesTheme.dimensions.spacing3),
+                        modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
                         text = it,
                         style = GrapesTheme.typography.titleS
                     )

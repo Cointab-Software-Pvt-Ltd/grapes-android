@@ -80,14 +80,14 @@ fun GrapesAmountListItem(
     }
 
     Row(
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing3),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
-            .clip(GrapesTheme.shapes.shape2)
+            .clip(GrapesTheme.shapes.radius8)
             .then(clickableModifier)
             .padding(
-                vertical = GrapesTheme.dimensions.spacing3,
-                horizontal = GrapesTheme.dimensions.spacing2,
+                vertical = GrapesTheme.dimensions.unit16,
+                horizontal = GrapesTheme.dimensions.unit8,
             ),
     ) {
         Box(

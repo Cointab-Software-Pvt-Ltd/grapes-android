@@ -19,7 +19,7 @@ fun GrapesDatePickerDialog(
     onDateSelected: (selectedDate: Date) -> Unit,
     modifier: Modifier = Modifier,
     colors: DatePickerColors = GrapesDatePickerDefaults.colors(),
-    shape: Shape = GrapesTheme.shapes.shape2,
+    shape: Shape = GrapesTheme.shapes.radius8,
     dismissOnBack: Boolean = true,
     dismissOnClickOutside: Boolean = true,
     yearRange: IntRange? = null,

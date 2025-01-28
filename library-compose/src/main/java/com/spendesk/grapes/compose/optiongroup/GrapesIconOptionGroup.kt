@@ -24,7 +24,7 @@ fun GrapesIconOptionGroup(
     modifier: Modifier = Modifier,
 ) {
     Row(
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.spacing2),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
         modifier = modifier,
     ) {
         items.forEach { item ->

@@ -35,7 +35,7 @@ fun GrapesTextBlockHeader(
                 .weight(1f),
             informativeLabel = informativeLabel
         )
-        Spacer(modifier = Modifier.width(GrapesTheme.dimensions.spacing3))
+        Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit16))
         action?.invoke()
     }
 }
@@ -56,7 +56,7 @@ private fun HeaderText(
             modifier = Modifier.weight(1f, fill = false)
         )
         informativeLabel?.let {
-            Spacer(modifier = Modifier.width(GrapesTheme.dimensions.spacing1))
+            Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit4))
             informativeLabel.invoke()
         }
     }
@@ -81,7 +81,7 @@ private fun TextBlockHeaderPreview(
         }
     }
 
-    GrapesTextBlockHeader(title = item.first, informativeLabel = informativeLabel, action = action, modifier = Modifier.padding(GrapesTheme.dimensions.spacing3))
+    GrapesTextBlockHeader(title = item.first, informativeLabel = informativeLabel, action = action, modifier = Modifier.padding(GrapesTheme.dimensions.unit16))
 }
 
 private class TextBlockHeaderProvider : PreviewParameterProvider<Triple<String, String?, String?>> {
