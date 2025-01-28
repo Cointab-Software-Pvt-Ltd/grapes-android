@@ -47,7 +47,11 @@ fun ErrorTemplate(
 ) {
     ErrorTemplate(
         title = {
-            Text(text = title, style = GrapesTheme.typography.titleM)
+            Text(
+                text = title,
+                style = GrapesTheme.typography.titleM,
+                color = GrapesTheme.colors.contentPrimary
+            )
         },
         icon = icon,
         description = description?.let {
@@ -55,7 +59,8 @@ fun ErrorTemplate(
                 Text(
                     text = it,
                     style = GrapesTheme.typography.bodyM,
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    color = GrapesTheme.colors.contentSecondaryBGPrimary
                 )
             }
         },
