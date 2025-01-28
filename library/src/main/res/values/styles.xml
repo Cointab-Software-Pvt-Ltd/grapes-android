@@ -22,14 +22,14 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/deepBlueBucketTitleText</item>
         <item name="android:textSize">@dimen/deepBlueBucketTitleTextSize</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
     </style>
 
     <style name="DeepBlueBucketDescription">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/deepBlueBucketDescriptionText</item>
         <item name="android:textSize">@dimen/deepBlueBucketDescriptionTextSize</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="DeepBlueBucketButton">
@@ -48,13 +48,13 @@
         <item name="android:textSize">@dimen/actionInformativeTitleTextSize</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:singleLine">true</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="ActionInformativeSubtitleText">
         <item name="android:textSize">@dimen/actionInformativeSubtitleTextSize</item>
         <item name="android:textColor">@color/actionInformativeSubtitleTextColor</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_marginEnd">@dimen/actionInformationSubtitleTextMarginEnd</item>
@@ -81,7 +81,7 @@
     </style>
 
     <style name="SummaryBlockContentTitleStartText">
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textColor">@color/partialContentBlockTitleTextColor</item>
         <item name="android:textSize">@dimen/partialContentBlockTitleTextSize</item>
         <item name="android:singleLine">true</item>
@@ -90,7 +90,7 @@
 
     <style name="SummaryBlockContentTitleMiddleText">
         <item name="android:visibility">gone</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textSize">@dimen/summaryBlockContentMiddleTitleTextSize</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">marquee</item>
@@ -100,7 +100,7 @@
         <item name="android:paddingTop">@dimen/partialContentBlockTextEndPaddingVert</item>
         <item name="android:paddingBottom">@dimen/partialContentBlockTextEndPaddingVert</item>
         <item name="android:visibility">gone</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textColor">@color/summary_block_content_title_end_text</item>
         <item name="android:textSize">@dimen/summaryBlockContentEndTitleTextSize</item>
         <item name="android:singleLine">true</item>
@@ -123,7 +123,7 @@
 
     <!-- region Inline Block -->
     <style name="InlineBlockViewKey">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:gravity">start</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">marquee</item>
@@ -132,7 +132,7 @@
     </style>
 
     <style name="InlineBlockViewValue">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:gravity">end</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
@@ -142,13 +142,13 @@
     <!-- endregion Inline Block -->
 
     <style name="ItemApproverStatusText">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/mainComplementary</item>
         <item name="android:textSize">@dimen/itemBlockApproverTitleTextSize</item>
     </style>
 
     <style name="SummaryBlockResponsibilityCenterDescription">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/summaryBlockResponsibilityCenterDescriptionTextColor</item>
         <item name="android:textSize">@dimen/summaryBlockContentResponsibilityCenterDescriptionTextSize</item>
     </style>
@@ -182,7 +182,7 @@
     </style>
 
     <style name="MapBlockAddressText">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/mapBlockAddressTextColor</item>
         <item name="android:textSize">@dimen/mapBlockAddressTextSize</item>
         <item name="android:drawablePadding">@dimen/mapBlockAddressDrawablePadding</item>
@@ -199,7 +199,7 @@
     </style>
 
     <style name="SummaryBlockTextValue">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/summary_block_content_text_value_text</item>
         <item name="android:textSize">@dimen/inlineBlockViewValueTextSize</item>
     </style>
@@ -224,7 +224,7 @@
     <style name="ToasterText">
         <item name="android:textColor">@color/contentComplementary</item>
         <item name="android:textSize">@dimen/toasterText</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
     </style>
 
     <!-- endregion Toaster -->
@@ -272,7 +272,7 @@
 
     <style name="SwitchCardText">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/switch_card_text</item>
         <item name="android:textSize">@dimen/switchCardTextSize</item>
     </style>

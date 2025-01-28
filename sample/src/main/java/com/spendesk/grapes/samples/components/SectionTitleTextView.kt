@@ -27,7 +27,7 @@ class SectionTitleTextView : AppCompatTextView {
     init {
         maxLines = 1
         ellipsize = TextUtils.TruncateAt.END
-        setTypeface(ResourcesCompat.getFont(context, R.font.gt_america), Typeface.NORMAL)
+        setTypeface(ResourcesCompat.getFont(context, R.font.inter_medium), Typeface.NORMAL)
         setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelSize(R.dimen.sectionTitleTextSize).toFloat())
         setTextColor(ContextCompat.getColor(context, R.color.sectionTitleTextColor))
     }

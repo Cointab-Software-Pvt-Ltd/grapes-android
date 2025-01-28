@@ -172,7 +172,7 @@ class MessageBlockView : ConstraintLayout {
     }
 
     private fun setupView() {
-        if (isInEditMode.not()) binding.messageBlockTitle.setTypeface(ResourcesCompat.getFont(context, R.font.gt_america_bold), Typeface.NORMAL)
+        if (isInEditMode.not()) binding.messageBlockTitle.setTypeface(ResourcesCompat.getFont(context, R.font.inter_semi_bold), Typeface.NORMAL)
 
         val paddingVert = resources.getDimensionPixelOffset(R.dimen.messageBlockPaddingVert)
         val paddingHorz = resources.getDimensionPixelOffset(R.dimen.messageBlockPaddingHorz)

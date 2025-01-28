@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
         <!-- Customize your theme here. -->
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="Theme.GrapesSamples.Launcher">

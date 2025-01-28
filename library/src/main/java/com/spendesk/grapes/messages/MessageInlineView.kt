@@ -129,7 +129,7 @@ class MessageInlineView : MaterialTextView {
     }
 
     private fun setupView() {
-        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.gt_america_bold), Typeface.NORMAL)
+        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.inter_semi_bold), Typeface.NORMAL)
 
         gravity = Gravity.CENTER
 

@@ -4,7 +4,7 @@
     <!-- region TextInput -->
 
     <style name="TextInputEditText">
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:paddingTop">@dimen/textInputEditTextPadding</item>
         <item name="android:paddingBottom">@dimen/textInputEditTextPaddingBottom</item>
         <item name="android:paddingStart">@dimen/textInputEditTextPadding</item>
@@ -36,7 +36,7 @@
     </style>
 
     <style name="PasswordInputEndText">
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textSize">@dimen/passwordInputEndTextSize</item>
         <item name="android:textColor">@color/passwordInputEndTextColor</item>
         <item name="android:padding">@dimen/passwordInputEndTextPadding</item>

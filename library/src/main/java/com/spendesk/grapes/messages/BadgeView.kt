@@ -25,7 +25,7 @@ class BadgeView : MaterialTextView {
     //endregion constructors
 
     init {
-        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.gt_america_bold), Typeface.NORMAL)
+        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.inter_semi_bold), Typeface.NORMAL)
 
         gravity = Gravity.CENTER
         background = ContextCompat.getDrawable(context, R.drawable.shape_solidmainstatuserror_paddingvert2horz8_corner30)
