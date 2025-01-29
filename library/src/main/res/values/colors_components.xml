@@ -19,7 +19,7 @@
 
     <!-- region Simple Section Item -->
     <color name="simpleSectionItemPrimaryBackgroundColor">@android:color/transparent</color>
-    <color name="simpleSectionItemSecondaryBackgroundColor">@color/mainNeutralLighter</color>
+    <color name="simpleSectionItemSecondaryBackgroundColor">@color/backgroundSecondary</color>
     <color name="simpleSectionItemStartImageTintColor">@color/mainNeutralDarker</color>
     <color name="simpleSectionItemStartTextColor">@color/mainNeutralDarker</color>
     <color name="simpleSectionItemEndTextColor">@color/mainNeutralDarker</color>
