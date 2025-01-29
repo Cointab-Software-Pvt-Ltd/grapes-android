@@ -102,7 +102,7 @@ private fun GrapesQuickActionButtonPreview() {
 
         Column(
             modifier = Modifier
-                .background(GrapesTheme.colors.structureBackground)
+                .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16)
         ) {
             GrapesQuickActionButton(
@@ -122,7 +122,7 @@ private fun GrapesQuickActionButtonDisabledPreview() {
 
         Column(
             modifier = Modifier
-                .background(GrapesTheme.colors.structureBackground)
+                .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16)
         ) {
             GrapesQuickActionButton(

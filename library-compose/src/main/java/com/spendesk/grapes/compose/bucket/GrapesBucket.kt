@@ -84,7 +84,7 @@ private fun GrapesBucketPreview() {
                 modifier = Modifier.padding(12.dp),
                 title = "Rick's bucket",
                 action = "Delete",
-                actionColor = GrapesTheme.colors.alertNormal,
+                actionColor = GrapesTheme.colors.contentAlertDefault,
                 onActionClicked = { println("Clicked") },
                 content = {
                     Column {
@@ -106,7 +106,7 @@ private fun GrapesBucketPreview() {
                         modifier = Modifier.background(Color.Yellow),
                         title = "Bucket de Rick Astley",
                         action = "Remove",
-                        actionColor = GrapesTheme.colors.alertNormal
+                        actionColor = GrapesTheme.colors.contentAlertDefault
                     )
                 }
             ) {

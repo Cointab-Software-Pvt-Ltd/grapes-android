@@ -43,7 +43,7 @@ fun ActionMenuSection(
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = GrapesTheme.colors.structureSurface,
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         ),
         shape = sectionShape,
     ) {

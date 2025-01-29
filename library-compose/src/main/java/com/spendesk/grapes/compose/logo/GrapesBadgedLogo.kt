@@ -103,7 +103,7 @@ private fun GrapesBadgedLogoPreview(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(GrapesTheme.shapes.radius1000)
-                        .background(GrapesTheme.colors.warningNormal)
+                        .background(GrapesTheme.colors.contentWarningDefault)
                 )
             },
             badgeAlignment = alignment,
@@ -132,7 +132,7 @@ private fun GrapesBadgedCardLogoPreview(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(GrapesTheme.shapes.radius1000)
-                        .background(GrapesTheme.colors.warningNormal)
+                        .background(GrapesTheme.colors.contentWarningDefault)
                 )
             },
             badgeAlignment = alignment,

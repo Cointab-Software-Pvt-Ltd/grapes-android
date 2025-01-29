@@ -108,7 +108,7 @@ private fun GrapesButtonBrandPreview() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(GrapesTheme.colors.structureBackground)
+                .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {

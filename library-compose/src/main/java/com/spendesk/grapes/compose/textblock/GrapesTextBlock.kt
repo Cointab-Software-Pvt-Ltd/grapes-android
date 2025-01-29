@@ -26,7 +26,7 @@ fun GrapesTextBlock(
 ) {
     Column(
         modifier = modifier
-            .background(GrapesTheme.colors.structureSurface, GrapesTheme.shapes.radius8)
+            .background(GrapesTheme.colors.backgroundPrimaryDefault, GrapesTheme.shapes.radius8)
             .border(BorderStroke(0.5.dp, GrapesTheme.colors.borderDefault), GrapesTheme.shapes.radius8)
     ) {
         header?.invoke()

@@ -41,7 +41,7 @@ fun GrapesNavigationBar(
     windowInsets: WindowInsets = NavigationBarDefaults.windowInsets,
 ) {
     NavigationBar(
-        containerColor = GrapesTheme.colors.structureSurface,
+        containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         contentColor = GrapesTheme.colors.contentSelected,
         windowInsets = windowInsets,
         modifier = modifier,
@@ -64,7 +64,7 @@ private fun RowScope.GrapesNavigationBarItem(
 ) {
     val textStyle = GrapesTheme.typography.titleS
     val colors = NavigationBarItemDefaults.colors(
-        indicatorColor = GrapesTheme.colors.structureSurface,
+        indicatorColor = GrapesTheme.colors.backgroundPrimaryDefault,
         selectedIconColor = GrapesTheme.colors.contentSelected,
         selectedTextColor = GrapesTheme.colors.contentSelected,
         unselectedIconColor = GrapesTheme.colors.neutralDark,

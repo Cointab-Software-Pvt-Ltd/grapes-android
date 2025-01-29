@@ -133,7 +133,7 @@ fun WindowEditTextPreview() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(GrapesTheme.colors.primaryLight),
+                .background(GrapesTheme.colors.backgroundSecondaryBrandDefault),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Column(

@@ -20,11 +20,11 @@ internal fun Slot(
 ) {
     Box(
         contentAlignment = Alignment.Center,
-        modifier = modifier.background(GrapesTheme.colors.warningLightest),
+        modifier = modifier.background(GrapesTheme.colors.backgroundSecondaryWarningDefault),
     ) {
         Text(
             text = "To be replaced",
-            color = GrapesTheme.colors.warningNormal,
+            color = GrapesTheme.colors.contentWarningDefault,
             style = GrapesTheme.typography.titleS,
         )
     }

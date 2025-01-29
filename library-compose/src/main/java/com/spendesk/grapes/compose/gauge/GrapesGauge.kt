@@ -213,7 +213,7 @@ private fun GaugePreview() {
                 modifier = Modifier.padding(16.dp),
                 backgroundColor = GrapesTheme.colors.neutralLightest,
                 gauges = listOf(
-                    Gauge.Stripped(progress = 0.8f, stripeColor = GrapesTheme.colors.backgroundSecondaryAlertDefault, stripeColorSecondary = GrapesTheme.colors.warningNormal)
+                    Gauge.Stripped(progress = 0.8f, stripeColor = GrapesTheme.colors.backgroundSecondaryAlertDefault, stripeColorSecondary = GrapesTheme.colors.contentWarningDefault)
                 )
             )
             GrapesGauge(
@@ -221,7 +221,7 @@ private fun GaugePreview() {
                 backgroundColor = GrapesTheme.colors.neutralLightest,
                 gauges = listOf(
                     Gauge.Solid(progress = 0.2f, color = GrapesTheme.colors.backgroundPrimaryWarningDefault),
-                    Gauge.Stripped(progress = 0.5f, stripeColor = GrapesTheme.colors.backgroundSecondaryAlertDefault, stripeColorSecondary = GrapesTheme.colors.warningNormal)
+                    Gauge.Stripped(progress = 0.5f, stripeColor = GrapesTheme.colors.backgroundSecondaryAlertDefault, stripeColorSecondary = GrapesTheme.colors.contentWarningDefault)
                 )
             )
         }
