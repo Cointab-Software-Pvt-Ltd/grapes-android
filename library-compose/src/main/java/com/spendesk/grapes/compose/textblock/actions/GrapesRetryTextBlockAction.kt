@@ -25,8 +25,8 @@ fun GrapesRetryTextBlockAction(retryLabel: String, onRetryClicked: () -> Unit, m
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
-        Text(text = retryLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.warningNormal)
-        GrapesIconSet.TriangleWarning(tint = GrapesTheme.colors.warningNormal)
+        Text(text = retryLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentWarningDefault)
+        GrapesIconSet.TriangleWarning(tint = GrapesTheme.colors.contentWarningDefault)
     }
 }
 

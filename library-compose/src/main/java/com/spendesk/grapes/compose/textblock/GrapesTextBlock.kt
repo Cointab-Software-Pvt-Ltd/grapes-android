@@ -27,7 +27,7 @@ fun GrapesTextBlock(
     Column(
         modifier = modifier
             .background(GrapesTheme.colors.structureSurface, GrapesTheme.shapes.radius8)
-            .border(BorderStroke(0.5.dp, GrapesTheme.colors.neutralLighter), GrapesTheme.shapes.radius8)
+            .border(BorderStroke(0.5.dp, GrapesTheme.colors.borderDefault), GrapesTheme.shapes.radius8)
     ) {
         header?.invoke()
         content?.invoke()
@@ -48,7 +48,7 @@ private fun TextBlockPreview() {
                     informativeLabel = {
                         GrapesTextBlockInformativeLabel(
                             label = "• Missing",
-                            color = GrapesTheme.colors.warningDark,
+                            color = GrapesTheme.colors.contentWarningDefault,
                         )
                     },
                     action = {

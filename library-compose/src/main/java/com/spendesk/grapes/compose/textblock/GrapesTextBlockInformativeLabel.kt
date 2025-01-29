@@ -53,8 +53,8 @@ private fun TextBlockOptionalTitlePreview() {
             modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
-            GrapesTextBlockInformativeLabel("Missing", color = GrapesTheme.colors.warningNormal)
-            GrapesTextBlockInformativeLabel("Optional", color = GrapesTheme.colors.neutralNormal)
+            GrapesTextBlockInformativeLabel("Missing", color = GrapesTheme.colors.contentWarningDefault)
+            GrapesTextBlockInformativeLabel("Optional", color = GrapesTheme.colors.contentSecondaryBGPrimary)
         }
     }
 }

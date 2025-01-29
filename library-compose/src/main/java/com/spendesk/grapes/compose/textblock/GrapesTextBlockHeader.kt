@@ -71,7 +71,7 @@ private fun TextBlockHeaderPreview(
         {
             GrapesTextBlockInformativeLabel(
                 label = "• $it",
-                color = GrapesTheme.colors.warningDark,
+                color = GrapesTheme.colors.contentWarningDefault,
             )
         }
     }

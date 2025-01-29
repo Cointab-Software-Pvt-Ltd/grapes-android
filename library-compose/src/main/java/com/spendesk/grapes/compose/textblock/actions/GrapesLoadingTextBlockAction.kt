@@ -4,6 +4,7 @@ package com.spendesk.grapes.compose.textblock.actions
  * @author Kélian CLERC
  * @since 15/01/2024
  */
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,8 +25,12 @@ fun GrapesLoadingTextBlockAction(loadingLabel: String, modifier: Modifier = Modi
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
-        Text(text = loadingLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.neutralNormal)
-        LinearProgressIndicator(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
+        Text(text = loadingLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        LinearProgressIndicator(
+            modifier = Modifier.size(GrapesTheme.dimensions.unit16),
+            color = GrapesTheme.colors.contentSecondaryBGPrimary,
+            trackColor = GrapesTheme.colors.backgroundSecondaryDefault
+        )
     }
 }
 
@@ -34,7 +39,7 @@ fun GrapesLoadingTextBlockAction(loadingLabel: String, modifier: Modifier = Modi
 fun LoadingTextBlockActionPreview() {
     GrapesTheme {
         Column(
-            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+            modifier = Modifier.background(GrapesTheme.colors.backgroundPrimaryDefault).padding(GrapesTheme.dimensions.unit16),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesLoadingTextBlockAction("Saving")
