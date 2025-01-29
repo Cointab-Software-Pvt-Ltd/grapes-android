@@ -135,7 +135,7 @@ fun ErrorTemplatePreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .background(GrapesTheme.colors.mainWhite)
+                .background(GrapesTheme.colors.backgroundPrimaryDefault)
                 .padding(GrapesTheme.dimensions.unit16),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
