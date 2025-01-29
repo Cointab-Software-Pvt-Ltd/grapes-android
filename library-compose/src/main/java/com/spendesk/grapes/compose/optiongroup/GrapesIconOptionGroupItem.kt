@@ -41,7 +41,7 @@ fun GrapesIconOptionGroupItem(
             painter = imagePainter,
             contentDescription = null,
             modifier = Modifier
-                .size(GrapesTheme.dimensions.sizing5)
+                .size(GrapesTheme.dimensions.unit32)
         )
     }
 }

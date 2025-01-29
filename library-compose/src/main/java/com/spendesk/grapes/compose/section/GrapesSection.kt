@@ -28,8 +28,8 @@ fun GrapesSection(
         modifier = modifier,
         shape = GrapesTheme.shapes.radius12,
         colors = CardDefaults.cardColors(
-            containerColor = GrapesTheme.colors.structureSurface,
-            contentColor = GrapesTheme.colors.neutralDarker,
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            contentColor = GrapesTheme.colors.contentPrimary,
         ),
     ) {
         Column(
@@ -38,7 +38,7 @@ fun GrapesSection(
             Text(
                 text = title,
                 style = GrapesTheme.typography.titleS,
-                color = GrapesTheme.colors.neutralDark,
+                color = GrapesTheme.colors.contentSecondaryBGSecondary,
                 modifier = Modifier.padding(
                     horizontal = GrapesTheme.dimensions.unit16,
                     vertical = GrapesTheme.dimensions.unit8,

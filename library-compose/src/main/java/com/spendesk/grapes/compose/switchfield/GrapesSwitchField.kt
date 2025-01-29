@@ -30,9 +30,9 @@ fun GrapesSwitchField(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     shape: Shape = GrapesTheme.shapes.radius8,
-    color: Color = GrapesTheme.colors.structureSurface,
-    contentColor: Color = GrapesTheme.colors.neutralDarker,
-    border: BorderStroke = BorderStroke(1.dp, GrapesTheme.colors.neutralLighter),
+    color: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+    contentColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
+    border: BorderStroke = BorderStroke(1.dp, GrapesTheme.colors.borderDefault),
     shadowElevation: Dp = 1.dp,
 ) {
     Surface(

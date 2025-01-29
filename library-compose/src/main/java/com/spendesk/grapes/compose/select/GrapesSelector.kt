@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.badge.GrapesAlertBadge
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -38,9 +39,7 @@ fun GrapesSelector(
         label = label,
         badge = badge,
         icon = {
-            Icon(
-                imageVector = Icons.Default.KeyboardArrowDown,
-                contentDescription = null,
+            GrapesIconSet.ChevronDown(
                 tint = colors.contentColor,
             )
         },
