@@ -36,9 +36,9 @@ internal fun NeutralGrapesTagColors(
 
 @Composable
 internal fun ErrorGrapesTagColors(
-    containerColor: Color = GrapesTheme.colors.alertLightest,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryAlertDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.alertLighter,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryAlertDefault,
 ): GrapesTagColors = DefaultGrapesTagColors(
     containerColor = containerColor,
     contentColor = contentColor,
@@ -47,9 +47,9 @@ internal fun ErrorGrapesTagColors(
 
 @Composable
 internal fun WarningGrapesTagColors(
-    containerColor: Color = GrapesTheme.colors.warningLightest,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryWarningDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.warningLighter,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryWarningDefault,
 ): GrapesTagColors = DefaultGrapesTagColors(
     containerColor = containerColor,
     contentColor = contentColor,
@@ -58,9 +58,9 @@ internal fun WarningGrapesTagColors(
 
 @Composable
 internal fun InfoGrapesTagColors(
-    containerColor: Color = GrapesTheme.colors.infoLightest,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryInfoDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.infoLighter,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryInfoDefault,
 ): GrapesTagColors = DefaultGrapesTagColors(
     containerColor = containerColor,
     contentColor = contentColor,
@@ -69,9 +69,9 @@ internal fun InfoGrapesTagColors(
 
 @Composable
 internal fun SuccessGrapesTagColors(
-    containerColor: Color = GrapesTheme.colors.successLightest,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondarySuccessDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.successLighter,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondarySuccessDefault,
 ): GrapesTagColors = DefaultGrapesTagColors(
     containerColor = containerColor,
     contentColor = contentColor,
