@@ -41,7 +41,7 @@ fun GrapesBucketHeadline(
             style = GrapesTheme.typography.titleS
         )
         if (action != null && actionColor != null) {
-            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizing1))
+            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit12))
             Text(
                 modifier = Modifier.clickable(onClick = onActionClicked ?: {}, onClickLabel = action, role = Role.Button),
                 text = action,
