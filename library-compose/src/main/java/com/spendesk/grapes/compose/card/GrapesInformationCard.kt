@@ -91,7 +91,7 @@ fun GrapesInformationCard(
                         painter = painterResource(id = headerIcon),
                         contentDescription = null,
                         tint = iconColor,
-                        modifier = Modifier.size(GrapesTheme.dimensions.sizing2)
+                        modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM)
                     )
                 }
             }
