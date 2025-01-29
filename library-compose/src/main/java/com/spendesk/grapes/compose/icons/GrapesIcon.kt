@@ -1,11 +1,16 @@
 package com.spendesk.grapes.compose.icons
 
 import androidx.annotation.DrawableRes
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.extensions.GrapesIcons
 import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -58,4 +63,33 @@ fun GrapesIcon(
         contentDescription = contentDescription,
         tint = tint
     )
+}
+
+@Preview
+@Composable
+private fun GrapesIconPreview() {
+    GrapesTheme {
+        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)) {
+            GrapesIcon(
+                icon = R.drawable.ic_grapes_icon_circle_check,
+                configuration = GrapesConfigurationStatus.INFORMATION,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconS)
+            )
+            GrapesIcon(
+                icon = R.drawable.ic_grapes_icon_circle_check,
+                configuration = GrapesConfigurationStatus.INFORMATION,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM)
+            )
+            GrapesIcon(
+                icon = R.drawable.ic_grapes_icon_circle_check,
+                configuration = GrapesConfigurationStatus.INFORMATION,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconL)
+            )
+            GrapesIcon(
+                icon = R.drawable.ic_grapes_icon_circle_check,
+                configuration = GrapesConfigurationStatus.INFORMATION,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconXl)
+            )
+        }
+    }
 }

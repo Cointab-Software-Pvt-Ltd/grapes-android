@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
@@ -16,8 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.bucket.GrapesBucketContainer
-import com.spendesk.grapes.compose.icons.Size
-import com.spendesk.grapes.compose.icons.StatusInformationIcon
+import com.spendesk.grapes.compose.icons.GrapesIcon
+import com.spendesk.grapes.compose.icons.GrapesSurface
 import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
@@ -39,12 +40,16 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
     ) {
 
-        StatusInformationIcon(
-            icon = iconActionConfiguration.icon,
+        GrapesSurface(
             configuration = iconActionConfiguration.status,
-            size = Size.M,
-            hasBorder = false
-        )
+            modifier = Modifier.size(GrapesTheme.dimensions.unit48)
+        ) {
+            GrapesIcon(
+                icon = iconActionConfiguration.icon,
+                configuration = iconActionConfiguration.status,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconL)
+            )
+        }
 
         Column(
             modifier = Modifier.weight(1f),

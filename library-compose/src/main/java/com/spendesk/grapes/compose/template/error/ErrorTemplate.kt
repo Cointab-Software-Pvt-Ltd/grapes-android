@@ -30,9 +30,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.spendesk.grapes.compose.button.GrapesButton
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconAlert
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconSize
-import com.spendesk.grapes.compose.icons.Size
-import com.spendesk.grapes.compose.icons.StatusInformationIcon
-import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import kotlinx.coroutines.delay
 
@@ -79,7 +76,7 @@ fun ErrorTemplate(
 @Composable
 fun ErrorTemplate(
     title: @Composable () -> Unit,
-    icon: @Composable () -> Unit = { StatusInformationIcon(configuration = GrapesConfigurationStatus.ALERT, size = Size.L) },
+    icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
     description: (@Composable () -> Unit)? = null,
     retryButton: (@Composable () -> Unit)? = null,
     configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration()

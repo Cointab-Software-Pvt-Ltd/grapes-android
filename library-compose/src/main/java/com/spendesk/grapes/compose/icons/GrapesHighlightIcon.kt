@@ -54,9 +54,9 @@ fun GrapesHighlightIconAlert(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.alertNormal,
-        containerColor = GrapesTheme.colors.alertLightest,
-        borderColor = GrapesTheme.colors.alertLighter,
+        tint = GrapesTheme.colors.contentAlertDefault,
+        containerColor = GrapesTheme.colors.backgroundSecondaryAlertDefault,
+        borderColor = GrapesTheme.colors.backgroundSecondaryAlertDefault,
         size = size,
         modifier = modifier,
     )
@@ -72,9 +72,9 @@ fun GrapesHighlightIconWarning(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.warningNormal,
-        containerColor = GrapesTheme.colors.warningLightest,
-        borderColor = GrapesTheme.colors.warningLighter,
+        tint = GrapesTheme.colors.contentWarningDefault,
+        containerColor = GrapesTheme.colors.backgroundSecondaryWarningDefault,
+        borderColor = GrapesTheme.colors.backgroundSecondaryWarningDefault,
         size = size,
         modifier = modifier,
     )
@@ -90,9 +90,9 @@ fun GrapesHighlightIconSuccess(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.successNormal,
-        containerColor = GrapesTheme.colors.successLightest,
-        borderColor = GrapesTheme.colors.successLighter,
+        tint = GrapesTheme.colors.contentSuccessDefault,
+        containerColor = GrapesTheme.colors.backgroundSecondarySuccessDefault,
+        borderColor = GrapesTheme.colors.backgroundSecondarySuccessDefault,
         size = size,
         modifier = modifier,
     )
@@ -108,7 +108,7 @@ fun GrapesHighlightIconNeutral(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.neutralDark,
+        tint = GrapesTheme.colors.contentSecondaryBGSecondary,
         containerColor = GrapesTheme.colors.neutralLightest,
         borderColor = GrapesTheme.colors.neutralLighter,
         size = size,
@@ -126,9 +126,9 @@ fun GrapesHighlightIconInfo(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.infoNormal,
-        containerColor = GrapesTheme.colors.infoLightest,
-        borderColor = GrapesTheme.colors.infoLighter,
+        tint = GrapesTheme.colors.contentInfoDefault,
+        containerColor = GrapesTheme.colors.backgroundSecondaryInfoDefault,
+        borderColor = GrapesTheme.colors.backgroundSecondaryInfoDefault,
         size = size,
         modifier = modifier,
     )

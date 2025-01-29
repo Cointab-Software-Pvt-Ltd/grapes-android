@@ -19,17 +19,17 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 fun GrapesSurface(
     configuration: GrapesConfigurationStatus,
     modifier: Modifier = Modifier,
-    shape: Shape = CircleShape,
+    shape: Shape = GrapesTheme.shapes.radius1000,
     hasBorder: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val (backgroundColor: Color, borderColor: Color) = when (configuration) {
-        GrapesConfigurationStatus.SUCCESS -> Pair(GrapesTheme.colors.successLightest, GrapesTheme.colors.successLighter)
-        GrapesConfigurationStatus.INFORMATION -> Pair(GrapesTheme.colors.infoLightest, GrapesTheme.colors.infoLighter)
+        GrapesConfigurationStatus.SUCCESS -> Pair(GrapesTheme.colors.backgroundSecondarySuccessDefault, GrapesTheme.colors.backgroundSecondarySuccessDefault)
+        GrapesConfigurationStatus.INFORMATION -> Pair(GrapesTheme.colors.backgroundSecondaryInfoDefault, GrapesTheme.colors.backgroundSecondaryInfoDefault)
         GrapesConfigurationStatus.NEUTRAL -> Pair(GrapesTheme.colors.neutralLightest, GrapesTheme.colors.neutralLighter)
-        GrapesConfigurationStatus.ALERT -> Pair(GrapesTheme.colors.alertLightest, GrapesTheme.colors.alertLighter)
-        GrapesConfigurationStatus.WARNING -> Pair(GrapesTheme.colors.warningLightest, GrapesTheme.colors.warningLighter)
-        GrapesConfigurationStatus.BLOCKED -> Pair(GrapesTheme.colors.primaryLightest, GrapesTheme.colors.primaryLighter)
+        GrapesConfigurationStatus.ALERT -> Pair(GrapesTheme.colors.backgroundSecondaryAlertDefault, GrapesTheme.colors.backgroundSecondaryAlertDefault)
+        GrapesConfigurationStatus.WARNING -> Pair(GrapesTheme.colors.backgroundSecondaryWarningDefault, GrapesTheme.colors.backgroundSecondaryWarningDefault)
+        GrapesConfigurationStatus.BLOCKED -> Pair(GrapesTheme.colors.backgroundSecondaryBrandDefault, GrapesTheme.colors.backgroundSecondaryBrandDefault)
     }
 
     val border = BorderStroke(1.dp, borderColor).takeIf { hasBorder }
