@@ -51,7 +51,7 @@ private fun GrapesCardPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .background(GrapesTheme.colors.structureBackground)
+                .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16)
         ) {
             GrapesCard {
@@ -72,12 +72,12 @@ internal object GrapesCardDefaults {
 
     val colors: CardColors
         @Composable get() = CardDefaults.elevatedCardColors(
-            containerColor = GrapesTheme.colors.mainWhite,
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         )
 
     val border: BorderStroke
         @Composable get() = BorderStroke(
             width = borderThickness,
-            color = GrapesTheme.colors.neutralLight,
+            color = GrapesTheme.colors.borderDefault,
         )
 }

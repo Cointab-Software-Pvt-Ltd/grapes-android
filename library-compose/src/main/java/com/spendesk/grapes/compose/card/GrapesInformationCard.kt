@@ -25,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.dp
+import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.listitem.GrapesDivider
 import com.spendesk.grapes.compose.listitem.GrapesInlineInformationItem
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -48,6 +49,7 @@ fun GrapesInformationCard(
                 text = title,
                 style = GrapesTheme.typography.titleS,
                 modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
+                color = GrapesTheme.colors.contentPrimary,
             )
         },
         modifier = modifier,
@@ -79,6 +81,7 @@ fun GrapesInformationCard(
                 Text(
                     text = title,
                     style = GrapesTheme.typography.titleS,
+                    color = GrapesTheme.colors.contentPrimary,
                     modifier = Modifier
                         .weight(1f)
                         .padding(GrapesTheme.dimensions.unit16),
@@ -133,7 +136,7 @@ object GrapesInformationCardDefaults {
 
     val colors: CardColors
         @Composable get() = CardDefaults.elevatedCardColors(
-            containerColor = GrapesTheme.colors.mainWhite,
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         )
 
     val iconColor: Color
@@ -142,7 +145,7 @@ object GrapesInformationCardDefaults {
     val border: BorderStroke
         @Composable get() = BorderStroke(
             width = borderThickness,
-            color = GrapesTheme.colors.neutralLight,
+            color = GrapesTheme.colors.borderDefault,
         )
 
     val contentVerticalArrangement: Arrangement.HorizontalOrVertical
@@ -156,7 +159,7 @@ private fun PreviewDescription(
 ) {
     GrapesTheme {
         Surface(
-            color = GrapesTheme.colors.structureBackground,
+            color = GrapesTheme.colors.backgroundSecondaryDefault,
         ) {
             GrapesInformationCard(
                 title = texts.first,
@@ -177,11 +180,11 @@ private fun PreviewWithIconDescription(
 ) {
     GrapesTheme {
         Surface(
-            color = GrapesTheme.colors.structureBackground,
+            color = GrapesTheme.colors.backgroundSecondaryDefault,
         ) {
             GrapesInformationCard(
                 title = texts.first,
-                headerIcon = android.R.drawable.ic_delete,
+                headerIcon = R.drawable.ic_grapes_icon_cross_small,
                 onHeaderIconClicked = {},
                 modifier = Modifier
                     .fillMaxWidth()
@@ -207,7 +210,7 @@ private class DescriptionParameterProvider : PreviewParameterProvider<Pair<Strin
 private fun PreviewDescriptionItems() {
     GrapesTheme {
         Surface(
-            color = GrapesTheme.colors.structureBackground,
+            color = GrapesTheme.colors.backgroundSecondaryDefault,
         ) {
             GrapesInformationCard(
                 title = "Description",
