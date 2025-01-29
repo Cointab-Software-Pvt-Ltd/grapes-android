@@ -102,7 +102,7 @@ private fun Select(
     }
 
     val contentColor = if (isEnabled) {
-        GrapesTheme.colors.structureComplementary
+        GrapesTheme.colors.contentPrimary
     } else {
         GrapesTheme.colors.neutralNormal
     }

@@ -41,7 +41,7 @@ fun GrapesQuickActionButton(
             Icon(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = GrapesTheme.colors.structureComplementary,
+                tint = GrapesTheme.colors.contentPrimary,
                 modifier = Modifier.size(GrapesTheme.dimensions.sizing2)
             )
         },

@@ -137,7 +137,7 @@ object GrapesInformationCardDefaults {
         )
 
     val iconColor: Color
-        @Composable get() = GrapesTheme.colors.structureComplementary
+        @Composable get() = GrapesTheme.colors.contentPrimary
 
     val border: BorderStroke
         @Composable get() = BorderStroke(

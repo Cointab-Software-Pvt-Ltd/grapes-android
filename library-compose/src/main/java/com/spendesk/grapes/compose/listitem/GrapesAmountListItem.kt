@@ -148,9 +148,9 @@ object GrapesAmountListItemDefaults {
 
     @Composable
     fun colors(
-        titleColor: Color = GrapesTheme.colors.structureComplementary,
+        titleColor: Color = GrapesTheme.colors.contentPrimary,
         subtitleColor: Color = GrapesTheme.colors.neutralDark,
-        amountColor: Color = GrapesTheme.colors.structureComplementary,
+        amountColor: Color = GrapesTheme.colors.contentPrimary,
         descriptionColor: Color = GrapesTheme.colors.neutralDark,
     ): GrapesAmountListItemColors = GrapesAmountListItemColors(
         titleColor = titleColor,

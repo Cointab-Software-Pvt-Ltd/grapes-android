@@ -63,7 +63,7 @@ fun GrapesMediumTopAppBar(
             title = {
                 Text(
                     text = title,
-                    color = GrapesTheme.colors.structureComplementary,
+                    color = GrapesTheme.colors.contentPrimary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     style = GrapesTheme.typography.titleXl,
