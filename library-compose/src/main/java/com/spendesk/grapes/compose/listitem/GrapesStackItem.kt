@@ -38,9 +38,9 @@ object GrapesStackItemDefaults {
 
     @Composable
     fun colors(
-        titleColor: Color = GrapesTheme.colors.neutralDarker,
-        descriptionColor: Color = GrapesTheme.colors.neutralDarker,
-        backgroundColor: Color = GrapesTheme.colors.structureBackground
+        titleColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
+        descriptionColor: Color = GrapesTheme.colors.contentPrimary,
+        backgroundColor: Color = GrapesTheme.colors.backgroundSecondaryDefault
     ): GrapesStackItemColors = GrapesStackItemColors(
         titleColor = titleColor,
         descriptionColor = descriptionColor,
@@ -106,14 +106,14 @@ fun GrapesStackItem(
 private fun GrapesStackItemPreview() {
     GrapesTheme {
         Column(modifier = Modifier.background(Color.White), verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
-            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizing2))
+            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM))
             GrapesStackItem(
                 title = "Awaiting Reimbursement",
                 description = "Total: 1000€",
                 itemsNumber = 2,
                 onClick = {}
             )
-            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizing2))
+            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM))
         }
     }
 }

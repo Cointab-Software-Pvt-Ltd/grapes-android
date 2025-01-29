@@ -72,7 +72,7 @@ fun GrapesStackSurface(
                 modifier = Modifier.align(Alignment.Center),
                 text = text,
                 style = GrapesTheme.typography.titleS,
-                color = GrapesTheme.colors.neutralDark,
+                color = GrapesTheme.colors.contentSecondaryBGSecondary,
                 textAlign = TextAlign.Center,
                 maxLines = GrapesStackSurfaceMaxLines,
                 overflow = TextOverflow.Ellipsis,
