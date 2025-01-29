@@ -62,7 +62,7 @@ fun PlaceholderDefaults.shimmerHighlightColor(
  * @param color the color used to draw the placeholder UI. If [Color.Unspecified] is provided,
  * the placeholder will use [GrapesColors.neutralLighter].
  * @param shape desired shape of the placeholder. If null is provided the placeholder
- * will use the shape [GrapesShapes.shape2].
+ * will use the shape [GrapesShapes.radius8].
  * @param highlight optional highlight animation.
  * @param placeholderFadeTransitionSpec The transition spec to use when fading the placeholder
  * on/off screen. The boolean parameter defined for the transition is [visible].
