@@ -23,16 +23,16 @@ object QuickActionButtonDefaults {
         @Composable
         @ReadOnlyComposable
         get() = ButtonColors(
-            containerColor = GrapesTheme.colors.structureSurface,
-            contentColor = GrapesTheme.colors.neutralDarker,
-            disabledContainerColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.structureSurface
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            contentColor = GrapesTheme.colors.contentPrimary,
+            disabledContainerColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentDisable,
         )
 
     val buttonBorder: BorderStroke
         @Composable
         @ReadOnlyComposable
-        get() = BorderStroke(1.dp, GrapesTheme.colors.neutralLighter)
+        get() = BorderStroke(1.dp, GrapesTheme.colors.borderDefault)
 
     val buttonShape: Shape
         @Composable

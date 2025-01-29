@@ -35,25 +35,27 @@ fun GrapesQuickActionButton(
     @DrawableRes icon: Int,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    isEnabled: Boolean = true,
 ) {
     QuickActionButton(
         buttonContent = {
             Icon(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = GrapesTheme.colors.contentPrimary,
-                modifier = Modifier.size(GrapesTheme.dimensions.sizing2)
+                tint = if (isEnabled) QuickActionButtonDefaults.buttonColors.contentColor else GrapesTheme.colors.contentDisable,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM)
             )
         },
         labelContent = {
             Text(
                 text = label,
                 textAlign = TextAlign.Center,
-                color = GrapesTheme.colors.neutralDarker
+                color = if (isEnabled) QuickActionButtonDefaults.buttonColors.contentColor else GrapesTheme.colors.contentDisable
             )
         },
         onClick = onClick,
         modifier = modifier,
+        isEnabled = isEnabled,
     )
 }
 
@@ -63,6 +65,7 @@ private fun QuickActionButton(
     labelContent: @Composable () -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    isEnabled: Boolean = true,
 ) {
     // To make the ripple happen on the button part of it, the mutable interaction source is shared between the button and the column.
     val mutableInteractionSource = remember { MutableInteractionSource() }
@@ -82,6 +85,7 @@ private fun QuickActionButton(
             shape = QuickActionButtonDefaults.buttonShape,
             contentPadding = QuickActionButtonDefaults.buttonPadding,
             interactionSource = mutableInteractionSource,
+            enabled = isEnabled,
         ) {
             buttonContent()
         }
@@ -104,6 +108,27 @@ private fun GrapesQuickActionButtonPreview() {
             GrapesQuickActionButton(
                 label = "Label $clickCount",
                 icon = R.drawable.ic_grapes_icon_circle_plus,
+                onClick = { clickCount++ }, // Let's make sure onClick is not triggered twice by the interaction source sharing.
+            )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun GrapesQuickActionButtonDisabledPreview() {
+    GrapesTheme {
+        var clickCount by remember { mutableStateOf(0) }
+
+        Column(
+            modifier = Modifier
+                .background(GrapesTheme.colors.structureBackground)
+                .padding(GrapesTheme.dimensions.unit16)
+        ) {
+            GrapesQuickActionButton(
+                label = "Label $clickCount",
+                icon = R.drawable.ic_grapes_icon_circle_plus,
+                isEnabled = false,
                 onClick = { clickCount++ }, // Let's make sure onClick is not triggered twice by the interaction source sharing.
             )
         }
