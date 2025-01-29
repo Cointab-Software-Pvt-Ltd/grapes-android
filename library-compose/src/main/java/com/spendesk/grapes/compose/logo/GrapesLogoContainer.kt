@@ -23,7 +23,7 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
  **/
 
 /**
- * Container for a logo with a maximum size of [GrapesTheme.dimensions.sizing5],
+ * Container for a logo with a maximum size of [GrapesTheme.dimensions.unit32],
  * clipped in a [GrapesTheme.shapes.radius4]
  */
 @Composable
@@ -36,12 +36,12 @@ fun GrapesMediumLogoContainer(
         content = content,
         modifier = modifier
             .clip(GrapesTheme.shapes.radius4)
-            .size(GrapesTheme.dimensions.sizing5),
+            .size(GrapesTheme.dimensions.unit32),
     )
 }
 
 /**
- * Container for a logo with a maximum size of [GrapesTheme.dimensions.sizing6],
+ * Container for a logo with a maximum size of [GrapesTheme.dimensions.unit40],
  * clipped in a [GrapesTheme.shapes.radius8]
  */
 @Composable
@@ -54,12 +54,12 @@ fun GrapesLargeLogoContainer(
         content = content,
         modifier = modifier
             .clip(GrapesTheme.shapes.radius8)
-            .size(GrapesTheme.dimensions.sizing6),
+            .size(GrapesTheme.dimensions.unit40),
     )
 }
 
 /**
- * Container for a card logo with a maximum height of [GrapesTheme.dimensions.sizing6] and width of [GrapesTheme.dimensions.sizing7].
+ * Container for a card logo.
  */
 @Composable
 fun GrapesCardLogoContainer(
