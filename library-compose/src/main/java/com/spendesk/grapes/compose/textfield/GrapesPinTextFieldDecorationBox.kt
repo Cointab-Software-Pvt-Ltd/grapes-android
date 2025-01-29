@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
@@ -90,6 +91,65 @@ private fun PinText(
             style = GrapesTheme.typography.bodyXl.copy(fontSize = 24.sp),
             color = GrapesPinTextFieldDefaults.pinFieldColors().textColor(isEnabled = isEnabled, isError = isError, isSelected = isFocused),
             textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun PinTextPreview() {
+    GrapesTheme {
+        PinText(
+            char = "1",
+            isError = false,
+            isEnabled = true,
+            isFocused = true,
+            onClick = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun GrapesPinTextFieldPreview() {
+    GrapesTheme {
+        GrapesPinTextFieldDecorationBox(
+            maxNumberOfChars = 4,
+            currentlySelectedIndex = 0,
+            lastTextValue = "123",
+            isError = false,
+            isEnabled = true,
+            onClick = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun GrapesPinTextFieldErrorPreview() {
+    GrapesTheme {
+        GrapesPinTextFieldDecorationBox(
+            maxNumberOfChars = 4,
+            currentlySelectedIndex = 0,
+            lastTextValue = "123",
+            isError = true,
+            isEnabled = true,
+            onClick = {}
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun GrapesPinTextFieldDisabledPreview() {
+    GrapesTheme {
+        GrapesPinTextFieldDecorationBox(
+            maxNumberOfChars = 4,
+            currentlySelectedIndex = 0,
+            lastTextValue = "123",
+            isError = false,
+            isEnabled = false,
+            onClick = {}
         )
     }
 }

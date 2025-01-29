@@ -6,6 +6,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.theme.GrapesTheme
+
 @Stable
 interface GrapesBadgeColors {
 
@@ -48,19 +49,19 @@ object GrapesBadgeDefaults {
 
     @Composable
     fun neutralBadgeColors(): GrapesBadgeColors = DefaultBadgeColors(
-        textColor = GrapesTheme.colors.neutralDark,
-        backgroundColor = GrapesTheme.colors.neutralLightest,
+        textColor = GrapesTheme.colors.contentSecondaryBGPrimary,
+        backgroundColor = GrapesTheme.colors.backgroundSecondaryDefault,
     )
 
     @Composable
     fun primaryBadgeColors(): GrapesBadgeColors = DefaultBadgeColors(
-        textColor = GrapesTheme.colors.structureSurface,
-        backgroundColor = GrapesTheme.colors.primaryNormal,
+        textColor = GrapesTheme.colors.contentComplementary,
+        backgroundColor = GrapesTheme.colors.backgroundPrimaryBrandDefault,
     )
 
     @Composable
     fun alertBadgeColors(): GrapesBadgeColors = DefaultBadgeColors(
-        textColor = GrapesTheme.colors.structureSurface,
-        backgroundColor = GrapesTheme.colors.alertNormal,
+        textColor = GrapesTheme.colors.contentComplementary,
+        backgroundColor = GrapesTheme.colors.backgroundPrimaryAlertDefault,
     )
 }

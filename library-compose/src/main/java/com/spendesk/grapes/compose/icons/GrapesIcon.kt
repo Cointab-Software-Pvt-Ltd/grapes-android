@@ -49,7 +49,7 @@ fun GrapesIcon(
     @DrawableRes icon: Int,
     modifier: Modifier = Modifier,
     contentDescription: String? = null,
-    tint: Color = GrapesTheme.colors.structureComplementary
+    tint: Color = GrapesTheme.colors.contentPrimary
 ) {
     Icon(
         modifier = modifier,

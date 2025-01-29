@@ -114,23 +114,23 @@ object GrapesSelectorDefaults {
 
     @Composable
     fun defaultColors(): GrapesSelectorColors = GrapesSelectorColors(
-        backgroundColor = GrapesTheme.colors.structureSurface,
-        borderColor = GrapesTheme.colors.primaryLighter,
-        contentColor = GrapesTheme.colors.primaryNormal,
+        backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+        borderColor = GrapesTheme.colors.borderSelected,
+        contentColor = GrapesTheme.colors.contentSelected,
     )
 
     @Composable
     fun secondaryColors(): GrapesSelectorColors = GrapesSelectorColors(
-        backgroundColor = GrapesTheme.colors.structureSurface,
-        borderColor = GrapesTheme.colors.primaryLighter,
-        contentColor = GrapesTheme.colors.structureComplementary,
+        backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+        borderColor = GrapesTheme.colors.borderSelected,
+        contentColor = GrapesTheme.colors.contentPrimary,
     )
 
     @Composable
     fun primaryColors(): GrapesSelectorColors = GrapesSelectorColors(
-        backgroundColor = GrapesTheme.colors.primaryNormal,
-        borderColor = GrapesTheme.colors.primaryNormal,
-        contentColor = GrapesTheme.colors.structureSurface,
+        backgroundColor = GrapesTheme.colors.backgroundPrimaryBrandDefault,
+        borderColor = GrapesTheme.colors.backgroundPrimaryBrandDefault,
+        contentColor = GrapesTheme.colors.contentComplementary,
     )
 }
 

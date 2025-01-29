@@ -12,10 +12,10 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 @Immutable
 object GrapesCheckboxDefaultColors {
 
-    val checkedColor: Color @Composable get() = GrapesTheme.colors.primaryNormal
-    val uncheckedColor: Color @Composable get() = GrapesTheme.colors.neutralNormal
-    val checkmarkColor: Color @Composable get() = GrapesTheme.colors.mainWhite
-    val disabledCheckedColor: Color @Composable get() = GrapesTheme.colors.neutralLighter
-    val disabledUncheckedColor: Color @Composable get() = GrapesTheme.colors.neutralLighter
-    val disabledIndeterminateColor: Color @Composable get() = GrapesTheme.colors.neutralLight
+    val checkedColor: Color @Composable get() = GrapesTheme.colors.contentSelected
+    val uncheckedColor: Color @Composable get() = GrapesTheme.colors.contentSelected
+    val checkmarkColor: Color @Composable get() = GrapesTheme.colors.contentComplementary
+    val disabledCheckedColor: Color @Composable get() = GrapesTheme.colors.contentDisable
+    val disabledUncheckedColor: Color @Composable get() = GrapesTheme.colors.contentDisable
+    val disabledIndeterminateColor: Color @Composable get() = GrapesTheme.colors.contentDisable
 }

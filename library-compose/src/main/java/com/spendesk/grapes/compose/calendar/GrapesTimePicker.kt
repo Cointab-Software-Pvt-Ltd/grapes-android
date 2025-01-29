@@ -47,15 +47,16 @@ fun GrapesTimePicker(
         modifier = modifier,
         state = timerPickerState,
         colors = TimePickerDefaults.colors(
-            periodSelectorBorderColor = GrapesTheme.colors.primaryNormal,
-            periodSelectorSelectedContainerColor = GrapesTheme.colors.primaryLightest,
-            periodSelectorUnselectedContainerColor = GrapesTheme.colors.mainWhite,
-            periodSelectorSelectedContentColor = GrapesTheme.colors.primaryNormal,
-            periodSelectorUnselectedContentColor = GrapesTheme.colors.neutralDark,
-            timeSelectorSelectedContainerColor = GrapesTheme.colors.mainWhite,
-            timeSelectorUnselectedContainerColor = GrapesTheme.colors.mainWhite,
-            timeSelectorSelectedContentColor = GrapesTheme.colors.neutralDark,
-            timeSelectorUnselectedContentColor = GrapesTheme.colors.neutralDark
+            periodSelectorBorderColor = GrapesTheme.colors.contentSelected,
+            periodSelectorSelectedContainerColor = GrapesTheme.colors.backgroundSecondaryBrandDefault,
+            periodSelectorUnselectedContainerColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            periodSelectorSelectedContentColor = GrapesTheme.colors.contentSelected,
+            periodSelectorUnselectedContentColor = GrapesTheme.colors.contentPrimary,
+            timeSelectorSelectedContainerColor = GrapesTheme.colors.backgroundSecondaryBrandDefault,
+            timeSelectorUnselectedContainerColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            timeSelectorSelectedContentColor = GrapesTheme.colors.contentSelected,
+            timeSelectorUnselectedContentColor = GrapesTheme.colors.contentPrimary,
+            selectorColor = GrapesTheme.colors.contentSelected,
         )
     )
 

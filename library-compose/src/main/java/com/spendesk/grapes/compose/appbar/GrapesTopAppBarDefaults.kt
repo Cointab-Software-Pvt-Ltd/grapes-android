@@ -11,11 +11,11 @@ object GrapesTopAppBarDefaults {
     @Composable
     @OptIn(ExperimentalMaterial3Api::class)
     fun mediumTopAppBarColors(
-        containerColor: Color = GrapesTheme.colors.structureBackground,
-        scrolledContainerColor: Color = GrapesTheme.colors.structureBackground,
-        navigationIconContentColor: Color = GrapesTheme.colors.structureComplementary,
-        titleContentColor: Color = GrapesTheme.colors.structureComplementary,
-        actionIconContentColor: Color = GrapesTheme.colors.structureComplementary,
+        containerColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        scrolledContainerColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        navigationIconContentColor: Color = GrapesTheme.colors.contentPrimary,
+        titleContentColor: Color = GrapesTheme.colors.contentPrimary,
+        actionIconContentColor: Color = GrapesTheme.colors.contentPrimary,
     ) = TopAppBarDefaults.mediumTopAppBarColors(
         containerColor = containerColor,
         scrolledContainerColor = scrolledContainerColor,
@@ -27,11 +27,11 @@ object GrapesTopAppBarDefaults {
     @Composable
     @OptIn(ExperimentalMaterial3Api::class)
     fun topAppBarColors(
-        containerColor: Color = GrapesTheme.colors.structureSurface,
-        scrolledContainerColor: Color = GrapesTheme.colors.structureSurface,
-        navigationIconContentColor: Color = GrapesTheme.colors.structureComplementary,
-        titleContentColor: Color = GrapesTheme.colors.structureComplementary,
-        actionIconContentColor: Color = GrapesTheme.colors.structureComplementary,
+        containerColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        scrolledContainerColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        navigationIconContentColor: Color = GrapesTheme.colors.contentPrimary,
+        titleContentColor: Color = GrapesTheme.colors.contentPrimary,
+        actionIconContentColor: Color = GrapesTheme.colors.contentPrimary,
     ) = TopAppBarDefaults.topAppBarColors(
         containerColor = containerColor,
         scrolledContainerColor = scrolledContainerColor,

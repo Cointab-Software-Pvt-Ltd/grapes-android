@@ -36,9 +36,9 @@ fun GrapesHighlightIconPrimary(
     GrapesHighlightIcon(
         painter = painter,
         contentDescription = contentDescription,
-        tint = GrapesTheme.colors.primaryNormal,
-        containerColor = GrapesTheme.colors.primaryLightest,
-        borderColor = GrapesTheme.colors.primaryLighter,
+        tint = GrapesTheme.colors.contentSelected,
+        containerColor = GrapesTheme.colors.backgroundSecondaryBrandDefault,
+        borderColor = GrapesTheme.colors.backgroundSecondaryBrandDefault,
         size = size,
         modifier = modifier,
     )

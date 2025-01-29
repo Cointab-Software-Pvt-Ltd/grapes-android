@@ -41,7 +41,7 @@ object ButtonColorDefaults {
         @ReadOnlyComposable
         get() = GrapesButtonColors(
             backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
-            contentColor = GrapesTheme.colors.primaryNormal,
+            contentColor = GrapesTheme.colors.contentSelected,
             disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
             disabledContentColor = GrapesTheme.colors.contentSecondaryBGPrimary,
         )
@@ -51,7 +51,7 @@ object ButtonColorDefaults {
         @ReadOnlyComposable
         get() = GrapesButtonColors(
             backgroundColor = Color.Transparent,
-            contentColor = GrapesTheme.colors.mainWhite,
+            contentColor = GrapesTheme.colors.contentComplementary,
             disabledBackgroundColor = Color.Transparent,
             disabledContentColor = GrapesTheme.colors.neutralNormal
         )
@@ -70,10 +70,10 @@ object ButtonColorDefaults {
         @Composable
         @ReadOnlyComposable
         get() = GrapesButtonColors(
-            backgroundColor = GrapesTheme.colors.mainWhite,
-            contentColor = GrapesTheme.colors.alertNormal,
-            disabledBackgroundColor = GrapesTheme.colors.neutralLight,
-            disabledContentColor = GrapesTheme.colors.mainWhite
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            contentColor = GrapesTheme.colors.contentAlertDefault,
+            disabledBackgroundColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+            disabledContentColor = GrapesTheme.colors.contentDisable
         )
 
     val warning: ButtonColors

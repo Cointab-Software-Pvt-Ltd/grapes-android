@@ -34,7 +34,7 @@ object GrapesSwitchDefaults {
     @Composable
     fun colors() = SwitchDefaults.colors(
         checkedThumbColor = GrapesTheme.colors.structureSurface,
-        checkedTrackColor = GrapesTheme.colors.primaryNormal,
+        checkedTrackColor = GrapesTheme.colors.backgroundPrimaryBrandDefault,
         uncheckedThumbColor = GrapesTheme.colors.structureSurface,
         uncheckedTrackColor = GrapesTheme.colors.neutralLight,
         uncheckedBorderColor = GrapesTheme.colors.neutralLight,
