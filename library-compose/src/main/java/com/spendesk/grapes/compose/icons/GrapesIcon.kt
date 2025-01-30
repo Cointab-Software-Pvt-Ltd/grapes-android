@@ -14,7 +14,6 @@ import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.extensions.GrapesIcons
 import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
-import com.spendesk.grapes.compose.theme.extensions.backgroundColorFor
 import com.spendesk.grapes.compose.theme.extensions.contentColorFor
 
 /**

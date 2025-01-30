@@ -21,7 +21,6 @@ import com.spendesk.grapes.compose.icons.GrapesIcon
 import com.spendesk.grapes.compose.icons.GrapesSurface
 import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
-import com.spendesk.grapes.compose.theme.extensions.backgroundColorFor
 import com.spendesk.grapes.compose.theme.extensions.contentColorFor
 
 /**

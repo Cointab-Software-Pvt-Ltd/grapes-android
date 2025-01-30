@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import com.spendesk.grapes.compose.theme.blue60
-import com.spendesk.grapes.compose.theme.blue70
 
 /**
  * @author jean-philippe

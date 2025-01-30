@@ -18,7 +18,6 @@ import com.spendesk.grapes.compose.theme.extensions.neutralContentColorFor
  * @since 02/12/2022
  */
 
-
 @Deprecated("Replaced by GrapesTag or new GrapesBadge")
 @Composable
 fun LegacyGrapesBadge(
