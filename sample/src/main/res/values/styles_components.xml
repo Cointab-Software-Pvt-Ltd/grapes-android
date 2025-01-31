@@ -3,7 +3,7 @@
 
     <style name="ColorSampleCardText">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textSize">@dimen/colorSampleCardText</item>
         <item name="android:textColor">@color/colorSampleCardText</item>
     </style>

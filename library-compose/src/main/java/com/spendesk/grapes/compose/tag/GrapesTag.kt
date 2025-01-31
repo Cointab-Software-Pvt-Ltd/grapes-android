@@ -37,7 +37,7 @@ fun GrapesSuccessTag(
     showIcon: Boolean = true,
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.successNormal,
+        LocalContentColor provides GrapesTheme.colors.contentSuccessDefault,
     ) {
         val icon: @Composable () -> Unit = @Composable {
             GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_check, contentDescription = "Success tag icon")
@@ -60,7 +60,7 @@ fun GrapesInfoTag(
     showIcon: Boolean = true,
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.infoNormal,
+        LocalContentColor provides GrapesTheme.colors.contentInfoDefault,
     ) {
         val icon: @Composable () -> Unit = @Composable {
             GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_information, contentDescription = "Info tag icon")
@@ -83,7 +83,7 @@ fun GrapesWarningTag(
     showIcon: Boolean = true,
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.warningNormal,
+        LocalContentColor provides GrapesTheme.colors.contentWarningDefault,
     ) {
         val icon: @Composable () -> Unit = @Composable {
             GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_triangle_warning, contentDescription = "Warning tag icon")
@@ -106,7 +106,7 @@ fun GrapesErrorTag(
     showIcon: Boolean = true,
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.alertNormal,
+        LocalContentColor provides GrapesTheme.colors.contentAlertDefault,
     ) {
         val icon: @Composable () -> Unit = @Composable {
             GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_hexagone_cross, contentDescription = "Error tag icon")
@@ -156,7 +156,7 @@ fun GrapesTag(
 ) {
     Surface(
         modifier = modifier.wrapContentSize(),
-        shape = LocalGrapesShapes.current.shape1,
+        shape = LocalGrapesShapes.current.radius4,
         color = backgroundColor,
         border = BorderStroke(GrapesTagDefaults.borderThickness, borderColor),
     ) {

@@ -107,7 +107,7 @@ object GrapesButtonDefaults {
             @ReadOnlyComposable
             get() = BorderStroke(
                 BorderThickness,
-                GrapesTheme.colors.alertNormal
+                GrapesTheme.colors.contentAlertDefault
             )
     }
     //endregion BorderStroke

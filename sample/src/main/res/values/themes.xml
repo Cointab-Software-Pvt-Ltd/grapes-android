@@ -16,7 +16,7 @@
 
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/activityBackground</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -26,7 +26,7 @@
     </style>
 
     <style name="Toolbar.Theme" parent="@style/Widget.MaterialComponents.Toolbar">
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
     </style>
 
     <style name="Toolbar">

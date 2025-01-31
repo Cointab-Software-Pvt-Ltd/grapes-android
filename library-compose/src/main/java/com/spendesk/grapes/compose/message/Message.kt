@@ -71,7 +71,7 @@ fun GrapesMessage(
                 Text(
                     text = description,
                     style = GrapesTheme.typography.bodyS,
-                    color = GrapesTheme.colors.structureComplementary,
+                    color = GrapesTheme.colors.contentPrimary,
                     textAlign = descriptionTextAlign,
                     modifier = Modifier.fillMaxWidth(),
                 )

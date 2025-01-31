@@ -35,13 +35,13 @@ fun GrapesBucketHeadline(
         Text(
             modifier = Modifier.weight(1f, fill = true),
             text = title,
-            color = GrapesTheme.colors.structureComplementary,
+            color = GrapesTheme.colors.contentPrimary,
             overflow = TextOverflow.Ellipsis,
             maxLines = 1,
             style = GrapesTheme.typography.titleS
         )
         if (action != null && actionColor != null) {
-            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.sizing1))
+            Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit12))
             Text(
                 modifier = Modifier.clickable(onClick = onActionClicked ?: {}, onClickLabel = action, role = Role.Button),
                 text = action,
@@ -71,13 +71,13 @@ private fun GrapesBucketHeadlinePreview() {
             GrapesBucketHeadline(title = "Bucket de Rick Astley a bit longer than expecteeeeeeeeeeeeeed")
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
 
-            GrapesBucketHeadline(title = "Bucket de Rick Astley a bit longer than expecteeeeeeeeeeeeeeeeeeed", action = "Remove", actionColor = GrapesTheme.colors.alertNormal)
+            GrapesBucketHeadline(title = "Bucket de Rick Astley a bit longer than expecteeeeeeeeeeeeeeeeeeed", action = "Remove", actionColor = GrapesTheme.colors.contentAlertDefault)
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
 
-            GrapesBucketHeadline(title = "Bucket de Rick Astley", action = "Remove", actionColor = GrapesTheme.colors.alertNormal)
+            GrapesBucketHeadline(title = "Bucket de Rick Astley", action = "Remove", actionColor = GrapesTheme.colors.contentAlertDefault)
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
 
-            GrapesBucketHeadline(title = "Bucket de Rick Astley", action = "Remooooooove with too many ooooooooooos", actionColor = GrapesTheme.colors.alertNormal)
+            GrapesBucketHeadline(title = "Bucket de Rick Astley", action = "Remooooooove with too many ooooooooooos", actionColor = GrapesTheme.colors.contentAlertDefault)
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit16))
         }
     }

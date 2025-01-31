@@ -19,8 +19,8 @@ object GrapesInlineInformationColorsDefaults {
 
     @Composable
     fun colors(
-        titleColor: Color = GrapesTheme.colors.neutralDark,
-        descriptionColor: Color = GrapesTheme.colors.structureComplementary,
+        titleColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
+        descriptionColor: Color = GrapesTheme.colors.contentPrimary,
     ): GrapesInlineInformationColors = GrapesInlineInformationColors(
         title = titleColor,
         description = descriptionColor,

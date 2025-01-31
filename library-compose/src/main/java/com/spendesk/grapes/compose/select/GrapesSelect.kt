@@ -9,12 +9,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -26,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -68,11 +66,17 @@ fun GrapesSelect(
         ExposedDropdownMenu(
             expanded = isExpanded,
             onDismissRequest = { isExpanded = false },
-            modifier = Modifier.background(GrapesTheme.colors.structureBackground)
+            modifier = Modifier.background(GrapesTheme.colors.backgroundSecondaryDefault)
         ) {
             entries.iterator().forEach {
                 DropdownMenuItem(
-                    text = { Text(it.label) },
+                    text = {
+                        Text(
+                            text = it.label,
+                            style = GrapesTheme.typography.bodyS,
+                            color = GrapesTheme.colors.contentPrimary
+                        )
+                    },
                     onClick = {
                         onItemSelected(it)
                         isExpanded = false
@@ -96,15 +100,21 @@ private fun Select(
     )
 
     val itemColor = if (isEnabled) {
-        GrapesTheme.colors.structureSurface
+        GrapesTheme.colors.backgroundPrimaryDefault
     } else {
-        GrapesTheme.colors.neutralLighter
+        GrapesTheme.colors.backgroundPrimaryDisabled
     }
 
     val contentColor = if (isEnabled) {
-        GrapesTheme.colors.structureComplementary
+        GrapesTheme.colors.contentPrimary
     } else {
-        GrapesTheme.colors.neutralNormal
+        GrapesTheme.colors.contentDisable
+    }
+
+    val borderColor = if (isEnabled) {
+        GrapesTheme.colors.borderDefault
+    } else {
+        GrapesTheme.colors.contentDisable
     }
 
     GrapesSelector(
@@ -113,7 +123,7 @@ private fun Select(
         modifier = modifier,
         contentPadding = PaddingValues(
             horizontal = GrapesTheme.dimensions.unit16,
-            vertical = GrapesTheme.dimensions.sizing1,
+            vertical = GrapesTheme.dimensions.unit12,
         ),
         icon = {
             GrapesSelectIcon(
@@ -124,7 +134,7 @@ private fun Select(
         colors = GrapesSelectorColors(
             backgroundColor = itemColor,
             contentColor = contentColor,
-            borderColor = contentColor,
+            borderColor = borderColor,
         ),
         shape = RoundedCornerShape(RadiusFiftyPercent, RadiusFiftyPercent, radiusSize, radiusSize),
     )
@@ -137,11 +147,9 @@ private fun GrapesSelectIcon(expanded: Boolean, tint: Color) {
         label = "Rotation angle animation",
     )
 
-    Icon(
-        imageVector = Icons.Filled.ArrowDropDown,
-        contentDescription = null,
-        modifier = Modifier.rotate(rotation),
-        tint = tint
+    GrapesIconSet.ChevronDown(
+        tint = tint,
+        modifier = Modifier.rotate(rotation)
     )
 }
 

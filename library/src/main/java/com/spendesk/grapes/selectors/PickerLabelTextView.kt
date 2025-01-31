@@ -29,7 +29,7 @@ class PickerLabelTextView : SelectLabelTextView {
         isClickable = true
         gravity = Gravity.CENTER
 
-        setTypeface(ResourcesCompat.getFont(context, R.font.gt_america), Typeface.NORMAL)
+        setTypeface(ResourcesCompat.getFont(context, R.font.inter_medium), Typeface.NORMAL)
         setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelSize(R.dimen.pickerLabelTextSize).toFloat())
     }
 

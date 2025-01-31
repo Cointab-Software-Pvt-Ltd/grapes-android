@@ -18,24 +18,24 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 /**
  * Returns the value used as the the `highlightColor` parameter value of [PlaceholderHighlight.Companion.fade].
  *
- * @param backgroundColor The current background color of the layout. Defaults to [GrapesColors.structureComplementary].
+ * @param backgroundColor The current background color of the layout. Defaults to [GrapesColors.contentPrimary].
  * @param alpha The alpha component to set on [backgroundColor]. Defaults to `0.16f`.
  */
 @Composable
 fun PlaceholderDefaults.fadeHighlightColor(
-    backgroundColor: Color = GrapesTheme.colors.structureComplementary,
+    backgroundColor: Color = GrapesTheme.colors.contentPrimary,
     alpha: Float = 0.12f,
 ): Color = backgroundColor.copy(alpha = alpha)
 
 /**
  * Returns the value used as the the `highlightColor` parameter value of [PlaceholderHighlight.Companion.shimmer].
  *
- * @param backgroundColor The current background color of the layout. Defaults to [GrapesColors.structureComplementary].
+ * @param backgroundColor The current background color of the layout. Defaults to [GrapesColors.contentPrimary].
  * @param alpha The alpha component to set on [backgroundColor]. Defaults to `0.16f`.
  */
 @Composable
 fun PlaceholderDefaults.shimmerHighlightColor(
-    backgroundColor: Color = GrapesTheme.colors.structureComplementary,
+    backgroundColor: Color = GrapesTheme.colors.contentPrimary,
     alpha: Float = 0.12f,
 ): Color {
     return backgroundColor.copy(alpha = alpha)
@@ -62,7 +62,7 @@ fun PlaceholderDefaults.shimmerHighlightColor(
  * @param color the color used to draw the placeholder UI. If [Color.Unspecified] is provided,
  * the placeholder will use [GrapesColors.neutralLighter].
  * @param shape desired shape of the placeholder. If null is provided the placeholder
- * will use the shape [GrapesShapes.shape2].
+ * will use the shape [GrapesShapes.radius8].
  * @param highlight optional highlight animation.
  * @param placeholderFadeTransitionSpec The transition spec to use when fading the placeholder
  * on/off screen. The boolean parameter defined for the transition is [visible].
@@ -84,7 +84,7 @@ fun Modifier.placeholder(
 ): Modifier = composed {
     Modifier.placeholder(
         visible = visible,
-        color = if (color.isSpecified) color else GrapesTheme.colors.structureComplementary.copy(alpha = 0.08f),
+        color = if (color.isSpecified) color else GrapesTheme.colors.contentPrimary.copy(alpha = 0.08f),
         shape = shape ?: GrapesTheme.shapes.radius8,
         highlight = highlight,
         placeholderFadeTransitionSpec = placeholderFadeTransitionSpec,

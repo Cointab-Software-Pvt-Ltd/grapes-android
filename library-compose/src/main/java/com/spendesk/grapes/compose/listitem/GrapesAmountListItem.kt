@@ -93,8 +93,8 @@ fun GrapesAmountListItem(
         Box(
             content = logo,
             modifier = Modifier.sizeIn(
-                maxWidth = GrapesTheme.dimensions.sizing6,
-                maxHeight = GrapesTheme.dimensions.sizing6,
+                maxWidth = GrapesTheme.dimensions.unit40,
+                maxHeight = GrapesTheme.dimensions.unit40,
             ),
         )
         Column(
@@ -148,10 +148,10 @@ object GrapesAmountListItemDefaults {
 
     @Composable
     fun colors(
-        titleColor: Color = GrapesTheme.colors.structureComplementary,
-        subtitleColor: Color = GrapesTheme.colors.neutralDark,
-        amountColor: Color = GrapesTheme.colors.structureComplementary,
-        descriptionColor: Color = GrapesTheme.colors.neutralDark,
+        titleColor: Color = GrapesTheme.colors.contentPrimary,
+        subtitleColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
+        amountColor: Color = GrapesTheme.colors.contentPrimary,
+        descriptionColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
     ): GrapesAmountListItemColors = GrapesAmountListItemColors(
         titleColor = titleColor,
         subtitleColor = subtitleColor,
@@ -171,7 +171,7 @@ private fun PreviewGrapesAmountListItemSmallAmount() {
             amount = "200€",
             description = "description",
             colors = GrapesAmountListItemDefaults.colors(
-                descriptionColor = GrapesTheme.colors.successNormal,
+                descriptionColor = GrapesTheme.colors.contentSuccessDefault,
             ),
             onClick = {},
             logo = { PreviewLogo() },
@@ -190,7 +190,7 @@ private fun PreviewGrapesAmountListItemTextOverflow() {
             amount = "2 000 000.00€",
             description = "Some very long description",
             colors = GrapesAmountListItemDefaults.colors(
-                descriptionColor = GrapesTheme.colors.successNormal,
+                descriptionColor = GrapesTheme.colors.contentSuccessDefault,
             ),
             onClick = {},
             logo = { PreviewLogo() },
@@ -209,7 +209,7 @@ private fun PreviewGrapesAmountListItemAnnotatedAmount() {
             amount = buildAnnotatedString {
                 withStyle(
                     GrapesTheme.typography.bodyM.toSpanStyle()
-                        .copy(color = GrapesTheme.colors.neutralDark)
+                        .copy(color = GrapesTheme.colors.contentSecondaryBGSecondary)
                 ) {
                     append("100€ • ")
                 }
@@ -219,7 +219,7 @@ private fun PreviewGrapesAmountListItemAnnotatedAmount() {
             },
             description = "description",
             colors = GrapesAmountListItemDefaults.colors(
-                descriptionColor = GrapesTheme.colors.successNormal,
+                descriptionColor = GrapesTheme.colors.contentSuccessDefault,
             ),
             onClick = {},
             logo = { PreviewLogo() },

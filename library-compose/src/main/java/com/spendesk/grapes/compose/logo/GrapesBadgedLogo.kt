@@ -51,7 +51,7 @@ fun GrapesBadgedLogo(
             Box(
                 modifier = Modifier
                     .align(badgeAlignment)
-                    .size(GrapesTheme.dimensions.sizing4)
+                    .size(GrapesTheme.dimensions.sizeIconXl)
                     .offset(x = highlightIconOffset, y = yOffset),
             ) {
                 badge()
@@ -81,7 +81,7 @@ fun GrapesCardBadgedLogo(
             Box(
                 modifier = Modifier
                     .align(badgeAlignment)
-                    .size(GrapesTheme.dimensions.sizing4)
+                    .size(GrapesTheme.dimensions.sizeIconXl)
                     .offset(y = yOffset, x = highlightIconOffset)
             ) {
                 badge()
@@ -103,7 +103,7 @@ private fun GrapesBadgedLogoPreview(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(GrapesTheme.shapes.radius1000)
-                        .background(GrapesTheme.colors.warningNormal)
+                        .background(GrapesTheme.colors.contentWarningDefault)
                 )
             },
             badgeAlignment = alignment,
@@ -132,7 +132,7 @@ private fun GrapesBadgedCardLogoPreview(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(GrapesTheme.shapes.radius1000)
-                        .background(GrapesTheme.colors.warningNormal)
+                        .background(GrapesTheme.colors.contentWarningDefault)
                 )
             },
             badgeAlignment = alignment,

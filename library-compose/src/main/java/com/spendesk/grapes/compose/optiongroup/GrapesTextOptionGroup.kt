@@ -42,7 +42,7 @@ fun GrapesTextOptionGroup(
             .width(IntrinsicSize.Max)
             .height(IntrinsicSize.Max)
             .shadow(2.dp, shape)
-            .background(GrapesTheme.colors.structureSurface)
+            .background(GrapesTheme.colors.backgroundPrimaryDefault)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -64,14 +64,6 @@ fun GrapesTextOptionGroup(
                     ),
                     modifier = Modifier.weight(1f)
                 )
-                if (index < items.lastIndex && !items[index + 1].isSelected) {
-                    Box(
-                        modifier = Modifier
-                            .width(1.dp)
-                            .height(16.dp)
-                            .background(GrapesTheme.colors.neutralLighter)
-                    )
-                }
             }
         }
     }

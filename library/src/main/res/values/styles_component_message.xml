@@ -4,7 +4,7 @@
     <!-- region MessageBlockView -->
     <style name="MessageBlockTitleText">
         <item name="android:textSize">@dimen/messageBlockTextSize</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">@dimen/messageBlockTextDrawablePadding</item>
     </style>

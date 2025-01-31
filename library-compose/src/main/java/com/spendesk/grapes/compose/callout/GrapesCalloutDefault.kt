@@ -26,10 +26,10 @@ object GrapesCalloutDefaults {
 
 @Composable
 internal fun ErrorGrapesCalloutColors(
-    containerColor: Color = GrapesTheme.colors.alertLightest,
-    titleColor: Color = GrapesTheme.colors.alertNormal,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryAlertDefault,
+    titleColor: Color = GrapesTheme.colors.contentAlertDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.alertLightest,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryAlertDefault,
 ): GrapesCalloutColors = DefaultGrapesCalloutColors(
     containerColor = containerColor,
     titleColor = titleColor,
@@ -39,10 +39,10 @@ internal fun ErrorGrapesCalloutColors(
 
 @Composable
 internal fun WarningGrapesCalloutColors(
-    containerColor: Color = GrapesTheme.colors.warningLightest,
-    titleColor: Color = GrapesTheme.colors.warningNormal,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryWarningDefault,
+    titleColor: Color = GrapesTheme.colors.contentWarningDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.warningLightest,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryWarningDefault,
 ): GrapesCalloutColors = DefaultGrapesCalloutColors(
     containerColor = containerColor,
     titleColor = titleColor,
@@ -52,10 +52,10 @@ internal fun WarningGrapesCalloutColors(
 
 @Composable
 internal fun InfoGrapesCalloutColors(
-    containerColor: Color = GrapesTheme.colors.infoLightest,
-    titleColor: Color = GrapesTheme.colors.infoNormal,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondaryInfoDefault,
+    titleColor: Color = GrapesTheme.colors.contentInfoDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.infoLightest,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondaryInfoDefault,
 ): GrapesCalloutColors = DefaultGrapesCalloutColors(
     containerColor = containerColor,
     titleColor = titleColor,
@@ -65,10 +65,10 @@ internal fun InfoGrapesCalloutColors(
 
 @Composable
 internal fun SuccessGrapesCalloutColors(
-    containerColor: Color = GrapesTheme.colors.successLightest,
-    titleColor: Color = GrapesTheme.colors.successNormal,
+    containerColor: Color = GrapesTheme.colors.backgroundSecondarySuccessDefault,
+    titleColor: Color = GrapesTheme.colors.contentSuccessDefault,
     contentColor: Color = LocalContentColor.current,
-    borderStoreColor: Color = GrapesTheme.colors.successLightest,
+    borderStoreColor: Color = GrapesTheme.colors.backgroundSecondarySuccessDefault,
 ): GrapesCalloutColors = DefaultGrapesCalloutColors(
     containerColor = containerColor,
     titleColor = titleColor,
@@ -78,7 +78,7 @@ internal fun SuccessGrapesCalloutColors(
 
 @Composable
 internal fun NeutralGrapesCalloutColors(
-    titleColor: Color = GrapesTheme.colors.neutralDark,
+    titleColor: Color = GrapesTheme.colors.contentSecondaryBGSecondary,
     containerColor: Color = GrapesTheme.colors.neutralLightest,
     contentColor: Color = LocalContentColor.current,
     borderStoreColor: Color = GrapesTheme.colors.neutralLightest,

@@ -26,7 +26,7 @@ fun GrapesPrimaryTextBlockAction(
     isEnabled: Boolean = true
 ) {
     val actionColor by animateColorAsState(
-        targetValue = if (isEnabled) GrapesTheme.colors.primaryNormal else GrapesTheme.colors.neutralLighter,
+        targetValue = if (isEnabled) GrapesTheme.colors.contentSelected else GrapesTheme.colors.contentDisable,
         label = "actionColor"
     )
     ColoredTextBlockAction(
@@ -46,7 +46,7 @@ fun GrapesNeutralDarkTextBlockAction(
     isEnabled: Boolean = true
 ) {
     val actionColor by animateColorAsState(
-        targetValue = if (isEnabled) GrapesTheme.colors.neutralDark else GrapesTheme.colors.neutralLighter,
+        targetValue = if (isEnabled) GrapesTheme.colors.contentPrimary else GrapesTheme.colors.contentDisable,
         label = "actionColor"
     )
     ColoredTextBlockAction(

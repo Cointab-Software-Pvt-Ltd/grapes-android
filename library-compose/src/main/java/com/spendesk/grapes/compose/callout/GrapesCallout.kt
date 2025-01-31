@@ -29,7 +29,7 @@ fun GrapesErrorCallout(
 ) {
     CompositionLocalProvider(
         LocalGrapesCalloutType provides GrapesCalloutType(CalloutType.ERROR),
-        LocalContentColor provides GrapesTheme.colors.structureComplementary,
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
     ) {
         val calloutColors = ErrorGrapesCalloutColors()
 
@@ -57,7 +57,7 @@ fun GrapesWarningCallout(
 ) {
     CompositionLocalProvider(
         LocalGrapesCalloutType provides GrapesCalloutType(CalloutType.WARNING),
-        LocalContentColor provides GrapesTheme.colors.structureComplementary,
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
     ) {
         val calloutColors = WarningGrapesCalloutColors()
 
@@ -85,7 +85,7 @@ fun GrapesInfoCallout(
 ) {
     CompositionLocalProvider(
         LocalGrapesCalloutType provides GrapesCalloutType(CalloutType.INFO),
-        LocalContentColor provides GrapesTheme.colors.structureComplementary,
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
     ) {
         val calloutColors = InfoGrapesCalloutColors()
 
@@ -113,7 +113,7 @@ fun GrapesSuccessCallout(
 ) {
     CompositionLocalProvider(
         LocalGrapesCalloutType provides GrapesCalloutType(CalloutType.SUCCESS),
-        LocalContentColor provides GrapesTheme.colors.structureComplementary,
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
     ) {
         val calloutColors = SuccessGrapesCalloutColors()
 
@@ -143,7 +143,7 @@ fun GrapesNeutralCallout(
 ) {
     CompositionLocalProvider(
         LocalGrapesCalloutType provides GrapesCalloutType(CalloutType.NEUTRAL),
-        LocalContentColor provides GrapesTheme.colors.structureComplementary,
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
     ) {
         val calloutColors = NeutralGrapesCalloutColors()
 

@@ -39,7 +39,7 @@ fun GrapesEditAvatar(
     modifier: Modifier = Modifier,
     badgeOffset: DpOffset = EditAvatarDefaults.badgeOffset,
     badgeSize: DpSize = EditAvatarDefaults.badgeSize,
-    badgeTint: Color = GrapesTheme.colors.structureComplementary,
+    badgeTint: Color = GrapesTheme.colors.contentPrimary,
     enabled: Boolean = true,
     onClick: () -> Unit = {},
 ) {

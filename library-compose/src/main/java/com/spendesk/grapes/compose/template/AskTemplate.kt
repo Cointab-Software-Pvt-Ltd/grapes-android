@@ -71,7 +71,7 @@ fun AskTemplate(
         Text(
             text = title,
             style = GrapesTheme.typography.titleXl.copy(fontSize = 32.sp),
-            color = GrapesTheme.colors.mainWhite,
+            color = GrapesTheme.colors.contentComplementary,
             textAlign = TextAlign.Center
         )
     }
@@ -81,7 +81,7 @@ fun AskTemplate(
             Text(
                 text = description,
                 style = GrapesTheme.typography.bodyM,
-                color = GrapesTheme.colors.mainWhite,
+                color = GrapesTheme.colors.contentComplementary,
                 textAlign = TextAlign.Center
             )
         }
@@ -101,7 +101,7 @@ fun AskTemplate(
 @Composable
 fun Preview() {
     val cta = @Composable {
-        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.sizing1)) {
+        Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12)) {
             GrapesButton(
                 text = "Main button",
                 buttonStyle = GrapesButtonStyleDefaults.secondary

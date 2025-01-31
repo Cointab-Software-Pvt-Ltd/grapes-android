@@ -4,7 +4,7 @@
     <style name="SummaryFooterTitleText">
         <item name="android:textColor">@color/summaryFooterTitleText</item>
         <item name="android:textSize">@dimen/summaryFooterTitleTextSize</item>
-        <item name="android:fontFamily">@font/gt_america_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:singleLine">true</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
@@ -12,7 +12,7 @@
     <style name="SummaryFooterSubtitleText">
         <item name="android:textColor">@color/summaryFooterSubtitleText</item>
         <item name="android:textSize">@dimen/summaryFooterSubtitleTextSize</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
 </resources>

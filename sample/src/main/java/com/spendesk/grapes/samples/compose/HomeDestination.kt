@@ -209,7 +209,7 @@ private fun GridItem(
     modifier: Modifier = Modifier
 ) {
     GrapesCard(onClick = onClick, modifier = modifier.padding(GrapesTheme.dimensions.unit8)) {
-        Box(modifier = Modifier.fillMaxSize().height(GrapesTheme.dimensions.sizing7), contentAlignment = Alignment.Center) {
+        Box(modifier = Modifier.fillMaxSize().height(GrapesTheme.dimensions.unit56), contentAlignment = Alignment.Center) {
             Text(
                 text = text,
                 style = GrapesTheme.typography.titleL,

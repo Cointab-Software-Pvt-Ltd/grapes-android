@@ -33,17 +33,17 @@ object GrapesSwitchDefaults {
 
     @Composable
     fun colors() = SwitchDefaults.colors(
-        checkedThumbColor = GrapesTheme.colors.structureSurface,
-        checkedTrackColor = GrapesTheme.colors.primaryNormal,
-        uncheckedThumbColor = GrapesTheme.colors.structureSurface,
-        uncheckedTrackColor = GrapesTheme.colors.neutralLight,
-        uncheckedBorderColor = GrapesTheme.colors.neutralLight,
-        disabledCheckedTrackColor = GrapesTheme.colors.neutralLightest,
-        disabledCheckedBorderColor = GrapesTheme.colors.neutralLight,
-        disabledCheckedThumbColor = GrapesTheme.colors.neutralLight,
-        disabledUncheckedTrackColor = GrapesTheme.colors.neutralLightest,
-        disabledUncheckedThumbColor = GrapesTheme.colors.neutralLight,
-        disabledUncheckedBorderColor = GrapesTheme.colors.neutralLight,
+        checkedThumbColor = GrapesTheme.colors.backgroundPrimaryDefault,
+        checkedTrackColor = GrapesTheme.colors.contentSelected,
+        uncheckedThumbColor = GrapesTheme.colors.backgroundPrimaryDefault,
+        uncheckedTrackColor = GrapesTheme.colors.contentSecondaryBGPrimary,
+        uncheckedBorderColor = GrapesTheme.colors.contentSecondaryBGPrimary,
+        disabledCheckedTrackColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+        disabledCheckedBorderColor = GrapesTheme.colors.borderDefault,
+        disabledCheckedThumbColor = GrapesTheme.colors.contentDisable,
+        disabledUncheckedTrackColor = GrapesTheme.colors.backgroundPrimaryDisabled,
+        disabledUncheckedThumbColor = GrapesTheme.colors.contentDisable,
+        disabledUncheckedBorderColor = GrapesTheme.colors.borderDefault,
     )
 }
 

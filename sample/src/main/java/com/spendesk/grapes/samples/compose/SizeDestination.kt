@@ -41,15 +41,6 @@ fun SizeDestination() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit32),
     ) {
-        SizePlaceholder(GrapesTheme.dimensions.sizing1, "sizing1")
-        SizePlaceholder(GrapesTheme.dimensions.sizing2, "sizing2")
-        SizePlaceholder(GrapesTheme.dimensions.sizing3, "sizing3")
-        SizePlaceholder(GrapesTheme.dimensions.sizing4, "sizing4")
-        SizePlaceholder(GrapesTheme.dimensions.sizing5, "sizing5")
-        SizePlaceholder(GrapesTheme.dimensions.sizing6, "sizing6")
-        SizePlaceholder(GrapesTheme.dimensions.sizing7, "sizing7")
-        HorizontalDivider()
-        Text("UI refresh")
         SizePlaceholder(GrapesTheme.dimensions.sizeIconS, "sizeIconS")
         SizePlaceholder(GrapesTheme.dimensions.sizeIconM, "sizeIconM")
         SizePlaceholder(GrapesTheme.dimensions.sizeIconL, "sizeIconL")

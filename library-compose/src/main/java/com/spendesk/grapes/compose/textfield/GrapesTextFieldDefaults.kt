@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.theme.GrapesTheme
+import com.spendesk.grapes.compose.theme.blue60
 
 /**
  * @author jean-philippe
@@ -94,30 +95,30 @@ object GrapesTextFieldDefaults {
     @Composable
     @Suppress("LongParameterList")
     fun textFieldColors(
-        textColor: Color = GrapesTheme.colors.neutralDarker,
-        disabledTextColor: Color = GrapesTheme.colors.neutralDarker,
-        backgroundColor: Color = GrapesTheme.colors.mainWhite,
-        disabledBackgroundColor: Color = GrapesTheme.colors.neutralLightest,
-        cursorColor: Color = GrapesTheme.colors.primaryLight,
-        errorCursorColor: Color = GrapesTheme.colors.alertNormal,
-        focusedBorderColor: Color = GrapesTheme.colors.neutralLighter,
-        unfocusedBorderColor: Color = GrapesTheme.colors.neutralLighter,
-        disabledBorderColor: Color = GrapesTheme.colors.neutralLighter,
-        errorBorderColor: Color = GrapesTheme.colors.alertNormal,
-        leadingIconColor: Color = GrapesTheme.colors.neutralDark,
+        textColor: Color = GrapesTheme.colors.contentPrimary,
+        disabledTextColor: Color = GrapesTheme.colors.contentDisable,
+        backgroundColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
+        disabledBackgroundColor: Color = GrapesTheme.colors.backgroundPrimaryDisabled,
+        cursorColor: Color = blue60,
+        errorCursorColor: Color = GrapesTheme.colors.contentAlertDefault,
+        focusedBorderColor: Color = GrapesTheme.colors.borderSelected,
+        unfocusedBorderColor: Color = GrapesTheme.colors.borderDefault,
+        disabledBorderColor: Color = GrapesTheme.colors.borderDefault,
+        errorBorderColor: Color = GrapesTheme.colors.borderAlertDefault,
+        leadingIconColor: Color = GrapesTheme.colors.contentDecorativeIcon,
         disabledLeadingIconColor: Color = leadingIconColor.copy(alpha = ContentAlpha.disabled),
         errorLeadingIconColor: Color = leadingIconColor, // Todo replace
-        trailingIconColor: Color = GrapesTheme.colors.neutralDark,
+        trailingIconColor: Color = GrapesTheme.colors.contentDecorativeIcon,
         disabledTrailingIconColor: Color = trailingIconColor.copy(alpha = ContentAlpha.disabled),
         errorTrailingIconColor: Color = Color.Yellow, // Todo replace
         focusedLabelColor: Color = Color.Yellow, // Todo replace
         unfocusedLabelColor: Color = Color.Yellow, // Todo replace
         disabledLabelColor: Color = unfocusedLabelColor.copy(ContentAlpha.disabled), // Todo replace
-        errorLabelColor: Color = GrapesTheme.colors.alertNormal,
-        placeholderColor: Color = GrapesTheme.colors.neutralNormal,
-        disabledPlaceholderColor: Color = GrapesTheme.colors.neutralLight,
-        helperTextColor: Color = GrapesTheme.colors.neutralNormal,
-        errorHelperTextColor: Color = GrapesTheme.colors.alertNormal,
+        errorLabelColor: Color = GrapesTheme.colors.contentAlertDefault,
+        placeholderColor: Color = GrapesTheme.colors.contentSecondaryBGPrimary,
+        disabledPlaceholderColor: Color = GrapesTheme.colors.contentDisable,
+        helperTextColor: Color = GrapesTheme.colors.contentSecondaryBGPrimary,
+        errorHelperTextColor: Color = GrapesTheme.colors.contentAlertDefault,
         disabledHelperTextColor: Color = helperTextColor.copy(ContentAlpha.disabled),
     ): GrapesTextFieldColors = DefaultGrapesGrapesTextFieldColors(
         textColor = textColor,

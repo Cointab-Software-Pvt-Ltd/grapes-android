@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.button.atoms.GrapesButtonContentText
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
@@ -67,10 +66,10 @@ fun ButtonPrimaryPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Primary Enabled",
@@ -137,10 +136,10 @@ fun ButtonSecondaryPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Secondary Enabled",
@@ -208,10 +207,10 @@ fun ButtonTextPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Text Enabled",
@@ -279,10 +278,10 @@ fun ButtonWarningPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Warning Enabled",
@@ -315,10 +314,10 @@ fun ButtonAlertPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Alert Enabled",
@@ -419,10 +418,10 @@ fun ButtonAlertOutlinedPreview() {
     GrapesTheme {
         Column(
             modifier = Modifier
-                .padding(16.dp)
+                .padding(GrapesTheme.dimensions.unit16)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {
             GrapesButton(
                 text = "Button Alert Enabled",

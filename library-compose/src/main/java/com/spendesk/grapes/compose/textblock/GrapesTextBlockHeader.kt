@@ -50,7 +50,7 @@ private fun HeaderText(
         Text(
             text = title,
             style = GrapesTheme.typography.titleS,
-            color = GrapesTheme.colors.structureComplementary,
+            color = GrapesTheme.colors.contentPrimary,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f, fill = false)
@@ -71,7 +71,7 @@ private fun TextBlockHeaderPreview(
         {
             GrapesTextBlockInformativeLabel(
                 label = "• $it",
-                color = GrapesTheme.colors.warningDark,
+                color = GrapesTheme.colors.contentWarningDefault,
             )
         }
     }

@@ -43,7 +43,7 @@ fun ActionMenuSection(
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = GrapesTheme.colors.structureSurface,
+            containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         ),
         shape = sectionShape,
     ) {
@@ -92,7 +92,7 @@ private fun ActionMenuSectionHeader(
             Text(
                 text = title,
                 style = GrapesTheme.typography.titleM,
-                color = GrapesTheme.colors.structureComplementary,
+                color = GrapesTheme.colors.contentPrimary,
                 maxLines = TITLE_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
             )

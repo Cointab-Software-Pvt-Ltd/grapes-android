@@ -3,7 +3,7 @@
 
     <item android:id="@android:id/background">
         <shape>
-            <solid android:color="@color/mainPrimaryLighter" />
+            <solid android:color="@color/backgroundSecondaryBrandDefault" />
         </shape>
     </item>
 
@@ -17,7 +17,7 @@
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <solid android:color="@color/mainPrimaryNormal" />
+                <solid android:color="@color/backgroundPrimaryBrandDefault" />
             </shape>
         </clip>
     </item>

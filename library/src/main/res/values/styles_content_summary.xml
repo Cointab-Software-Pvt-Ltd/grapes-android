@@ -14,12 +14,12 @@
     <style name="ResponsibilityCenterGaugeLegendTitle">
         <item name="android:textSize">@dimen/responsibilityCenterGaugeLegendTitleSize</item>
         <item name="android:textColor">@color/responsibilityCenterGaugeLegendTitleColor</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="ResponsibilityCenterGaugeLegendSubtitle">
         <item name="android:textSize">@dimen/responsibilityCenterGaugeLegendSubtitleSize</item>
         <item name="android:textColor">@color/responsibilityCenterGaugeLegendSubtitleColor</item>
-        <item name="android:fontFamily">@font/gt_america</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
     </style>
 </resources>

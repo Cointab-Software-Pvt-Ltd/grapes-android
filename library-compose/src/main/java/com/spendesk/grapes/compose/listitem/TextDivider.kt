@@ -24,7 +24,7 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 fun TextDivider(
     text: String,
     modifier: Modifier = Modifier,
-    color: Color = GrapesTheme.colors.neutralLight
+    color: Color = GrapesTheme.colors.borderDefault
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -44,7 +44,7 @@ private fun TextDividerPreview() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(GrapesTheme.colors.structureBackground)
+                .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16),
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16)
         ) {

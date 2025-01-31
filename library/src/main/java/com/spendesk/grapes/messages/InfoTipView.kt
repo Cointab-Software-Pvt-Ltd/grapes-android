@@ -41,7 +41,7 @@ class InfoTipView : MaterialTextView {
         val paddingVert = resources.getDimensionPixelOffset(R.dimen.infoTipViewPaddingVert)
         val paddingHorz = resources.getDimensionPixelOffset(R.dimen.infoTipViewPaddingHorz)
 
-        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.gt_america), Typeface.NORMAL)
+        if (isInEditMode.not()) setTypeface(ResourcesCompat.getFont(context, R.font.inter_medium), Typeface.NORMAL)
         gravity = Gravity.CENTER
         setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimensionPixelOffset(R.dimen.infoTipViewTextSize).toFloat())
         setPadding(paddingHorz, paddingVert, paddingHorz, paddingVert)

@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
  * @author jean-philippe
@@ -21,7 +21,7 @@ fun ColumnScope.GrapesCalloutContentBottomCTA(
     }
 
     // Design require extra padding between the content and the buttons
-    Spacer(modifier = Modifier.padding(top = 8.dp))
+    Spacer(modifier = Modifier.padding(top = GrapesTheme.dimensions.unit8))
 
     primaryButton?.invoke(this)
     secondaryButton?.invoke(this)

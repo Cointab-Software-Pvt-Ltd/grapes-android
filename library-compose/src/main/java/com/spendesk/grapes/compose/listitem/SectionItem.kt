@@ -36,7 +36,7 @@ fun SectionItem(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier.padding(
             horizontal = GrapesTheme.dimensions.unit16,
-            vertical = GrapesTheme.dimensions.sizing1,
+            vertical = GrapesTheme.dimensions.unit12,
         ),
     ) {
         icon(Modifier.size(iconSize))
