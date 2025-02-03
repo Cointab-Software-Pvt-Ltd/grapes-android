@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.LocalContentColor
-import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,7 +19,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.tag.atoms.GrapesTagIcon
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -162,25 +160,29 @@ fun GrapesTag(
     ) {
         Row(
             modifier = Modifier
-                .padding(PaddingValues(horizontal = 8.dp, vertical = 4.dp)),
+                .padding(
+                    PaddingValues(
+                        horizontal = GrapesTheme.dimensions.unit8,
+                        vertical = GrapesTheme.dimensions.unit4
+                    )
+                ),
+            verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
         ) {
             if (icon != null) {
                 Box(
-                    modifier = Modifier
-                        .size(GrapesTagDefaults.iconSize)
-                        .align(Alignment.CenterVertically),
+                    modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM),
                     contentAlignment = Alignment.Center,
                 ) {
                     icon()
                 }
             }
 
-            ProvideTextStyle(
-                GrapesTheme.typography.titleS.copy(color = LocalContentColor.current),
-            ) {
-                Text(text = label)
-            }
+            Text(
+                text = label,
+                style = GrapesTheme.typography.bodyM,
+                color = LocalContentColor.current
+            )
         }
     }
 }
