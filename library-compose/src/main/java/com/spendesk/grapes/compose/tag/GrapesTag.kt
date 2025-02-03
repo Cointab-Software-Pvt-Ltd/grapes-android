@@ -1,6 +1,5 @@
 package com.spendesk.grapes.compose.tag
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -47,7 +46,6 @@ fun GrapesSuccessTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -70,7 +68,6 @@ fun GrapesInfoTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -93,7 +90,6 @@ fun GrapesWarningTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -116,7 +112,6 @@ fun GrapesErrorTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -139,7 +134,6 @@ fun GrapesNeutralTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -148,7 +142,6 @@ fun GrapesNeutralTag(
 fun GrapesTag(
     label: String,
     backgroundColor: Color,
-    borderColor: Color,
     modifier: Modifier = Modifier,
     icon: (@Composable () -> Unit)? = null,
 ) {
@@ -156,7 +149,6 @@ fun GrapesTag(
         modifier = modifier.wrapContentSize(),
         shape = LocalGrapesShapes.current.radius1000,
         color = backgroundColor,
-        border = BorderStroke(GrapesTagDefaults.borderThickness, borderColor),
     ) {
         Row(
             modifier = Modifier
