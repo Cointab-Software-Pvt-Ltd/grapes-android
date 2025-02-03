@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -148,9 +149,9 @@ private fun GrapesHighlightIcon(
         contentAlignment = Alignment.Center,
         modifier = modifier
             .size(size.getContainerSize())
-            .clip(GrapesTheme.shapes.radius1000)
+            .clip(size.getShape())
             .background(containerColor)
-            .border(1.dp, borderColor, GrapesTheme.shapes.radius1000)
+            .border(1.dp, borderColor, size.getShape())
     ) {
         Icon(
             painter = painter,
@@ -181,6 +182,14 @@ enum class GrapesHighlightIconSize {
         MEDIUM -> GrapesTheme.dimensions.sizeIconM
         LARGE -> GrapesTheme.dimensions.sizeIconL
         EXTRA_LARGE -> GrapesTheme.dimensions.sizeIconXl
+    }
+
+    @Composable
+    fun getShape(): Shape = when (this) {
+        SMALL -> GrapesTheme.shapes.radius4
+        MEDIUM -> GrapesTheme.shapes.radius8
+        LARGE -> GrapesTheme.shapes.radius8
+        EXTRA_LARGE -> GrapesTheme.shapes.radius12
     }
 }
 
