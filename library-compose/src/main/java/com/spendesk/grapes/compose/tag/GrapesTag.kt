@@ -1,6 +1,5 @@
 package com.spendesk.grapes.compose.tag
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -9,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.LocalContentColor
-import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,7 +18,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
-import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.tag.atoms.GrapesTagIcon
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -49,7 +46,6 @@ fun GrapesSuccessTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -72,7 +68,6 @@ fun GrapesInfoTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -95,7 +90,6 @@ fun GrapesWarningTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -118,7 +112,6 @@ fun GrapesErrorTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -141,7 +134,6 @@ fun GrapesNeutralTag(
             label = label,
             icon = icon.takeIf { showIcon },
             backgroundColor = tagColors.containerColor().value,
-            borderColor = tagColors.borderStrokeColor().value
         )
     }
 }
@@ -150,37 +142,39 @@ fun GrapesNeutralTag(
 fun GrapesTag(
     label: String,
     backgroundColor: Color,
-    borderColor: Color,
     modifier: Modifier = Modifier,
     icon: (@Composable () -> Unit)? = null,
 ) {
     Surface(
         modifier = modifier.wrapContentSize(),
-        shape = LocalGrapesShapes.current.radius4,
+        shape = LocalGrapesShapes.current.radius1000,
         color = backgroundColor,
-        border = BorderStroke(GrapesTagDefaults.borderThickness, borderColor),
     ) {
         Row(
             modifier = Modifier
-                .padding(PaddingValues(horizontal = 8.dp, vertical = 4.dp)),
+                .padding(
+                    PaddingValues(
+                        horizontal = GrapesTheme.dimensions.unit8,
+                        vertical = GrapesTheme.dimensions.unit4
+                    )
+                ),
+            verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
         ) {
             if (icon != null) {
                 Box(
-                    modifier = Modifier
-                        .size(GrapesTagDefaults.iconSize)
-                        .align(Alignment.CenterVertically),
+                    modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM),
                     contentAlignment = Alignment.Center,
                 ) {
                     icon()
                 }
             }
 
-            ProvideTextStyle(
-                GrapesTheme.typography.titleS.copy(color = LocalContentColor.current),
-            ) {
-                Text(text = label)
-            }
+            Text(
+                text = label,
+                style = GrapesTheme.typography.bodyM,
+                color = LocalContentColor.current
+            )
         }
     }
 }
