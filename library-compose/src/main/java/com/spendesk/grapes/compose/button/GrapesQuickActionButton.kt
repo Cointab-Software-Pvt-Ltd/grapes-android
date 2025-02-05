@@ -1,6 +1,7 @@
 package com.spendesk.grapes.compose.button
 
 import androidx.annotation.DrawableRes
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,13 +38,15 @@ fun GrapesQuickActionButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     isEnabled: Boolean = true,
+    colors: ButtonColors = QuickActionButtonDefaults.buttonColors,
+    border: BorderStroke = QuickActionButtonDefaults.buttonBorder,
 ) {
     QuickActionButton(
         buttonContent = {
             Icon(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = if (isEnabled) QuickActionButtonDefaults.buttonColors.contentColor else GrapesTheme.colors.contentDisable,
+                tint = if (isEnabled) colors.contentColor else colors.disabledContentColor,
                 modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM)
             )
         },
@@ -50,12 +54,14 @@ fun GrapesQuickActionButton(
             Text(
                 text = label,
                 textAlign = TextAlign.Center,
-                color = if (isEnabled) QuickActionButtonDefaults.buttonColors.contentColor else GrapesTheme.colors.contentDisable
+                color = if (isEnabled) colors.contentColor else colors.disabledContentColor
             )
         },
         onClick = onClick,
         modifier = modifier,
         isEnabled = isEnabled,
+        colors = colors,
+        border = border,
     )
 }
 
@@ -66,6 +72,8 @@ private fun QuickActionButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     isEnabled: Boolean = true,
+    colors: ButtonColors = QuickActionButtonDefaults.buttonColors,
+    border: BorderStroke = QuickActionButtonDefaults.buttonBorder,
 ) {
     // To make the ripple happen on the button part of it, the mutable interaction source is shared between the button and the column.
     val mutableInteractionSource = remember { MutableInteractionSource() }
@@ -80,8 +88,8 @@ private fun QuickActionButton(
         Button(
             modifier = Modifier.size(QuickActionButtonDefaults.buttonSize),
             onClick = onClick,
-            colors = QuickActionButtonDefaults.buttonColors,
-            border = QuickActionButtonDefaults.buttonBorder,
+            colors = colors,
+            border = border,
             shape = QuickActionButtonDefaults.buttonShape,
             contentPadding = QuickActionButtonDefaults.buttonPadding,
             interactionSource = mutableInteractionSource,
