@@ -10,7 +10,7 @@ androidTargetSdk = "34"
 # [PLUGINS]
 
 ## Firebase
-firebaseAppdistributionPlugin = "5.0.0"
+firebaseAppdistributionPlugin = "5.1.1"
 
 # [LIBRARIES]
 detekt = "1.23.7"
