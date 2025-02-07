@@ -1,6 +1,6 @@
 [versions]
 grapes-version = '1.22.0'
-androidGradlePlugin = "8.7.2"
+androidGradlePlugin = "8.8.0"
 
 # [ANDROID]
 androidCompileSdk = "34"
@@ -10,7 +10,7 @@ androidTargetSdk = "34"
 # [PLUGINS]
 
 ## Firebase
-firebaseAppdistributionPlugin = "5.0.0"
+firebaseAppdistributionPlugin = "5.1.1"
 
 # [LIBRARIES]
 detekt = "1.23.7"
@@ -28,7 +28,7 @@ androidxEspresso = "3.6.1"
 androidxFragment = "1.8.5"
 androidxLifecycle = "2.8.7"
 androidxTestJunit = "1.2.1"
-andoridxNavigation = "2.8.5"
+andoridxNavigation = "2.8.6"
 
 ## Google
 hilt = "2.50"
