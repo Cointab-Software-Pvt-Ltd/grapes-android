@@ -28,7 +28,7 @@ androidxEspresso = "3.6.1"
 androidxFragment = "1.8.5"
 androidxLifecycle = "2.8.7"
 androidxTestJunit = "1.2.1"
-andoridxNavigation = "2.8.5"
+andoridxNavigation = "2.8.6"
 
 ## Google
 hilt = "2.50"
