@@ -42,12 +42,11 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
 
         GrapesSurface(
             configuration = iconActionConfiguration.status,
-            modifier = Modifier.size(GrapesTheme.dimensions.unit48)
         ) {
             GrapesIcon(
                 icon = iconActionConfiguration.icon,
                 configuration = iconActionConfiguration.status,
-                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconL)
+                modifier = Modifier.padding(GrapesTheme.dimensions.unit16).size(GrapesTheme.dimensions.sizeIconL)
             )
         }
 
