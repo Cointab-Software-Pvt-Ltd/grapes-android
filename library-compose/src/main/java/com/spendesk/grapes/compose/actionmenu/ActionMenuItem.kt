@@ -42,9 +42,9 @@ private const val ACTION_TEXT_MAX_LINES = 2
 @Composable
 fun ActionMenuItem(
     text: String,
-    icon: @Composable () -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    icon: (@Composable () -> Unit)? = null,
     enabled: Boolean = true,
 ) {
     Button(
@@ -68,11 +68,13 @@ fun ActionMenuItem(
         Row(
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            ActionMenuItemIcon(
-                enabled = enabled,
-                icon = icon,
-            )
-            Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
+            if (icon != null) {
+                ActionMenuItemIcon(
+                    enabled = enabled,
+                    icon = icon,
+                )
+                Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
+            }
             Text(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
@@ -121,6 +123,7 @@ private fun ActionMenuItemPreview() {
             GrapesIconSet.ReceiptQuestion(modifier = Modifier.size(48.dp))
         }
         val text = "Action"
+        val textNoIcon = "Action without icon"
         val longText = "Action with a very long title which will not fit in one line. Event two lines will not be enough"
         val modifier = Modifier.fillMaxWidth()
         Column(
@@ -135,6 +138,11 @@ private fun ActionMenuItemPreview() {
             ActionMenuItem(
                 text = longText,
                 icon = icon,
+                onClick = {},
+                modifier = modifier,
+            )
+            ActionMenuItem(
+                text = textNoIcon,
                 onClick = {},
                 modifier = modifier,
             )
