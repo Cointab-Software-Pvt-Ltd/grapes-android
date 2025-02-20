@@ -136,12 +136,6 @@ private fun ActionMenuItemPreview() {
                 modifier = modifier,
             )
             ActionMenuItem(
-                text = text,
-                icon = icon,
-                onClick = {},
-                modifier = modifier,
-            )
-            ActionMenuItem(
                 text = longText,
                 icon = icon,
                 onClick = {},
