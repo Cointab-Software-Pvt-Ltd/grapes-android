@@ -43,8 +43,8 @@ private const val ACTION_TEXT_MAX_LINES = 2
 fun ActionMenuItem(
     text: String,
     onClick: () -> Unit,
-    icon: (@Composable () -> Unit)? = null,
     modifier: Modifier = Modifier,
+    icon: (@Composable () -> Unit)? = null,
     enabled: Boolean = true,
 ) {
     Button(
