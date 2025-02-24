@@ -20,11 +20,13 @@ fun GrapesTopAppBarIconButton(
     icon: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {},
+    enabled: Boolean = true,
 ) {
     IconButton(
         modifier = modifier,
         content = icon,
         onClick = onClick,
+        enabled = enabled,
     )
 }
 
