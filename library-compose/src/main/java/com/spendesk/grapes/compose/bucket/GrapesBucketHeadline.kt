@@ -29,6 +29,7 @@ fun GrapesBucketHeadline(
     modifier: Modifier = Modifier,
     action: String? = null,
     actionColor: Color? = null,
+    actionEnabled: Boolean = true,
     onActionClicked: (() -> Unit)? = null
 ) {
     Row(modifier = modifier.fillMaxWidth()) {
@@ -43,7 +44,7 @@ fun GrapesBucketHeadline(
         if (action != null && actionColor != null) {
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit12))
             Text(
-                modifier = Modifier.clickable(onClick = onActionClicked ?: {}, onClickLabel = action, role = Role.Button),
+                modifier = Modifier.clickable(onClick = onActionClicked ?: {}, onClickLabel = action, role = Role.Button, enabled = actionEnabled),
                 text = action,
                 color = actionColor,
                 overflow = TextOverflow.Ellipsis,
