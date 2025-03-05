@@ -41,28 +41,44 @@ fun GrapesActionSheet(
         containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
         modifier = modifier,
     ) {
-        Column {
-            Text(
-                text = title,
-                textAlign = textAlign,
-                style = GrapesTheme.typography.titleXxl,
-                modifier = Modifier
-                    .padding(horizontal = GrapesTheme.dimensions.unit24)
-                    .fillMaxWidth()
-            )
-            Spacer(Modifier.height(GrapesTheme.dimensions.unit8))
-            Text(
-                text = message,
-                textAlign = textAlign,
-                style = GrapesTheme.typography.bodyS,
-                modifier = Modifier
-                    .padding(horizontal = GrapesTheme.dimensions.unit24)
-                    .fillMaxWidth()
-            )
-            Spacer(Modifier.height(GrapesTheme.dimensions.unit24))
-            actions()
-            Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
-        }
+        GrapesActionSheetContent(
+            title = title,
+            textAlign = textAlign,
+            message = message,
+            actions = actions,
+        )
+    }
+}
+
+@Composable
+fun GrapesActionSheetContent(
+    title: String,
+    message: String,
+    modifier: Modifier = Modifier,
+    textAlign: TextAlign = TextAlign.Start,
+    actions: @Composable ColumnScope.() -> Unit,
+) {
+    Column(modifier = modifier) {
+        Text(
+            text = title,
+            textAlign = textAlign,
+            style = GrapesTheme.typography.titleXxl,
+            modifier = Modifier
+                .padding(horizontal = GrapesTheme.dimensions.unit24)
+                .fillMaxWidth()
+        )
+        Spacer(Modifier.height(GrapesTheme.dimensions.unit8))
+        Text(
+            text = message,
+            textAlign = textAlign,
+            style = GrapesTheme.typography.bodyS,
+            modifier = Modifier
+                .padding(horizontal = GrapesTheme.dimensions.unit24)
+                .fillMaxWidth()
+        )
+        Spacer(Modifier.height(GrapesTheme.dimensions.unit24))
+        actions()
+        Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
     }
 }
 
