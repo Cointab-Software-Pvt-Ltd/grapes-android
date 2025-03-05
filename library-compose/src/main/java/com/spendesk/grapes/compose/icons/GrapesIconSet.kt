@@ -1971,7 +1971,7 @@ object GrapesIconSet {
 }
 
 @OptIn(ExperimentalLayoutApi::class)
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun IconsPreview() {
     GrapesTheme {
