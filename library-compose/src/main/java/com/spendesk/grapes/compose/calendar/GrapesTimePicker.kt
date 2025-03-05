@@ -1,25 +1,18 @@
 package com.spendesk.grapes.compose.calendar
 
+import android.text.format.DateFormat
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TimeInput
 import androidx.compose.material3.TimePickerDefaults
+import androidx.compose.material3.TimePickerState
 import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.spendesk.grapes.compose.theme.GrapesTheme
-import java.util.Calendar
-import java.util.Date
-
-/**
- * @author : dany
- * @since : 07/03/2023, Tue
- **/
+import java.time.LocalTime
 
 /**
  * Grapes time picker which lets the user selects a specific time by providing the hour, minutes and the am/pm format.
@@ -27,20 +20,22 @@ import java.util.Date
  * @param initialHour Initial hour to be displayed in the picker
  * @param initialMinute Initial minute to be displayed in the picker
  * @param modifier The [Modifier] to be applied to this time picker
- * @param onTimeSelected Callback when an hour or minute is changed in the picker
+ * @param onTimeChange Callback when an hour or minute is changed in the picker
+ * @param is24hFormat Whether the picker should be in 24-hour format or not. Default to the device setting
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun GrapesTimePicker(
     initialHour: Int,
     initialMinute: Int,
+    onTimeChange: (LocalTime) -> Unit,
     modifier: Modifier = Modifier,
-    onTimeSelected: ((Int, Int) -> Unit)? = null
+    is24hFormat: Boolean = DateFormat.is24HourFormat(LocalContext.current),
 ) {
-    val timerPickerState = rememberTimePickerState(
+    val timerPickerState: TimePickerState = rememberTimePickerState(
         initialHour = initialHour,
         initialMinute = initialMinute,
-        is24Hour = false
+        is24Hour = is24hFormat,
     )
 
     TimeInput(
@@ -61,27 +56,38 @@ fun GrapesTimePicker(
     )
 
     LaunchedEffect(timerPickerState.hour, timerPickerState.minute) {
-        if (timerPickerState.hour != initialHour || timerPickerState.minute != initialMinute) {
-            onTimeSelected?.invoke(timerPickerState.hour, timerPickerState.minute)
-        }
+        onTimeChange(LocalTime.of(timerPickerState.hour, timerPickerState.minute))
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-private fun GrapesTimePickerPreview() {
-    var itemHour by remember { mutableStateOf(Calendar.getInstance().apply { time = Date() }.get(Calendar.HOUR_OF_DAY)) }
-    var itemMinutes by remember { mutableStateOf(Calendar.getInstance().apply { time = Date() }.get(Calendar.MINUTE)) }
+@Preview(showBackground = true)
+@Suppress("MagicNumber")
+private fun PreviewGrapesTimePicker24Hour() {
+    val now = LocalTime.of(16, 44, 0)
 
     GrapesTheme {
         GrapesTimePicker(
-            initialHour = itemHour,
-            initialMinute = itemMinutes,
-            onTimeSelected = { hour, minute ->
-                itemHour = hour
-                itemMinutes = minute
-                println("Selected hour: $hour and minute: $minute")
-            }
+            initialHour = now.hour,
+            initialMinute = now.minute,
+            is24hFormat = true,
+            onTimeChange = {},
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+@Suppress("MagicNumber")
+private fun PreviewGrapesTimePicker12Hour() {
+    val now = LocalTime.of(16, 44, 0)
+
+    GrapesTheme {
+        GrapesTimePicker(
+            initialHour = now.hour,
+            initialMinute = now.minute,
+            is24hFormat = false,
+            onTimeChange = {},
         )
     }
 }
