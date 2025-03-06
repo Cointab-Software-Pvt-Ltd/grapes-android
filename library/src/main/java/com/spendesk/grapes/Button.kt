@@ -180,8 +180,8 @@ class Button : MaterialCardView {
             Style.SECONDARY ->
                 ButtonConfig(
                     colorBackground = R.color.buttonSecondaryBackground,
-                    colorBackgroundPressed = R.color.buttonSecondaryBackgroundPressed,
-                    colorBackgroundDisabled = R.color.buttonSecondaryBackgroundDisabled,
+                    colorBackgroundPressed = R.color.backgroundPressed,
+                    colorBackgroundDisabled = R.color.buttonPrimaryBackgroundDisabled,
                     contentTextColorStateList = R.color.btn_secondary_text,
                     radius = R.dimen.buttonRadius,
                     stroke = R.dimen.buttonSecondaryBackgroundStroke,

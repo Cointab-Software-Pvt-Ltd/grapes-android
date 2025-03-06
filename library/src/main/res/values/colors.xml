@@ -68,7 +68,7 @@
     <!-- endregion Default -->
 
     <!-- region BadgeView -->
-    <color name="badgeViewTextColor">@color/mainWhite</color> white
+    <color name="badgeViewTextColor">@color/mainWhite</color>
 
     <!-- region Button -->
     <color name="buttonPrimaryBackground">@color/backgroundPrimaryBrandDefault</color>
@@ -80,10 +80,10 @@
     <color name="buttonPrimaryBorder">@color/borderDefault</color>
 
     <color name="buttonSecondaryBackground">@color/backgroundPrimary</color>
-    <color name="buttonSecondaryBackgroundPressed">@color/backgroundPressed</color>
-    <color name="buttonSecondaryBackgroundDisabled">@color/backgroundDisabled</color>
+    <color name="buttonSecondaryBackgroundPressed">@color/contentPrimary</color>
+    <color name="buttonSecondaryBackgroundDisabled">@color/contentSecondaryBGSecondary</color>
     <color name="buttonSecondaryBackgroundStroke">@color/borderDefault</color>
-    <color name="buttonSecondaryContent">@color/contentBrandDefault</color>
+    <color name="buttonSecondaryContent">@color/contentPrimary</color>
     <color name="buttonSecondaryContentDisabled">@color/contentSecondaryBGSecondary</color>
 
     <color name="buttonAlertBackground">@color/backgroundPrimaryAlertDefault</color>
