@@ -1,43 +1,73 @@
 complexity:
+  CognitiveComplexMethod:
+    threshold: 20
+  ComplexInterface:
+    threshold: 15
+  CyclomaticComplexMethod:
+    threshold: 20
+    ignoreSingleWhenExpression: true
+    ignoreSimpleWhenEntries: true
   LongMethod:
-    ignoreAnnotated: [ 'Composable' ]
+    ignoreAnnotated: [ 'Test', 'Composable' ]
   LongParameterList:
     ignoreDataClasses: true
     ignoreDefaultParameters: true
-    ignoreAnnotated: [ 'Composable' ]
+    ignoreAnnotated: [ 'Binds', 'Provides', 'Composable' ]
+    constructorThreshold: 160
+  TooManyFunctions:
+    ignoreAnnotated: [ 'Module', 'HiltViewModel' ]
+    ignorePrivate: true
+    thresholdInFiles: 15
+    thresholdInClasses: 15
+    thresholdInInterfaces: 15
+    thresholdInObjects: 15
+coroutines:
+  GlobalCoroutineUsage:
+    active: true
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
 formatting:
   ArgumentListWrapping:
-    maxLineLength: 200
+    maxLineLength: 160
   ContextReceiverMapping:
-    maxLineLength: 200
+    maxLineLength: 160
   FunctionReturnTypeSpacing:
-    maxLineLength: 200
+    maxLineLength: 160
   FunctionSignature:
-    maxLineLength: 200
+    maxLineLength: 160
   ImportOrdering:
     active: false
   MaximumLineLength:
-    maxLineLength: 200
+    maxLineLength: 160
   ParameterListWrapping:
-    maxLineLength: 200
+    maxLineLength: 160
   ParameterWrapping:
-    maxLineLength: 200
+    maxLineLength: 160
   PropertyWrapping:
-    maxLineLength: 200
+    maxLineLength: 160
   Wrapping:
-    maxLineLength: 200
+    maxLineLength: 160
 naming:
   FunctionNaming:
     ignoreAnnotated: [ 'Composable' ]
+  ClassNaming:
+    excludes: [ '**/data/common/libs/realm/version/**' ]
   TopLevelPropertyNaming:
     constantPattern: '[A-Z][_A-Za-z0-9]*'
 style:
   MagicNumber:
+    ignoreAnnotated: [ 'Preview' ]
     ignorePropertyDeclaration: true
     ignoreCompanionObjectPropertyDeclaration: true
   MaxLineLength:
     active: true
-    maxLineLength: 200
-    excludeCommentStatements: false
+    maxLineLength: 160
+    excludeCommentStatements: true
+  ReturnCount:
+    max: 3
+    excludeGuardClauses: true
   UnusedPrivateMember:
     ignoreAnnotated: [ 'Preview' ]
+  UnusedPrivateProperty:
+    ignoreAnnotated: [ 'Mock', 'Spy' ]
