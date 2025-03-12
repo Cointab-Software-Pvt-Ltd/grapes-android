@@ -92,6 +92,12 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.ktx)
+
+    // Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.androidxcompose)
+    implementation(libs.kotlinx.collections.immutable)
 
     implementation(libs.google.material)
 

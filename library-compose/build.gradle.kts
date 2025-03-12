@@ -84,12 +84,12 @@ dependencies {
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    api(libs.androidx.lifecycle.ktx)
+    implementation(libs.androidx.lifecycle.ktx)
 
     // Compose
-    api(platform(libs.androidx.compose.bom))
-    api(libs.bundles.androidxcompose)
-    api(libs.kotlinx.collections.immutable)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.androidxcompose)
+    implementation(libs.kotlinx.collections.immutable)
 
     // UI Tests
     androidTestImplementation(libs.androidx.compose.ui.test)
