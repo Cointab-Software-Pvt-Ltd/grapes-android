@@ -35,7 +35,7 @@ interface GrapesNavigationItem {
 @Composable
 fun GrapesNavigationBar(
     tabs: List<GrapesNavigationItem>,
-    selected: GrapesNavigationItem,
+    selected: GrapesNavigationItem?,
     onSelected: (GrapesNavigationItem) -> Unit,
     modifier: Modifier = Modifier,
     windowInsets: WindowInsets = NavigationBarDefaults.windowInsets,
