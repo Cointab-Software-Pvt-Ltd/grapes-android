@@ -21,6 +21,7 @@ import com.spendesk.grapes.list.content.summary.SummaryBlockContentModel
 class SummaryBlockContentMapView : SummaryBlockView {
 
     companion object {
+
         private const val MAP_IMAGE_HEIGHT_RATIO = 0.68 // Height is smaller than the width
     }
 
@@ -37,7 +38,8 @@ class SummaryBlockContentMapView : SummaryBlockView {
         val arrivalAddress: CharSequence,
         val items: List<SummaryBlockContentModel.InlineKeyValue>,
         val buttonCollapsedText: CharSequence? = null, // Text appearing when the block is collapsed
-        val buttonExpandedText: CharSequence? = null // Text appearing when the block is expanded
+        val buttonExpandedText: CharSequence? = null, // Text appearing when the block is expanded
+        val isEnabled: Boolean = true,
     ) : SummaryBlockView.Configuration(titleConfiguration)
 
     private val binding: SummaryBlockContentMapBinding = SummaryBlockContentMapBinding.inflate(LayoutInflater.from(context), this, true)
@@ -87,6 +89,8 @@ class SummaryBlockContentMapView : SummaryBlockView {
                 }
             }
         }
+
+        isEnabled = configuration.isEnabled
     }
 
     private fun setupView() {
