@@ -20,7 +20,7 @@ glide = "4.16.0"
 ## AndroidX
 androidxActivityCompose = "1.9.3"
 androidxAppcompat = "1.7.0"
-androidxComposeBom = "2024.09.02"
+androidxComposeBom = "2025.05.01"
 androidxComposeCompiler = "1.5.14"
 androidxConstraintlayout = "2.2.0"
 androidxCore = "1.13.1"
