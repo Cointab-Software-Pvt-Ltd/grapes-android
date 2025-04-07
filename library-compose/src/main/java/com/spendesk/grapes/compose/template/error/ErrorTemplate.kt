@@ -27,7 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import com.spendesk.grapes.compose.button.GrapesButton
+import com.spendesk.grapes.compose.button.primary.GrapesBrandPrimaryButton
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconAlert
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconSize
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -40,7 +40,7 @@ fun ErrorTemplate(
     description: String? = null,
     retryUiModel: ErrorRetryUiModel? = null,
     icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
-    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration()
+    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration(),
 ) {
     ErrorTemplate(
         title = {
@@ -63,9 +63,10 @@ fun ErrorTemplate(
         },
         retryButton = retryUiModel?.canRetry?.takeIf { it }?.let {
             {
-                GrapesButton(
+                GrapesBrandPrimaryButton(
                     text = retryUiModel.message,
-                    onClick = retryUiModel.onRetryClicked
+                    onClick = retryUiModel.onRetryClicked,
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
         },
@@ -79,7 +80,7 @@ fun ErrorTemplate(
     icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
     description: (@Composable () -> Unit)? = null,
     retryButton: (@Composable () -> Unit)? = null,
-    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration()
+    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration(),
 ) {
     var isVisible by remember { mutableStateOf(false) }
 
@@ -152,7 +153,10 @@ fun ErrorTemplatePreview() {
                     )
                 } else {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        GrapesButton(text = "Perform some network call", onClick = { isError = true })
+                        GrapesBrandPrimaryButton(
+                            text = "Perform some network call",
+                            onClick = { isError = true },
+                        )
                     }
                 }
             }

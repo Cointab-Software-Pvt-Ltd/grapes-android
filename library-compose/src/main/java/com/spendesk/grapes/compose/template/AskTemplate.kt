@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.Text
@@ -16,8 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.spendesk.grapes.compose.R
-import com.spendesk.grapes.compose.button.GrapesButton
-import com.spendesk.grapes.compose.button.GrapesButtonStyleDefaults
+import com.spendesk.grapes.compose.button.primary.GrapesComplementaryTertiaryButton
+import com.spendesk.grapes.compose.button.primary.GrapesSecondaryButton
 import com.spendesk.grapes.compose.template.molecule.InformativeComponent
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
@@ -102,14 +103,16 @@ fun AskTemplate(
 fun Preview() {
     val cta = @Composable {
         Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12)) {
-            GrapesButton(
+            GrapesSecondaryButton(
                 text = "Main button",
-                buttonStyle = GrapesButtonStyleDefaults.secondary
+                onClick = {},
+                modifier = Modifier.fillMaxWidth(),
             )
 
-            GrapesButton(
+            GrapesComplementaryTertiaryButton(
                 text = "Secondary button",
-                buttonStyle = GrapesButtonStyleDefaults.text
+                onClick = {},
+                modifier = Modifier.fillMaxWidth(),
             )
         }
     }
