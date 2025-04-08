@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.Alignment
@@ -31,6 +32,15 @@ object GrapesTertiaryDefault {
         disabledContentColor = GrapesTheme.colors.contentSecondaryBGPrimary,
         loadingColor = GrapesTheme.colors.backgroundSecondaryBrandPressed,
     )
+
+    @Composable
+    internal fun complementaryColors(): GrapesButtonColors = GrapesButtonColors(
+        containerColor = Color.Transparent,
+        contentColor = GrapesTheme.colors.contentComplementary,
+        disabledContainerColor = Color.Transparent,
+        disabledContentColor = GrapesTheme.colors.contentSecondaryBGPrimary,
+        loadingColor = GrapesTheme.colors.backgroundSecondaryBrandPressed,
+    )
 }
 
 @Composable
@@ -50,6 +60,30 @@ fun GrapesTertiaryButton(
         icon = icon,
         interactionSource = interactionSource,
         colors = GrapesTertiaryDefault.colors(),
+        border = null,
+        onClick = onClick,
+        alignment = alignment,
+        modifier = modifier,
+    )
+}
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+fun GrapesComplementaryTertiaryButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    state: GrapesButtonState = GrapesButtonState.Enabled,
+    icon: @Composable (() -> Unit)? = null,
+    interactionSource: MutableInteractionSource? = null,
+    alignment: Alignment = Alignment.Center,
+) {
+    BasicButton(
+        text = text,
+        state = state,
+        icon = icon,
+        interactionSource = interactionSource,
+        colors = GrapesTertiaryDefault.complementaryColors(),
         border = null,
         onClick = onClick,
         alignment = alignment,
@@ -113,6 +147,29 @@ private fun PreviewGrapesTertiaryButton() {
                 onClick = {},
                 modifier = Modifier.fillMaxWidth()
             )
+
+            Surface(
+                color = GrapesTheme.colors.backgroundPrimaryBrandDefault,
+            ) {
+                GrapesComplementaryTertiaryButton(
+                    text = "Tertiary Complementary Button",
+                    state = GrapesButtonState.Enabled,
+                    onClick = {},
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
+            Surface(
+                color = GrapesTheme.colors.backgroundPrimaryBrandDefault,
+            ) {
+                GrapesComplementaryTertiaryButton(
+                    text = "Tertiary Complementary Button",
+                    state = GrapesButtonState.Enabled,
+                    onClick = {},
+                    icon = icon,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
         }
     }
 }

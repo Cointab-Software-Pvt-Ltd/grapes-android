@@ -2,11 +2,18 @@ package com.spendesk.grapes.compose.callout.atoms
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import com.spendesk.grapes.compose.button.GrapesButton
-import com.spendesk.grapes.compose.button.GrapesButtonStyleDefaults
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
+import com.spendesk.grapes.compose.button.primary.GrapesAlertPrimaryButton
+import com.spendesk.grapes.compose.button.primary.GrapesBrandPrimaryButton
+import com.spendesk.grapes.compose.button.primary.GrapesWarningPrimaryButton
 import com.spendesk.grapes.compose.callout.CalloutType
+import com.spendesk.grapes.compose.callout.GrapesCalloutType
 import com.spendesk.grapes.compose.callout.LocalGrapesCalloutType
+import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
  * @author jean-philippe
@@ -18,18 +25,53 @@ fun GrapesCalloutContentCTAPrimary(
     buttonText: String,
     onButtonClick: () -> Unit,
 ) {
-    val primaryButtonStyle = when (LocalGrapesCalloutType.current.type) {
-        CalloutType.ERROR -> GrapesButtonStyleDefaults.alert
-        CalloutType.WARNING -> GrapesButtonStyleDefaults.warning
+    when (LocalGrapesCalloutType.current.type) {
+        CalloutType.ERROR -> {
+            GrapesAlertPrimaryButton(
+                text = buttonText,
+                onClick = onButtonClick,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+
+        CalloutType.WARNING -> {
+            GrapesWarningPrimaryButton(
+                text = buttonText,
+                onClick = onButtonClick,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+
         CalloutType.INFO,
         CalloutType.SUCCESS,
-        CalloutType.NEUTRAL -> GrapesButtonStyleDefaults.primary
+        CalloutType.NEUTRAL,
+        -> {
+            GrapesBrandPrimaryButton(
+                text = buttonText,
+                onClick = onButtonClick,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
     }
+}
 
-    GrapesButton(
-        modifier = Modifier.fillMaxWidth(),
-        text = buttonText,
-        buttonStyle = primaryButtonStyle,
-        onClick = onButtonClick,
-    )
+private class GrapesCalloutTypeProvider : PreviewParameterProvider<GrapesCalloutType> {
+
+    override val values: Sequence<GrapesCalloutType>
+        get() = CalloutType.entries.map { GrapesCalloutType(it) }.asSequence()
+}
+
+@Preview
+@Composable
+private fun PreviewGrapesCalloutContentCTAPrimary(
+    @PreviewParameter(GrapesCalloutTypeProvider::class) type: GrapesCalloutType,
+) {
+    GrapesTheme {
+        CompositionLocalProvider(LocalGrapesCalloutType provides type) {
+            GrapesCalloutContentCTAPrimary(
+                buttonText = "Button",
+                onButtonClick = {},
+            )
+        }
+    }
 }
