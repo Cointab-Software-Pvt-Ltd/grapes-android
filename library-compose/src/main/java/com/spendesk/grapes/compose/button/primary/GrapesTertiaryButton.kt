@@ -2,7 +2,6 @@
 
 package com.spendesk.grapes.compose.button.primary
 
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -51,14 +50,12 @@ fun GrapesTertiaryButton(
     modifier: Modifier = Modifier,
     state: GrapesButtonState = GrapesButtonState.Enabled,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
     alignment: Alignment = Alignment.Center,
 ) {
     BasicButton(
         text = text,
         state = state,
         icon = icon,
-        interactionSource = interactionSource,
         colors = GrapesTertiaryDefault.colors(),
         border = null,
         onClick = onClick,
@@ -75,14 +72,12 @@ fun GrapesComplementaryTertiaryButton(
     modifier: Modifier = Modifier,
     state: GrapesButtonState = GrapesButtonState.Enabled,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
     alignment: Alignment = Alignment.Center,
 ) {
     BasicButton(
         text = text,
         state = state,
         icon = icon,
-        interactionSource = interactionSource,
         colors = GrapesTertiaryDefault.complementaryColors(),
         border = null,
         onClick = onClick,

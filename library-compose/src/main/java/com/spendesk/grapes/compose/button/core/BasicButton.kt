@@ -20,6 +20,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -27,6 +28,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.spendesk.grapes.compose.button.NoRippleInteractionSource
 import com.spendesk.grapes.compose.button.primary.GrapesPrimaryDefault
 import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -39,7 +41,6 @@ internal fun BasicButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
     border: BorderStroke? = null,
     alignment: Alignment = Alignment.Center,
 ) {
@@ -54,7 +55,11 @@ internal fun BasicButton(
         shape = GrapesTheme.shapes.radius8,
         border = border,
         contentPadding = PaddingValues(0.dp),
-        interactionSource = interactionSource,
+        interactionSource = if (state is GrapesButtonState.Loading) {
+            NoRippleInteractionSource()
+        } else {
+            remember { MutableInteractionSource() }
+        },
         onClick = onClick,
         modifier = modifier
             .heightIn(min = GrapesTheme.dimensions.unit48)
