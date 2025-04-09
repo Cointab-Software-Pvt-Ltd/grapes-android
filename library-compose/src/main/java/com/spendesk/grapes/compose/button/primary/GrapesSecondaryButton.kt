@@ -3,7 +3,6 @@
 package com.spendesk.grapes.compose.button.primary
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -62,13 +61,11 @@ fun GrapesSecondaryButton(
     modifier: Modifier = Modifier,
     state: GrapesButtonState = GrapesButtonState.Enabled,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
 ) {
     BasicButton(
         text = text,
         state = state,
         icon = icon,
-        interactionSource = interactionSource,
         colors = GrapesSecondaryDefault.colors(),
         border = GrapesSecondaryDefault.buttonBorder(),
         onClick = onClick,
@@ -83,13 +80,11 @@ fun GrapesAlertSecondaryButton(
     modifier: Modifier = Modifier,
     state: GrapesButtonState = GrapesButtonState.Enabled,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
 ) {
     BasicButton(
         text = text,
         state = state,
         icon = icon,
-        interactionSource = interactionSource,
         colors = GrapesSecondaryDefault.alertColors(),
         border = GrapesSecondaryDefault.buttonBorder(),
         onClick = onClick,
@@ -104,13 +99,11 @@ fun GrapesWarningSecondaryButton(
     modifier: Modifier = Modifier,
     state: GrapesButtonState = GrapesButtonState.Enabled,
     icon: @Composable (() -> Unit)? = null,
-    interactionSource: MutableInteractionSource? = null,
 ) {
     BasicButton(
         text = text,
         state = state,
         icon = icon,
-        interactionSource = interactionSource,
         colors = GrapesSecondaryDefault.warningColors(),
         border = GrapesSecondaryDefault.buttonBorder(),
         onClick = onClick,
