@@ -4,8 +4,8 @@
     <!-- region TextInput -->
 
     <dimen name="textInputTextSize">16sp</dimen>
-    <dimen name="textInputEditTextPadding">16dp</dimen>
-    <dimen name="textInputEditTextPaddingBottom">12dp</dimen>
+    <dimen name="textInputEditTextPaddingHorizontal">16dp</dimen>
+    <dimen name="textInputEditTextPaddingVertical">12dp</dimen>
     <dimen name="textInputPrimaryDrawableCompoundPadding">8dp</dimen>
     <dimen name="searchInputProgressBarHeight">4dp</dimen>
     <dimen name="textInputPrimaryCardElevation">4dp</dimen>
