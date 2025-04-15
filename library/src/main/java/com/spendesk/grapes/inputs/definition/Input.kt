@@ -37,6 +37,7 @@ abstract class Input : CardView {
         SECONDARY(1);
 
         companion object {
+
             fun fromPosition(position: Int): Style {
                 return try {
                     values().first { it.position == position }
@@ -87,8 +88,15 @@ abstract class Input : CardView {
      * @param style The style to be applied to this editText.
      * @param extraConfiguration An instruction block that can be applied (if any) to this editText to allow some extra configuration.
      */
-    open fun configureEditText(focusable: Boolean, hint: String? = null, drawableStart: Int, style: Style, extraConfiguration: ((editText: EditText) -> Unit)? = null) {
+    open fun configureEditText(
+        focusable: Boolean,
+        hint: String? = null,
+        drawableStart: Int,
+        style: Style,
+        extraConfiguration: ((editText: EditText) -> Unit)? = null,
+    ) {
         with(getEditText()) {
+
             // Set basic properties
             this.isFocusable = focusable
             this.hint = hint
