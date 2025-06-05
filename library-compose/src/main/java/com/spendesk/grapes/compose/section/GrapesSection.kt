@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -32,11 +33,13 @@ fun GrapesSection(
     title: String,
     modifier: Modifier = Modifier,
     action: @Composable (GrapesSectionActionScope.() -> Unit)? = null,
+    elevation: CardElevation = CardDefaults.cardElevation(),
     content: @Composable () -> Unit,
 ) {
     Card(
         modifier = modifier,
         shape = GrapesTheme.shapes.radius12,
+        elevation = elevation,
         colors = CardDefaults.cardColors(
             containerColor = GrapesTheme.colors.backgroundPrimaryDefault,
             contentColor = GrapesTheme.colors.contentPrimary,
