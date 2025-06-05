@@ -25,6 +25,8 @@ fun GrapesCheckboxBox(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     onCheckedChange: (Boolean) -> Unit,
+    maxLines: Int = 1,
+    overflow: TextOverflow = TextOverflow.Ellipsis,
 ) {
     Card(
         onClick = { onCheckedChange(!checked) },
@@ -53,8 +55,8 @@ fun GrapesCheckboxBox(
             Text(
                 text = text,
                 style = GrapesTheme.typography.bodyM,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
+                maxLines = maxLines,
+                overflow = overflow,
             )
         }
     }
@@ -95,6 +97,15 @@ private fun PreviewGrapesCheckboxBox() {
                 modifier = Modifier.fillMaxWidth(),
                 enabled = false,
                 onCheckedChange = {},
+            )
+            GrapesCheckboxBox(
+                text = "Long label that should be on multiple lines and should not be truncated at the end",
+                checked = false,
+                modifier = Modifier.fillMaxWidth(),
+                enabled = true,
+                onCheckedChange = {},
+                maxLines = Int.MAX_VALUE,
+                overflow = TextOverflow.Clip,
             )
         }
     }
