@@ -5,6 +5,8 @@ package com.spendesk.grapes.list.content.summary
  * @since 1/14/21
  */
 enum class SummaryBlockContentViewType {
+
     APPROVER_STATUS,
-    INLINE_KEY_VALUE
+    INLINE_KEY_VALUE,
+    ICON_DESCRIPTION,
 }

@@ -1,6 +1,7 @@
 package com.spendesk.grapes.list.content.summary
 
 import com.spendesk.grapes.list.content.summary.item.ApproverStatusItemView
+import com.spendesk.grapes.list.content.summary.item.IconDescriptionItemView
 import com.spendesk.grapes.list.content.summary.item.InlineKeyValueItemView
 
 /**
@@ -8,6 +9,19 @@ import com.spendesk.grapes.list.content.summary.item.InlineKeyValueItemView
  * @since 1/14/21
  */
 sealed class SummaryBlockContentModel(val viewType: SummaryBlockContentViewType) {
-    data class ApproverStatus(val id: String, val configuration: ApproverStatusItemView.Configuration) : SummaryBlockContentModel(SummaryBlockContentViewType.APPROVER_STATUS)
-    data class InlineKeyValue(val id: String, val configuration: InlineKeyValueItemView.Configuration) : SummaryBlockContentModel(SummaryBlockContentViewType.INLINE_KEY_VALUE)
+
+    data class ApproverStatus(
+        val id: String,
+        val configuration: ApproverStatusItemView.Configuration,
+    ) : SummaryBlockContentModel(SummaryBlockContentViewType.APPROVER_STATUS)
+
+    data class InlineKeyValue(
+        val id: String,
+        val configuration: InlineKeyValueItemView.Configuration,
+    ) : SummaryBlockContentModel(SummaryBlockContentViewType.INLINE_KEY_VALUE)
+
+    data class IconDescription(
+        val id: String,
+        val configuration: IconDescriptionItemView.Configuration,
+    ) : SummaryBlockContentModel(SummaryBlockContentViewType.ICON_DESCRIPTION)
 }
