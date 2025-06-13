@@ -11,6 +11,7 @@ import com.spendesk.grapes.component.content.summary.block.SummaryBlockContentTe
 import com.spendesk.grapes.component.content.summary.block.definition.SummaryBlockTitleView
 import com.spendesk.grapes.extensions.shortToaster
 import com.spendesk.grapes.list.content.summary.SummaryBlockContentModel
+import com.spendesk.grapes.list.content.summary.item.IconDescriptionItemView
 import com.spendesk.grapes.list.content.summary.item.InlineKeyValueItemView
 import com.spendesk.grapes.messages.MessageBlockView
 import com.spendesk.grapes.messages.MessageInlineView
@@ -25,6 +26,7 @@ import com.spendesk.grapes.samples.databinding.FragmentHomeContentsBinding
 class ContentsFragment : Fragment(R.layout.fragment_home_contents) {
 
     companion object {
+
         fun newInstance() = ContentsFragment()
     }
 
@@ -102,8 +104,22 @@ class ContentsFragment : Fragment(R.layout.fragment_home_contents) {
                         isActivated = true
                     ),
                     mapImageUrl = "", // TODO Change this when we actually use Mapbox
-                    departureAddress = "Ca part de là mais c'est assez long quand même",
-                    arrivalAddress = "Et ça fini ici !",
+                    stops = listOf(
+                        SummaryBlockContentModel.IconDescription(
+                            id = "1",
+                            configuration = IconDescriptionItemView.Configuration(
+                                icon = R.drawable.ic_grapes_icon_map_pin,
+                                title = "Departure address",
+                            ),
+                        ),
+                        SummaryBlockContentModel.IconDescription(
+                            id = "2",
+                            configuration = IconDescriptionItemView.Configuration(
+                                icon = R.drawable.ic_grapes_icon_flag_checkered,
+                                title = "Destination address",
+                            ),
+                        ),
+                    ),
                     items = listOf(
                         SummaryBlockContentModel.InlineKeyValue(id = "", configuration = InlineKeyValueItemView.Configuration(key = "Key #1", value = "Value #1")),
                         SummaryBlockContentModel.InlineKeyValue(id = "", configuration = InlineKeyValueItemView.Configuration(key = "Key #2", value = "Value #2")),
@@ -126,8 +142,29 @@ class ContentsFragment : Fragment(R.layout.fragment_home_contents) {
                     startTitle = "Route"
                 ),
                 mapImageUrl = "", // TODO Change this when we actually use Mapbox
-                departureAddress = "Ca part de là mais c'est assez long quand même",
-                arrivalAddress = "Et ça fini ici !",
+                stops = listOf(
+                    SummaryBlockContentModel.IconDescription(
+                        id = "1",
+                        configuration = IconDescriptionItemView.Configuration(
+                            icon = R.drawable.ic_grapes_icon_map_pin,
+                            title = "Departure address",
+                        ),
+                    ),
+                    SummaryBlockContentModel.IconDescription(
+                        id = "1",
+                        configuration = IconDescriptionItemView.Configuration(
+                            icon = R.drawable.ic_grapes_icon_map_pin,
+                            title = "Stop 1",
+                        ),
+                    ),
+                    SummaryBlockContentModel.IconDescription(
+                        id = "2",
+                        configuration = IconDescriptionItemView.Configuration(
+                            icon = R.drawable.ic_grapes_icon_flag_checkered,
+                            title = "Destination address",
+                        ),
+                    ),
+                ),
                 items = listOf(
                     SummaryBlockContentModel.InlineKeyValue(id = "", configuration = InlineKeyValueItemView.Configuration(key = "Key #1", value = "Value #1")),
                     SummaryBlockContentModel.InlineKeyValue(id = "", configuration = InlineKeyValueItemView.Configuration(key = "Key #2", value = "Value #2")),
