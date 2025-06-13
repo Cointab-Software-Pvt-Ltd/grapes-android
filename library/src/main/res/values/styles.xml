@@ -190,14 +190,6 @@
         <item name="android:ellipsize">marquee</item>
     </style>
 
-    <style name="MapBlockDepartureAddressText" parent="@style/MapBlockAddressText">
-        <item name="android:drawableStart">@drawable/ic_address_departure</item>
-    </style>
-
-    <style name="MapBlockArrivalAddressText" parent="@style/MapBlockAddressText">
-        <item name="android:drawableStart">@drawable/ic_address_arrival</item>
-    </style>
-
     <style name="SummaryBlockTextValue">
         <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/summary_block_content_text_value_text</item>
