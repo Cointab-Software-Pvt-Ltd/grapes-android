@@ -34,8 +34,7 @@ class SummaryBlockContentMapView : SummaryBlockView {
     data class Configuration(
         override val titleConfiguration: SummaryBlockTitleView.Configuration,
         val mapImageUrl: String,
-        val departureAddress: CharSequence,
-        val arrivalAddress: CharSequence,
+        val stops: List<SummaryBlockContentModel.IconDescription>,
         val items: List<SummaryBlockContentModel.InlineKeyValue>,
         val buttonCollapsedText: CharSequence? = null, // Text appearing when the block is collapsed
         val buttonExpandedText: CharSequence? = null, // Text appearing when the block is expanded
@@ -44,6 +43,7 @@ class SummaryBlockContentMapView : SummaryBlockView {
 
     private val binding: SummaryBlockContentMapBinding = SummaryBlockContentMapBinding.inflate(LayoutInflater.from(context), this, true)
     private val adapter = SummaryBlockContentAdapter()
+    private val stopsAdapter = SummaryBlockContentAdapter()
     private var buttonCollapsedText: CharSequence? = null
     private var buttonExpandedText: CharSequence? = null
 
@@ -60,9 +60,7 @@ class SummaryBlockContentMapView : SummaryBlockView {
         this.buttonExpandedText = configuration.buttonExpandedText
 
         with(binding) {
-            summaryBlockContentMapDepartureTitle.text = configuration.departureAddress
-            summaryBlockContentMapArrivalTitle.text = configuration.arrivalAddress
-
+            stopsAdapter.updateList(configuration.stops)
             adapter.updateList(configuration.items)
 
             if (shouldDisplayViewMoreButton()) {
@@ -97,6 +95,7 @@ class SummaryBlockContentMapView : SummaryBlockView {
         with(binding) {
             summaryBlockContentMapList.gone()
             summaryBlockContentMapList.adapter = adapter
+            summaryBlockContentMapStopsList.adapter = stopsAdapter
 
             summaryBlockContentViewMoreButton.setOnClickListener {
                 when {
