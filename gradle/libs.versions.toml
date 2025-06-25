@@ -1,6 +1,6 @@
 [versions]
 grapes-version = '1.22.0'
-androidGradlePlugin = "8.8.0"
+androidGradlePlugin = "8.11.0"
 
 # [ANDROID]
 androidCompileSdk = "35"
