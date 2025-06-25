@@ -43,12 +43,15 @@ captures/
 .idea/workspace.xml
 .idea/misc.xml
 .idea/deploymentTargetDropDown.xml
+.idea/deploymentTargetSelector.xml
 .idea/tasks.xml
 .idea/gradle.xml
 .idea/assetWizardSettings.xml
 .idea/dictionaries
 .idea/libraries
 .idea/appInsightsSettings.xml
+.idea/migrations.xml
+.idea/runConfigurations.xml
 # Android Studio 3 in .gitignore file.
 .idea/caches
 .idea/modules.xml
@@ -78,3 +81,6 @@ lint/tmp/
 
 # MacOS
 *.DS_Store
+
+# Kotlin
+.kotlin/
