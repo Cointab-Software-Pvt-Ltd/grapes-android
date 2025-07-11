@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -18,86 +17,70 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.spendesk.grapes.compose.appbar.GrapesTopAppBarCloseIcon
-import com.spendesk.grapes.compose.appbar.GrapesTopAppBarIconButton
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 @Composable
 fun GrapesHeader(
-    onCloseClicked: () -> Unit,
-    supplierImage: @Composable () -> Unit,
     supplierName: String,
     title: String,
     subtitle: String?,
     description: String?,
     date: String,
-    statusTag: @Composable () -> Unit,
+    supplierImage: @Composable () -> Unit,
     identifierTag: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     extraContent: (@Composable () -> Unit)? = null,
 ) {
-    Column(modifier = modifier.background(GrapesTheme.colors.backgroundPrimaryDefault)) {
+    Column(
+        modifier = modifier
+            .background(GrapesTheme.colors.backgroundPrimaryDefault)
+            .padding(horizontal = GrapesTheme.dimensions.unit16)
+    ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.heightIn(min = GrapesTheme.dimensions.unit56)
         ) {
-            GrapesTopAppBarIconButton(
-                { GrapesTopAppBarCloseIcon() },
-                onClick = onCloseClicked
-            )
-            Spacer(modifier = Modifier.weight(1f))
-            statusTag()
-            Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit8))
-        }
-        Column(
-            modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16),
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                supplierImage()
-                Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit16))
-                Text(
-                    text = supplierName,
-                    style = GrapesTheme.typography.titleL,
-                    color = GrapesTheme.colors.contentPrimary
-                )
-            }
-            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
+            supplierImage()
+            Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit16))
             Text(
-                text = title,
-                style = GrapesTheme.typography.heading,
+                text = supplierName,
+                style = GrapesTheme.typography.titleL,
                 color = GrapesTheme.colors.contentPrimary
             )
-            subtitle?.let {
-                Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
-                Text(
-                    text = it,
-                    style = GrapesTheme.typography.bodyL,
-                    color = GrapesTheme.colors.contentSecondaryBGPrimary
-                )
-            }
-            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit24))
-            description?.let {
-                Text(
-                    text = it,
-                    style = GrapesTheme.typography.bodyL,
-                    color = GrapesTheme.colors.contentPrimary
-                )
-                Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
-            }
+        }
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
+        Text(
+            text = title,
+            style = GrapesTheme.typography.heading,
+            color = GrapesTheme.colors.contentPrimary
+        )
+        subtitle?.let {
+            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
             Text(
-                text = date,
+                text = it,
                 style = GrapesTheme.typography.bodyL,
                 color = GrapesTheme.colors.contentSecondaryBGPrimary
             )
-            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
-            identifierTag()
+        }
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit24))
+        description?.let {
+            Text(
+                text = it,
+                style = GrapesTheme.typography.bodyL,
+                color = GrapesTheme.colors.contentPrimary
+            )
+            Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
+        }
+        Text(
+            text = date,
+            style = GrapesTheme.typography.bodyL,
+            color = GrapesTheme.colors.contentSecondaryBGPrimary
+        )
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
+        identifierTag()
+        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
+        extraContent?.let {
+            it()
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
-            extraContent?.let {
-                it()
-                Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
-            }
         }
     }
 }
@@ -107,7 +90,6 @@ fun GrapesHeader(
 private fun GrapesHeaderPreview() {
     GrapesTheme {
         GrapesHeader(
-            onCloseClicked = {},
             supplierImage = {
                 Box(
                     modifier = Modifier
@@ -120,7 +102,6 @@ private fun GrapesHeaderPreview() {
             subtitle = "Header Subtitle",
             description = "Header Description",
             date = "Header Date",
-            statusTag = { Text("Status") },
             identifierTag = { Text("Identifier") }
         )
     }
@@ -131,7 +112,6 @@ private fun GrapesHeaderPreview() {
 private fun GrapesHeaderWithExtraContentPreview() {
     GrapesTheme {
         GrapesHeader(
-            onCloseClicked = {},
             supplierImage = {
                 Box(
                     modifier = Modifier
@@ -144,7 +124,6 @@ private fun GrapesHeaderWithExtraContentPreview() {
             subtitle = "Header Subtitle",
             description = "Header Description",
             date = "Header Date",
-            statusTag = { Text("Status") },
             identifierTag = { Text("Identifier") },
             extraContent = {
                 Box(
@@ -163,7 +142,6 @@ private fun GrapesHeaderWithExtraContentPreview() {
 private fun GrapesHeaderWithExtraContentVeryLongPreview() {
     GrapesTheme {
         GrapesHeader(
-            onCloseClicked = {},
             supplierImage = {
                 Box(
                     modifier = Modifier
@@ -176,7 +154,6 @@ private fun GrapesHeaderWithExtraContentVeryLongPreview() {
             subtitle = "Header Subtitle which is very long also to see",
             description = "Header Description which is very long also to see",
             date = "Header Date which is very long also to see",
-            statusTag = { Text("Status") },
             identifierTag = { Text("Identifier") },
             extraContent = {
                 Box(
