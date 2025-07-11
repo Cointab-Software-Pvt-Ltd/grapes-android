@@ -122,6 +122,7 @@ internal fun View.showSoftKeyboard() {
 /**
  * Hides the soft keyboard.
  */
+@Suppress("WrongConstant")
 internal fun View.hideKeyboard() {
     val imm = this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)

@@ -1,3 +1,6 @@
+import com.google.firebase.appdistribution.gradle.firebaseAppDistribution
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,6 +9,7 @@ plugins {
     alias(libs.plugins.hilt)
     alias(libs.plugins.firebase.appdistribution)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose.compiler)
 }
 
 android {
@@ -31,15 +35,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-        freeCompilerArgs = listOf("-Xcontext-receivers")
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
     }
 
     signingConfigs {
@@ -80,6 +75,13 @@ android {
 
     lint {
         abortOnError = false
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+        freeCompilerArgs = listOf("-Xcontext-receivers")
     }
 }
 

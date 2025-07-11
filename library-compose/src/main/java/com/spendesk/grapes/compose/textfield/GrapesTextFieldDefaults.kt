@@ -195,6 +195,11 @@ private data class DefaultGrapesGrapesTextFieldColors(
     }
 
     @Composable
+    @Deprecated(
+        "Use/implement overload with interactionSource parameter",
+        replaceWith = ReplaceWith("leadingIconColor(enabled, isError, interactionSource)"),
+        level = DeprecationLevel.WARNING,
+    )
     override fun leadingIconColor(enabled: Boolean, isError: Boolean): State<Color> {
         return rememberUpdatedState(
             when {
@@ -205,6 +210,11 @@ private data class DefaultGrapesGrapesTextFieldColors(
         )
     }
 
+    @Deprecated(
+        "Use/implement overload with interactionSource parameter",
+        replaceWith = ReplaceWith("trailingIconColor(enabled, isError, interactionSource)"),
+        level = DeprecationLevel.WARNING,
+    )
     @Composable
     override fun trailingIconColor(enabled: Boolean, isError: Boolean): State<Color> {
         return rememberUpdatedState(
