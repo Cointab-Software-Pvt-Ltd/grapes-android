@@ -73,7 +73,6 @@ kotlinx-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", ver
 # [OTHERS]
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detektFormatting" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
-glide-compiler = { group = "com.github.bumptech.glide", name = "compil", version.ref = "glide" }
 glide-ksp = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide" }
 
 [bundles]
