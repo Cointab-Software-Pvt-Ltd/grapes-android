@@ -17,8 +17,6 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.androidMinSdk.get().toInt()
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildFeatures {
@@ -80,19 +78,12 @@ tasks.withType<DetektCreateBaselineTask>().configureEach {
 }
 
 dependencies {
-    testImplementation(libs.junit4)
-    androidTestImplementation(libs.androidx.test.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(libs.androidx.lifecycle.ktx)
 
     // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.androidxcompose)
     implementation(libs.kotlinx.collections.immutable)
-
-    // UI Tests
-    androidTestImplementation(libs.androidx.compose.ui.test)
 }
 
 afterEvaluate {

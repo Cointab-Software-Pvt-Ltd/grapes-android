@@ -23,10 +23,8 @@ androidxAppcompat = "1.7.1"
 androidxComposeBom = "2025.05.01"
 androidxConstraintlayout = "2.2.1"
 androidxCore = "1.16.0"
-androidxEspresso = "3.6.1"
 androidxFragment = "1.8.8"
 androidxLifecycle = "2.9.1"
-androidxTestJunit = "1.2.1"
 andoridxNavigation = "2.9.1"
 
 ## Google
@@ -38,9 +36,6 @@ material = "1.12.0"
 kotlin = "2.2.0"
 kotlinxCollectionsImmutable = "0.4.0"
 kotlinxSerialization = "1.9.0"
-
-## Tests
-junit4 = "4.13.2"
 
 [libraries]
 
@@ -55,15 +50,12 @@ androidx-compose-material-icons-extended = { group = "androidx.compose.material"
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidxConstraintlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
 androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidxFragment" }
 androidx-lifecycle-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
-androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestJunit" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "andoridxNavigation" }
 
 # [GOOGLE]
@@ -74,9 +66,6 @@ hilt-ksp = { group = "com.google.dagger", name = "hilt-compiler", version.ref = 
 # [JETBRAINS]
 kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxCollectionsImmutable" }
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
-
-# [TESTS]
-junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 
 # [TOOLS]
 kotlinx-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }

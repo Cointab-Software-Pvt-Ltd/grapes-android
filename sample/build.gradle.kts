@@ -23,8 +23,6 @@ android {
         targetSdk = libs.versions.androidTargetSdk.get().toInt()
         versionCode = 1
         versionName = libs.versions.grapes.version.get()
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildFeatures {
@@ -102,11 +100,6 @@ dependencies {
     implementation(libs.kotlinx.collections.immutable)
 
     implementation(libs.google.material)
-
-    // JUNIT
-    testImplementation(libs.junit4)
-    androidTestImplementation(libs.androidx.test.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     // HILT
     implementation(libs.hilt.android)
