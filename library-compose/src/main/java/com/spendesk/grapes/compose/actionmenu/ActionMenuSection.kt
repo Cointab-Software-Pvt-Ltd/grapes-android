@@ -36,8 +36,8 @@ private const val DESCRIPTION_MAX_LINES = 3
 fun ActionMenuSection(
     title: String,
     description: String,
-    illustration: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    illustration: @Composable () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit,
 ) {
     Card(
@@ -49,7 +49,7 @@ fun ActionMenuSection(
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
-            modifier = Modifier.padding(GrapesTheme.dimensions.unit8),
+            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
         ) {
             ActionMenuSectionHeader(
                 title = title,
@@ -65,8 +65,8 @@ fun ActionMenuSection(
 private fun ActionMenuSectionHeader(
     title: String,
     description: String,
-    illustration: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    illustration: @Composable () -> Unit = {},
 ) {
     Row(
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
@@ -99,7 +99,7 @@ private fun ActionMenuSectionHeader(
             Text(
                 text = description,
                 style = GrapesTheme.typography.bodyS,
-                color = GrapesTheme.colors.neutralDark,
+                color = GrapesTheme.colors.contentSecondaryBGPrimary,
                 maxLines = DESCRIPTION_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -111,6 +111,29 @@ private fun ActionMenuSectionHeader(
 @Preview(fontScale = 2f)
 @Composable
 private fun ActionMenuSectionPreview() {
+    GrapesTheme {
+        ActionMenuSection(
+            title = "Make a purchase request",
+            description = "Order a virtual card to directly use company money online",
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            ActionMenuItem(
+                text = "Ask for a virtual card",
+                icon = { GrapesIconSet.ReceiptQuestion() },
+                onClick = {},
+            )
+            ActionMenuItem(
+                text = "Ask for a virtual card",
+                icon = { GrapesIconSet.ReceiptQuestion() },
+                onClick = {},
+            )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun ActionMenuSectionWithIllustrationPreview() {
     GrapesTheme {
         ActionMenuSection(
             title = "Make a purchase request",
