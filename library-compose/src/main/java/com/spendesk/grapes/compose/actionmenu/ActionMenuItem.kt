@@ -5,14 +5,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -23,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
+import com.spendesk.grapes.compose.theme.brightLemon
 
 /**
  * @author : RomainGF
@@ -52,14 +53,14 @@ fun ActionMenuItem(
         enabled = enabled,
         colors = ButtonDefaults.buttonColors(
             containerColor = GrapesTheme.colors.backgroundSecondaryDefault,
-            contentColor = GrapesTheme.colors.contentSelected,
+            contentColor = GrapesTheme.colors.contentPrimary,
             disabledContainerColor = GrapesTheme.colors.backgroundPrimaryDisabled,
             disabledContentColor = GrapesTheme.colors.contentSecondaryBGSecondary,
         ),
         contentPadding = PaddingValues(
-            start = GrapesTheme.dimensions.unit24,
-            end = GrapesTheme.dimensions.unit16,
-            top = GrapesTheme.dimensions.unit16,
+            start = GrapesTheme.dimensions.unit12,
+            end = GrapesTheme.dimensions.unit12,
+            top = GrapesTheme.dimensions.unit12,
             bottom = GrapesTheme.dimensions.unit16,
         ),
         shape = GrapesTheme.shapes.radius12,
@@ -67,49 +68,32 @@ fun ActionMenuItem(
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
         ) {
             if (icon != null) {
-                ActionMenuItemIcon(
-                    enabled = enabled,
-                    icon = icon,
-                )
-                Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
+                Box(
+                    modifier = Modifier.sizeIn(
+                        maxWidth = GrapesTheme.dimensions.unit32,
+                        maxHeight = GrapesTheme.dimensions.unit32,
+                    )
+                ) {
+                    CompositionLocalProvider(LocalContentColor provides GrapesTheme.colors.contentPrimary) {
+                        icon()
+                    }
+                }
             }
             Text(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
-                style = GrapesTheme.typography.titleS,
+                style = GrapesTheme.typography.bodyM,
                 modifier = Modifier.weight(1f),
             )
             if (enabled) {
-                Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
                 GrapesIconSet.ChevronRight(
                     tint = GrapesTheme.colors.contentPrimary
                 )
             }
-        }
-    }
-}
-
-@Composable
-private fun ActionMenuItemIcon(
-    enabled: Boolean,
-    icon: @Composable () -> Unit,
-) {
-    Box(
-        modifier = Modifier.sizeIn(
-            maxWidth = GrapesTheme.dimensions.sizeIconM,
-            maxHeight = GrapesTheme.dimensions.sizeIconM,
-        ),
-    ) {
-        val iconContentColor = if (enabled) {
-            GrapesTheme.colors.contentSelected
-        } else {
-            GrapesTheme.colors.contentSecondaryBGSecondary
-        }
-        CompositionLocalProvider(LocalContentColor provides iconContentColor) {
-            icon()
         }
     }
 }
@@ -120,7 +104,17 @@ private fun ActionMenuItemIcon(
 private fun ActionMenuItemPreview() {
     GrapesTheme {
         val icon = @Composable {
-            GrapesIconSet.ReceiptQuestion(modifier = Modifier.size(48.dp))
+            Surface(
+                color = brightLemon,
+                shape = GrapesTheme.shapes.radius8,
+                modifier = Modifier.size(GrapesTheme.dimensions.unit32)
+            ) {
+                GrapesIconSet.Puzzle(
+                    modifier = Modifier
+                        .padding(GrapesTheme.dimensions.unit8)
+                        .size(GrapesTheme.dimensions.unit24)
+                )
+            }
         }
         val text = "Action"
         val textNoIcon = "Action without icon"
