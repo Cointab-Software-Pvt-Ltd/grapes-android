@@ -41,7 +41,7 @@ private const val ACTION_TEXT_MAX_LINES = 2
  * @param enabled Whether the button is enabled or not
  */
 @Composable
-fun ActionMenuItem(
+fun GrapesNavigationItem(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -123,24 +123,24 @@ private fun ActionMenuItemPreview() {
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = text,
                 icon = icon,
                 onClick = {},
                 modifier = modifier,
             )
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = longText,
                 icon = icon,
                 onClick = {},
                 modifier = modifier,
             )
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = textNoIcon,
                 onClick = {},
                 modifier = modifier,
             )
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = text,
                 icon = icon,
                 onClick = {},

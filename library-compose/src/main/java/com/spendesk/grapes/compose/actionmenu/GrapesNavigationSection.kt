@@ -33,7 +33,7 @@ private const val TITLE_MAX_LINES = 2
 private const val DESCRIPTION_MAX_LINES = 3
 
 @Composable
-fun ActionMenuSection(
+fun GrapesNavigationSection(
     title: String,
     description: String,
     modifier: Modifier = Modifier,
@@ -112,17 +112,17 @@ private fun ActionMenuSectionHeader(
 @Composable
 private fun ActionMenuSectionPreview() {
     GrapesTheme {
-        ActionMenuSection(
+        GrapesNavigationSection(
             title = "Make a purchase request",
             description = "Order a virtual card to directly use company money online",
             modifier = Modifier.fillMaxWidth(),
         ) {
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = "Ask for a virtual card",
                 icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
             )
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = "Ask for a virtual card",
                 icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
@@ -135,7 +135,7 @@ private fun ActionMenuSectionPreview() {
 @Composable
 private fun ActionMenuSectionWithIllustrationPreview() {
     GrapesTheme {
-        ActionMenuSection(
+        GrapesNavigationSection(
             title = "Make a purchase request",
             description = "Order a virtual card to directly use company money online",
             illustration = {
@@ -143,12 +143,12 @@ private fun ActionMenuSectionWithIllustrationPreview() {
             },
             modifier = Modifier.fillMaxWidth(),
         ) {
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = "Ask for a virtual card",
                 icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
             )
-            ActionMenuItem(
+            GrapesNavigationItem(
                 text = "Ask for a virtual card",
                 icon = { GrapesIconSet.ReceiptQuestion() },
                 onClick = {},
