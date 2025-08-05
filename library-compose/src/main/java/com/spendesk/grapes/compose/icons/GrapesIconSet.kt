@@ -1214,6 +1214,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun Globe(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_globe),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun HexagoneCross(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2065,6 +2079,7 @@ private fun IconsPreview() {
                 GrapesIconSet.FlagCheckered()
                 GrapesIconSet.Gas()
                 GrapesIconSet.Gear()
+                GrapesIconSet.Globe()
                 GrapesIconSet.HexagoneCross()
                 GrapesIconSet.House()
                 GrapesIconSet.Inbox()
