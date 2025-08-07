@@ -15,6 +15,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -23,6 +28,31 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 fun GrapesHeader(
     supplierName: String,
     title: String,
+    subtitle: String?,
+    description: String?,
+    date: String,
+    supplierImage: @Composable () -> Unit,
+    identifierTag: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    extraContent: (@Composable () -> Unit)? = null,
+) {
+    GrapesHeader(
+        supplierName = supplierName,
+        title = AnnotatedString(title),
+        subtitle = subtitle,
+        description = description,
+        date = date,
+        supplierImage = supplierImage,
+        identifierTag = identifierTag,
+        modifier = modifier,
+        extraContent = extraContent,
+    )
+}
+
+@Composable
+fun GrapesHeader(
+    supplierName: String,
+    title: AnnotatedString,
     subtitle: String?,
     description: String?,
     date: String,
@@ -99,6 +129,32 @@ private fun GrapesHeaderPreview() {
             },
             supplierName = "Supplier Name",
             title = "Header Title",
+            subtitle = "Header Subtitle",
+            description = "Header Description",
+            date = "Header Date",
+            identifierTag = { Text("Identifier") }
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun GrapesAnnotatedHeaderPreview() {
+    GrapesTheme {
+        GrapesHeader(
+            supplierImage = {
+                Box(
+                    modifier = Modifier
+                        .size(40.dp)
+                        .background(Color.Gray)
+                )
+            },
+            supplierName = "Supplier Name",
+            title = buildAnnotatedString {
+                withStyle(style = SpanStyle(textDecoration = TextDecoration.LineThrough)) {
+                    append("Header Title")
+                }
+            },
             subtitle = "Header Subtitle",
             description = "Header Description",
             date = "Header Date",
