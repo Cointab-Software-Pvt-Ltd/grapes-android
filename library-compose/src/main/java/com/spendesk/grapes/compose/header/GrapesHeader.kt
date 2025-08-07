@@ -64,7 +64,7 @@ fun GrapesHeader(
     Column(
         modifier = modifier
             .background(GrapesTheme.colors.backgroundPrimaryDefault)
-            .padding(horizontal = GrapesTheme.dimensions.unit16)
+            .padding(all = GrapesTheme.dimensions.unit16)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -107,10 +107,9 @@ fun GrapesHeader(
         )
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
         identifierTag()
-        Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
         extraContent?.let {
-            it()
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
+            it()
         }
     }
 }
