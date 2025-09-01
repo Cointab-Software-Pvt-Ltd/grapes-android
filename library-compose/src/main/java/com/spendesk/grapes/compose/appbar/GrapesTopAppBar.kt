@@ -23,7 +23,7 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 fun GrapesTopAppBar(
-    title: String,
+    title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     actions: @Composable RowScope.() -> Unit = {},
     navigationIcon: @Composable () -> Unit = {},
@@ -33,6 +33,30 @@ fun GrapesTopAppBar(
     elevation: Dp = 1.dp,
 ) {
     TopAppBar(
+        title = title,
+        actions = actions,
+        colors = colors,
+        navigationIcon = navigationIcon,
+        scrollBehavior = scrollBehavior,
+        windowInsets = windowInsets,
+        modifier = modifier
+            .shadow(elevation)
+    )
+}
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+fun GrapesTopAppBar(
+    title: String,
+    modifier: Modifier = Modifier,
+    actions: @Composable RowScope.() -> Unit = {},
+    navigationIcon: @Composable () -> Unit = {},
+    colors: TopAppBarColors = GrapesTopAppBarDefaults.topAppBarColors(),
+    scrollBehavior: TopAppBarScrollBehavior? = null,
+    windowInsets: WindowInsets = TopAppBarDefaults.windowInsets,
+    elevation: Dp = 1.dp,
+) {
+    GrapesTopAppBar(
         title = {
             Text(
                 text = title,
@@ -41,11 +65,11 @@ fun GrapesTopAppBar(
         },
         actions = actions,
         colors = colors,
+        elevation = elevation,
         navigationIcon = navigationIcon,
         scrollBehavior = scrollBehavior,
         windowInsets = windowInsets,
-        modifier = modifier
-            .shadow(elevation)
+        modifier = modifier,
     )
 }
 
