@@ -57,7 +57,7 @@ internal fun SuccessGrapesTagColors(
     contentColor = contentColor,
 )
 
-private class DefaultGrapesStatusTagColors constructor(
+private class DefaultGrapesStatusTagColors(
     private val containerColor: Color,
     private val contentColor: Color,
 ) : GrapesStatusTagColors {

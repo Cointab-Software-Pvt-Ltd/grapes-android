@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.tag.atoms.GrapesTagIcon
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import com.spendesk.grapes.compose.theme.LocalGrapesShapes
@@ -139,6 +140,25 @@ fun GrapesNeutralTag(
 }
 
 @Composable
+fun GrapesDecorativeTag(
+    label: String,
+    backgroundColor: GrapesDecorativeTagColors,
+    modifier: Modifier = Modifier,
+    leadingIcon: (@Composable () -> Unit)? = null,
+) {
+    CompositionLocalProvider(
+        LocalContentColor provides GrapesTheme.colors.contentPrimary,
+    ) {
+        GrapesStatusTag(
+            modifier = modifier,
+            label = label,
+            backgroundColor = backgroundColor.containerColor(),
+            leadingIcon = leadingIcon,
+        )
+    }
+}
+
+@Composable
 fun GrapesStatusTag(
     label: String,
     backgroundColor: Color,
@@ -191,6 +211,15 @@ private fun Preview(
             is Tags.Success -> GrapesSuccessTag(label = tag.tag, showIcon = tag.showLeadingIcon)
             is Tags.Warning -> GrapesWarningTag(label = tag.tag, showIcon = tag.showLeadingIcon)
             is Tags.Neutral -> GrapesNeutralTag(label = tag.tag, showIcon = tag.showLeadingIcon)
+            is Tags.Decorative -> GrapesDecorativeTag(
+                label = tag.tag,
+                backgroundColor = GrapesDecorativeTagColor.Purple,
+                leadingIcon = {
+                    if (tag.showLeadingIcon) {
+                        GrapesIconSet.Puzzle()
+                    }
+                },
+            )
         }
     }
 }
@@ -212,6 +241,8 @@ internal class TagProvider : PreviewParameterProvider<Tags> {
 
         Tags.Neutral("Label", true),
         Tags.Neutral("Label", false),
+
+        Tags.Decorative("decorative", true)
     )
 }
 
@@ -225,4 +256,5 @@ internal sealed class Tags {
     data class Warning(override val tag: String, override val showLeadingIcon: Boolean) : Tags()
     data class Success(override val tag: String, override val showLeadingIcon: Boolean) : Tags()
     data class Neutral(override val tag: String, override val showLeadingIcon: Boolean) : Tags()
+    data class Decorative(override val tag: String, override val showLeadingIcon: Boolean) : Tags()
 }
