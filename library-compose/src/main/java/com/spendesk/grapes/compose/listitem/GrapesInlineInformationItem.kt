@@ -27,7 +27,7 @@ fun GrapesInlineInformationItem(
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
-        verticalAlignment = Alignment.CenterVertically,
+        verticalAlignment = Alignment.Top,
     ) {
         Text(
             text = title,
