@@ -265,114 +265,88 @@ private fun GrapesHighlightIconPreviewNoBorder() {
         ) {
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = GrapesTheme.colors.backgroundSecondaryBrandPressed,
-                borderColor = GrapesTheme.colors.backgroundSecondaryBrandPressed,
                 size = GrapesHighlightIconSize.LARGE,
             )
 
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = GrapesTheme.colors.backgroundSecondaryDefault,
-                borderColor = GrapesTheme.colors.backgroundSecondaryDefault,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = brightLemon,
-                borderColor = brightLemon,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = brightGrolive,
-                borderColor = brightGrolive,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = brightOcean,
-                borderColor = brightOcean,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = apricot20,
-                borderColor = apricot20,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = brightPeach,
-                borderColor = brightPeach,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = carbon7,
-                borderColor = carbon7,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = blue20,
-                borderColor = blue20,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = emerald20,
-                borderColor = emerald20,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = brightForest,
-                borderColor = brightForest,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = raspberry20,
-                borderColor = raspberry20,
                 size = GrapesHighlightIconSize.LARGE,
             )
             GrapesHighlightIcon(
                 painter = painterResource(R.drawable.ic_grapes_icon_puzzle),
-                contentDescription = null,
                 tint = GrapesTheme.colors.contentPrimary,
                 containerColor = carbon10,
-                borderColor = carbon10,
                 size = GrapesHighlightIconSize.LARGE,
             )
-
         }
     }
 }
 
 private class SizeParameterProvider : PreviewParameterProvider<GrapesHighlightIconSize> {
+
     override val values = GrapesHighlightIconSize.entries.asSequence()
 }

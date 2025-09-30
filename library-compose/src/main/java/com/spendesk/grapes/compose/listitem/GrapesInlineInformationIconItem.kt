@@ -1,5 +1,6 @@
 package com.spendesk.grapes.compose.listitem
 
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -9,13 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.icons.GrapesHighlightIcon
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconSize
-import com.spendesk.grapes.compose.listitem.GrapesInlineInformationColors
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -25,11 +24,36 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 @Composable
 fun GrapesInlineInformationIconItem(
     description: String,
+    tint: Color,
+    containerColor: Color,
+    @DrawableRes icon: Int,
     modifier: Modifier = Modifier,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
-    painter: Painter,
-    tint: Color,
-    containerColor: Color
+    subtitle: String? = null,
+) {
+    GrapesInlineInformationIconItem(
+        description = description,
+        icon = {
+            GrapesHighlightIcon(
+                size = GrapesHighlightIconSize.LARGE,
+                painter = painterResource(icon),
+                tint = tint,
+                containerColor = containerColor,
+            )
+        },
+        modifier = modifier,
+        colors = colors,
+        subtitle = subtitle,
+    )
+}
+
+@Composable
+private fun GrapesInlineInformationIconItem(
+    description: String,
+    icon: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
+    subtitle: String? = null,
 ) {
     Column(
         modifier = modifier,
@@ -37,18 +61,10 @@ fun GrapesInlineInformationIconItem(
         horizontalAlignment = Alignment.Start
     ) {
         Row(
-            modifier = Modifier,
             horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            GrapesHighlightIcon(
-                size = GrapesHighlightIconSize.LARGE,
-                modifier = Modifier,
-                painter = painter,
-                contentDescription = "test",
-                tint = tint,
-                containerColor = containerColor,
-            )
+            icon()
             Text(
                 text = description,
                 color = colors.description,
@@ -56,12 +72,14 @@ fun GrapesInlineInformationIconItem(
                 modifier = Modifier,
             )
         }
-        Text(
-            text = "blahblablah",
-            color = GrapesTheme.colors.contentSecondaryBGPrimary,
-            style = GrapesTheme.typography.bodyM,
-            modifier = Modifier
-        )
+        if (subtitle != null) {
+            Text(
+                text = subtitle,
+                color = GrapesTheme.colors.contentSecondaryBGPrimary,
+                style = GrapesTheme.typography.bodyM,
+                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit4)
+            )
+        }
     }
 }
 
@@ -73,7 +91,23 @@ private fun PreviewGrapesInlineInformationIconItem() {
             modifier = Modifier.padding(all = GrapesTheme.dimensions.unit16),
             description = "This is some kind of potential description",
             colors = GrapesInlineInformationColorsDefaults.colors(),
-            painter = painterResource(R.drawable.ic_grapes_icon_card),
+            icon = R.drawable.ic_grapes_icon_card,
+            tint = GrapesTheme.colors.contentPrimary,
+            containerColor = GrapesTheme.colors.backgroundSecondaryWarningPressed,
+            subtitle = "This is a subtitle",
+        )
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+private fun PreviewGrapesInlineInformationIconItem_NoSubtitle() {
+    GrapesTheme {
+        GrapesInlineInformationIconItem(
+            modifier = Modifier.padding(all = GrapesTheme.dimensions.unit16),
+            description = "This is some kind of potential description",
+            colors = GrapesInlineInformationColorsDefaults.colors(),
+            icon = R.drawable.ic_grapes_icon_card,
             tint = GrapesTheme.colors.contentPrimary,
             containerColor = GrapesTheme.colors.backgroundSecondaryWarningPressed,
         )
