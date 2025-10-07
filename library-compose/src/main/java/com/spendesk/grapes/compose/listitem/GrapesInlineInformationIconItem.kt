@@ -27,9 +27,8 @@ fun GrapesInlineInformationIconItem(
     tint: Color,
     containerColor: Color,
     @DrawableRes icon: Int,
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
-    subtitle: String? = null,
 ) {
     GrapesInlineInformationIconItem(
         description = description,
@@ -41,9 +40,7 @@ fun GrapesInlineInformationIconItem(
                 containerColor = containerColor,
             )
         },
-        modifier = modifier,
         colors = colors,
-        subtitle = subtitle,
     )
 }
 
@@ -51,57 +48,28 @@ fun GrapesInlineInformationIconItem(
 private fun GrapesInlineInformationIconItem(
     description: String,
     icon: @Composable () -> Unit,
-    modifier: Modifier = Modifier,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
-    subtitle: String? = null,
 ) {
-    Column(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
-        horizontalAlignment = Alignment.Start
+
+    Row(
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            icon()
-            Text(
-                text = description,
-                color = colors.description,
-                style = GrapesTheme.typography.bodyM,
-                modifier = Modifier,
-            )
-        }
-        if (subtitle != null) {
-            Text(
-                text = subtitle,
-                color = GrapesTheme.colors.contentSecondaryBGPrimary,
-                style = GrapesTheme.typography.bodyM,
-                modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit4)
-            )
-        }
+        icon()
+        Text(
+            text = description,
+            color = colors.description,
+            style = GrapesTheme.typography.bodyM,
+            modifier = Modifier,
+        )
     }
+
+
 }
 
 @Composable
 @Preview(showBackground = true)
 private fun PreviewGrapesInlineInformationIconItem() {
-    GrapesTheme {
-        GrapesInlineInformationIconItem(
-            modifier = Modifier.padding(all = GrapesTheme.dimensions.unit16),
-            description = "This is some kind of potential description",
-            colors = GrapesInlineInformationColorsDefaults.colors(),
-            icon = R.drawable.ic_grapes_icon_card,
-            tint = GrapesTheme.colors.contentPrimary,
-            containerColor = GrapesTheme.colors.backgroundSecondaryWarningPressed,
-            subtitle = "This is a subtitle",
-        )
-    }
-}
-
-@Composable
-@Preview(showBackground = true)
-private fun PreviewGrapesInlineInformationIconItem_NoSubtitle() {
     GrapesTheme {
         GrapesInlineInformationIconItem(
             modifier = Modifier.padding(all = GrapesTheme.dimensions.unit16),
