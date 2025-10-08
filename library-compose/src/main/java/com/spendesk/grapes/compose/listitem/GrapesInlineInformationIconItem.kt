@@ -2,9 +2,7 @@ package com.spendesk.grapes.compose.listitem
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,7 +25,6 @@ fun GrapesInlineInformationIconItem(
     tint: Color,
     containerColor: Color,
     @DrawableRes icon: Int,
-    modifier: Modifier,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
 ) {
     GrapesInlineInformationIconItem(
@@ -50,7 +47,6 @@ private fun GrapesInlineInformationIconItem(
     icon: @Composable () -> Unit,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
 ) {
-
     Row(
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12),
         verticalAlignment = Alignment.CenterVertically,
@@ -63,8 +59,6 @@ private fun GrapesInlineInformationIconItem(
             modifier = Modifier,
         )
     }
-
-
 }
 
 @Composable
@@ -72,7 +66,6 @@ private fun GrapesInlineInformationIconItem(
 private fun PreviewGrapesInlineInformationIconItem() {
     GrapesTheme {
         GrapesInlineInformationIconItem(
-            modifier = Modifier.padding(all = GrapesTheme.dimensions.unit16),
             description = "This is some kind of potential description",
             colors = GrapesInlineInformationColorsDefaults.colors(),
             icon = R.drawable.ic_grapes_icon_card,
