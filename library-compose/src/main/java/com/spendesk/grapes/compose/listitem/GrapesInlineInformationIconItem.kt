@@ -1,17 +1,18 @@
 package com.spendesk.grapes.compose.listitem
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesHighlightIcon
+import com.spendesk.grapes.compose.icons.GrapesHighlightIconSize
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -20,25 +21,42 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
  */
 @Composable
 fun GrapesInlineInformationIconItem(
-    @DrawableRes icon: Int,
     description: String,
-    modifier: Modifier = Modifier,
+    tint: Color,
+    containerColor: Color,
+    @DrawableRes icon: Int,
+    colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
+) {
+    GrapesInlineInformationIconItem(
+        description = description,
+        icon = {
+            GrapesHighlightIcon(
+                size = GrapesHighlightIconSize.LARGE,
+                painter = painterResource(icon),
+                tint = tint,
+                containerColor = containerColor,
+            )
+        },
+        colors = colors,
+    )
+}
+
+@Composable
+private fun GrapesInlineInformationIconItem(
+    description: String,
+    icon: @Composable () -> Unit,
     colors: GrapesInlineInformationColors = GrapesInlineInformationColorsDefaults.colors(),
 ) {
     Row(
-        modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
+        horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit12),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Image(
-            painter = painterResource(id = icon),
-            contentDescription = null,
-        )
+        icon()
         Text(
             text = description,
             color = colors.description,
             style = GrapesTheme.typography.bodyM,
-            modifier = Modifier.weight(1f),
+            modifier = Modifier,
         )
     }
 }
@@ -48,9 +66,11 @@ fun GrapesInlineInformationIconItem(
 private fun PreviewGrapesInlineInformationIconItem() {
     GrapesTheme {
         GrapesInlineInformationIconItem(
-            modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
-            icon = R.drawable.ic_google_logo,
             description = "This is some kind of potential description",
+            colors = GrapesInlineInformationColorsDefaults.colors(),
+            icon = R.drawable.ic_grapes_icon_card,
+            tint = GrapesTheme.colors.contentPrimary,
+            containerColor = GrapesTheme.colors.backgroundSecondaryWarningPressed,
         )
     }
 }
