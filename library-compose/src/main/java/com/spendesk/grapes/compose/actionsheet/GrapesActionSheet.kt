@@ -1,5 +1,6 @@
 package com.spendesk.grapes.compose.actionsheet
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
@@ -32,7 +33,7 @@ fun GrapesActionSheet(
         skipPartiallyExpanded = true,
     ),
     textAlign: TextAlign = TextAlign.Start,
-    actions: @Composable ColumnScope.() -> Unit,
+    content: @Composable ColumnScope.() -> Unit,
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -45,7 +46,7 @@ fun GrapesActionSheet(
             title = title,
             textAlign = textAlign,
             message = message,
-            actions = actions,
+            content = content,
         )
     }
 }
@@ -56,9 +57,12 @@ fun GrapesActionSheetContent(
     message: String,
     modifier: Modifier = Modifier,
     textAlign: TextAlign = TextAlign.Start,
-    actions: @Composable ColumnScope.() -> Unit,
+    content: @Composable ColumnScope.() -> Unit,
 ) {
-    Column(modifier = modifier) {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
+        modifier = modifier
+    ) {
         Text(
             text = title,
             textAlign = textAlign,
@@ -68,7 +72,6 @@ fun GrapesActionSheetContent(
                 .padding(horizontal = GrapesTheme.dimensions.unit24)
                 .fillMaxWidth()
         )
-        Spacer(Modifier.height(GrapesTheme.dimensions.unit8))
         Text(
             text = message,
             textAlign = textAlign,
@@ -78,8 +81,7 @@ fun GrapesActionSheetContent(
                 .padding(horizontal = GrapesTheme.dimensions.unit24)
                 .fillMaxWidth()
         )
-        Spacer(Modifier.height(GrapesTheme.dimensions.unit24))
-        actions()
+        content()
         Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
     }
 }
@@ -102,7 +104,7 @@ private fun PreviewActionSheet() {
             title = "Title",
             message = "Message",
             onDismiss = {},
-            actions = {
+            content = {
                 GrapesActionSheetButton(
                     text = "Action",
                     onClick = {},
