@@ -73,7 +73,7 @@ fun MessagingDestination() {
 
         Text("Toaster", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
-        Snackbar { Text("Message", style = GrapesTheme.typography.bodyM) }
+        Snackbar { Text("Message", style = GrapesTheme.typography.bodyL) }
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Callout", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)

@@ -66,7 +66,7 @@ private fun SpacingPlaceholder(spacing: Dp, text: String) {
         }
         Text(
             text = "$text: ${spacing.value}dp",
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
         )
     }
 }

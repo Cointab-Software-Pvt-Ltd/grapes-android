@@ -98,7 +98,7 @@ private fun ButtonPrimary() {
             Row(modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16)) {
                 GrapesIconSet.CirclePlus()
                 Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit8))
-                Text("Label", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentComplementary)
+                Text("Label", style = GrapesTheme.typography.bodyL, color = GrapesTheme.colors.contentComplementary)
             }
         }
     }

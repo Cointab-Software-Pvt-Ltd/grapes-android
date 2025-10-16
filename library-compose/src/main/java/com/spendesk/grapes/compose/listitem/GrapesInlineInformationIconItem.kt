@@ -55,7 +55,7 @@ private fun GrapesInlineInformationIconItem(
         Text(
             text = description,
             color = colors.description,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             modifier = Modifier,
         )
     }

@@ -64,7 +64,7 @@ private fun SizePlaceholder(size: Dp, text: String) {
         )
         Text(
             text = "$text: ${size.value}dp",
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
         )
     }
 }

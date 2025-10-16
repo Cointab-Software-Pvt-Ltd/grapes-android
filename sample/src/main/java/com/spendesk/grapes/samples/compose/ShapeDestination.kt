@@ -92,7 +92,7 @@ fun ShapePlaceholder(
     ) {
         Text(
             text = text,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             color = contentColor,
         )
     }

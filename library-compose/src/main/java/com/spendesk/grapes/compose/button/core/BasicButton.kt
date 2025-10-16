@@ -109,7 +109,7 @@ internal fun GrapesButtonContent(
 
         Text(
             text = text,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )

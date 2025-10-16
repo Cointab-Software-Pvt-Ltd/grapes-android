@@ -32,7 +32,7 @@ fun TypographyDestination() {
         Text("Title/L", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
         Text("Title/M", style = GrapesTheme.typography.titleM, color = GrapesTheme.colors.contentPrimary)
         Text("Title/S", style = GrapesTheme.typography.titleS, color = GrapesTheme.colors.contentPrimary)
-        Text("Body/M", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentPrimary)
+        Text("Body/M", style = GrapesTheme.typography.bodyL, color = GrapesTheme.colors.contentPrimary)
         Text("Body/S", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentPrimary)
         Text("Body/Xs", style = GrapesTheme.typography.bodyXs, color = GrapesTheme.colors.contentPrimary)
     }
