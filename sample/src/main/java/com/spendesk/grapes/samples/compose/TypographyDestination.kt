@@ -26,7 +26,7 @@ fun TypographyDestination() {
             .padding(GrapesTheme.dimensions.unit16),
         verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
     ) {
-        Text("Heading", style = GrapesTheme.typography.heading, color = GrapesTheme.colors.contentPrimary)
+        Text("Heading", style = GrapesTheme.typography.headingXl, color = GrapesTheme.colors.contentPrimary)
         Text("Title/Xxl", style = GrapesTheme.typography.titleXxl, color = GrapesTheme.colors.contentPrimary)
         Text("Title/Xl", style = GrapesTheme.typography.titleXl, color = GrapesTheme.colors.contentPrimary)
         Text("Title/L", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)

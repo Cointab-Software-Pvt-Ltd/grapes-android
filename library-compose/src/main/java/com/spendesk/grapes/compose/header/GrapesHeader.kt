@@ -80,7 +80,7 @@ fun GrapesHeader(
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
         Text(
             text = title,
-            style = GrapesTheme.typography.heading,
+            style = GrapesTheme.typography.headingXl,
             color = GrapesTheme.colors.contentPrimary
         )
         subtitle?.let {
