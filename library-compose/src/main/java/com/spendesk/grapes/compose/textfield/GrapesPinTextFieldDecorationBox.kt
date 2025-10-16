@@ -88,7 +88,7 @@ private fun PinText(
     ) {
         Text(
             text = char,
-            style = GrapesTheme.typography.bodyXl.copy(fontSize = 24.sp),
+            style = GrapesTheme.typography.bodyXxl.copy(fontSize = 24.sp),
             color = GrapesPinTextFieldDefaults.pinFieldColors().textColor(isEnabled = isEnabled, isError = isError, isSelected = isFocused),
             textAlign = TextAlign.Center
         )
