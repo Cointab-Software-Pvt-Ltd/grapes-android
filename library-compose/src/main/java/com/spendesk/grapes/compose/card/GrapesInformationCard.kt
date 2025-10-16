@@ -47,7 +47,7 @@ fun GrapesInformationCard(
         header = {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleS,
+                style = GrapesTheme.typography.titleM,
                 modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
                 color = GrapesTheme.colors.contentPrimary,
             )
@@ -80,7 +80,7 @@ fun GrapesInformationCard(
             ) {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleS,
+                    style = GrapesTheme.typography.titleM,
                     color = GrapesTheme.colors.contentPrimary,
                     modifier = Modifier
                         .weight(1f)

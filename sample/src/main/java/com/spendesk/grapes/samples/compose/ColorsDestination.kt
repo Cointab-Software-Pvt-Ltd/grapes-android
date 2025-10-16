@@ -174,7 +174,7 @@ private fun LazyGridScope.colorGroup(group: ColorShowcase.ColorGroup, depth: Int
         val titleStyle = when (depth) {
             0 -> GrapesTheme.typography.legacyTitleXxl
             1 -> GrapesTheme.typography.legacyTitleL
-            else -> GrapesTheme.typography.titleS
+            else -> GrapesTheme.typography.titleM
         }
         val titleBackground = when (depth) {
             0 -> carbon30

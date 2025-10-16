@@ -39,7 +39,7 @@ fun GrapesBucketHeadline(
             color = GrapesTheme.colors.contentPrimary,
             overflow = TextOverflow.Ellipsis,
             maxLines = 1,
-            style = GrapesTheme.typography.titleS
+            style = GrapesTheme.typography.titleM
         )
         if (action != null && actionColor != null) {
             Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit12))
@@ -49,7 +49,7 @@ fun GrapesBucketHeadline(
                 color = actionColor,
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 1,
-                style = GrapesTheme.typography.titleS
+                style = GrapesTheme.typography.titleM
             )
         }
     }

@@ -45,7 +45,7 @@ object GrapesBadgeDefaults {
     fun backgroundShape() = GrapesTheme.shapes.radius1000
 
     @Composable
-    fun textTypography(textColor: Color) = GrapesTheme.typography.titleS.copy(color = textColor)
+    fun textTypography(textColor: Color) = GrapesTheme.typography.titleM.copy(color = textColor)
 
     @Composable
     fun neutralBadgeColors(): GrapesBadgeColors = DefaultBadgeColors(

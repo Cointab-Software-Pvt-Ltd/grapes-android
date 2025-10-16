@@ -55,7 +55,7 @@ fun GrapesSection(
             ) {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleS,
+                    style = GrapesTheme.typography.titleM,
                     color = GrapesTheme.colors.contentSecondaryBGSecondary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -106,7 +106,7 @@ object GrapesSectionActionScope {
         ) {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleS,
+                style = GrapesTheme.typography.titleM,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )

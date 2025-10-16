@@ -89,7 +89,7 @@ internal fun GrapesSelector(
         ) {
             Text(
                 text = label,
-                style = GrapesTheme.typography.titleS,
+                style = GrapesTheme.typography.titleM,
                 color = colors.contentColor,
             )
 

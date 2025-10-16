@@ -49,7 +49,7 @@ private fun HeaderText(
     Row(modifier = modifier.wrapContentWidth(align = Alignment.Start), verticalAlignment = Alignment.CenterVertically) {
         Text(
             text = title,
-            style = GrapesTheme.typography.titleS,
+            style = GrapesTheme.typography.titleM,
             color = GrapesTheme.colors.contentPrimary,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,

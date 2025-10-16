@@ -80,7 +80,7 @@ fun GrapesStackItem(
             Column {
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleS,
+                    style = GrapesTheme.typography.titleM,
                     color = colors.titleColor,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 1,

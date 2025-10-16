@@ -45,7 +45,7 @@ fun GrapesCoreCallout(
                 horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8),
             ) {
                 ProvideTextStyle(
-                    GrapesTheme.typography.titleS.copy(color = colors.titleColor().value),
+                    GrapesTheme.typography.titleM.copy(color = colors.titleColor().value),
                 ) {
                     if (leadingIcon != null) {
                         Box(

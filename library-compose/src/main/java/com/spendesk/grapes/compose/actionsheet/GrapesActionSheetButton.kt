@@ -41,7 +41,7 @@ fun GrapesActionSheetButton(
             Box { icon?.invoke(this) }
             Text(
                 text = text,
-                style = GrapesTheme.typography.titleS,
+                style = GrapesTheme.typography.titleM,
                 modifier = Modifier
                     .padding(vertical = GrapesTheme.dimensions.unit12)
                     .weight(1f)
