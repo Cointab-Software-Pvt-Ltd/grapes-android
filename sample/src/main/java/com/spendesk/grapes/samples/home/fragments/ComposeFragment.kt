@@ -49,7 +49,7 @@ class ComposeFragment : Fragment() {
                             onClick = {}
                         )
                         Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
-                        Text(text = "Shapes", style = GrapesTheme.typography.titleM)
+                        Text(text = "Shapes", style = GrapesTheme.typography.titleL)
                         Box(
                             modifier = Modifier
                                 .height(100.dp)

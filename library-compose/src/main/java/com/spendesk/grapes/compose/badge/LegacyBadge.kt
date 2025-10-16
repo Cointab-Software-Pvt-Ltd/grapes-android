@@ -32,7 +32,7 @@ fun LegacyGrapesBadge(
         modifier = modifier
             .background(backgroundColor, GrapesTheme.shapes.radius1000)
             .padding(horizontal = GrapesTheme.dimensions.unit16, vertical = GrapesTheme.dimensions.unit4),
-        style = GrapesTheme.typography.titleM,
+        style = GrapesTheme.typography.titleL,
         color = contentColor
     )
 }
