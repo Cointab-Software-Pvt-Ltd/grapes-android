@@ -29,13 +29,13 @@ import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 
 private data class ColorUiModel(
-    val groups: ImmutableList<ColorShowcase>
+    val groups: ImmutableList<ColorShowcase>,
 )
 
 private sealed class ColorShowcase {
     data class ColorGroup(
         val groupName: String,
-        val colors: ImmutableList<ColorShowcase>
+        val colors: ImmutableList<ColorShowcase>,
     ) : ColorShowcase()
 
     data class ColorItem(
@@ -172,7 +172,7 @@ private fun LazyGridScope.colorGroup(group: ColorShowcase.ColorGroup, depth: Int
     val groupName = "$parentName/${group.groupName}"
     item(span = { GridItemSpan(maxLineSpan) }) {
         val titleStyle = when (depth) {
-            0 -> GrapesTheme.typography.titleXxl
+            0 -> GrapesTheme.typography.legacyTitleXxl
             1 -> GrapesTheme.typography.titleL
             else -> GrapesTheme.typography.titleS
         }
