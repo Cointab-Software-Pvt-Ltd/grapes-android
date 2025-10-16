@@ -40,32 +40,32 @@ fun ButtonsDestination() {
             .verticalScroll(scroll)
             .padding(GrapesTheme.dimensions.unit16),
     ) {
-        Text("Button primary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button primary", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonPrimary()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Button secondary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button secondary", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonSecondary()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Button tertiary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button tertiary", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonTertiary()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Button alert", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button alert", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonAlert()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Button warning", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button warning", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         ButtonWarning()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Button SSO", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Button SSO", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit8))
         MarketingButtons()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
@@ -98,7 +98,7 @@ private fun ButtonPrimary() {
             Row(modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit16)) {
                 GrapesIconSet.CirclePlus()
                 Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit8))
-                Text("Label", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentComplementary)
+                Text("Label", style = GrapesTheme.typography.bodyL, color = GrapesTheme.colors.contentComplementary)
             }
         }
     }

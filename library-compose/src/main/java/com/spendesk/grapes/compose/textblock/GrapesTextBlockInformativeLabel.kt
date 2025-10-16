@@ -38,7 +38,7 @@ fun GrapesTextBlockInformativeLabel(
         )
         Text(
             text = label,
-            style = GrapesTheme.typography.bodyS,
+            style = GrapesTheme.typography.bodyM,
             color = color,
             maxLines = 1,
         )

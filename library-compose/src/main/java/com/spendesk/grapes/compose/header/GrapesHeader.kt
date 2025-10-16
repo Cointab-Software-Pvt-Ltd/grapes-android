@@ -73,21 +73,21 @@ fun GrapesHeader(
             Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit16))
             Text(
                 text = supplierName,
-                style = GrapesTheme.typography.titleL,
+                style = GrapesTheme.typography.legacyTitleL,
                 color = GrapesTheme.colors.contentPrimary
             )
         }
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
         Text(
             text = title,
-            style = GrapesTheme.typography.heading,
+            style = GrapesTheme.typography.headingXl,
             color = GrapesTheme.colors.contentPrimary
         )
         subtitle?.let {
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
             Text(
                 text = it,
-                style = GrapesTheme.typography.bodyL,
+                style = GrapesTheme.typography.bodyXl,
                 color = GrapesTheme.colors.contentSecondaryBGPrimary
             )
         }
@@ -95,14 +95,14 @@ fun GrapesHeader(
         description?.let {
             Text(
                 text = it,
-                style = GrapesTheme.typography.bodyL,
+                style = GrapesTheme.typography.bodyXl,
                 color = GrapesTheme.colors.contentPrimary
             )
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         }
         Text(
             text = date,
-            style = GrapesTheme.typography.bodyL,
+            style = GrapesTheme.typography.bodyXl,
             color = GrapesTheme.colors.contentSecondaryBGPrimary
         )
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))

@@ -22,10 +22,10 @@ fun InputsDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("Search main", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Search secondary", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Search main", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Search secondary", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

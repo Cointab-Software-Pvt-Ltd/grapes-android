@@ -32,7 +32,7 @@ fun GrapesInlineInformationItem(
         Text(
             text = title,
             color = colors.title,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             modifier = Modifier.weight(1f),
         )
         Box(
@@ -42,7 +42,7 @@ fun GrapesInlineInformationItem(
             Text(
                 text = value,
                 color = colors.description,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyL,
                 textAlign = TextAlign.End
             )
         }

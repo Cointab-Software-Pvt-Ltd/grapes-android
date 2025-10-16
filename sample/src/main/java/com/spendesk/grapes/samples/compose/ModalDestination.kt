@@ -22,12 +22,12 @@ fun ModalDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("Modal message", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Modal set amount", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Modal top up", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Modal message", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Modal set amount", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Modal top up", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

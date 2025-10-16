@@ -54,7 +54,7 @@ fun GrapesCheckboxBox(
             )
             Text(
                 text = text,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyL,
                 maxLines = maxLines,
                 overflow = overflow,
             )

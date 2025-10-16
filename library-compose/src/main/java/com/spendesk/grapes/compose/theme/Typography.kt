@@ -44,100 +44,102 @@ private val Inter = FontFamily(
 
 @Immutable
 data class GrapesTypography(
-    val bodyXs: TextStyle,
-    val bodyS: TextStyle,
-    val bodyM: TextStyle,
-    @Deprecated("No longer used")
-    val bodyL: TextStyle,
-    @Deprecated("No longer used")
-    val bodyXl: TextStyle,
-    @Deprecated("No longer used")
-    val bodyXxl: TextStyle,
-    val titleS: TextStyle,
-    val titleM: TextStyle,
-    val titleL: TextStyle,
-    val titleXl: TextStyle,
-    val titleXxl: TextStyle,
-    val heading: TextStyle,
-) {
-    constructor(
-        defaultFontFamily: FontFamily = Inter,
-        bodyXs: TextStyle = TextStyle(
-            fontWeight = FontWeight.Medium,
-            fontSize = 12.sp,
-            lineHeight = 16.sp,
-        ),
-        bodyS: TextStyle = TextStyle(
-            fontWeight = FontWeight.Medium,
-            fontSize = 14.sp,
-            lineHeight = 20.sp,
-        ),
-        bodyM: TextStyle = TextStyle(
-            fontWeight = FontWeight.Medium,
-            fontSize = 16.sp,
-            lineHeight = 24.sp,
-        ),
-        bodyL: TextStyle = TextStyle(
-            fontWeight = FontWeight.Normal,
-            fontSize = 16.sp,
-        ),
-        bodyXl: TextStyle = TextStyle(
-            fontWeight = FontWeight.Normal,
-            fontSize = 20.sp,
-        ),
-        bodyXxl: TextStyle = TextStyle(
-            fontWeight = FontWeight.Normal,
-            fontSize = 40.sp,
-        ),
-        titleS: TextStyle = TextStyle(
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
-            lineHeight = 20.sp,
-        ),
-        titleM: TextStyle = TextStyle(
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 16.sp,
-            lineHeight = 24.sp,
-        ),
-        titleL: TextStyle = TextStyle(
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 18.sp,
-            lineHeight = 26.sp,
-        ),
-        titleXl: TextStyle = TextStyle(
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 20.sp,
-            lineHeight = 28.sp,
-        ),
-        titleXxl: TextStyle = TextStyle(
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 24.sp,
-            lineHeight = 32.sp,
-        ),
-        heading: TextStyle = TextStyle(
-            fontFamily = Roobert,
-            fontWeight = FontWeight.Medium,
-            fontSize = 32.sp,
-            lineHeight = 40.sp,
-        ),
-    ) : this(
-        bodyXs = bodyXs.withDefaultFontFamily(defaultFontFamily),
-        bodyS = bodyS.withDefaultFontFamily(defaultFontFamily),
-        bodyM = bodyM.withDefaultFontFamily(defaultFontFamily),
-        bodyL = bodyL.withDefaultFontFamily(defaultFontFamily),
-        bodyXl = bodyXl.withDefaultFontFamily(defaultFontFamily),
-        bodyXxl = bodyXxl.withDefaultFontFamily(defaultFontFamily),
-        titleS = titleS.withDefaultFontFamily(defaultFontFamily),
-        titleM = titleM.withDefaultFontFamily(defaultFontFamily),
-        titleL = titleL.withDefaultFontFamily(defaultFontFamily),
-        titleXl = titleXl.withDefaultFontFamily(defaultFontFamily),
-        titleXxl = titleXxl.withDefaultFontFamily(defaultFontFamily),
-        heading = heading,
-    )
-}
+    val bodyS: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+    ),
+    val bodyM: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+    ),
+    val bodyL: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Medium,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+    ),
+    val bodyXl: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
+        lineHeight = 24.sp,
+    ),
+    val bodyXxl: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Normal,
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
+    ),
+    val titleS: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+    ),
+    val titleM: TextStyle = TextStyle(
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+    ),
+    val titleL: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+    ),
+    val titleXl: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 20.sp,
+        lineHeight = 28.sp,
+    ),
+    val titleXxl: TextStyle = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
+    ),
+    val headingM: TextStyle = TextStyle(
+        fontFamily = Roobert,
+        fontWeight = FontWeight.Medium,
+        fontSize = 20.sp,
+        lineHeight = 24.sp,
+    ),
+    val headingL: TextStyle = TextStyle(
+        fontFamily = Roobert,
+        fontWeight = FontWeight.Medium,
+        fontSize = 24.sp,
+        lineHeight = 32.sp,
+    ),
+    val headingXl: TextStyle = TextStyle(
+        fontFamily = Roobert,
+        fontWeight = FontWeight.Medium,
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
+    ),
+    val headingXxl: TextStyle = TextStyle(
+        fontFamily = Roobert,
+        fontWeight = FontWeight.Medium,
+        fontSize = 40.sp,
+        lineHeight = 48.sp,
+    ),
+    // Legacy styles (to be removed soon)
+    @Deprecated("Will be removed soon")
+    val legacyTitleL: TextStyle = TextStyle(
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 18.sp,
+        lineHeight = 26.sp,
+    ),
+    @Deprecated("Will be removed soon")
+    val legacyTitleXxl: TextStyle = TextStyle(
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 24.sp,
+        lineHeight = 32.sp,
+    ),
+)
 
 internal val LocalGrapesTypography = staticCompositionLocalOf { GrapesTypography() }
-
-private fun TextStyle.withDefaultFontFamily(default: FontFamily): TextStyle {
-    return if (fontFamily != null) this else copy(fontFamily = default)
-}

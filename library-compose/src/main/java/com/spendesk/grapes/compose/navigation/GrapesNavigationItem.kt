@@ -52,7 +52,7 @@ fun NavigationItem(
         Spacer(Modifier.width(GrapesTheme.dimensions.unit16))
         Text(
             text = text,
-            style = GrapesTheme.typography.titleL,
+            style = GrapesTheme.typography.legacyTitleL,
             color = GrapesTheme.colors.contentPrimary,
             modifier = Modifier.weight(1f)
         )

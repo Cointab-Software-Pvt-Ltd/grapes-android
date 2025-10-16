@@ -54,7 +54,7 @@ fun GrapesSearchInputPrimary(
         enabled = enabled,
         readOnly = readOnly,
         singleLine = true,
-        textStyle = GrapesTheme.typography.bodyM,
+        textStyle = GrapesTheme.typography.bodyL,
         colors = GrapesTextFieldDefaults.textFieldColors(
             backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
             leadingIconColor = GrapesTheme.colors.contentDecorativeIcon,
@@ -121,7 +121,7 @@ fun GrapesSearchInputSecondary(
         enabled = enabled,
         readOnly = readOnly,
         singleLine = true,
-        textStyle = GrapesTheme.typography.bodyM,
+        textStyle = GrapesTheme.typography.bodyL,
         colors = GrapesTextFieldDefaults.textFieldColors(
             backgroundColor = GrapesTheme.colors.backgroundSecondaryDefault,
             leadingIconColor = GrapesTheme.colors.contentDecorativeIcon,

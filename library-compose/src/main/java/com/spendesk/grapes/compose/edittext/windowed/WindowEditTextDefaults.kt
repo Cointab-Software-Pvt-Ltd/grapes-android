@@ -9,10 +9,12 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
 
 @Immutable
 object WindowEditTextDefaults {
+
     const val DefaultWindowLength = 4
     const val DefaultMaxLength = 12
     internal val ForbiddenCharRegex = "\\D".toRegex()
 
     @Composable
-    fun defaultTextStyle(): TextStyle = GrapesTheme.typography.bodyS.copy(letterSpacing = 3.sp, color = Color.White, fontSize = 18.sp, fontFeatureSettings = "tnum")
+    fun defaultTextStyle(): TextStyle =
+        GrapesTheme.typography.bodyM.copy(letterSpacing = 3.sp, color = Color.White, fontSize = 18.sp, fontFeatureSettings = "tnum")
 }

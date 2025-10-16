@@ -91,14 +91,14 @@ private fun ActionMenuSectionHeader(
         ) {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleM,
+                style = GrapesTheme.typography.titleL,
                 color = GrapesTheme.colors.contentPrimary,
                 maxLines = TITLE_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
             )
             Text(
                 text = description,
-                style = GrapesTheme.typography.bodyS,
+                style = GrapesTheme.typography.bodyM,
                 color = GrapesTheme.colors.contentSecondaryBGPrimary,
                 maxLines = DESCRIPTION_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,

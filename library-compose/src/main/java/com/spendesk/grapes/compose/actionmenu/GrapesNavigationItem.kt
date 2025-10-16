@@ -86,7 +86,7 @@ fun GrapesNavigationItem(
                 text = text,
                 maxLines = ACTION_TEXT_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyL,
                 modifier = Modifier.weight(1f),
             )
             if (enabled) {

@@ -73,7 +73,7 @@ fun GrapesSelect(
                     text = {
                         Text(
                             text = it.label,
-                            style = GrapesTheme.typography.bodyS,
+                            style = GrapesTheme.typography.bodyM,
                             color = GrapesTheme.colors.contentPrimary
                         )
                     },

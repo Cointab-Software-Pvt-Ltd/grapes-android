@@ -25,7 +25,7 @@ internal fun Slot(
         Text(
             text = "To be replaced",
             color = GrapesTheme.colors.contentWarningDefault,
-            style = GrapesTheme.typography.titleS,
+            style = GrapesTheme.typography.titleM,
         )
     }
 }

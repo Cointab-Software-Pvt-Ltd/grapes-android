@@ -59,7 +59,7 @@ fun GrapesMessage(
                 }
                 Text(
                     text = title,
-                    style = GrapesTheme.typography.titleS,
+                    style = GrapesTheme.typography.titleM,
                     color = GrapesTheme.colors.contentColorFor(configuration),
                     textAlign = titleTextAlign,
                     modifier = Modifier.fillMaxWidth(),
@@ -70,7 +70,7 @@ fun GrapesMessage(
                 Spacer(modifier = Modifier.size(GrapesTheme.dimensions.unit4))
                 Text(
                     text = description,
-                    style = GrapesTheme.typography.bodyS,
+                    style = GrapesTheme.typography.bodyM,
                     color = GrapesTheme.colors.contentPrimary,
                     textAlign = descriptionTextAlign,
                     modifier = Modifier.fillMaxWidth(),

@@ -141,7 +141,7 @@ private fun GrapesDatePickerPreview(
                     Text(
                         modifier = Modifier.padding(GrapesTheme.dimensions.unit16),
                         text = it,
-                        style = GrapesTheme.typography.titleS
+                        style = GrapesTheme.typography.titleM
                     )
                 }
             },

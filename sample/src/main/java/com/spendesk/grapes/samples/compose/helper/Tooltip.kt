@@ -45,7 +45,7 @@ fun TooltipContent(text: String, modifier: Modifier = Modifier) {
         GrapesIconSet.CircleInformation(tint = GrapesTheme.colors.contentInfoDefault)
         Text(
             text = text,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             color = GrapesTheme.colors.contentInfoDefault
         )
     }

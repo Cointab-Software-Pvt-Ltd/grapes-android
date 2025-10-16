@@ -49,7 +49,7 @@ class ComposeFragment : Fragment() {
                             onClick = {}
                         )
                         Spacer(Modifier.height(GrapesTheme.dimensions.unit16))
-                        Text(text = "Shapes", style = GrapesTheme.typography.titleM)
+                        Text(text = "Shapes", style = GrapesTheme.typography.titleL)
                         Box(
                             modifier = Modifier
                                 .height(100.dp)
@@ -59,7 +59,7 @@ class ComposeFragment : Fragment() {
                         ) {
                             Text(
                                 text = "shape0",
-                                style = GrapesTheme.typography.titleS.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
+                                style = GrapesTheme.typography.titleM.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
                             )
                         }
                         Box(
@@ -72,7 +72,7 @@ class ComposeFragment : Fragment() {
 
                             Text(
                                 text = "shape1",
-                                style = GrapesTheme.typography.titleS.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
+                                style = GrapesTheme.typography.titleM.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
                             )
                         }
                         Box(
@@ -85,7 +85,7 @@ class ComposeFragment : Fragment() {
 
                             Text(
                                 text = "shape2",
-                                style = GrapesTheme.typography.titleS.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
+                                style = GrapesTheme.typography.titleM.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
                             )
                         }
                         Box(
@@ -98,7 +98,7 @@ class ComposeFragment : Fragment() {
 
                             Text(
                                 text = "shape3",
-                                style = GrapesTheme.typography.titleS.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
+                                style = GrapesTheme.typography.titleM.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
                             )
                         }
                         Box(
@@ -111,7 +111,7 @@ class ComposeFragment : Fragment() {
 
                             Text(
                                 text = "shape4",
-                                style = GrapesTheme.typography.titleS.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
+                                style = GrapesTheme.typography.titleM.copy(color = GrapesTheme.colors.backgroundPrimaryDefault),
                             )
                         }
                     }

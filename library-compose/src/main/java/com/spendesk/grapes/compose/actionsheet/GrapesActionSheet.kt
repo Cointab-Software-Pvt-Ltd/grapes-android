@@ -66,7 +66,7 @@ fun GrapesActionSheetContent(
         Text(
             text = title,
             textAlign = textAlign,
-            style = GrapesTheme.typography.titleXxl,
+            style = GrapesTheme.typography.legacyTitleXxl,
             color = GrapesTheme.colors.contentPrimary,
             modifier = Modifier
                 .padding(horizontal = GrapesTheme.dimensions.unit24)
@@ -75,7 +75,7 @@ fun GrapesActionSheetContent(
         Text(
             text = message,
             textAlign = textAlign,
-            style = GrapesTheme.typography.bodyS,
+            style = GrapesTheme.typography.bodyM,
             color = GrapesTheme.colors.contentSecondaryBGPrimary,
             modifier = Modifier
                 .padding(horizontal = GrapesTheme.dimensions.unit24)

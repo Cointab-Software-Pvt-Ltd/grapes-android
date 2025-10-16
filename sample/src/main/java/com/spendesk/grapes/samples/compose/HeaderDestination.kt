@@ -22,8 +22,8 @@ fun HeaderDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("Header", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("Header", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

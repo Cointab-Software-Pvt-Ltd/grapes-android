@@ -109,7 +109,7 @@ internal fun GrapesButtonContent(
 
         Text(
             text = text,
-            style = GrapesTheme.typography.bodyM,
+            style = GrapesTheme.typography.bodyL,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
@@ -157,7 +157,7 @@ private fun PreviewGrapesBasicButton() {
             modifier = Modifier.padding(GrapesTheme.dimensions.unit8),
         ) {
             val icon = @Composable { GrapesIconSet.Bell() }
-            Text(text = "Full width", style = GrapesTheme.typography.titleM)
+            Text(text = "Full width", style = GrapesTheme.typography.titleL)
             BasicButton(
                 text = "Basic Button Full Width",
                 state = GrapesButtonState.Enabled,
@@ -184,7 +184,7 @@ private fun PreviewGrapesBasicButton() {
                 modifier = Modifier.fillMaxWidth()
             )
 
-            Text(text = "Text overflow", style = GrapesTheme.typography.titleM)
+            Text(text = "Text overflow", style = GrapesTheme.typography.titleL)
             BasicButton(
                 text = "Basic Button with a long title which should exceed the button size",
                 state = GrapesButtonState.Enabled,
@@ -208,7 +208,7 @@ private fun PreviewGrapesBasicButton() {
                 onClick = {},
             )
 
-            Text(text = "Simple", style = GrapesTheme.typography.titleM)
+            Text(text = "Simple", style = GrapesTheme.typography.titleL)
             BasicButton(
                 text = "Basic Button",
                 state = GrapesButtonState.Enabled,

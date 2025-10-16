@@ -62,7 +62,7 @@ private fun TextBlockPreview() {
             content = {
                 Text(
                     text = "Content",
-                    style = GrapesTheme.typography.bodyS,
+                    style = GrapesTheme.typography.bodyM,
                     color = GrapesTheme.colors.neutralDark,
                     modifier = Modifier.padding(GrapesTheme.dimensions.unit16)
                 )

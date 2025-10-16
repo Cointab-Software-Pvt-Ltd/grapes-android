@@ -193,7 +193,7 @@ fun GrapesStatusTag(
 
             Text(
                 text = label,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyL,
                 color = LocalContentColor.current
             )
         }

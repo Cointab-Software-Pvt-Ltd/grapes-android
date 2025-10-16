@@ -60,13 +60,13 @@ fun GrapesBlockOptionGroupItem(
                     text = model.title,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    style = GrapesTheme.typography.titleM,
+                    style = GrapesTheme.typography.titleL,
                 )
                 Text(
                     text = model.description,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    style = GrapesTheme.typography.bodyS,
+                    style = GrapesTheme.typography.bodyM,
                 )
             }
         }

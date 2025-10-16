@@ -46,7 +46,7 @@ fun ErrorTemplate(
         title = {
             Text(
                 text = title,
-                style = GrapesTheme.typography.titleM,
+                style = GrapesTheme.typography.titleL,
                 color = GrapesTheme.colors.contentPrimary
             )
         },
@@ -55,7 +55,7 @@ fun ErrorTemplate(
             {
                 Text(
                     text = it,
-                    style = GrapesTheme.typography.bodyM,
+                    style = GrapesTheme.typography.bodyL,
                     textAlign = TextAlign.Center,
                     color = GrapesTheme.colors.contentSecondaryBGPrimary
                 )

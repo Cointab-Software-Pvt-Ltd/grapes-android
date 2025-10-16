@@ -50,7 +50,7 @@ fun GrapesSwitchField(
         ) {
             Text(
                 text = title,
-                style = GrapesTheme.typography.bodyM,
+                style = GrapesTheme.typography.bodyL,
                 modifier = Modifier.padding(vertical = GrapesTheme.dimensions.unit16)
             )
             Spacer(Modifier.weight(1f))
