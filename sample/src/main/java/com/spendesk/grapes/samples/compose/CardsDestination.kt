@@ -22,9 +22,9 @@ fun CardsDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("Budget", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Budget", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Sheet", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Sheet", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }

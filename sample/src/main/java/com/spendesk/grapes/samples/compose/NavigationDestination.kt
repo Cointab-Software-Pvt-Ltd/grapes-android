@@ -22,17 +22,17 @@ fun NavigationDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("Actionable Avatar", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Actionable Avatar", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Action Menu", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Action Menu", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Card link", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Card link", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Company Selector", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Company Selector", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Todo", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Todo", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
-        Text("Search & Filters", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Search & Filters", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }

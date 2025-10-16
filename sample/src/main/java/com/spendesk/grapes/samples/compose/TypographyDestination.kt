@@ -29,7 +29,7 @@ fun TypographyDestination() {
         Text("Heading", style = GrapesTheme.typography.headingXl, color = GrapesTheme.colors.contentPrimary)
         Text("Title/Xxl", style = GrapesTheme.typography.legacyTitleXxl, color = GrapesTheme.colors.contentPrimary)
         Text("Title/Xl", style = GrapesTheme.typography.titleXl, color = GrapesTheme.colors.contentPrimary)
-        Text("Title/L", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Title/L", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Text("Title/M", style = GrapesTheme.typography.titleM, color = GrapesTheme.colors.contentPrimary)
         Text("Title/S", style = GrapesTheme.typography.titleS, color = GrapesTheme.colors.contentPrimary)
         Text("Body/M", style = GrapesTheme.typography.bodyL, color = GrapesTheme.colors.contentPrimary)

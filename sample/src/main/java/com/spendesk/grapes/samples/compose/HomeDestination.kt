@@ -193,8 +193,8 @@ fun HomeDestination(
 private fun GridHeader(text: String, modifier: Modifier = Modifier) {
     Text(
         text = text,
-        style = GrapesTheme.typography.titleL,
-        color = GrapesTheme.colors.contentInfoDefault  ,
+        style = GrapesTheme.typography.legacyTitleL,
+        color = GrapesTheme.colors.contentInfoDefault,
         modifier = modifier
             .fillMaxWidth()
             .background(GrapesTheme.colors.backgroundSecondaryInfoDefault)
@@ -212,7 +212,7 @@ private fun GridItem(
         Box(modifier = Modifier.fillMaxSize().height(GrapesTheme.dimensions.unit56), contentAlignment = Alignment.Center) {
             Text(
                 text = text,
-                style = GrapesTheme.typography.titleL,
+                style = GrapesTheme.typography.legacyTitleL,
                 color = GrapesTheme.colors.contentPrimary,
                 textAlign = TextAlign.Center,
             )

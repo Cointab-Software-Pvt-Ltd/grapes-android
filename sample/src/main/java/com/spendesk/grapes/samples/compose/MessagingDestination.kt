@@ -51,32 +51,32 @@ fun MessagingDestination() {
             .verticalScroll(scroll)
             .padding(GrapesTheme.dimensions.unit16),
     ) {
-        Text("Badge", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Badge", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Badges()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Empty state", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Empty state", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Tag", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Tag", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Tags()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Message", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Message", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Toaster", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Toaster", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Snackbar { Text("Message", style = GrapesTheme.typography.bodyL) }
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
-        Text("Callout", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
+        Text("Callout", style = GrapesTheme.typography.legacyTitleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         Callouts()
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))

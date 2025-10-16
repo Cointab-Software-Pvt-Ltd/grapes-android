@@ -73,7 +73,7 @@ fun GrapesHeader(
             Spacer(modifier = Modifier.width(GrapesTheme.dimensions.unit16))
             Text(
                 text = supplierName,
-                style = GrapesTheme.typography.titleL,
+                style = GrapesTheme.typography.legacyTitleL,
                 color = GrapesTheme.colors.contentPrimary
             )
         }
