@@ -87,7 +87,7 @@ fun GrapesHeader(
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
             Text(
                 text = it,
-                style = GrapesTheme.typography.bodyL,
+                style = GrapesTheme.typography.bodyXl,
                 color = GrapesTheme.colors.contentSecondaryBGPrimary
             )
         }
@@ -95,14 +95,14 @@ fun GrapesHeader(
         description?.let {
             Text(
                 text = it,
-                style = GrapesTheme.typography.bodyL,
+                style = GrapesTheme.typography.bodyXl,
                 color = GrapesTheme.colors.contentPrimary
             )
             Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
         }
         Text(
             text = date,
-            style = GrapesTheme.typography.bodyL,
+            style = GrapesTheme.typography.bodyXl,
             color = GrapesTheme.colors.contentSecondaryBGPrimary
         )
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit40))
