@@ -23,7 +23,7 @@ fun HeaderDestination() {
             .verticalScroll(scroll)
     ) {
         Text("Header", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

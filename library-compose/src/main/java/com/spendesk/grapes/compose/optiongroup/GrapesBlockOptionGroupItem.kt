@@ -66,7 +66,7 @@ fun GrapesBlockOptionGroupItem(
                     text = model.description,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    style = GrapesTheme.typography.bodyS,
+                    style = GrapesTheme.typography.bodyM,
                 )
             }
         }

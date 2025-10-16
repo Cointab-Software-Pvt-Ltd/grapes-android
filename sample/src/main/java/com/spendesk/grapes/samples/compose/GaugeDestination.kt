@@ -22,7 +22,7 @@ fun GaugeDestination() {
             .fillMaxSize()
             .verticalScroll(scroll)
     ) {
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

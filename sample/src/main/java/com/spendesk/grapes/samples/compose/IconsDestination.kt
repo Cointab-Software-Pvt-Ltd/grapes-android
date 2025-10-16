@@ -732,7 +732,7 @@ fun IconDisplay(iconName: String, icon: @Composable () -> Unit) {
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             iconName,
-            style = GrapesTheme.typography.bodyS,
+            style = GrapesTheme.typography.bodyM,
             color = GrapesTheme.colors.contentPrimary,
             textAlign = androidx.compose.ui.text.style.TextAlign.Center
         )

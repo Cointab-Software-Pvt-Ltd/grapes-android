@@ -56,7 +56,7 @@ internal fun IconAction(iconActionConfiguration: ListItemConfiguration.IconActio
         ) {
             Text(text = iconActionConfiguration.title, style = GrapesTheme.typography.titleM, color = titleColor)
             iconActionConfiguration.description?.let {
-                Text(text = it, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.neutralDark)
+                Text(text = it, style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.neutralDark)
             }
         }
     }

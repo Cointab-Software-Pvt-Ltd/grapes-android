@@ -215,7 +215,7 @@ private fun LazyGridScope.colorItem(colorItem: ColorShowcase.ColorItem, modifier
         ) {
             Text(
                 text = colorItem.colorName,
-                style = GrapesTheme.typography.bodyS,
+                style = GrapesTheme.typography.bodyM,
                 color = colorItem.contentColor,
                 modifier = modifier
             )

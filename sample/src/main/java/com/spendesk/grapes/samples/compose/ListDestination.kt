@@ -23,19 +23,19 @@ fun ListDestination() {
             .verticalScroll(scroll)
     ) {
         Text("List artifact", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("List expense", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("List request", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("List subscription", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Info list", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Approver", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Misc", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 

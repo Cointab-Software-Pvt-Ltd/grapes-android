@@ -98,7 +98,7 @@ private fun ActionMenuSectionHeader(
             )
             Text(
                 text = description,
-                style = GrapesTheme.typography.bodyS,
+                style = GrapesTheme.typography.bodyM,
                 color = GrapesTheme.colors.contentSecondaryBGPrimary,
                 maxLines = DESCRIPTION_MAX_LINES,
                 overflow = TextOverflow.Ellipsis,

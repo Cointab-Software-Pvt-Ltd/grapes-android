@@ -25,7 +25,7 @@ fun GrapesLoadingTextBlockAction(loadingLabel: String, modifier: Modifier = Modi
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
-        Text(text = loadingLabel, style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text(text = loadingLabel, style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         LinearProgressIndicator(
             modifier = Modifier.size(GrapesTheme.dimensions.unit16),
             color = GrapesTheme.colors.contentSecondaryBGPrimary,

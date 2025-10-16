@@ -58,7 +58,7 @@ fun MessagingDestination() {
 
         Text("Empty state", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Tag", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
@@ -68,7 +68,7 @@ fun MessagingDestination() {
 
         Text("Message", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit4))
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Spacer(modifier = Modifier.height(GrapesTheme.dimensions.unit16))
 
         Text("Toaster", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)

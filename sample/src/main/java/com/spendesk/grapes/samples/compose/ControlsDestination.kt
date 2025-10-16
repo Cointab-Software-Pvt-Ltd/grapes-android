@@ -23,13 +23,13 @@ fun ControlsDestination() {
             .verticalScroll(scroll)
     ) {
         Text("Checkbox", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Radio button", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Switch", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
         Text("Option group", style = GrapesTheme.typography.titleL, color = GrapesTheme.colors.contentPrimary)
-        Text("todo ...", style = GrapesTheme.typography.bodyS, color = GrapesTheme.colors.contentSecondaryBGPrimary)
+        Text("todo ...", style = GrapesTheme.typography.bodyM, color = GrapesTheme.colors.contentSecondaryBGPrimary)
     }
 }
 
