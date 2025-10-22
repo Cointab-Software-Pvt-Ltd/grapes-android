@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.icons.GrapesIconSet
@@ -75,6 +76,73 @@ fun GrapesSearchInputPrimary(
         leadingIcon = leadingIcon,
         trailingIcon = {
             if (value.isNotEmpty()) {
+                IconButton(onClick = onClear) {
+                    GrapesIconSet.CircleCross(
+                        contentDescription = clearContentDescription,
+                        tint = GrapesTheme.colors.contentDecorativeIcon,
+                    )
+                }
+            }
+        },
+        textPadding = GrapesTextFieldDefaults.textFieldPadding(
+            bottom = searchInputTextPaddingVertical,
+            end = searchInputTextPaddingHorizontal,
+            start = searchInputTextPaddingHorizontal,
+            top = searchInputTextPaddingVertical,
+        ),
+    )
+}
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+fun GrapesSearchInputPrimary(
+    value: TextFieldValue,
+    placeholder: String,
+    clearContentDescription: String,
+    onValueChange: (TextFieldValue) -> Unit,
+    onClear: () -> Unit,
+    modifier: Modifier = Modifier,
+    helperText: String? = null,
+    enabled: Boolean = true,
+    readOnly: Boolean = false,
+    isError: Boolean = false,
+    onClick: (() -> Unit)? = null,
+    onKeyboardSearch: (() -> Unit)? = null,
+    leadingIcon: @Composable (() -> Unit)? = null,
+) {
+    val keyboardController = LocalSoftwareKeyboardController.current
+
+    GrapesBaseTextField(
+        value = value,
+        placeholderValue = placeholder,
+        onValueChange = onValueChange,
+        modifier = modifier,
+        helperText = helperText,
+        enabled = enabled,
+        readOnly = readOnly,
+        singleLine = true,
+        textStyle = GrapesTheme.typography.bodyL,
+        colors = GrapesTextFieldDefaults.textFieldColors(
+            backgroundColor = GrapesTheme.colors.backgroundPrimaryDefault,
+            leadingIconColor = GrapesTheme.colors.contentDecorativeIcon,
+            trailingIconColor = GrapesTheme.colors.contentDecorativeIcon,
+            textColor = GrapesTheme.colors.contentPrimary,
+            placeholderColor = GrapesTheme.colors.contentSecondaryBGPrimary,
+            unfocusedBorderColor = GrapesTheme.colors.borderDefault,
+            focusedBorderColor = GrapesTheme.colors.borderSelected,
+        ),
+        isError = isError,
+        onClick = onClick,
+        keyboardActions = KeyboardActions(
+            onSearch = {
+                onKeyboardSearch?.invoke()
+                keyboardController?.hide()
+            },
+        ),
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+        leadingIcon = leadingIcon,
+        trailingIcon = {
+            if (value.text.isNotEmpty()) {
                 IconButton(onClick = onClear) {
                     GrapesIconSet.CircleCross(
                         contentDescription = clearContentDescription,
