@@ -11,10 +11,10 @@ import kotlinx.coroutines.launch
  * @author Kélian CLERC
  * @since 25/08/2023
  */
-context(CoroutineScope, LifecycleOwner)
+context(scope: CoroutineScope, lifecycleOwner: LifecycleOwner)
 fun <T> Flow<T>.collectOnCreated(block: suspend (value: T) -> Unit) {
-    launch {
-        repeatOnLifecycle(Lifecycle.State.CREATED) {
+    scope.launch {
+        lifecycleOwner.repeatOnLifecycle(Lifecycle.State.CREATED) {
             collect { value ->
                 block(value)
             }
