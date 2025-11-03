@@ -3,9 +3,9 @@ grapes-version = '1.22.0'
 androidGradlePlugin = "8.13.0"
 
 # [ANDROID]
-androidCompileSdk = "35"
+androidCompileSdk = "36"
 androidMinSdk = "26"
-androidTargetSdk = "35"
+androidTargetSdk = "36"
 
 # [PLUGINS]
 
