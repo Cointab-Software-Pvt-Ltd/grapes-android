@@ -28,12 +28,12 @@ androidxLifecycle = "2.9.4"
 andoridxNavigation = "2.9.5"
 
 ## Google
-ksp = "2.2.0-2.0.2"
 hilt = "2.57.2"
+ksp = "2.2.21-2.0.4"
 material = "1.13.0"
 
 ## Jetbrains
-kotlin = "2.2.0"
+kotlin = "2.2.21"
 kotlinxCollectionsImmutable = "0.4.0"
 kotlinxSerialization = "1.9.0"
 
