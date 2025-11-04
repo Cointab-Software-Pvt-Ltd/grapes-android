@@ -13,10 +13,9 @@ import androidx.compose.material3.SheetState
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.rememberStandardBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.spendesk.grapes.compose.icons.GrapesIconSet
@@ -90,14 +89,9 @@ fun GrapesActionSheetContent(
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 private fun PreviewActionSheet() {
-    val density = LocalDensity.current
-    val state = remember {
-        SheetState(
-            skipPartiallyExpanded = true,
-            density = density,
-            initialValue = SheetValue.Expanded,
-        )
-    }
+    val state = rememberStandardBottomSheetState(
+        initialValue = SheetValue.Expanded,
+    )
 
     GrapesTheme {
         GrapesActionSheet(
