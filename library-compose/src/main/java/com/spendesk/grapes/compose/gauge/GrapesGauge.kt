@@ -69,12 +69,12 @@ internal object GrapesGaugeDefaults {
 @Stable
 data class GaugeUiModel(
     val total: Float,
-    val segments: ImmutableList<GaugeSegment>,
-    val limit: GaugeLimit? = null,
+    val segments: ImmutableList<GrapesGaugeSegment>,
+    val limit: GrapesGaugeLimit? = null,
 )
 
 @Stable
-sealed class GaugeSegment {
+sealed class GrapesGaugeSegment {
 
     abstract val value: Float
 
@@ -82,18 +82,18 @@ sealed class GaugeSegment {
     data class Solid(
         override val value: Float,
         val color: Color,
-    ) : GaugeSegment()
+    ) : GrapesGaugeSegment()
 
     @Stable
     data class Stripped(
         override val value: Float,
         val stripeColor: Color,
         val backgroundColor: Color,
-    ) : GaugeSegment()
+    ) : GrapesGaugeSegment()
 }
 
 @Stable
-data class GaugeLimit(
+data class GrapesGaugeLimit(
     val position: Float,
 )
 
