@@ -1982,6 +1982,20 @@ object GrapesIconSet {
             modifier = modifier
         )
     }
+
+    @Composable
+    fun PaperPlane(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_paper_plane),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
 }
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -2134,6 +2148,7 @@ private fun IconsPreview() {
                 GrapesIconSet.Wallet()
                 GrapesIconSet.X()
                 GrapesIconSet.Youtube()
+                GrapesIconSet.PaperPlane()
             }
         }
     }
