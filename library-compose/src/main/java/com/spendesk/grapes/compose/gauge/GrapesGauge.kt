@@ -1,5 +1,10 @@
 package com.spendesk.grapes.compose.gauge
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.AnimationSpec
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -15,7 +20,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -61,6 +70,7 @@ internal object GrapesGaugeDefaults {
     // Limit divider properties
     val limitDividerWidth: Dp = 3.dp
     val limitDividerHeight: Dp = 24.dp
+    const val segmentAnimationDurationMillis: Int = 150
 
     @Composable
     fun limitDividerColor(): Color = GrapesTheme.colors.backgroundComplementaryDefault
@@ -112,6 +122,55 @@ fun GrapesGauge(
     backgroundColor: Color = GrapesGaugeDefaults.containerBackgroundColor(),
     shape: Shape = GrapesGaugeDefaults.containerShape(),
 ) {
+    Gauge(
+        model = model,
+        modifier = modifier,
+        backgroundColor = backgroundColor,
+        shape = shape,
+        animationSpec = null,
+    )
+}
+
+/**
+ * Displays an animated gauge composed of a list of segments, each segment can be either solid or stripped.
+ *
+ * @param model the UI model containing the total, segments, and optional limit.
+ * @param modifier the modifier to apply to this layout.
+ * @param backgroundColor the background color of the gauge container.
+ * @param shape the shape to clip the gauge container.
+ * @param animationSpec the animation specification for animating each segment. By default, segments animate sequentially.
+ */
+@Composable
+fun GrapesAnimatedGauge(
+    model: GaugeUiModel,
+    modifier: Modifier = Modifier,
+    backgroundColor: Color = GrapesGaugeDefaults.containerBackgroundColor(),
+    shape: Shape = GrapesGaugeDefaults.containerShape(),
+    animationSpec: (index: Int) -> AnimationSpec<Float> = { index ->
+        tween(
+            durationMillis = GrapesGaugeDefaults.segmentAnimationDurationMillis,
+            delayMillis = GrapesGaugeDefaults.segmentAnimationDurationMillis * index,
+            easing = LinearEasing,
+        )
+    },
+) {
+    Gauge(
+        model = model,
+        modifier = modifier,
+        backgroundColor = backgroundColor,
+        shape = shape,
+        animationSpec = animationSpec,
+    )
+}
+
+@Composable
+private fun Gauge(
+    model: GaugeUiModel,
+    animationSpec: ((index: Int) -> AnimationSpec<Float>)?,
+    modifier: Modifier = Modifier,
+    backgroundColor: Color = GrapesGaugeDefaults.containerBackgroundColor(),
+    shape: Shape = GrapesGaugeDefaults.containerShape(),
+) {
     Box(
         contentAlignment = Alignment.CenterStart,
         modifier = modifier
@@ -135,32 +194,19 @@ fun GrapesGauge(
                             0, model.segments.lastIndex -> GrapesGaugeDefaults.segmentDelimiterWidth / 2
                             else -> GrapesGaugeDefaults.segmentDelimiterWidth
                         }
-                        val width = availableWidth * segment.value / model.total - spacing
-                        when (segment) {
-                            is GaugeSegment.Solid -> {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxHeight()
-                                        .width(width)
-                                        .background(segment.color)
-                                )
-                            }
-
-                            is GaugeSegment.Stripped -> {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxHeight()
-                                        .width(width)
-                                        .background(
-                                            createStripeBrush(
-                                                stripeColor = segment.stripeColor,
-                                                backgroundColor = segment.backgroundColor,
-                                                stripeWidth = GrapesGaugeDefaults.segmentStripWidth
-                                            )
-                                        )
-                                )
-                            }
+                        if (animationSpec == null) {
+                            Segment(
+                                segment = segment,
+                                width = availableWidth * segment.value / model.total - spacing,
+                            )
+                        } else {
+                            AnimatedSegment(
+                                targetWidth = availableWidth * segment.value / model.total - spacing,
+                                segment = segment,
+                                animationSpec = animationSpec(index),
+                            )
                         }
+
                         if (index != model.segments.lastIndex) {
                             VerticalDivider(
                                 color = GrapesGaugeDefaults.segmentDelimiterColor(),
@@ -177,6 +223,61 @@ fun GrapesGauge(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(GrapesGaugeDefaults.limitDividerHeight)
+            )
+        }
+    }
+}
+
+@Composable
+private fun AnimatedSegment(
+    segment: GrapesGaugeSegment,
+    targetWidth: Dp,
+    animationSpec: AnimationSpec<Float> = spring(),
+) {
+    // Animate from 0f to 1f representing the fraction of the target width
+    val animatedFraction = remember { Animatable(0f) }
+    val width by remember { derivedStateOf { targetWidth * animatedFraction.value } }
+
+    LaunchedEffect("animation") {
+        animatedFraction.animateTo(
+            targetValue = 1f,
+            animationSpec = animationSpec,
+        )
+    }
+
+    Segment(
+        segment = segment,
+        width = width,
+    )
+}
+
+@Composable
+private fun Segment(
+    width: Dp,
+    segment: GrapesGaugeSegment,
+) {
+    when (segment) {
+        is GrapesGaugeSegment.Solid -> {
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .width(width)
+                    .background(segment.color)
+            )
+        }
+
+        is GrapesGaugeSegment.Stripped -> {
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .width(width)
+                    .background(
+                        createStripeBrush(
+                            stripeColor = segment.stripeColor,
+                            backgroundColor = segment.backgroundColor,
+                            stripeWidth = GrapesGaugeDefaults.segmentStripWidth
+                        )
+                    )
             )
         }
     }
@@ -231,48 +332,48 @@ private fun GaugeLimitDivider(
 private fun GaugePreview() {
     GrapesTheme {
         Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4)) {
-            GrapesGauge(
+            GrapesAnimatedGauge(
                 model = GaugeUiModel(
                     total = 1f,
                     segments = persistentListOf(
-                        GaugeSegment.Solid(value = 0.1f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault),
-                        GaugeSegment.Solid(value = 0.25f, color = GrapesTheme.colors.backgroundPrimaryWarningDefault),
-                        GaugeSegment.Solid(value = 0.65f, color = GrapesTheme.colors.backgroundPrimaryAlertDefault)
+                        GrapesGaugeSegment.Solid(value = 0.1f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault),
+                        GrapesGaugeSegment.Solid(value = 0.25f, color = GrapesTheme.colors.backgroundPrimaryWarningDefault),
+                        GrapesGaugeSegment.Solid(value = 0.65f, color = GrapesTheme.colors.backgroundPrimaryAlertDefault)
                     ),
-                    limit = GaugeLimit(0.35f),
+                    limit = GrapesGaugeLimit(0.35f),
                 ),
                 modifier = Modifier.padding(16.dp),
             )
-            GrapesGauge(
+            GrapesAnimatedGauge(
                 model = GaugeUiModel(
                     total = 123f,
                     segments = persistentListOf(
-                        GaugeSegment.Solid(value = 12f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault),
-                        GaugeSegment.Solid(value = 25f, color = GrapesTheme.colors.backgroundPrimaryWarningDefault),
-                        GaugeSegment.Solid(value = 65f, color = GrapesTheme.colors.backgroundPrimaryAlertDefault)
+                        GrapesGaugeSegment.Solid(value = 12f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault),
+                        GrapesGaugeSegment.Solid(value = 25f, color = GrapesTheme.colors.backgroundPrimaryWarningDefault),
+                        GrapesGaugeSegment.Solid(value = 65f, color = GrapesTheme.colors.backgroundPrimaryAlertDefault)
                     ),
-                    limit = GaugeLimit(102f),
+                    limit = GrapesGaugeLimit(102f),
                 ),
                 modifier = Modifier.padding(16.dp),
             )
-            GrapesGauge(
+            GrapesAnimatedGauge(
                 model = GaugeUiModel(
                     total = 1f,
                     segments = persistentListOf(
-                        GaugeSegment.Solid(value = 0.2f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault)
+                        GrapesGaugeSegment.Solid(value = 0.2f, color = GrapesTheme.colors.backgroundPrimaryBrandDefault)
                     ),
                 ),
                 modifier = Modifier.padding(16.dp),
             )
-            GrapesGauge(
+            GrapesAnimatedGauge(
                 model = GaugeUiModel(
                     total = 1f,
                     segments = persistentListOf(
-                        GaugeSegment.Solid(
+                        GrapesGaugeSegment.Solid(
                             value = 0.2f,
                             color = GrapesTheme.colors.backgroundPrimaryBrandDefault,
                         ),
-                        GaugeSegment.Stripped(
+                        GrapesGaugeSegment.Stripped(
                             value = 0.5f,
                             stripeColor = GrapesTheme.colors.backgroundSecondaryAlertDefault,
                             backgroundColor = GrapesTheme.colors.contentWarningDefault
