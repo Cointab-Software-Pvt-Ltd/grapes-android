@@ -39,6 +39,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.spendesk.grapes.compose.gauge.GrapesGaugeDefaults.ANIMATION_DELAY_MILLIS
+import com.spendesk.grapes.compose.gauge.GrapesGaugeDefaults.ANIMATION_DURATION_MILLIS
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
@@ -70,7 +72,9 @@ internal object GrapesGaugeDefaults {
     // Limit divider properties
     val limitDividerWidth: Dp = 3.dp
     val limitDividerHeight: Dp = 24.dp
-    const val segmentAnimationDurationMillis: Int = 150
+
+    const val ANIMATION_DELAY_MILLIS: Int = 100
+    const val ANIMATION_DURATION_MILLIS: Int = 300
 
     @Composable
     fun limitDividerColor(): Color = GrapesTheme.colors.backgroundComplementaryDefault
@@ -147,9 +151,11 @@ fun GrapesAnimatedGauge(
     backgroundColor: Color = GrapesGaugeDefaults.containerBackgroundColor(),
     shape: Shape = GrapesGaugeDefaults.containerShape(),
     animationSpec: (index: Int) -> AnimationSpec<Float> = { index ->
+        // Animation duration should not depend on the number of segments
+        val durationPerSegment = ANIMATION_DURATION_MILLIS / model.segments.size
         tween(
-            durationMillis = GrapesGaugeDefaults.segmentAnimationDurationMillis,
-            delayMillis = GrapesGaugeDefaults.segmentAnimationDurationMillis * index,
+            durationMillis = durationPerSegment,
+            delayMillis = ANIMATION_DELAY_MILLIS + durationPerSegment * index,
             easing = LinearEasing,
         )
     },
