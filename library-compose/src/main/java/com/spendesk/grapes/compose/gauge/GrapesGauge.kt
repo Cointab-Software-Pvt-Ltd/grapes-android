@@ -212,7 +212,7 @@ private fun Gauge(
                             AnimatedSegment(
                                 targetWidth = availableWidth * segment.value / model.total - spacing,
                                 segment = segment,
-                                animationSpec = animationSpec(index),
+                                animationSpec = { animationSpec(index) },
                             )
                         }
 
@@ -241,7 +241,7 @@ private fun Gauge(
 private fun AnimatedSegment(
     segment: GrapesGaugeSegment,
     targetWidth: Dp,
-    animationSpec: AnimationSpec<Float> = spring(),
+    animationSpec: () -> AnimationSpec<Float> = { spring() },
 ) {
     // Animate from 0f to 1f representing the fraction of the target width
     val animatedFraction = remember { Animatable(0f) }
