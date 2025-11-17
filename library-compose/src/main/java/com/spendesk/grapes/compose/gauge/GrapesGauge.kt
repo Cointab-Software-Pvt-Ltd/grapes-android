@@ -24,7 +24,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -244,11 +247,21 @@ private fun AnimatedSegment(
     val animatedFraction = remember { Animatable(0f) }
     val width by remember { derivedStateOf { targetWidth * animatedFraction.value } }
 
-    LaunchedEffect("animation") {
-        animatedFraction.animateTo(
-            targetValue = 1f,
-            animationSpec = animationSpec,
-        )
+    // Remember if this segment has already animated to avoid re-animating
+    // on recomposition, for example in LazyColumn scroll
+    var animationCompleted by rememberSaveable(segment) { mutableStateOf(false) }
+
+    LaunchedEffect(segment) {
+        if (animationCompleted) {
+            animatedFraction.snapTo(1f)
+        } else {
+            animatedFraction.snapTo(0f)
+            animatedFraction.animateTo(
+                targetValue = 1f,
+                animationSpec = animationSpec(),
+            )
+            animationCompleted = true
+        }
     }
 
     Segment(
