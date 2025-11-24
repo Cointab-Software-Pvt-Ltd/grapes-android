@@ -836,6 +836,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun CircleHalfFilled(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_circle_half_filled),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun CircleInformation(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -927,6 +941,34 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_circle_question_outline),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun CircleStrikeout(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_circle_strikeout),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun CircleThreeStrikeout(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_circle_three_strikeout),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -2066,6 +2108,7 @@ private fun IconsPreview() {
                 GrapesIconSet.CircleActive()
                 GrapesIconSet.CircleCheck()
                 GrapesIconSet.CircleCross()
+                GrapesIconSet.CircleHalfFilled()
                 GrapesIconSet.CircleInformation()
                 GrapesIconSet.CircleMinus()
                 GrapesIconSet.CirclePause()
@@ -2073,6 +2116,8 @@ private fun IconsPreview() {
                 GrapesIconSet.CirclePlus()
                 GrapesIconSet.CircleQuestionFilled()
                 GrapesIconSet.CircleQuestionOutline()
+                GrapesIconSet.CircleStrikeout()
+                GrapesIconSet.CircleThreeStrikeout()
                 GrapesIconSet.Clipboard()
                 GrapesIconSet.ClipboardPin()
                 GrapesIconSet.ClockFilled()
