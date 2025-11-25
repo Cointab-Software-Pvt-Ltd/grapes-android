@@ -24,7 +24,6 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.spendesk.grapes.compose.theme.GrapesTheme
-import com.spendesk.grapes.compose.theme.blue60
 
 /**
  * @author jean-philippe
@@ -99,7 +98,6 @@ object GrapesTextFieldDefaults {
         disabledTextColor: Color = GrapesTheme.colors.contentDisable,
         backgroundColor: Color = GrapesTheme.colors.backgroundPrimaryDefault,
         disabledBackgroundColor: Color = GrapesTheme.colors.backgroundPrimaryDisabled,
-        cursorColor: Color = blue60,
         errorCursorColor: Color = GrapesTheme.colors.contentAlertDefault,
         focusedBorderColor: Color = GrapesTheme.colors.borderSelected,
         unfocusedBorderColor: Color = GrapesTheme.colors.borderDefault,
@@ -123,7 +121,7 @@ object GrapesTextFieldDefaults {
     ): GrapesTextFieldColors = DefaultGrapesGrapesTextFieldColors(
         textColor = textColor,
         disabledTextColor = disabledTextColor,
-        cursorColor = cursorColor,
+        cursorColor = focusedBorderColor,
         errorCursorColor = errorCursorColor,
         focusedIndicatorColor = focusedBorderColor,
         unfocusedIndicatorColor = unfocusedBorderColor,
