@@ -25,7 +25,7 @@ import com.spendesk.grapes.compose.button.GrapesButtonState
 import com.spendesk.grapes.compose.button.GrapesButtonStyleDefaults
 import com.spendesk.grapes.compose.button.GrapesGoogleButton
 import com.spendesk.grapes.compose.button.GrapesMicrosoftButton
-import com.spendesk.grapes.compose.button.GrapesQuickActionButton
+import com.spendesk.grapes.compose.button.GrapesIconButtonSecondary
 import com.spendesk.grapes.compose.button.GrapesSamlButton
 import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.theme.GrapesTheme
@@ -113,7 +113,7 @@ private fun ButtonSecondary() {
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.secondary, state = GrapesButtonState.Disabled, modifier = Modifier.fillMaxWidth(), onClick = {})
         GrapesButton("Label", buttonStyle = GrapesButtonStyleDefaults.secondary, state = GrapesButtonState.ShowCircularIndicator, modifier = Modifier.fillMaxWidth(), onClick = {})
         Text("Button icon secondary", style = GrapesTheme.typography.titleS, color = GrapesTheme.colors.contentPrimary)
-        GrapesQuickActionButton(label = "Label", icon = R.drawable.ic_grapes_icon_puzzle, onClick = {})
+        GrapesIconButtonSecondary(label = "Label", icon = R.drawable.ic_grapes_icon_puzzle, onClick = {})
     }
 }
 
