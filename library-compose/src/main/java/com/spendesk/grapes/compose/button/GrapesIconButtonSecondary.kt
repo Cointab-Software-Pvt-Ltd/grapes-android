@@ -32,7 +32,7 @@ import com.spendesk.grapes.compose.theme.GrapesTheme
  * @since : 30/10/2024
  **/
 @Composable
-fun GrapesQuickActionButton(
+fun GrapesIconButtonSecondary(
     label: String,
     @DrawableRes icon: Int,
     onClick: () -> Unit,
@@ -41,7 +41,7 @@ fun GrapesQuickActionButton(
     colors: ButtonColors = QuickActionButtonDefaults.buttonColors,
     border: BorderStroke = QuickActionButtonDefaults.buttonBorder,
 ) {
-    QuickActionButton(
+    IconButtonSecondary(
         buttonContent = {
             Icon(
                 painter = painterResource(id = icon),
@@ -66,7 +66,7 @@ fun GrapesQuickActionButton(
 }
 
 @Composable
-private fun QuickActionButton(
+private fun IconButtonSecondary(
     buttonContent: @Composable () -> Unit,
     labelContent: @Composable () -> Unit,
     onClick: () -> Unit,
@@ -104,7 +104,7 @@ private fun QuickActionButton(
 
 @Preview
 @Composable
-private fun GrapesQuickActionButtonPreview() {
+private fun GrapesIconButtonSecondaryPreview() {
     GrapesTheme {
         var clickCount by remember { mutableStateOf(0) }
 
@@ -113,7 +113,7 @@ private fun GrapesQuickActionButtonPreview() {
                 .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16)
         ) {
-            GrapesQuickActionButton(
+            GrapesIconButtonSecondary(
                 label = "Label $clickCount",
                 icon = R.drawable.ic_grapes_icon_circle_plus,
                 onClick = { clickCount++ }, // Let's make sure onClick is not triggered twice by the interaction source sharing.
@@ -124,7 +124,7 @@ private fun GrapesQuickActionButtonPreview() {
 
 @Preview
 @Composable
-private fun GrapesQuickActionButtonDisabledPreview() {
+private fun GrapesIconButtonSecondaryDisabledPreview() {
     GrapesTheme {
         var clickCount by remember { mutableStateOf(0) }
 
@@ -133,7 +133,7 @@ private fun GrapesQuickActionButtonDisabledPreview() {
                 .background(GrapesTheme.colors.backgroundSecondaryDefault)
                 .padding(GrapesTheme.dimensions.unit16)
         ) {
-            GrapesQuickActionButton(
+            GrapesIconButtonSecondary(
                 label = "Label $clickCount",
                 icon = R.drawable.ic_grapes_icon_circle_plus,
                 isEnabled = false,
