@@ -3,16 +3,15 @@ package com.spendesk.grapes.compose.textfield
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.calculateEndPadding
-import androidx.compose.foundation.layout.calculateStartPadding
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
@@ -29,13 +28,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.tooling.preview.Preview
+import com.spendesk.grapes.compose.R
+import com.spendesk.grapes.compose.icons.GrapesIcon
+import com.spendesk.grapes.compose.model.GrapesConfigurationStatus
 import com.spendesk.grapes.compose.theme.GrapesTheme
 
 /**
@@ -70,7 +73,7 @@ internal fun GrapesBaseTextField(
     trailingIcon: @Composable (() -> Unit)? = null,
 ) {
     /**
-     * Mapping from string to TextFieldValue copy-pasted from string version of [androidx.compose.foundation.text.BasicTextField]
+     * Mapping from string to TextFieldValue copy-pasted from string version of [BasicTextField]
      * The code style has been kept as it is in androidx source code on purpose, to be able to compare it easily.
      */
 
@@ -248,21 +251,26 @@ internal fun GrapesHelperText(
     val textColor = colors.helperTextColor(enabled, isError).value
     val mergedTextStyle = textStyle.merge(TextStyle(color = textColor))
 
-    val layoutDirection = LocalLayoutDirection.current
-
     val topPadding = contentPadding.calculateTopPadding()
-    val endPadding = contentPadding.calculateEndPadding(layoutDirection)
-    val startPadding = contentPadding.calculateStartPadding(layoutDirection)
 
-    Box(
-        modifier = modifier
-            .padding(start = startPadding, end = endPadding),
-        propagateMinConstraints = true,
+    Row(
+        modifier = modifier.fillMaxWidth()
+            .paddingFromBaseline(top = topPadding),
+        horizontalArrangement = Arrangement.spacedBy(
+            space = GrapesTheme.dimensions.unit4,
+        ),
+        verticalAlignment = Alignment.Top
     ) {
+        if (isError) {
+            GrapesIcon(
+                icon = R.drawable.ic_grapes_icon_circle_cross,
+                contentDescription = null,
+                configuration = GrapesConfigurationStatus.ALERT,
+                modifier = Modifier.size(GrapesTheme.dimensions.sizeIconS)
+            )
+        }
         Text(
             text = text,
-            modifier = Modifier
-                .paddingFromBaseline(top = topPadding),
             style = mergedTextStyle,
         )
     }
@@ -337,4 +345,44 @@ private fun GrapesBasicTextFieldDecorationBox(
             )
         },
     )
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+@Preview
+fun GrapesBaseTextFieldPreview() {
+    GrapesTheme {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit16),
+            modifier = Modifier
+                .background(GrapesTheme.colors.backgroundPrimaryDefault)
+        ) {
+            GrapesBaseTextField(
+                value = "",
+                placeholderValue = "Placeholder",
+                onValueChange = {},
+                helperText = "Helper text",
+            )
+            GrapesBaseTextField(
+                value = "Text field value",
+                placeholderValue = "Placeholder",
+                onValueChange = {},
+                helperText = "Helper text",
+            )
+            GrapesBaseTextField(
+                value = "Error state",
+                placeholderValue = "Placeholder",
+                onValueChange = {},
+                helperText = "Helper text",
+                isError = true,
+            )
+            GrapesBaseTextField(
+                value = "Disabled state",
+                placeholderValue = "Placeholder",
+                onValueChange = {},
+                helperText = "Helper text",
+                enabled = false,
+            )
+        }
+    }
 }
