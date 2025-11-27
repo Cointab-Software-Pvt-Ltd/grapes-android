@@ -448,9 +448,9 @@ fun IconsDestination() {
                 GrapesIconSet.Gear()
             }
         }
-        item(key = "HexagoneCross") {
-            IconDisplay("HexagoneCross") {
-                GrapesIconSet.HexagoneCross()
+        item(key = "OctogoneCross") {
+            IconDisplay("OctogoneCross") {
+                GrapesIconSet.OctogoneCross()
             }
         }
         item(key = "House") {

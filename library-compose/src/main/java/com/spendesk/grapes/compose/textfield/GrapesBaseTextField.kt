@@ -263,7 +263,7 @@ internal fun GrapesHelperText(
     ) {
         if (isError) {
             GrapesIcon(
-                icon = R.drawable.ic_grapes_icon_circle_cross,
+                icon = R.drawable.ic_grapes_icon_octogone_cross,
                 contentDescription = null,
                 configuration = GrapesConfigurationStatus.ALERT,
                 modifier = Modifier.size(GrapesTheme.dimensions.sizeIconS)
