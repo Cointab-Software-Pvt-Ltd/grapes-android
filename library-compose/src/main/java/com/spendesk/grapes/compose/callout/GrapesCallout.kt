@@ -36,7 +36,7 @@ fun GrapesErrorCallout(
         GrapesCoreCallout(
             leadingIcon = {
                 GrapesIcon(
-                    icon = R.drawable.ic_grapes_icon_hexagone_cross,
+                    icon = R.drawable.ic_grapes_icon_octogone_cross,
                     contentDescription = "Error callout icon",
                     tint = calloutColors.titleColor().value,
                 )

@@ -105,7 +105,7 @@ fun GrapesErrorTag(
         LocalContentColor provides GrapesTheme.colors.contentAlertDefault,
     ) {
         val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_hexagone_cross, contentDescription = "Error tag icon")
+            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_octogone_cross, contentDescription = "Error tag icon")
         }
 
         val tagColors = ErrorGrapesTagColors()
