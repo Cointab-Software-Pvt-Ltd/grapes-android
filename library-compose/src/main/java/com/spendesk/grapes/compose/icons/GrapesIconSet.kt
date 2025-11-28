@@ -1270,13 +1270,13 @@ object GrapesIconSet {
     }
 
     @Composable
-    fun HexagoneCross(
+    fun OctogoneCross(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
         contentDescription: String? = null,
     ) {
         Icon(
-            painter = painterResource(R.drawable.ic_grapes_icon_hexagone_cross),
+            painter = painterResource(R.drawable.ic_grapes_icon_octogone_cross),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -2139,7 +2139,7 @@ private fun IconsPreview() {
                 GrapesIconSet.Gas()
                 GrapesIconSet.Gear()
                 GrapesIconSet.Globe()
-                GrapesIconSet.HexagoneCross()
+                GrapesIconSet.OctogoneCross()
                 GrapesIconSet.House()
                 GrapesIconSet.Inbox()
                 GrapesIconSet.InboxStack()
