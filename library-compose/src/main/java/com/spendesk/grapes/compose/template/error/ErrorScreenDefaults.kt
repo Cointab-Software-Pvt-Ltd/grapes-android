@@ -13,7 +13,7 @@ import androidx.compose.runtime.Immutable
  * @since 02/06/2023
  */
 @Immutable
-object ErrorTemplateDefaults {
+object ErrorScreenDefaults {
 
     private const val DefaultStartingDelayMs = 200L
     private const val DefaultTitleAnimationDurationMs = 500
@@ -43,7 +43,7 @@ object ErrorTemplateDefaults {
         val descriptionAppearanceDelayMs: Int,
         val retryButtonAnimationDurationMs: Int,
         val retryButtonAppearanceDelayMs: Int,
-    ): Configuration {
+    ) : Configuration {
         override val iconEnterAnimation: EnterTransition
             get() = scaleIn()
 
@@ -66,4 +66,3 @@ object ErrorTemplateDefaults {
         val retryButtonEnterAnimation: EnterTransition
     }
 }
-

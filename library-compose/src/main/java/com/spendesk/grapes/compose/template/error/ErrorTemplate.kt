@@ -27,60 +27,143 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.spendesk.grapes.compose.button.core.GrapesButtonState
 import com.spendesk.grapes.compose.button.primary.GrapesBrandPrimaryButton
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconAlert
 import com.spendesk.grapes.compose.icons.GrapesHighlightIconSize
 import com.spendesk.grapes.compose.theme.GrapesTheme
 import kotlinx.coroutines.delay
 
+@Composable
+fun ErrorScreen(
+    title: String,
+    retryMessage: String,
+    onRetryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    description: String? = null,
+    retryEnabled: Boolean = true,
+    icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
+    configuration: ErrorScreenDefaults.Configuration = ErrorScreenDefaults.defaultConfiguration(),
+) {
+    ErrorTemplate(
+        title = { ErrorTitle(title) },
+        icon = icon,
+        description = description?.let { { ErrorDescription(it) } },
+        retryButton = {
+            ErrorRetryButton(
+                text = retryMessage,
+                enabled = retryEnabled,
+                onClick = onRetryClick,
+                modifier = Modifier.fillMaxWidth()
+            )
+        },
+        configuration = configuration,
+        modifier = modifier,
+    )
+}
 
 @Composable
+fun ErrorScreen(
+    title: String,
+    modifier: Modifier = Modifier,
+    description: String? = null,
+    icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
+    configuration: ErrorScreenDefaults.Configuration = ErrorScreenDefaults.defaultConfiguration(),
+) {
+    ErrorTemplate(
+        title = { ErrorTitle(title) },
+        icon = icon,
+        description = description?.let { { ErrorDescription(it) } },
+        retryButton = null,
+        configuration = configuration,
+        modifier = modifier,
+    )
+}
+
+@Composable
+@Deprecated("Use ErrorScreen without ErrorRetryUiModel instead", ReplaceWith("ErrorScreen"))
 fun ErrorTemplate(
     title: String,
     description: String? = null,
     retryUiModel: ErrorRetryUiModel? = null,
     icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
-    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration(),
+    configuration: ErrorScreenDefaults.Configuration = ErrorScreenDefaults.defaultConfiguration(),
 ) {
     ErrorTemplate(
-        title = {
-            Text(
-                text = title,
-                style = GrapesTheme.typography.titleL,
-                color = GrapesTheme.colors.contentPrimary
-            )
-        },
+        title = { ErrorTitle(title) },
         icon = icon,
-        description = description?.let {
-            {
-                Text(
-                    text = it,
-                    style = GrapesTheme.typography.bodyL,
-                    textAlign = TextAlign.Center,
-                    color = GrapesTheme.colors.contentSecondaryBGPrimary
-                )
-            }
-        },
+        description = description?.let { { ErrorDescription(it) } },
         retryButton = retryUiModel?.canRetry?.takeIf { it }?.let {
             {
-                GrapesBrandPrimaryButton(
+                ErrorRetryButton(
                     text = retryUiModel.message,
+                    enabled = true,
                     onClick = retryUiModel.onRetryClicked,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
         },
-        configuration = configuration
+        configuration = configuration,
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(GrapesTheme.dimensions.unit16),
     )
 }
 
 @Composable
-fun ErrorTemplate(
+private fun ErrorTitle(
+    title: String,
+    modifier: Modifier = Modifier,
+) {
+    Text(
+        text = title,
+        style = GrapesTheme.typography.titleL,
+        color = GrapesTheme.colors.contentPrimary,
+        modifier = modifier,
+    )
+}
+
+@Composable
+private fun ErrorDescription(
+    string: String,
+    modifier: Modifier = Modifier,
+) {
+    Text(
+        text = string,
+        style = GrapesTheme.typography.bodyL,
+        textAlign = TextAlign.Center,
+        color = GrapesTheme.colors.contentSecondaryBGPrimary,
+        modifier = modifier,
+    )
+}
+
+@Composable
+private fun ErrorRetryButton(
+    text: String,
+    enabled: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    GrapesBrandPrimaryButton(
+        text = text,
+        state = if (enabled) {
+            GrapesButtonState.Enabled
+        } else {
+            GrapesButtonState.Disabled
+        },
+        onClick = onClick,
+        modifier = modifier
+    )
+}
+
+@Composable
+private fun ErrorTemplate(
     title: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
     icon: @Composable () -> Unit = { GrapesHighlightIconAlert(size = GrapesHighlightIconSize.EXTRA_LARGE) },
     description: (@Composable () -> Unit)? = null,
     retryButton: (@Composable () -> Unit)? = null,
-    configuration: ErrorTemplateDefaults.Configuration = ErrorTemplateDefaults.defaultConfiguration(),
+    configuration: ErrorScreenDefaults.Configuration = ErrorScreenDefaults.defaultConfiguration(),
 ) {
     var isVisible by remember { mutableStateOf(false) }
 
@@ -90,10 +173,8 @@ fun ErrorTemplate(
     }
 
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(GrapesTheme.dimensions.unit16),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
     ) {
         Column(
             modifier = Modifier
@@ -142,14 +223,12 @@ fun ErrorTemplatePreview() {
         ) {
             AnimatedContent(targetState = isError, label = "Preview animation") { animatedIsError ->
                 if (animatedIsError) {
-                    ErrorTemplate(
+                    ErrorScreen(
                         title = "Phone number reset failed",
                         description = "An error occurred while resetting your phone number. Please try again later.",
-                        retryUiModel = ErrorRetryUiModel(
-                            canRetry = true,
-                            message = "Retry",
-                            onRetryClicked = { isError = false }
-                        )
+                        retryMessage = "Retry",
+                        retryEnabled = true,
+                        onRetryClick = { isError = false },
                     )
                 } else {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
