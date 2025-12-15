@@ -1228,6 +1228,34 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun ForkKnife(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_fork_knife),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun ForkKnifeStrikeout(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_fork_knife_strikeout),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Gas(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2136,6 +2164,8 @@ private fun IconsPreview() {
                 GrapesIconSet.Facebook()
                 GrapesIconSet.Flag()
                 GrapesIconSet.FlagCheckered()
+                GrapesIconSet.ForkKnife()
+                GrapesIconSet.ForkKnifeStrikeout()
                 GrapesIconSet.Gas()
                 GrapesIconSet.Gear()
                 GrapesIconSet.Globe()
