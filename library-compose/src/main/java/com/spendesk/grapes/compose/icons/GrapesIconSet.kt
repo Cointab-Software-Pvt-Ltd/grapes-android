@@ -1102,6 +1102,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun Dummy(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_dummy),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun EllipsisHorizontal(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -1592,6 +1606,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun PaperPlane(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_paper_plane),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Pdf(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2026,6 +2054,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun Wifi(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_wifi),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun X(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2047,20 +2089,6 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_youtube),
-            tint = tint,
-            contentDescription = contentDescription,
-            modifier = modifier
-        )
-    }
-
-    @Composable
-    fun PaperPlane(
-        modifier: Modifier = Modifier,
-        tint: Color = LocalContentColor.current,
-        contentDescription: String? = null,
-    ) {
-        Icon(
-            painter = painterResource(R.drawable.ic_grapes_icon_paper_plane),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -2155,6 +2183,7 @@ private fun IconsPreview() {
                 GrapesIconSet.CrossSmall()
                 GrapesIconSet.Cube()
                 GrapesIconSet.DollarCircleArrow()
+                GrapesIconSet.Dummy()
                 GrapesIconSet.EllipsisHorizontal()
                 GrapesIconSet.EllipsisVertical()
                 GrapesIconSet.Envelope()
@@ -2190,6 +2219,7 @@ private fun IconsPreview() {
                 GrapesIconSet.MinusSmall()
                 GrapesIconSet.Motorcycle()
                 GrapesIconSet.MouseSquareStack()
+                GrapesIconSet.PaperPlane()
                 GrapesIconSet.Pdf()
                 GrapesIconSet.Pen()
                 GrapesIconSet.Person()
@@ -2221,9 +2251,9 @@ private fun IconsPreview() {
                 GrapesIconSet.Trash()
                 GrapesIconSet.TriangleWarning()
                 GrapesIconSet.Wallet()
+                GrapesIconSet.Wifi()
                 GrapesIconSet.X()
                 GrapesIconSet.Youtube()
-                GrapesIconSet.PaperPlane()
             }
         }
     }
