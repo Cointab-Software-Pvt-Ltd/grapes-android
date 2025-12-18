@@ -34,7 +34,7 @@ import com.spendesk.grapes.compose.callout.atoms.GrapesCalloutContentCTAPrimary
 import com.spendesk.grapes.compose.callout.atoms.GrapesCalloutContentCTASecondary
 import com.spendesk.grapes.compose.callout.molecules.GrapesCalloutContent
 import com.spendesk.grapes.compose.callout.molecules.GrapesCalloutContentBottomCTA
-import com.spendesk.grapes.compose.tag.GrapesErrorTag
+import com.spendesk.grapes.compose.tag.GrapesAlertTag
 import com.spendesk.grapes.compose.tag.GrapesInfoTag
 import com.spendesk.grapes.compose.tag.GrapesNeutralTag
 import com.spendesk.grapes.compose.tag.GrapesSuccessTag
@@ -117,19 +117,19 @@ private fun Tags() {
         verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)
     ) {
         GrapesTooltipBox("GrapesErrorTag") {
-            GrapesErrorTag("Label", showIcon = true)
+            GrapesAlertTag("Label")
         }
         GrapesTooltipBox("GrapesNeutralTag") {
-            GrapesNeutralTag("Label", showIcon = true)
+            GrapesNeutralTag("Label")
         }
         GrapesTooltipBox("GrapesWarningTag") {
-            GrapesWarningTag("Label", showIcon = true)
+            GrapesWarningTag("Label")
         }
         GrapesTooltipBox("GrapesInfoTag") {
-            GrapesInfoTag("Label", showIcon = true)
+            GrapesInfoTag("Label")
         }
         GrapesTooltipBox("GrapesSuccessTag") {
-            GrapesSuccessTag("Label", showIcon = true)
+            GrapesSuccessTag("Label")
         }
     }
 }

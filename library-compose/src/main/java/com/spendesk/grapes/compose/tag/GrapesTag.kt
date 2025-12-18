@@ -3,7 +3,6 @@ package com.spendesk.grapes.compose.tag
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -15,7 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
@@ -23,181 +21,217 @@ import com.spendesk.grapes.compose.R
 import com.spendesk.grapes.compose.icons.GrapesIconSet
 import com.spendesk.grapes.compose.tag.atoms.GrapesTagIcon
 import com.spendesk.grapes.compose.theme.GrapesTheme
-import com.spendesk.grapes.compose.theme.LocalGrapesShapes
-
-/**
- * @author jean-philippe
- * @since 18/10/2023, Wednesday
- **/
 
 @Composable
 fun GrapesSuccessTag(
     label: String,
-    showIcon: Boolean = true,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentSuccessDefault,
-    ) {
-        val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_check, contentDescription = "Success tag icon")
-        }
-
-        val tagColors = SuccessGrapesTagColors()
-
-        GrapesStatusTag(
-            label = label,
-            leadingIcon = icon.takeIf { showIcon },
-            backgroundColor = tagColors.containerColor().value,
+    modifier: Modifier = Modifier,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_circle_check,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        colors = GrapesTagDefaults.colorsSuccess(),
+        modifier = modifier,
+    )
 }
 
 @Composable
 fun GrapesInfoTag(
     label: String,
-    showIcon: Boolean = true,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentInfoDefault,
-    ) {
-        val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_information, contentDescription = "Info tag icon")
-        }
-
-        val tagColors = InfoGrapesTagColors()
-
-        GrapesStatusTag(
-            label = label,
-            leadingIcon = icon.takeIf { showIcon },
-            backgroundColor = tagColors.containerColor().value,
+    modifier: Modifier = Modifier,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_circle_information,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        colors = GrapesTagDefaults.colorsInfo(),
+        modifier = modifier,
+    )
 }
 
 @Composable
 fun GrapesWarningTag(
     label: String,
-    showIcon: Boolean = true,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentWarningDefault,
-    ) {
-        val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_triangle_warning, contentDescription = "Warning tag icon")
-        }
-
-        val tagColors = WarningGrapesTagColors()
-
-        GrapesStatusTag(
-            label = label,
-            leadingIcon = icon.takeIf { showIcon },
-            backgroundColor = tagColors.containerColor().value,
+    modifier: Modifier = Modifier,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_triangle_warning,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        colors = GrapesTagDefaults.colorsWarning(),
+        modifier = modifier,
+    )
 }
 
 @Composable
-fun GrapesErrorTag(
+fun GrapesAlertTag(
     label: String,
-    showIcon: Boolean = true,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentAlertDefault,
-    ) {
-        val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_octogone_cross, contentDescription = "Error tag icon")
-        }
-
-        val tagColors = ErrorGrapesTagColors()
-
-        GrapesStatusTag(
-            label = label,
-            leadingIcon = icon.takeIf { showIcon },
-            backgroundColor = tagColors.containerColor().value,
+    modifier: Modifier = Modifier,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_octogone_cross,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        colors = GrapesTagDefaults.colorsAlert(),
+        modifier = modifier,
+    )
 }
 
 @Composable
 fun GrapesNeutralTag(
     label: String,
-    showIcon: Boolean = true,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentSecondaryBGSecondary,
-    ) {
-        val icon: @Composable () -> Unit = @Composable {
-            GrapesTagIcon(iconRes = R.drawable.ic_grapes_icon_circle_question_filled, contentDescription = "Neutral tag icon")
-        }
-
-        val tagColors = NeutralGrapesTagColors()
-
-        GrapesStatusTag(
-            label = label,
-            leadingIcon = icon.takeIf { showIcon },
-            backgroundColor = tagColors.containerColor().value,
+    modifier: Modifier = Modifier,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_circle_question_filled,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        colors = GrapesTagDefaults.colorsNeutral(),
+        modifier = modifier,
+    )
 }
 
 @Composable
 fun GrapesDecorativeTag(
     label: String,
-    backgroundColor: GrapesDecorativeTagColors,
+    colors: GrapesDecorativeTagColors,
     modifier: Modifier = Modifier,
-    leadingIcon: (@Composable () -> Unit)? = null,
-) {
-    CompositionLocalProvider(
-        LocalContentColor provides GrapesTheme.colors.contentPrimary,
-    ) {
-        GrapesStatusTag(
-            modifier = modifier,
-            label = label,
-            backgroundColor = backgroundColor.containerColor(),
-            leadingIcon = leadingIcon,
+    iconPosition: GrapesTagIconPosition = GrapesTagDefaults.defaultTagPosition(),
+    icon: (@Composable () -> Unit)? = {
+        GrapesTagIcon(
+            iconRes = R.drawable.ic_grapes_icon_circle_question_filled,
+            contentDescription = null,
         )
-    }
+    },
+) {
+    GrapesStatusTag(
+        label = label,
+        colors = GrapesStatusTagColors(
+            containerColor = colors.containerColor(),
+            contentColor = GrapesTheme.colors.contentPrimary,
+        ),
+        leadingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Leading },
+        trailingIcon = icon.takeIf { iconPosition == GrapesTagIconPosition.Trailing },
+        modifier = modifier
+    )
 }
 
 @Composable
 fun GrapesStatusTag(
     label: String,
-    backgroundColor: Color,
+    colors: GrapesStatusTagColors,
     modifier: Modifier = Modifier,
     leadingIcon: (@Composable () -> Unit)? = null,
+    trailingIcon: (@Composable () -> Unit)? = null,
 ) {
     Surface(
         modifier = modifier.height(GrapesTheme.dimensions.sizeIconXl),
-        shape = LocalGrapesShapes.current.radius1000,
-        color = backgroundColor,
+        shape = GrapesTheme.shapes.radius1000,
+        color = colors.containerColor,
     ) {
         Row(
-            modifier = Modifier
-                .padding(
-                    PaddingValues(
-                        start = GrapesTheme.dimensions.unit8.takeIf { leadingIcon == null } ?: GrapesTheme.dimensions.unit4,
-                        end = GrapesTheme.dimensions.unit8,
-                    )
-                ),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit4),
+            modifier = Modifier
+                .padding(horizontal = GrapesTheme.dimensions.unit4)
         ) {
-            if (leadingIcon != null) {
-                Box(
-                    modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    leadingIcon()
+            CompositionLocalProvider(
+                LocalContentColor provides colors.contentColor,
+            ) {
+                if (leadingIcon != null) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        content = { leadingIcon() },
+                        modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM),
+                    )
+                }
+
+                Text(
+                    text = label,
+                    style = GrapesTheme.typography.bodyL,
+                    modifier = Modifier.padding(horizontal = GrapesTheme.dimensions.unit4)
+                )
+
+                if (trailingIcon != null) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        content = { trailingIcon() },
+                        modifier = Modifier.size(GrapesTheme.dimensions.sizeIconM),
+                    )
                 }
             }
-
-            Text(
-                text = label,
-                style = GrapesTheme.typography.bodyL,
-                color = LocalContentColor.current
-            )
         }
     }
+}
+
+data object GrapesTagDefaults {
+
+    fun defaultTagPosition(): GrapesTagIconPosition = GrapesTagIconPosition.Leading
+
+    @Composable
+    internal fun colorsNeutral(): GrapesStatusTagColors = GrapesStatusTagColors(
+        containerColor = GrapesTheme.colors.neutralLightest,
+        contentColor = GrapesTheme.colors.contentSecondaryBGSecondary,
+    )
+
+    @Composable
+    internal fun colorsAlert(): GrapesStatusTagColors = GrapesStatusTagColors(
+        containerColor = GrapesTheme.colors.backgroundSecondaryAlertDefault,
+        contentColor = GrapesTheme.colors.contentAlertDefault,
+    )
+
+    @Composable
+    internal fun colorsWarning(): GrapesStatusTagColors = GrapesStatusTagColors(
+        containerColor = GrapesTheme.colors.backgroundSecondaryWarningDefault,
+        contentColor = GrapesTheme.colors.contentWarningDefault,
+    )
+
+    @Composable
+    internal fun colorsInfo(): GrapesStatusTagColors = GrapesStatusTagColors(
+        containerColor = GrapesTheme.colors.backgroundSecondaryInfoDefault,
+        contentColor = GrapesTheme.colors.contentInfoDefault,
+    )
+
+    @Composable
+    internal fun colorsSuccess(): GrapesStatusTagColors = GrapesStatusTagColors(
+        containerColor = GrapesTheme.colors.backgroundSecondarySuccessDefault,
+        contentColor = GrapesTheme.colors.contentSuccessDefault,
+    )
 }
 
 @Preview
@@ -209,35 +243,80 @@ private fun PreviewStatusTag(
         Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)) {
             when (tag) {
                 is StatusTags.Error -> {
-                    GrapesErrorTag(label = tag.tag, showIcon = true)
-                    GrapesErrorTag(label = tag.tag, showIcon = false)
+                    GrapesAlertTag(
+                        label = tag.tag,
+                    )
+                    GrapesAlertTag(
+                        label = tag.tag,
+                        iconPosition = GrapesTagIconPosition.Trailing
+                    )
+                    GrapesAlertTag(
+                        label = tag.tag,
+                        icon = null
+                    )
                 }
 
                 is StatusTags.Info -> {
-                    GrapesInfoTag(label = tag.tag, showIcon = true)
-                    GrapesInfoTag(label = tag.tag, showIcon = false)
+                    GrapesInfoTag(
+                        label = tag.tag,
+                    )
+                    GrapesInfoTag(
+                        label = tag.tag,
+                        iconPosition = GrapesTagIconPosition.Trailing
+                    )
+                    GrapesInfoTag(
+                        label = tag.tag,
+                        icon = null
+                    )
                 }
 
                 is StatusTags.Success -> {
-                    GrapesSuccessTag(label = tag.tag, showIcon = true)
-                    GrapesSuccessTag(label = tag.tag, showIcon = false)
+                    GrapesSuccessTag(
+                        label = tag.tag,
+                    )
+                    GrapesSuccessTag(
+                        label = tag.tag,
+                        iconPosition = GrapesTagIconPosition.Trailing
+                    )
+                    GrapesSuccessTag(
+                        label = tag.tag,
+                        icon = null
+                    )
                 }
 
                 is StatusTags.Warning -> {
-                    GrapesWarningTag(label = tag.tag, showIcon = true)
-                    GrapesWarningTag(label = tag.tag, showIcon = false)
+                    GrapesWarningTag(
+                        label = tag.tag,
+                    )
+                    GrapesWarningTag(
+                        label = tag.tag,
+                        iconPosition = GrapesTagIconPosition.Trailing
+                    )
+                    GrapesWarningTag(
+                        label = tag.tag,
+                        icon = null
+                    )
                 }
 
                 is StatusTags.Neutral -> {
-                    GrapesNeutralTag(label = tag.tag, showIcon = true)
-                    GrapesNeutralTag(label = tag.tag, showIcon = false)
+                    GrapesNeutralTag(
+                        label = tag.tag,
+                    )
+                    GrapesNeutralTag(
+                        label = tag.tag,
+                        iconPosition = GrapesTagIconPosition.Trailing
+                    )
+                    GrapesNeutralTag(
+                        label = tag.tag,
+                        icon = null
+                    )
                 }
             }
         }
     }
 }
 
-internal class StatusTagProvider : PreviewParameterProvider<StatusTags> {
+private class StatusTagProvider : PreviewParameterProvider<StatusTags> {
 
     override val values: Sequence<StatusTags> = sequenceOf(
         StatusTags.Error("Error"),
@@ -248,7 +327,7 @@ internal class StatusTagProvider : PreviewParameterProvider<StatusTags> {
     )
 }
 
-internal sealed class StatusTags {
+private sealed class StatusTags {
 
     abstract val tag: String
 
@@ -268,22 +347,22 @@ private fun PreviewDecorativeTag(
         Column(verticalArrangement = Arrangement.spacedBy(GrapesTheme.dimensions.unit8)) {
             GrapesDecorativeTag(
                 label = tag.label,
-                backgroundColor = tag.colors,
-                leadingIcon = {
+                colors = tag.colors,
+                icon = {
                     GrapesIconSet.Puzzle()
                 },
             )
 
             GrapesDecorativeTag(
                 label = tag.label,
-                backgroundColor = tag.colors,
-                leadingIcon = null,
+                colors = tag.colors,
+                icon = null,
             )
         }
     }
 }
 
-internal class DecorativeTagProvider : PreviewParameterProvider<DecorativeTag> {
+private class DecorativeTagProvider : PreviewParameterProvider<DecorativeTag> {
 
     override val values: Sequence<DecorativeTag> = sequenceOf(
         DecorativeTag(
@@ -325,4 +404,4 @@ internal class DecorativeTagProvider : PreviewParameterProvider<DecorativeTag> {
     )
 }
 
-internal data class DecorativeTag(val label: String, val colors: GrapesDecorativeTagColors)
+private data class DecorativeTag(val label: String, val colors: GrapesDecorativeTagColors)
