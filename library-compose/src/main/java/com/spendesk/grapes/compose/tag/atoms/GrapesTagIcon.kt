@@ -13,7 +13,7 @@ import com.spendesk.grapes.compose.icons.GrapesIcon
 @Composable
 fun GrapesTagIcon(
     @DrawableRes iconRes: Int,
-    contentDescription: String,
+    contentDescription: String?,
 ) {
     GrapesIcon(
         icon = iconRes,
