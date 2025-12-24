@@ -49,6 +49,7 @@ fun lightColorsPalette(
     backgroundPrimaryAlertPressed: Color = raspberry90,
 
     backgroundSecondaryDefault: Color = carbon3,
+    backgroundSecondaryDisabled: Color = carbon5,
 
     backgroundSecondaryBrandDefault: Color = purple10,
     backgroundSecondaryBrandHover: Color = purple10.copy(alpha = 0.8f),
@@ -140,6 +141,7 @@ fun lightColorsPalette(
     backgroundPrimaryAlertHover = backgroundPrimaryAlertHover,
     backgroundPrimaryAlertPressed = backgroundPrimaryAlertPressed,
     backgroundSecondaryDefault = backgroundSecondaryDefault,
+    backgroundSecondaryDisabled = backgroundSecondaryDisabled,
     backgroundSecondaryBrandDefault = backgroundSecondaryBrandDefault,
     backgroundSecondaryBrandHover = backgroundSecondaryBrandHover,
     backgroundSecondaryBrandPressed = backgroundSecondaryBrandPressed,

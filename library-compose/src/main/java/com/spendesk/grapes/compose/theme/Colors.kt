@@ -54,6 +54,7 @@ data class GrapesColors(
     val backgroundPrimaryAlertPressed: Color,
 
     val backgroundSecondaryDefault: Color,
+    val backgroundSecondaryDisabled: Color,
 
     val backgroundSecondaryBrandDefault: Color,
     val backgroundSecondaryBrandHover: Color,
