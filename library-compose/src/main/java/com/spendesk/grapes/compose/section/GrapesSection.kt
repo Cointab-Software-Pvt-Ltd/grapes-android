@@ -34,6 +34,7 @@ fun GrapesSection(
     modifier: Modifier = Modifier,
     action: @Composable (GrapesSectionActionScope.() -> Unit)? = null,
     elevation: CardElevation = CardDefaults.cardElevation(),
+    contentPadding: PaddingValues = PaddingValues(vertical = GrapesTheme.dimensions.unit8),
     content: @Composable () -> Unit,
 ) {
     Card(
@@ -46,8 +47,7 @@ fun GrapesSection(
         ),
     ) {
         Column(
-            modifier = Modifier
-                .padding(vertical = GrapesTheme.dimensions.unit8)
+            modifier = Modifier.padding(contentPadding)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
