@@ -248,6 +248,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun BabyBottle(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_baby_bottle),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Backspace(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -367,6 +381,20 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_bike),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun Briefcase(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_briefcase),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -1102,6 +1130,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun DumbBell(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_dumbbell),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Dummy(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -1109,6 +1151,34 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_dummy),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun Ear(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_ear),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun Eighteen(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_eighteen),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -1494,6 +1564,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun Lotus(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_lotus),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun MagicWand(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -1613,6 +1697,34 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_paper_plane),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun ParkingSign(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_parking_sign),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun Paw(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_paw),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -1774,6 +1886,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun PoolLadder(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_pool_ladder),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Puzzle(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -1893,6 +2019,20 @@ object GrapesIconSet {
     ) {
         Icon(
             painter = painterResource(R.drawable.ic_grapes_icon_slack),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun Sofa(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_sofa),
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
@@ -2054,6 +2194,34 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun WashingMachine(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_washing_machine),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
+    fun WheelChair(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_wheelchair),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Wifi(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -2122,6 +2290,7 @@ private fun IconsPreview() {
                 GrapesIconSet.ArrowUp()
                 GrapesIconSet.ArrowUturnLeftDown()
                 GrapesIconSet.ArrowUturnRightTop()
+                GrapesIconSet.BabyBottle()
                 GrapesIconSet.Backspace()
                 GrapesIconSet.Banknote()
                 GrapesIconSet.BanknoteStrikeout()
@@ -2131,6 +2300,7 @@ private fun IconsPreview() {
                 GrapesIconSet.Bell()
                 GrapesIconSet.BellDesk()
                 GrapesIconSet.Bike()
+                GrapesIconSet.Briefcase()
                 GrapesIconSet.BuildingBank()
                 GrapesIconSet.BuildingStorefront()
                 GrapesIconSet.BuildingsOffice()
@@ -2183,7 +2353,10 @@ private fun IconsPreview() {
                 GrapesIconSet.CrossSmall()
                 GrapesIconSet.Cube()
                 GrapesIconSet.DollarCircleArrow()
+                GrapesIconSet.DumbBell()
                 GrapesIconSet.Dummy()
+                GrapesIconSet.Ear()
+                GrapesIconSet.Eighteen()
                 GrapesIconSet.EllipsisHorizontal()
                 GrapesIconSet.EllipsisVertical()
                 GrapesIconSet.Envelope()
@@ -2211,6 +2384,7 @@ private fun IconsPreview() {
                 GrapesIconSet.Linkedin()
                 GrapesIconSet.LockClose()
                 GrapesIconSet.LockOpen()
+                GrapesIconSet.Lotus()
                 GrapesIconSet.MagicWand()
                 GrapesIconSet.MagnifyingGlass()
                 GrapesIconSet.MapPin()
@@ -2220,6 +2394,8 @@ private fun IconsPreview() {
                 GrapesIconSet.Motorcycle()
                 GrapesIconSet.MouseSquareStack()
                 GrapesIconSet.PaperPlane()
+                GrapesIconSet.ParkingSign()
+                GrapesIconSet.Paw()
                 GrapesIconSet.Pdf()
                 GrapesIconSet.Pen()
                 GrapesIconSet.Person()
@@ -2231,6 +2407,7 @@ private fun IconsPreview() {
                 GrapesIconSet.Plane()
                 GrapesIconSet.Plug()
                 GrapesIconSet.Plus()
+                GrapesIconSet.PoolLadder()
                 GrapesIconSet.Puzzle()
                 GrapesIconSet.Receipt()
                 GrapesIconSet.ReceiptChecked()
@@ -2240,6 +2417,7 @@ private fun IconsPreview() {
                 GrapesIconSet.ShieldStar()
                 GrapesIconSet.ShoppingCart()
                 GrapesIconSet.Slack()
+                GrapesIconSet.Sofa()
                 GrapesIconSet.Sparkle()
                 GrapesIconSet.Spendesk()
                 GrapesIconSet.Square4()
@@ -2251,6 +2429,8 @@ private fun IconsPreview() {
                 GrapesIconSet.Trash()
                 GrapesIconSet.TriangleWarning()
                 GrapesIconSet.Wallet()
+                GrapesIconSet.WashingMachine()
+                GrapesIconSet.WheelChair()
                 GrapesIconSet.Wifi()
                 GrapesIconSet.X()
                 GrapesIconSet.Youtube()
