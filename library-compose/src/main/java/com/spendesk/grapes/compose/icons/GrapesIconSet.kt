@@ -724,6 +724,20 @@ object GrapesIconSet {
     }
 
     @Composable
+    fun ChatBubble(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_chat_bubble),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
+        )
+    }
+
+    @Composable
     fun Check(
         modifier: Modifier = Modifier,
         tint: Color = LocalContentColor.current,
@@ -1714,6 +1728,21 @@ object GrapesIconSet {
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
+
+        )
+    }
+
+    @Composable
+    fun Password(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_password),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
         )
     }
 
@@ -2324,6 +2353,7 @@ private fun IconsPreview() {
                 GrapesIconSet.CardStrikeout()
                 GrapesIconSet.CfoConnect()
                 GrapesIconSet.ChartPie()
+                GrapesIconSet.ChatBubble()
                 GrapesIconSet.Check()
                 GrapesIconSet.ChevronDouble()
                 GrapesIconSet.ChevronDoubleRight()
@@ -2395,6 +2425,7 @@ private fun IconsPreview() {
                 GrapesIconSet.MouseSquareStack()
                 GrapesIconSet.PaperPlane()
                 GrapesIconSet.ParkingSign()
+                GrapesIconSet.Password()
                 GrapesIconSet.Paw()
                 GrapesIconSet.Pdf()
                 GrapesIconSet.Pen()
