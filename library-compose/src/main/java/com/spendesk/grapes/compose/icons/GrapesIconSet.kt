@@ -1728,6 +1728,21 @@ object GrapesIconSet {
             tint = tint,
             contentDescription = contentDescription,
             modifier = modifier
+
+        )
+    }
+
+    @Composable
+    fun Password(
+        modifier: Modifier = Modifier,
+        tint: Color = LocalContentColor.current,
+        contentDescription: String? = null,
+    ) {
+        Icon(
+            painter = painterResource(R.drawable.ic_grapes_icon_password),
+            tint = tint,
+            contentDescription = contentDescription,
+            modifier = modifier
         )
     }
 
@@ -2410,6 +2425,7 @@ private fun IconsPreview() {
                 GrapesIconSet.MouseSquareStack()
                 GrapesIconSet.PaperPlane()
                 GrapesIconSet.ParkingSign()
+                GrapesIconSet.Password()
                 GrapesIconSet.Paw()
                 GrapesIconSet.Pdf()
                 GrapesIconSet.Pen()
